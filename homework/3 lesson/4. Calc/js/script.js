@@ -36,14 +36,18 @@ switch (mathOperator) {
         result = operandA * operandB;
         break;
     case "/":
-        if (operandB === 0) {
-            result = "Error, can't divide by zero!";
-            break;
-        }
-        else {
-            result = operandA / operandB;
-            break;
-        }
+        // if (operandB === 0) {
+        //     result = "Error, can't divide by zero!";
+        //     break;
+        // }
+        
+        // else {
+        //     result = operandA / operandB;
+        //     break;
+        // }
+
+        result = operandB === 0 ? "Error, can't divide by zero!" : operandA / operandB;
+        break;
     case "**":
         result = operandA ** operandB;
         break;
