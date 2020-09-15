@@ -9,19 +9,19 @@ while (mathOperator !== "+" && mathOperator !== "-" && mathOperator !== "*" && m
     if (mathOperator === null) break;
 }
 
-let operandA = +(prompt("Input first operand")).trim();
+let operandA = +prompt("Input first operand").trim();
 
 while (isNaN(operandA)) {
     alert("Operand must be a digit");
-    operandA = +(prompt("Input first operand")).trim();
+    operandA = +prompt("Input first operand").trim();
     if (operandA === null) break;
 }
 
-let operandB = +(prompt("Input second operand")).trim();
+let operandB = +prompt("Input second operand").trim();
 
 while (isNaN(operandB)) {
     alert("Operand must be a digit");
-    operandB = +(prompt("Input second operand")).trim();
+    operandB = +prompt("Input second operand").trim();
     if (operandB === null) break;
 }
 
