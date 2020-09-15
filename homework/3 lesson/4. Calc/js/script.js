@@ -4,13 +4,13 @@ let result = 0;
 let mathOperator = prompt("Input operator (+, -, *, /, **, %)").trim();
 
 function readOperand(message) {
-  let operand = +(prompt(message)).trim();
-  while (isNaN(operand)) {
-    alert("Operand must be a digit");
-    operand = +(prompt(message)).trim();
-    if (operand === null) break;
-  }
-  return operand;
+    let operand = +(prompt(message)).trim();
+    while (isNaN(operand)) {
+        alert("Operand must be a digit");
+        operand = +(prompt(message)).trim();
+        if (operand === null) break;
+    }
+    return operand;
 }
 
 
@@ -34,8 +34,8 @@ switch (mathOperator) {
         result = operandA * operandB;
         break;
     case "/":
-	    result = operandB === 0 ? result = "Error, can't divide by zero!" : operandA / operandB;
-        break
+        result = (operandB === 0) ? result = "Error, can't divide by zero!" : operandA / operandB;
+        break;
     case "**":
         result = operandA ** operandB;
         break;
