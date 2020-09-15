@@ -14,6 +14,7 @@ let operandA = +(prompt("Input first operand")).trim();
 while (!+operandA) {
     alert("Operand must be a digit");
     operandA = +(prompt("Input first operand")).trim();
+    if (operandA === null) break;
 }
 
 let operandB = +(prompt("Input second operand")).trim();
@@ -21,6 +22,7 @@ let operandB = +(prompt("Input second operand")).trim();
 while (!+operandB) {
     alert("Operand must be a digit");
     operandB = +(prompt("Input second operand")).trim();
+    if (operandB === null) break;
 }
 
 switch (mathOperator) {
