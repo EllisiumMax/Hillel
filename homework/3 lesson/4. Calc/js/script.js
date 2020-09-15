@@ -3,6 +3,12 @@
 let result = 0;
 let mathOperator = prompt("Input operator (+, -, *, /, **, %)").trim();
 
+while (mathOperator !== "+" && mathOperator !== "-" && mathOperator !== "*" && mathOperator !== "/" && mathOperator !== "**" && mathOperator !== "%") {
+    alert("This is not valid operator");
+    mathOperator = prompt("Input operator (+, -, *, /, **, %)").trim();
+    if (mathOperator === null) break;
+}
+
 function readOperand(message) {
     let operand = +(prompt(message)).trim();
     while (isNaN(operand)) {
@@ -11,13 +17,6 @@ function readOperand(message) {
         if (operand === null) break;
     }
     return operand;
-}
-
-
-while (mathOperator !== "+" && mathOperator !== "-" && mathOperator !== "*" && mathOperator !== "/" && mathOperator !== "**" && mathOperator !== "%") {
-    alert("This is not valid operator");
-    mathOperator = prompt("Input operator (+, -, *, /, **, %)").trim();
-    if (mathOperator === null) break;
 }
 
 let operandA = readOperand("Input first operand");
