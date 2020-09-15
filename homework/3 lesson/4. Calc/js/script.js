@@ -11,7 +11,7 @@ while (mathOperator !== "+" && mathOperator !== "-" && mathOperator !== "*" && m
 
 let operandA = +(prompt("Input first operand")).trim();
 
-while (!+operandA && operandA !== 0) {
+while (isNaN(operandA)) {
     alert("Operand must be a digit");
     operandA = +(prompt("Input first operand")).trim();
     if (operandA === null) break;
@@ -19,7 +19,7 @@ while (!+operandA && operandA !== 0) {
 
 let operandB = +(prompt("Input second operand")).trim();
 
-while (!+operandB && operandB !== 0) {
+while (isNaN(operandB)) {
     alert("Operand must be a digit");
     operandB = +(prompt("Input second operand")).trim();
     if (operandB === null) break;
