@@ -3,45 +3,45 @@
 let result = 0;
 let mathOperator = prompt("Input operator (+, -, *, /, **, %)").trim();
 
- while (mathOperator !== "+" && mathOperator !== "-" && mathOperator !== "*" && mathOperator !== "/" && mathOperator !== "**" && mathOperator !== "%") {
+while (mathOperator !== "+" && mathOperator !== "-" && mathOperator !== "*" && mathOperator !== "/" && mathOperator !== "**" && mathOperator !== "%") {
     alert("This is not valid operator");
     mathOperator = prompt("Input operator (+, -, *, /, **, %)").trim();
     if (mathOperator === null) break;
- }
+}
 
- let operandA = +(prompt("Input first operand")).trim();
+let operandA = +(prompt("Input first operand")).trim();
 
- while (!+operandA) {
+while (!+operandA) {
     alert("Operand must be a digit");
-     operandA = +(prompt("Input first operand")).trim();
- }
+    operandA = +(prompt("Input first operand")).trim();
+}
 
- let operandB = +(prompt("Input second operand")).trim();
+let operandB = +(prompt("Input second operand")).trim();
 
- while (!+operandB) {
+while (!+operandB) {
     alert("Operand must be a digit");
-     operandB = +(prompt("Input second operand")).trim();
- }
+    operandB = +(prompt("Input second operand")).trim();
+}
 
 switch (mathOperator) {
-    case "+": 
-            result = operandA + operandB;
-            break;
-            case "-": 
-            result = operandA - operandB;
-            break;
-            case "*": 
-            result = operandA * operandB;
-            break;
-            case "/": 
-            result = operandA / operandB;
-            break;
-            case "**": 
-            result = operandA ** operandB;
-            break;
-            case "%": 
-            result = operandA % operandB;
-            break;
+    case "+":
+        result = operandA + operandB;
+        break;
+    case "-":
+        result = operandA - operandB;
+        break;
+    case "*":
+        result = operandA * operandB;
+        break;
+    case "/":
+        result = operandA / operandB;
+        break;
+    case "**":
+        result = operandA ** operandB;
+        break;
+    case "%":
+        result = operandA % operandB;
+        break;
 }
 
 
