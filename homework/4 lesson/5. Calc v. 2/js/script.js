@@ -2,7 +2,7 @@
 
 let operatorIsValid = false;
 let choosenOperand;
-let numbers = 0;
+let numbers = [];
 
 
 
@@ -12,10 +12,10 @@ function validateOperator (value) {
 }
 
 function validateOperand (value) {
-    if (value === null) return console.log(parseInt(numbers));
+    if (value === null) return console.log(parseInt(numbers)); // фукнция вычисления
     else if (value.trim().length > 6) return alert("Operator length must be less than 6 digits!");
     else if (!Number.isInteger(+value)) return alert("Operand must be an integer number!");
-    else return numbers += +value + " ";
+    else return numbers.push(+value);
  
 }
 
