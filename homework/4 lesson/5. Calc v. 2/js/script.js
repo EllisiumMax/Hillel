@@ -6,7 +6,7 @@ let numbers = [];
 let selectedOperator;
 
 function inputOperator () {
-    let validOperators = ["+", "*"];
+    const validOperators = ["+", "*"];
     let operator;
     while(!validOperators.includes(operator)) {
         operator = prompt("Enter operator ( + or * )");
