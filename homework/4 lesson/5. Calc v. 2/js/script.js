@@ -3,6 +3,7 @@
 
 
 let numbers = [];
+let selectedOperator;
 
 function inputOperator () {
     let validOperators = ["+", "*"];
@@ -12,7 +13,7 @@ function inputOperator () {
         if (operator === null) return alert("Cancelled by user.");
         else if (!validOperators.includes(operator)) alert("Error: Enter valid operator! ( + or * )")
     };
-    return operator; 
+    return selectedOperator = operator; 
 }
 
 function validateOperand (value) {
@@ -23,7 +24,7 @@ function validateOperand (value) {
  
 }
 
-function userInput () { 
+function inputOperand () { 
     let operand;
     while (operand !== null) {
         operand = prompt("Input operand");
@@ -32,10 +33,38 @@ function userInput () {
 }
 
 function sumValues (value) {
-     numbers += value;
+    let result = 0;
+    let expression = "";
+    for (let i = 0; i < value.length; i++) {
+        result += value[i];
+        expression += value[i] + " + ";
+    }
+    return alert(expression.slice(0,expression.length - 2) + " = " + result);
+}
+
+function multiplyValues (value) {
+    let result = 1;
+    let expression = "";
+    for (let i = 0; i < value.length; i++) {
+        result *= value[i];
+        expression += value[i] + " * ";
+    }
+    return alert(expression.slice(0,expression.length - 2) + " = " + result);
 }
 
 
 
-userInput();
-console.log(numbers);
+function calculate (operator) {
+    switch(operator) {
+        case "+": 
+            sumValues(numbers);
+            break;
+        case "*":
+            multiplyValues(numbers);
+    }
+}
+
+inputOperator ();
+inputOperand ();
+calculate (selectedOperator);
+
