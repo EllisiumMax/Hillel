@@ -25,6 +25,7 @@ function validateOperand(value) {
 }
 
 function inputOperand() {
+    if (selectedOperator === undefined) return;
     let operand;
     while (operand !== null) {
         operand = prompt("Input operand");
@@ -43,24 +44,28 @@ function sumValues(value) {
 }
 
 function multiplyValues(value) {
-    let result = 1;
+    let result = "1";
     let expression = "";
     for (let i = 0; i < value.length; i++) {
         result *= value[i];
         expression += value[i] + " * ";
     }
+    if (result >= Number.MAX_SAFE_INTEGER) return alert("Error: Value is too big!");
+    else if (result <= Number.MIN_SAFE_INTEGER) return alert("Error: Value is too small!")
     return alert(expression.slice(0, expression.length - 2) + " = " + result);
 }
 
 
 
 function calculate(operator) {
+    if (numbers.length <= 1 && selectedOperator !== undefined) return alert('Error: Input at least two numbers.');
     switch (operator) {
         case "+":
             sumValues(numbers);
             break;
         case "*":
             multiplyValues(numbers);
+            break;
     }
 }
 
