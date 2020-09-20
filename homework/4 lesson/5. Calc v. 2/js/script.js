@@ -73,7 +73,8 @@ let selectedOperator = "undefined";
 
 function userInput(text) {
   // заправшивает ввод оператора или операндов
-  let userValue = prompt(text).trim();
+  let userValue = prompt(text);
+  if (userValue !== null) userValue.trim();
   return userValue;
 }
 
@@ -92,7 +93,8 @@ function validateOperator(operator) {
 function validateOperand(operand) {
   // проверка значений полученных из userInput (), - целое число, макс. длина 6 символов, не +/- Infinity
   let maxLength = 6;
-  if (!Number.isInteger(+operand) || operand === "") {
+  if (operand === null) return;
+  else if (!Number.isInteger(+operand) || operand === "") {
     alert("Error: Please enter an integer number.");
   } else if (operand.startsWith("-") || operand.startsWith("+")) maxLength = 7;
   if (operand.length > maxLength) {
@@ -129,7 +131,7 @@ function validateMaxMinInteger(result) {
   return true;
 }
 
-function calculateResultFromOperator(operator, numbers) {
+function calculatePerOperator(operator, numbers) {
   // выбор функции суммы или умножения в зависимости от оператора сохраненного в глобальной переменной selectedOperator
   switch (operator) {
     case "+":
@@ -143,5 +145,24 @@ function calculateResultFromOperator(operator, numbers) {
 
 function launchApplication() {
   // функция запуска калькулятора
+
+  let operator;
+  let operand;
+  let numbers;
+
+  do {
+    operator = userInput("Input operator + or *");
+  } while (!validateOperator(operator) && selectedOperator === "undefined");
+
+  
+  do {
+    operand = userInput("Input number");
+    if (validateOperand(operand)) numbers += +operand + ' ';
+    console.log(numbers);
+    if (operand === null) return calculatePerOperator(operator, numbers);
+  } while (validateOperand(operand) && operand !== null);
 }
 
+
+
+console.log(launchApplication());
