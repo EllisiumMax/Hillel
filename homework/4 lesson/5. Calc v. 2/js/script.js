@@ -1,6 +1,5 @@
 "use strict";
 
-
 let selectedOperator = "undefined";
 
 function userInput(text) {
@@ -31,6 +30,7 @@ function validateOperand(operand) {
   } else if (operand.startsWith("-") || operand.startsWith("+")) maxLength = 7;
   if (operand.length > maxLength) {
     alert("Error: Maximum length must be 6 digits.");
+    return false;
   }
   return true;
 }
@@ -38,7 +38,7 @@ function validateOperand(operand) {
 function sumValues(numbers) {
   // суммирует входящие значения и выдает полное математическое выражение с результатом
   let result = 0;
-  for (let x of numbers.split(" ")) {
+  for (let x of numbers) {
     result += +x;
   }
   return result;
@@ -47,7 +47,7 @@ function sumValues(numbers) {
 function multiplyValues(numbers) {
   // умножает входящие значения и выдает полное математическое выражение с результатом
   let result = 1;
-  for (let x of numbers.split(" ")) {
+  for (let x of numbers) {
     result *= +x;
   }
   return result;
@@ -80,21 +80,26 @@ function launchApplication() {
 
   let operator;
   let operand;
-  let numbers;
+  let numbers = [];
+  let result;
+  let fullExpression ='';
 
   do {
     operator = userInput("Input operator + or *");
   } while (!validateOperator(operator) && selectedOperator === "undefined");
 
-  
-  do {
+  while (operand !== null) {
     operand = userInput("Input number");
-    if (validateOperand(operand)) numbers += +operand + ' ';
+    if (validateOperand(operand) && operand !=='') {
+         numbers.push(+operand);
+         fullExpression += operand + ' ' + operator + ' ';
     console.log(numbers);
-    if (operand === null) return calculatePerOperator(operator, numbers);
-  } while (validateOperand(operand) && operand !== null);
+  }
+}
+  if (operand === null) {
+    result = calculatePerOperator(operator, numbers);
+  }
+  if (validateMaxMinInteger(result)) return alert(`${fullExpression.slice(0,-2)} = ${result}`);
 }
 
-
-
-console.log(launchApplication());
+launchApplication();
