@@ -1,7 +1,5 @@
 "use strict";
 
-
-
 // let numbers = [];
 // let selectedOperator;
 
@@ -55,8 +53,6 @@
 //     return alert(expression.slice(0, expression.length - 2) + " = " + result);
 // }
 
-
-
 // function calculate(operator) {
 //     if (numbers.length <= 1 && selectedOperator !== undefined) return alert('Error: Input at least two numbers.');
 //     switch (operator) {
@@ -73,76 +69,66 @@
 // inputOperand();
 // calculate(selectedOperator);
 
-let selectedOperator = 'undefined';
-let numbers = '';
+let selectedOperator = "undefined";
+let numbers = "";
 
-
-function userInput (text) {
-// заправшивает ввод оператора или операндов
-let userValue = prompt(text).trim(); 
-return userValue;
+function userInput(text) {
+  // заправшивает ввод оператора или операндов
+  let userValue = prompt(text).trim();
+  return userValue;
 }
 
-
-
-
-function validateOperator (operator) {
-// проверка оператора полученного из userInput () на соотвествие '+' или '*'
-const validOperators = "+ *";
-if (validOperators.includes(operator) && operator != "") { 
+function validateOperator(operator) {
+  // проверка оператора полученного из userInput () на соотвествие '+' или '*'
+  const validOperators = "+ *";
+  if (validOperators.includes(operator) && operator != "") {
     selectedOperator = operator;
     return true;
-}
-else {
+  } else {
     alert(`Error: Please enter valid operator: ( ${validOperators} )`);
     return false;
-}
+  }
 }
 
-
-function validateOperand (operand) {
-// проверка значений полученных из userInput (), - целое число, макс. длина 6 символов, не +/- Infinity
-    let extractedValue = "";
-    if (!Number.isInteger(+operand)) {
-        alert('Error: Please enter an integer number.');
-        return false;
-    } else if (operand.startsWith('+') || operand.startsWith('-')) {
-        extractedValue = operand.slice(1);
-    } else if (extractedValue.length > 6) {
-        alert('Error: Maximum length must be 6 digits.');
+function validateOperand(operand) {
+  // проверка значений полученных из userInput (), - целое число, макс. длина 6 символов, не +/- Infinity
+  if (!Number.isInteger(+operand)) {
+    alert("Error: Please enter an integer number.");
+    return false;
+  } else if (operand.startsWith("+") || operand.startsWith("-")) {
+    if (operand.slice(1).length > 6) {
+      alert("Error: Maximum length must be 6 digits.");
+      return false;
     } else {
-        numbers += operand + ' ';
-        return true;
+      return true;
     }
+  } else if (operand.length > 6) {
+    alert("Error: Maximum length must be 6 digits.");
+    return false;
+  } else {
+    return true;
+  }
 }
 
-
-
-
-function sumValues () {
-    // суммирует полученные значения от userInput()
-    }
-    
-    
-function multiplyValues () {
-    // умножает полученные значения от userInput()
-    }
-
-function validateMaxMinInteger () {
-        // проверка результата из calculateResult () на min/max integer
-        }
-    
-function calculateResult () {
-// выбор функции суммы или умножения в зависимости от оператора сохраненного в глобальной переменной selectedOperator
+function sumValues(values) {
+  // суммирует полученные значения из переменной numbers
+  for (let number of values.)
 }
 
+function multiplyValues(value) {
+  // умножает полученные значения из переменной numbers
+}
 
+function validateMaxMinInteger(result) {
+  // проверка результата из calculateResult () на min/max integer
+}
 
+function calculateResult() {
+  // выбор функции суммы или умножения в зависимости от оператора сохраненного в глобальной переменной selectedOperator
+}
 
-validateOperand(prompt('operand'));
-validateOperand(prompt('operand'));
-validateOperand(prompt('operand'));
-validateOperand(prompt('operand'));
-validateOperand(prompt('operand'));
-validateOperand(prompt('operand'));
+validateOperand(prompt("operand"));
+validateOperand(prompt("operand"));
+validateOperand(prompt("operand"));
+
 console.log(numbers);
