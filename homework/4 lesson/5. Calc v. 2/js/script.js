@@ -36,7 +36,7 @@ function validateOperand(operand) {
 }
 
 function sumValues(numbers) {
-  // суммирует входящие значения массива и выдает полное математическое выражение с результатом
+  // суммирует входящие значения массива и выдает результат
   let result = 0;
   for (let x of numbers) {
     result += +x;
@@ -45,7 +45,7 @@ function sumValues(numbers) {
 }
 
 function multiplyValues(numbers) {
-  // умножает входящие значения массива и выдает полное математическое выражение с результатом
+  // умножает входящие значения массива и выдает результат
   let result = 1;
   for (let x of numbers) {
     result *= +x;
