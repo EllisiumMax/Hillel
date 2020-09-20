@@ -129,7 +129,19 @@ function validateMaxMinInteger(result) {
   return true;
 }
 
-function calculateResult() {
+function calculateResultFromOperator(operator, numbers) {
   // выбор функции суммы или умножения в зависимости от оператора сохраненного в глобальной переменной selectedOperator
+  switch (operator) {
+    case "+":
+      return sumValues(numbers);
+    case "*":
+      return multiplyValues(numbers);
+    default:
+      alert("Critical Error: Unexpected operator!");
+  }
+}
+
+function launchApplication() {
+  // функция запуска калькулятора
 }
 
