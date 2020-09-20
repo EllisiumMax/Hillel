@@ -71,7 +71,6 @@
 
 let selectedOperator = "undefined";
 
-
 function userInput(text) {
   // заправшивает ввод оператора или операндов
   let userValue = prompt(text).trim();
@@ -105,35 +104,32 @@ function validateOperand(operand) {
 function sumValues(numbers) {
   // суммирует входящие значения и выдает полное математическое выражение с результатом
   let result = 0;
-  let fullExpression = '';
-  for (let x of numbers.split(' ')) {
+  for (let x of numbers.split(" ")) {
     result += +x;
-    fullExpression += ' + ' + x;
   }
-  alert (`${fullExpression.slice(2)} = ${result}`);
   return result;
 }
 
 function multiplyValues(numbers) {
   // умножает входящие значения и выдает полное математическое выражение с результатом
   let result = 1;
-  let fullExpression = '';
-  for (let x of numbers.split(' ')) {
+  for (let x of numbers.split(" ")) {
     result *= +x;
-    fullExpression += ' * ' + x;
   }
-  alert (`${fullExpression.slice(2)} = ${result}`);
   return result;
 }
 
 function validateMaxMinInteger(result) {
-  // проверка результата из calculateResult () на min/max integer
+  // проверка результата из sumValues(numbers) или function multiplyValues(numbers) на min/max integer
+  if (+result > Number.MAX_SAFE_INTEGER) {
+    alert("Error: Result is bigger than MAX_SAFE_INTEGER!");
+  } else if (+result < Number.MIN_SAFE_INTEGER) {
+    alert("Error: Result is smaller than MIN_SAFE_INTEGER!");
+  }
+  return true;
 }
 
 function calculateResult() {
   // выбор функции суммы или умножения в зависимости от оператора сохраненного в глобальной переменной selectedOperator
 }
-let numbers = "2 2 30";
-let sorted = numbers.split(' ');
-console.log(sumValues(numbers));
-console.log(multiplyValues(numbers));
+
