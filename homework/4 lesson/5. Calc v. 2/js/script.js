@@ -92,27 +92,20 @@ function validateOperator(operator) {
 
 function validateOperand(operand) {
   // проверка значений полученных из userInput (), - целое число, макс. длина 6 символов, не +/- Infinity
-  if (!Number.isInteger(+operand)) {
+  let maxLength = 6;
+  if (!Number.isInteger(+operand) || operand === "") {
     alert("Error: Please enter an integer number.");
-    return false;
-  } else if (operand.startsWith("+") || operand.startsWith("-")) {
-    if (operand.slice(1).length > 6) {
-      alert("Error: Maximum length must be 6 digits.");
-      return false;
-    } else {
-      return true;
-    }
-  } else if (operand.length > 6) {
+  } else if (operand.startsWith("-") || operand.startsWith("+")) maxLength = 7;
+  if (operand.length > maxLength) {
     alert("Error: Maximum length must be 6 digits.");
-    return false;
-  } else {
-    return true;
   }
+  return true;
 }
 
 function sumValues(values) {
   // суммирует полученные значения из переменной numbers
-  for (let number of values.)
+  for (let number of values) {
+  }
 }
 
 function multiplyValues(value) {
@@ -127,8 +120,4 @@ function calculateResult() {
   // выбор функции суммы или умножения в зависимости от оператора сохраненного в глобальной переменной selectedOperator
 }
 
-validateOperand(prompt("operand"));
-validateOperand(prompt("operand"));
-validateOperand(prompt("operand"));
-
-console.log(numbers);
+console.log(validateOperand(prompt("operand")));
