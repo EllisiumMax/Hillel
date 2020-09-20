@@ -36,7 +36,7 @@ function validateOperand(operand) {
 }
 
 function sumValues(numbers) {
-  // суммирует входящие значения и выдает полное математическое выражение с результатом
+  // суммирует входящие значения массива и выдает полное математическое выражение с результатом
   let result = 0;
   for (let x of numbers) {
     result += +x;
@@ -45,7 +45,7 @@ function sumValues(numbers) {
 }
 
 function multiplyValues(numbers) {
-  // умножает входящие значения и выдает полное математическое выражение с результатом
+  // умножает входящие значения массива и выдает полное математическое выражение с результатом
   let result = 1;
   for (let x of numbers) {
     result *= +x;
@@ -54,7 +54,7 @@ function multiplyValues(numbers) {
 }
 
 function validateMaxMinInteger(result) {
-  // проверка результата из sumValues(numbers) или function multiplyValues(numbers) на min/max integer
+  // проверка результата из sumValues(numbers) или multiplyValues(numbers) на min/max integer
   if (+result > Number.MAX_SAFE_INTEGER) {
     alert("Error: Result is bigger than MAX_SAFE_INTEGER!");
   } else if (+result < Number.MIN_SAFE_INTEGER) {
@@ -82,24 +82,32 @@ function launchApplication() {
   let operand;
   let numbers = [];
   let result;
-  let fullExpression ='';
+  let fullExpression = "";
 
   do {
     operator = userInput("Input operator + or *");
+    if (operator === null) {
+      alert("Cancelled");
+      return;
+    }
   } while (!validateOperator(operator) && selectedOperator === "undefined");
 
   while (operand !== null) {
     operand = userInput("Input number");
-    if (validateOperand(operand) && operand !=='') {
-         numbers.push(+operand);
-         fullExpression += operand + ' ' + operator + ' ';
-    console.log(numbers);
+    if (operand === null && numbers.length < 2) {
+      alert("Error: Enter at least two values.");
+      return;
+    }
+    if (validateOperand(operand) && operand !== "") {
+      numbers.push(+operand);
+      fullExpression += operand + " " + operator + " ";
+    }
   }
-}
   if (operand === null) {
     result = calculatePerOperator(operator, numbers);
   }
-  if (validateMaxMinInteger(result)) return alert(`${fullExpression.slice(0,-2)} = ${result}`);
+  if (validateMaxMinInteger(result))
+    return alert(`${fullExpression.slice(0, -2)} = ${result}`);
 }
 
 launchApplication();
