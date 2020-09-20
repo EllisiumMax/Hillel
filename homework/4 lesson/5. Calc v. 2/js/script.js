@@ -70,7 +70,7 @@
 // calculate(selectedOperator);
 
 let selectedOperator = "undefined";
-let numbers = "";
+
 
 function userInput(text) {
   // заправшивает ввод оператора или операндов
@@ -102,14 +102,28 @@ function validateOperand(operand) {
   return true;
 }
 
-function sumValues(values) {
-  // суммирует полученные значения из переменной numbers
-  for (let number of values) {
+function sumValues(numbers) {
+  // суммирует входящие значения и выдает полное математическое выражение с результатом
+  let result = 0;
+  let fullExpression = '';
+  for (let x of numbers.split(' ')) {
+    result += +x;
+    fullExpression += ' + ' + x;
   }
+  alert (`${fullExpression.slice(2)} = ${result}`);
+  return result;
 }
 
-function multiplyValues(value) {
-  // умножает полученные значения из переменной numbers
+function multiplyValues(numbers) {
+  // умножает входящие значения и выдает полное математическое выражение с результатом
+  let result = 1;
+  let fullExpression = '';
+  for (let x of numbers.split(' ')) {
+    result *= +x;
+    fullExpression += ' * ' + x;
+  }
+  alert (`${fullExpression.slice(2)} = ${result}`);
+  return result;
 }
 
 function validateMaxMinInteger(result) {
@@ -119,5 +133,7 @@ function validateMaxMinInteger(result) {
 function calculateResult() {
   // выбор функции суммы или умножения в зависимости от оператора сохраненного в глобальной переменной selectedOperator
 }
-
-console.log(validateOperand(prompt("operand")));
+let numbers = "2 2 30";
+let sorted = numbers.split(' ');
+console.log(sumValues(numbers));
+console.log(multiplyValues(numbers));
