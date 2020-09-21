@@ -26,11 +26,10 @@ function validateOperand(operand) {
   let maxLength = 6;
   if (operand === null) return;
   else if (!Number.isInteger(+operand) || operand === "") {
-    alert("Error: Please enter an integer number.");
+    return alert("Error: Please enter an integer number.");
   } else if (operand.startsWith("-") || operand.startsWith("+")) maxLength = 7;
   if (operand.length > maxLength) {
-    alert("Error: Maximum length must be 6 digits.");
-    return false;
+    return alert("Error: Maximum length must be 6 digits.");
   }
   return true;
 }
@@ -56,9 +55,9 @@ function multiplyValues(numbers) {
 function validateMaxMinInteger(result) {
   // проверка результата из sumValues(numbers) или multiplyValues(numbers) на min/max integer
   if (+result > Number.MAX_SAFE_INTEGER) {
-    alert("Error: Result is bigger than MAX_SAFE_INTEGER!");
+    return alert("Error: Result is bigger than MAX_SAFE_INTEGER!");
   } else if (+result < Number.MIN_SAFE_INTEGER) {
-    alert("Error: Result is smaller than MIN_SAFE_INTEGER!");
+    return alert("Error: Result is smaller than MIN_SAFE_INTEGER!");
   }
   return true;
 }
