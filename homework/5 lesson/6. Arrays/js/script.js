@@ -1,6 +1,5 @@
 "use strict";
 
-
 const resultsObj = {
   allValues: [], //(массив всех введенных значений)
   elements: "No elements.", //(общее количество элементов массива)
@@ -21,12 +20,14 @@ function userInput() {
   }
 }
 
-function getNumbers (objectArray) {
-  const numbersArray = [];
+function numbersArray(objectArray) {
+  //выбирает из массива объекта все числа и возвращает массив только числовых значений
+  const numbers = [];
   for (let value of objectArray.allValues) {
-    if(parseInt(+value)) numbersArray.push(+value);
+    if (Number(value) && Number.isFinite(+value)) numbers.push(+value);
   }
-  return console.log(numbersArray);
+  console.log(numbers);
+  return numbers;
 }
 
 function findQuantityOfValues(objectArray) {
@@ -36,39 +37,41 @@ function findQuantityOfValues(objectArray) {
 
 function findMaxMinInteger(objectArray) {
   // находит максимальное и минимальное значение в массиве.
-  let max = parseInt(objectArray.allValues.sort((a, b) => {
-    return +b - +a;
-  })[0]);
-  let min = parseInt(objectArray.allValues.sort((a, b) => {
-    return +a - +b;
-  })[0]);
+  let max = numbersArray(resultsObj).sort((a, b) => {
+    return b - a;
+  });
+  let min = numbersArray(resultsObj).sort((a, b) => {
+    return a - b;
+  });
 
-  if (!isNaN(min)) objectArray.minInteger = +min;
-  if (!isNaN(max)) objectArray.maxInteger = +max;
-  
+  if (min[0] === undefined && max[0] === undefined) {
+    objectArray.minInteger = "No any integer numbers.";
+    objectArray.maxInteger = "No any integer numbers.";
+  } else {
+    objectArray.minInteger = min[0];
+    objectArray.maxInteger = max[0];
+  }
 }
 
 function findArithmeticMean(objectArray) {
   // находит среднее арифметичесское всех целых чисел.
   const integerNumbers = [];
   let summ = 0;
-  for (let value of objectArray.allValues) {
-  let trimmedValue = value.trim();
-    if (parseInt(+trimmedValue) && Number.isInteger(+trimmedValue)) {
-      integerNumbers.push(trimmedValue);
-      summ += +trimmedValue;
+  for (let value of numbersArray(resultsObj)) {
+    if (Number.isInteger(value)) {
+      integerNumbers.push(value);
+      summ += value;
     }
   }
   let result = summ / integerNumbers.length;
   if (!isNaN(result)) objectArray.arithmeticMean = result;
-  
 }
 
 function findEvenPositiveIntegers(objectArray) {
   // находит общее количество четных положительных целых чисел.
   const integerNumbers = [];
-  for (let value of objectArray.allValues) {
-    if (parseInt(+value) > 0 && +value % 2 === 0) {
+  for (let value of numbersArray(resultsObj)) {
+    if (value > 0 && value % 2 === 0) {
       integerNumbers.push(value);
     }
   }
@@ -78,8 +81,8 @@ function findEvenPositiveIntegers(objectArray) {
 function findNegativeNumbers(objectArray) {
   // находит количество отрицательных чисел.
   const negativeNumbers = [];
-  for (let value of objectArray.allValues) {
-    if (+value < 0) negativeNumbers.push(value);
+  for (let value of numbersArray(resultsObj)) {
+    if (value < 0) negativeNumbers.push(value);
   }
   objectArray.negativeElements = negativeNumbers.length;
 }
@@ -87,18 +90,19 @@ function findNegativeNumbers(objectArray) {
 function findSumOfFractionalNumbers(objectArray) {
   //  находит сумму всех дробных чисел.
   let result = 0;
-  for (let value of objectArray.allValues) {
-    if (parseInt(+value) % 2 !== 0) result += +value;
+  for (let value of numbersArray(resultsObj)) {
+    if (value % 1 !== 0) result += value;
   }
   objectArray.fractionSum = result;
 }
 
 userInput();
+numbersArray(resultsObj);
 findQuantityOfValues(resultsObj);
 findMaxMinInteger(resultsObj);
 findArithmeticMean(resultsObj);
 findEvenPositiveIntegers(resultsObj);
 findNegativeNumbers(resultsObj);
 findSumOfFractionalNumbers(resultsObj);
-getNumbers(resultsObj);
+
 console.log(resultsObj);
