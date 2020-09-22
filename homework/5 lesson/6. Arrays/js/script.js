@@ -26,7 +26,6 @@ function numbersArray(objectArray) {
   for (let value of objectArray.allValues) {
     if (Number(value) && Number.isFinite(+value)) numbers.push(+value);
   }
-  console.log(numbers);
   return numbers;
 }
 
