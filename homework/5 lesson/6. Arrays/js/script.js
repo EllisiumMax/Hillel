@@ -12,15 +12,29 @@ const resultsObj = {
 };
 
 function userInput() {
-  //запрашивает значения и сохраняет их в массив, пока пользователь не нажмет отмена.
+  //запрашивает значения и сохраняет их в массив объекта allValues:, пока пользователь не нажмет отмена.
+  let input;
+  while (input !== null) {
+    input = prompt("Input any values");
+    if (input !== null) resultsObj.allValues.push(input);
+  }
 }
 
-function findQuantityOfValues(array) {
-  // находит кол-во значений в массиве.
+function findQuantityOfValues(objectArray) {
+  // находит кол-во значений в массиве объекта и записывает в свойство elements:.
+  objectArray.elements = objectArray.allValues.length;
 }
 
-function findMaxMinInteger(array) {
+function findMaxMinInteger(objectArray) {
   // находит максимальное и минимальное значение в массиве.
+  let max = Number.MAX_SAFE_INTEGER;
+  let min = Number.MIN_SAFE_INTEGER;
+  for (let values of objectArray.allValues) {
+    if (Number.isInteger(+values) && +values >= min) max = +values;
+    else if (Number.isInteger(+values) && +values  <= max) min = +values;
+  }
+  objectArray.minInteger = min;
+  objectArray.maxInteger = max;
 }
 
 function findAverageInteger(array) {
@@ -39,4 +53,10 @@ function findSumOfFractionalNumbers(array) {
   //  находит сумму всех дробных чисел.
 }
 
+userInput();
+findQuantityOfValues(resultsObj);
+findMaxMinInteger(resultsObj);
 console.log(resultsObj);
+
+
+// let array = ["1", 1.4, "wqdwq", 1, 444, 0, "eff", 5, -5.5];
