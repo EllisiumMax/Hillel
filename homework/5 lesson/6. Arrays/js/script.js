@@ -31,7 +31,7 @@ function numbersArray(objectArray) {
 
 function findQuantityOfValues(objectArray) {
   // находит кол-во значений в массиве объекта и записывает в свойство elements:.
-  objectArray.elements = objectArray.allValues.length;
+  if(objectArray.allValues.length > 0) objectArray.elements = objectArray.allValues.length;
 }
 
 function findMaxMinInteger(objectArray) {
@@ -74,7 +74,7 @@ function findEvenPositiveIntegers(objectArray) {
       integerNumbers.push(value);
     }
   }
-  objectArray.evenPositiveIntegerElements = integerNumbers.length;
+  objectArray.evenPositiveIntegerElements = integerNumbers.length || "No any positive integer numbers";
 }
 
 function findNegativeNumbers(objectArray) {
@@ -83,12 +83,12 @@ function findNegativeNumbers(objectArray) {
   for (let value of numbersArray(resultsObj)) {
     if (value < 0) negativeNumbers.push(value);
   }
-  objectArray.negativeElements = negativeNumbers.length;
+  objectArray.negativeElements = negativeNumbers.length || "No any negative numbers";
 }
 
 function findSumOfFractionalNumbers(objectArray) {
   //  находит сумму всех дробных чисел.
-  let result = 0;
+  let result = "No any fractional numbers.";
   for (let value of numbersArray(resultsObj)) {
     if (value % 1 !== 0) result += value;
   }
