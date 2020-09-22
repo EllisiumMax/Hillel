@@ -27,36 +27,51 @@ function findQuantityOfValues(objectArray) {
 
 function findMaxMinInteger(objectArray) {
   // находит максимальное и минимальное значение в массиве.
-  let max = Number.MAX_SAFE_INTEGER;
-  let min = Number.MIN_SAFE_INTEGER;
+  let max = Number.MIN_SAFE_INTEGER;
+  let min = Number.MAX_SAFE_INTEGER;
   for (let values of objectArray.allValues) {
-    if (Number.isInteger(+values) && +values >= min) max = +values;
-    else if (Number.isInteger(+values) && +values  <= max) min = +values;
+    if (Number.isInteger(+values) && +values >= max) max = +values;
+    if (Number.isInteger(+values) && +values <= min) min = +values;
   }
   objectArray.minInteger = min;
   objectArray.maxInteger = max;
 }
 
-function findAverageInteger(array) {
+function findArithmeticMean(objectArray) {
   // находит среднее арифметичесское всех целых чисел.
+  const integerNumbers = [];
+  let summ = 0;
+  for (let value of objectArray.allValues) {
+    if (Number.isInteger(+value)) {
+      integerNumbers.push(value);
+      summ += +value;
+    }
+  }
+  objectArray.arithmeticMean = summ / integerNumbers.length;
 }
 
-function findEvenPositiveIntegers(array) {
+function findEvenPositiveIntegers(objectArray) {
   // находит общее количество четных положительных целых чисел.
+  const integerNumbers = [];
+  for (let value of objectArray.allValues) {
+    if (parseInt(+value) > 0 && +value % 2 === 0) {
+      integerNumbers.push(value);
+    }
+  }
+  objectArray.evenPositiveIntegerElements = integerNumbers.length;
 }
 
-function findNegativeNumbers(array) {
+function findNegativeNumbers(objectArray) {
   // находит количество отрицательных чисел.
 }
 
-function findSumOfFractionalNumbers(array) {
+function findSumOfFractionalNumbers(objectArray) {
   //  находит сумму всех дробных чисел.
 }
 
-userInput();
-findQuantityOfValues(resultsObj);
-findMaxMinInteger(resultsObj);
-console.log(resultsObj);
-
-
-// let array = ["1", 1.4, "wqdwq", 1, 444, 0, "eff", 5, -5.5];
+// userInput();
+// findQuantityOfValues(resultsObj);
+// findMaxMinInteger(resultsObj);
+// findArithmeticMean(resultsObj);
+// findEvenPositiveIntegers(resultsObj);
+// console.log(resultsObj);
