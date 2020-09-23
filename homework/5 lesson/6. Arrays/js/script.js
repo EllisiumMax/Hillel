@@ -37,10 +37,14 @@ function findQuantityOfValues(objectArray) {
 
 function findMaxMinInteger(objectArray) {
   // находит максимальное и минимальное значение в массиве.
-  let max = numbersArray(resultsObj).sort((a, b) => {
+  let integerNumbers =[];
+  for (let value of numbersArray(resultsObj)) {
+    if(Number.isInteger(value)) integerNumbers.push(value);
+  }
+  let max = integerNumbers.sort((a, b) => {
     return b - a;
   });
-  let min = numbersArray(resultsObj).sort((a, b) => {
+  let min = integerNumbers.sort((a, b) => {
     return a - b;
   });
 
