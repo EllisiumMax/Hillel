@@ -31,7 +31,8 @@ function numbersArray(objectArray) {
 
 function findQuantityOfValues(objectArray) {
   // находит кол-во значений в массиве объекта и записывает в свойство elements:.
-  if(objectArray.allValues.length > 0) objectArray.elements = objectArray.allValues.length;
+  if (objectArray.allValues.length > 0)
+    objectArray.elements = objectArray.allValues.length;
 }
 
 function findMaxMinInteger(objectArray) {
@@ -74,7 +75,8 @@ function findEvenPositiveIntegers(objectArray) {
       integerNumbers.push(value);
     }
   }
-  objectArray.evenPositiveIntegerElements = integerNumbers.length || "No any positive integer numbers";
+  objectArray.evenPositiveIntegerElements =
+    integerNumbers.length || "No any positive integer numbers";
 }
 
 function findNegativeNumbers(objectArray) {
@@ -83,7 +85,8 @@ function findNegativeNumbers(objectArray) {
   for (let value of numbersArray(resultsObj)) {
     if (value < 0) negativeNumbers.push(value);
   }
-  objectArray.negativeElements = negativeNumbers.length || "No any negative numbers";
+  objectArray.negativeElements =
+    negativeNumbers.length || "No any negative numbers";
 }
 
 function findSumOfFractionalNumbers(objectArray) {
@@ -94,10 +97,10 @@ function findSumOfFractionalNumbers(objectArray) {
     if (value % 1 !== 0) {
       fractionalNumbers.push(value);
       summ += +value;
+    }
+    if (fractionalNumbers.length !== 0)
+      objectArray.fractionSum = +summ.toFixed(2);
   }
-  if (fractionalNumbers.length !== 0) objectArray.fractionSum = +summ.toFixed(2) ;
-}
-
 }
 
 userInput("Input any value");
