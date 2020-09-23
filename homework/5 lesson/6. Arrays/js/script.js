@@ -11,11 +11,11 @@ const resultsObj = {
   fractionSum: "No any fractional numbers.", //(сумма всех дробных чисел)
 };
 
-function userInput() {
+function userInput(text) {
   //запрашивает значения и сохраняет их в массив объекта allValues:, пока пользователь не нажмет отмена.
   let input;
   while (input !== null) {
-    input = prompt("Input any values");
+    input = prompt(text);
     if (input !== null) resultsObj.allValues.push(input);
   }
 }
@@ -63,7 +63,7 @@ function findArithmeticMean(objectArray) {
     }
   }
   let result = summ / integerNumbers.length;
-  if (!isNaN(result)) objectArray.arithmeticMean = result;
+  if (!isNaN(result)) objectArray.arithmeticMean = result.toFixed(2);
 }
 
 function findEvenPositiveIntegers(objectArray) {
@@ -88,14 +88,19 @@ function findNegativeNumbers(objectArray) {
 
 function findSumOfFractionalNumbers(objectArray) {
   //  находит сумму всех дробных чисел.
-  let result = "No any fractional numbers.";
+  let fractionalNumbers = [];
+  let summ = 0;
   for (let value of numbersArray(resultsObj)) {
-    if (value % 1 !== 0) result += value;
+    if (value % 1 !== 0) {
+      fractionalNumbers.push(value);
+      summ += +value;
   }
-  objectArray.fractionSum = result;
+  if (fractionalNumbers.length !== 0) objectArray.fractionSum = +summ.toFixed(2) ;
 }
 
-userInput();
+}
+
+userInput("Input any value");
 numbersArray(resultsObj);
 findQuantityOfValues(resultsObj);
 findMaxMinInteger(resultsObj);
