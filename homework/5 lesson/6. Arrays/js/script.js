@@ -36,24 +36,23 @@ function findQuantityOfValues(objectArray) {
 }
 
 function findMaxMinInteger(objectArray) {
-  // находит максимальное и минимальное значение в массиве.
-  let integerNumbers =[];
+  // находит максимальное и минимальное целое число значение в массиве.
+  let integerNumbers = [];
   for (let value of numbersArray(resultsObj)) {
-    if(Number.isInteger(value)) integerNumbers.push(value);
+    if (Number.isInteger(value)) integerNumbers.push(value);
   }
-  let max = integerNumbers.sort((a, b) => {
-    return b - a;
-  });
-  let min = integerNumbers.sort((a, b) => {
-    return a - b;
+  let sortedArray = integerNumbers.sort((a, b) => {
+    if (a > b) return 1;
+    if (a == b) return 0;
+    if (a < b) return -1;
   });
 
-  if (min[0] === undefined && max[0] === undefined) {
+  if (sortedArray[0] === undefined) {
     objectArray.minInteger = "No any integer numbers.";
     objectArray.maxInteger = "No any integer numbers.";
   } else {
-    objectArray.minInteger = min[0];
-    objectArray.maxInteger = max[0];
+    objectArray.minInteger = sortedArray[0];
+    objectArray.maxInteger = integerNumbers[integerNumbers.length - 1];
   }
 }
 
