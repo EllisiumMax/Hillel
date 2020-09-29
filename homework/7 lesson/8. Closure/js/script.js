@@ -10,7 +10,7 @@ function closureDivide (dividerValue = 1) {
   }
 }
 
-let divide = closureDivide(6); // делитель по умолчанию передается в аргумент этой функции
+let divide = closureDivide(); // делитель по умолчанию передается в аргумент этой функции
 
 console.log(divide(2));
 console.log(divide(1));
