@@ -4,7 +4,7 @@ function closureDivide (dividerValue = 1) {
   let result = 0;
   return function (value) {
     result = value / dividerValue;
-    dividerValue = Math.round(result);
+    dividerValue = Math.ceil(result);
     return result;
   }
 }
