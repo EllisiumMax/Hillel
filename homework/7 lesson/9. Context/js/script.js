@@ -1,10 +1,11 @@
 "use strict";
 
-function closureDivide (dividerValue = 1) {
+function closureDivide (dividerValue) {
   let result = 0;
+  let divider = dividerValue || 1;
   return function (value) {
-    result = value / dividerValue;
-    dividerValue = Math.round(result);
+    result = value / divider;
+    divider = Math.round(result);
     return result;
   }
 }
