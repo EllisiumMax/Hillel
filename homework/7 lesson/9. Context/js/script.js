@@ -1,12 +1,14 @@
 "use strict";
 
 function WisheshConstructor(greeting, appeal, wishes) {
+  //конструктор новых объектов
   this.greeting = greeting;
   this.appeal = appeal;
   this.wishes = wishes;
 }
 
 function greetings(name) {
+  //функция приветствия
   return alert(
     `${this.greeting}, ${this.appeal} ${name}! ${this.wishes}.`
   );
