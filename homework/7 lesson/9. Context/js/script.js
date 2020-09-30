@@ -1,24 +1,22 @@
 "use strict";
 
-function closureDivide (dividerValue) {
-  let result = 0;
-  let divider = dividerValue || 1;
-  return function (value) {
-    result = value / divider;
-    divider = Math.round(result);
-    return result;
-  }
+function WisheshConstructor(greeting, appeal, wishes) {
+  this.greeting = greeting;
+  this.appeal = appeal;
+  this.wishes = wishes;
 }
 
-let divide = closureDivide(2); // делитель по умолчанию передается в аргумент этой функции
+function greetings(name) {
+  return alert(
+    `${this.greeting}, ${this.appeal} ${name}! ${this.wishes}.`
+  );
+}
 
-// console.log(divide(2));
-// console.log(divide(1));
-// console.log(divide(7));
-// console.log(divide(70));
-// console.log(divide(2));
+const doctor = new WisheshConstructor("Hello", "dr.", "Have a nice day");
+const colleague = new WisheshConstructor("Hi", "dear", "Regards, John");
 
-console.log(divide(1));
-console.log(divide(7));
-console.log(divide(70));
-console.log(divide(2));
+const greetingDoctor = greetings.bind(doctor);
+const greetingColleague = greetings.bind(colleague);
+
+greetingDoctor('Watson');
+greetingColleague('Kristy');
