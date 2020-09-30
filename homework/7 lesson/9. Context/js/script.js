@@ -1,6 +1,6 @@
 "use strict";
 
-function WisheshConstructor(greeting, appeal, wishes) {
+function WishesConstructor(greeting, appeal, wishes) {
   //конструктор новых объектов
   this.greeting = greeting;
   this.appeal = appeal;
@@ -14,8 +14,8 @@ function greetings(name) {
   );
 }
 
-const doctor = new WisheshConstructor("Hello", "dr.", "Have a nice day");
-const colleague = new WisheshConstructor("Hi", "dear", "Regards, John");
+const doctor = new WishesConstructor("Hello", "dr.", "Have a nice day");
+const colleague = new WishesConstructor("Hi", "dear", "Regards, John");
 
 const greetingDoctor = greetings.bind(doctor);
 const greetingColleague = greetings.bind(colleague);
