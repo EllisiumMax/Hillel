@@ -29,6 +29,7 @@ function clearLinks () {
     const emptyNode = document.createElement("ol");
     const linksList = document.querySelector("#links");
     emptyNode.id = "links";
+    emptyNode.className = "link-list";
     linksList.replaceWith(emptyNode);
 }
 
