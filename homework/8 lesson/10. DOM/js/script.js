@@ -16,9 +16,9 @@ function addLink () {
         element.innerHTML = `<a href="${webAdress}">${webAdress}</a>`;
         linksList.append(element);
         const button = document.createElement("button");
-        button.className = "button-delete";
+        button.className = "button button-delete";
         button.id = "delete" + id;
-        button.innerHTML = "Удалить";
+        button.innerHTML = "удалить";
         element.append(button);
     };
 }
@@ -35,7 +35,6 @@ function clearLinks () {
 function deleteLink (event) {
     let eventID = event.target.id.slice(6);
     const link = document.querySelector(`#link${eventID}`);
-    console.log(eventID);
     if (link) link.remove();
     else return;
     

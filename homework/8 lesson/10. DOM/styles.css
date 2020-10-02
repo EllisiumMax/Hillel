@@ -1,39 +1,105 @@
-.container {
-    color: black;
-    background-color: rgba(0, 247, 255, 0.342);
-    border: 1px solid blue;
-    border-radius: 3px;
-    min-height: 10em;
-    margin: 2em auto 0 auto;
-    padding: 0;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 40em;
+body {
+    font-family: Arial, Helvetica, sans-serif;
 }
 
-#header {
-    margin: 0.5em;
+
+
+hr {
+    width: 50%;
+    opacity: 50%;
 }
 
-.main-button {
+.button {
     display: block;
-    margin: 1em auto 0 auto;
+    margin: 1em auto;
     padding: 0.5em;
+    background: linear-gradient(to bottom, #5a69ad 5%, #355eac 100%);
+    border: 1px solid #010200;
+    cursor: pointer;
+    color: #ffffff;
+    font-size: 0.8em;
+    text-decoration: none;
+    width: 12em;
+    outline: none;
+    border-radius: 3px;
+
 }
 
-
-
-.user-link {
-    font-size: 1em;
+.button:hover {
+    background: linear-gradient(to bottom, #778ce9 5%, #3b74df 100%);
+    background-color: #68a54b;
 }
 
-.user-link:last-child {
-    margin-bottom: 1em;
+.button-clear {
+    background: linear-gradient(to bottom, #bd7f45 5%, #be6b1c 100%);
+    border: 1px solid #130711;
+}
+
+.button-clear:hover {
+    background: linear-gradient(to bottom, #cc9b6b 5%, #f18a23 100%);
+
 }
 
 .button-delete {
-    margin: 0.3em 0 0.3em 1em;
-    padding: 0;
+
+    display: inline-block;
+    width: 6em;
+    margin-left: 1.2em;
+    padding: 0.2em;
+    background: linear-gradient(to bottom, #db5942 5%, #860e0ece 100%);
+    border: 1px solid #b80202;
+    font-variant: small-caps;
+    font-size: 0.7em;
+    letter-spacing: 1px;
+    border-radius: 1em;
+
 }
 
+.button-delete:hover {
+    background: linear-gradient(to bottom, #ff6b51 5%, #e20000 100%);
+}
+
+
+.container {
+
+    background-color: rgb(255, 255, 255);
+    box-shadow: 0px 0px 23px 4px rgb(201, 198, 198);
+    border-radius: 3px;
+    min-height: 10em;
+    margin: 2em auto 3em auto;
+    padding: 0;
+    min-width: 400px;
+    width: 50%;
+    border-radius: 3px;
+
+
+}
+
+.user-link,
+a {
+    font-size: 1em;
+    text-decoration: none;
+    color: #4016fc;
+}
+
+
+.user-link:last-child {
+    margin-bottom: 1.5em;
+}
+
+#header {
+    color: #747474;
+    text-align: center;
+    padding: 0.6em 0 0 0;
+    margin: 0;
+}
+
+#links {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    padding: 0;
+    overflow: auto;
+}
