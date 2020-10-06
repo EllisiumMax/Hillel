@@ -1,5 +1,6 @@
 "use strict";
-let currentIndex = 1;
+
+let currentIndex = 0;
 const imgDatabase = [
   "img_1",
   "img_2",
@@ -25,9 +26,35 @@ const imgDatabase = [
   "img_22",
 ];
 
+const miniImgDatabase = [
+  "img_1s",
+  "img_2s",
+  "img_3s",
+  "img_4s",
+  "img_5s",
+  "img_6s",
+  "img_7s",
+  "img_8s",
+  "img_9s",
+  "img_10s",
+  "img_11s",
+  "img_12s",
+  "img_13s",
+  "img_14s",
+  "img_15s",
+  "img_16s",
+  "img_17s",
+  "img_18s",
+  "img_19s",
+  "img_20s",
+  "img_21s",
+  "img_22s",
+];
+
 const btnPrevious = document.querySelector("#prev");
 const btnNext = document.querySelector("#next");
 const mainImg = document.querySelector("#img-main");
+const smallImgsArea = document.querySelector("#img-collection");
 
 function setImgSRC() {
   mainImg.src = `img/${imgDatabase[currentIndex]}.jpg`;
@@ -63,6 +90,16 @@ function openImgFullScreen() {
   });
 }
 
+function addSmallImgs(imagesArray) {
+  for (let image of imagesArray) {
+    const img = document.createElement("img");
+    img.className = "img-small";
+    img.src = `img/img_small/${image}.jpg`;
+    smallImgsArea.append(img);
+  }
+}
+
 btnNext.onclick = nextImg;
 btnPrevious.onclick = prevImg;
 mainImg.onclick = openImgFullScreen;
+addSmallImgs(miniImgDatabase);
