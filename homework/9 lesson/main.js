@@ -27,28 +27,28 @@ const imgDatabase = [
 ];
 
 const miniImgDatabase = [
-  "img_1s",
-  "img_2s",
-  "img_3s",
-  "img_4s",
-  "img_5s",
-  "img_6s",
-  "img_7s",
-  "img_8s",
-  "img_9s",
-  "img_10s",
-  "img_11s",
-  "img_12s",
-  "img_13s",
-  "img_14s",
-  "img_15s",
-  "img_16s",
-  "img_17s",
-  "img_18s",
-  "img_19s",
-  "img_20s",
-  "img_21s",
-  "img_22s",
+  "img_1",
+  "img_2",
+  "img_3",
+  "img_4",
+  "img_5",
+  "img_6",
+  "img_7",
+  "img_8",
+  "img_9",
+  "img_10",
+  "img_11",
+  "img_12",
+  "img_13",
+  "img_14",
+  "img_15",
+  "img_16",
+  "img_17",
+  "img_18",
+  "img_19",
+  "img_20",
+  "img_21",
+  "img_22",
 ];
 
 const btnPrevious = document.querySelector("#prev");
@@ -99,7 +99,19 @@ function addSmallImgs(imagesArray) {
   }
 }
 
+function replaceMainImg(event) {
+  let targetSrc = event.target.outerHTML.slice(
+    42,
+    event.target.outerHTML.length - 2
+  );
+  mainImg.src = `img/${targetSrc}`;
+}
+
 btnNext.onclick = nextImg;
 btnPrevious.onclick = prevImg;
 mainImg.onclick = openImgFullScreen;
 addSmallImgs(miniImgDatabase);
+
+smallImgsArea.addEventListener("click", (event) => {
+  if (event.target.classList.contains("img-small")) replaceMainImg(event);
+});
