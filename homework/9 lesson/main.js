@@ -69,9 +69,10 @@ function nextImg() {
 
 function prevImg() {
   if (currentIndex !== 0) --currentIndex;
-  if (currentIndex === imgDatabase.length - 1) --currentIndex;
-  if (currentIndex === 0) currentIndex = imgDatabase.length - 1;
+  else if (currentIndex === imgDatabase.length - 1) --currentIndex;
+  else if (currentIndex == 0) currentIndex = imgDatabase.length - 1;
   setImgSRC();
+  console.log(currentIndex);
 }
 
 function openImgFullScreen() {
@@ -103,6 +104,7 @@ function replaceMainImg(event) {
     const targetIndex = (targetHtml.slice(46, targetHtml.length-6)-1);
     mainImg.src = `img/${imgDatabase[targetIndex]}.jpg`;
     currentIndex = targetIndex;
+    console.log(currentIndex);
 }
 
 btnNext.onclick = nextImg;
