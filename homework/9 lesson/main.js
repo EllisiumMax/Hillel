@@ -57,6 +57,13 @@ const mainImg = document.querySelector("#img-main");
 const smallImgsArea = document.querySelector("#img-collection");
 
 function setImgSRC() {
+  let opacity = 0;
+  setInterval(() => {
+    if (opacity < 1) {
+      opacity += 0.1;
+      mainImg.style.opacity = opacity;
+    }
+  }, 15);
   mainImg.src = `img/${imgDatabase[currentIndex]}.jpg`;
 }
 
@@ -64,7 +71,6 @@ function nextImg() {
   if (currentIndex < imgDatabase.length - 1) ++currentIndex;
   else currentIndex = 0;
   setImgSRC();
-  console.log(currentIndex);
 }
 
 function prevImg() {
@@ -72,18 +78,21 @@ function prevImg() {
   else if (currentIndex === imgDatabase.length - 1) --currentIndex;
   else if (currentIndex == 0) currentIndex = imgDatabase.length - 1;
   setImgSRC();
-  console.log(currentIndex);
 }
 
 function openImgFullScreen() {
   const modalWindow = document.createElement("div");
   const largeImg = document.createElement("img");
+  const closeIco = document.createElement("p");
 
   modalWindow.className = "modal";
   document.body.append(modalWindow);
   largeImg.className = "img-large";
   largeImg.src = mainImg.src;
   document.body.append(largeImg);
+  closeIco.className = "btn-close";
+  closeIco.textContent = "X";
+  modalWindow.append(closeIco);
   modalWindow.addEventListener("click", () => {
     modalWindow.remove();
     largeImg.remove();
@@ -100,11 +109,10 @@ function addSmallImgs(imagesArray) {
 }
 
 function replaceMainImg(event) {
-    const targetHtml = event.target.outerHTML;
-    const targetIndex = (targetHtml.slice(46, targetHtml.length-6)-1);
-    mainImg.src = `img/${imgDatabase[targetIndex]}.jpg`;
-    currentIndex = targetIndex;
-    console.log(currentIndex);
+  const targetHtml = event.target.outerHTML;
+  const targetIndex = targetHtml.slice(46, targetHtml.length - 6) - 1;
+  mainImg.src = `img/${imgDatabase[targetIndex]}.jpg`;
+  currentIndex = targetIndex;
 }
 
 btnNext.onclick = nextImg;
