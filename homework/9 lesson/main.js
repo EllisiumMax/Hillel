@@ -62,7 +62,7 @@ function changeImg() {
     mainImg.src = `img/${imgDatabase[currentIndex]}.jpg`;
     mainImg.className = "img-preview";
   }, 200);
-  mainImg.className += ' img-preview.appear';
+  mainImg.className += " img-preview.appear";
 }
 
 function nextImg() {
