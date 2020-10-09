@@ -31,16 +31,18 @@ html {
 	position: relative;
 	transition: all 0.1s;
 	margin: 1em;
+	font-weight: 700;
+	font-size: 1.4rem;
 	outline: none;
 	border: solid 1px #05061d;
-	border-radius: 5px;
+	border-radius: 50px;
 	box-shadow: 0px 6px 0px#315996;
-	background: #6499e9;
-	padding: 0.7em 3em;
+	background: #2f62ad;
+	padding:  0.4em 0.7em;
 	text-align: center;
 	text-decoration: none;
 	color: #ffffff;
-	font-size: 1em;
+
 }
 .btn-ctrl:active {
 	top: 4px;
@@ -60,7 +62,7 @@ html {
 .img-small {
 	margin: 0.8em;
 	border-radius: 0.3em;
-	box-shadow: 0 0 15px 0px #000000;
+	box-shadow: 0 0 3px 1px #000000;
 	width: 37%;
 }
 .img-small:hover {
@@ -95,7 +97,7 @@ html {
 	right: 5%;
 	cursor: pointer;
 	color: rgb(151, 162, 163);
-	font-family: sans-serif;
+	font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 	font-size: 3em;
 	font-weight: 700;
 }
