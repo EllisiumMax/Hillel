@@ -16,7 +16,17 @@ html {
 	box-shadow: 0 0 5px 0px #000000;
 	width: 70%;
 	max-width: 1920px;
+	transition: all 0.4s ease-out;
 }
+
+.img-preview-disappear {
+	opacity: 0;
+}
+
+.img-preview-appear {
+	opacity: 1;
+}
+
 .btn-ctrl {
 	position: relative;
 	transition: all 0.1s;

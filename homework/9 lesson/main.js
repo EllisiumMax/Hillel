@@ -56,28 +56,26 @@ const btnNext = document.querySelector("#next");
 const mainImg = document.querySelector("#img-main");
 const smallImgsArea = document.querySelector("#img-collection");
 
-function setImgSRC() {
-  let opacity = 0;
-  setInterval(() => {
-    if (opacity < 1) {
-      opacity += 0.1;
-      mainImg.style.opacity = opacity;
-    }
-  }, 15);
-  mainImg.src = `img/${imgDatabase[currentIndex]}.jpg`;
+function changeImg() {
+  mainImg.className += " img-preview-disappear";
+  setTimeout(() => {
+    mainImg.src = `img/${imgDatabase[currentIndex]}.jpg`;
+    mainImg.className = "img-preview";
+  }, 200);
+  mainImg.className += ' img-preview.appear';
 }
 
 function nextImg() {
   if (currentIndex < imgDatabase.length - 1) ++currentIndex;
   else currentIndex = 0;
-  setImgSRC();
+  changeImg();
 }
 
 function prevImg() {
   if (currentIndex !== 0) --currentIndex;
   else if (currentIndex === imgDatabase.length - 1) --currentIndex;
   else if (currentIndex == 0) currentIndex = imgDatabase.length - 1;
-  setImgSRC();
+  changeImg();
 }
 
 function openImgFullScreen() {
@@ -111,8 +109,8 @@ function addSmallImgs(imagesArray) {
 function replaceMainImg(event) {
   const targetHtml = event.target.outerHTML;
   const targetIndex = targetHtml.slice(46, targetHtml.length - 6) - 1;
-  mainImg.src = `img/${imgDatabase[targetIndex]}.jpg`;
   currentIndex = targetIndex;
+  changeImg();
 }
 
 btnNext.onclick = nextImg;
