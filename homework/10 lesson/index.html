@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    </link>
+    <script defer src="main.js"></script>
+    <title>TO DO list</title>
+</head>
+
+<body>
+    <div class="input-container">
+        <input type="text" placeholder="Enter the task.." id="input-field">
+        <button id="btn-submit">OK</button>
+    </div>
+    <ul id="toDo"></ul>
+    <ul id="done"></ul>
+    <ul id="rejected"></ul>
+
+    <script id="template-list-name" type="text/template">
+        <h2>{{listName}}</h2>
+        <hr>
+    </script>
+
+    <script id="template-list-item" type="text/template">
+        <li class="{{class}}"><input type="checkbox" class="checkbox">{{text}}<button class="{{reject-restore}}">{{btn-text}}</button></li>
+        
+    </script>
+
+</body>
+
+</html>

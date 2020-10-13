@@ -1,0 +1,29 @@
+.input-container {
+	text-align: center;
+	margin-top: 4rem;
+	width: 100%;
+}
+
+#input-field {
+	width: 25%;
+	font-size: 1em;
+}
+
+#btn-submit {
+	width: 5%;
+	font-size: 1em;
+
+}
+
+li {
+	list-style: none;
+	margin-bottom: 1em;
+}
+
+input[type="checkbox"] {
+	margin-right: 0.8em;
+}
+
+.btn-delete {
+	margin-left: 2em;
+}
