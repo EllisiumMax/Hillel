@@ -8,7 +8,9 @@ const listRejected = document.getElementById("rejected");
 const templateListName = document.getElementById("template-list-name");
 const templateListItem = document.getElementById("template-list-item");
 const modalWindow = document.getElementById("modal-window");
+const modalInputWindow = document.getElementById("modal-input-window");
 const templateModalWindow = document.getElementById("template-modal-window");
+const templateModalInput = document.getElementById("template-modal-input");
 
 function addToDo() {
   const value = inputField.value;
@@ -89,7 +91,7 @@ function moveToRejected(event) {
       "Rejected"
     );
   }
-  
+
   listRejected.innerHTML += templateListItem.innerHTML
     .replace("{{class}}", "rejected")
     .replace("{{text}}", event.target.textContent)
@@ -123,8 +125,23 @@ listRejected.addEventListener("click", (e) => {
 });
 
 function renameTask(event) {
-  const newTask = prompt("Enter new task name", event.target.textContent);
-  event.target.innerHTML = event.target.innerHTML.replace(event.target.textContent, newTask);
+  // const newTask = prompt("Enter new task name", event.target.textContent);
+  // event.target.innerHTML = event.target.innerHTML.replace(event.target.textContent, newTask);
+  const oldTaskName = event.target.textContent;
+  modalInputWindow.innerHTML = templateModalInput.innerHTML;
+  const inputField = document.getElementById("renameInput");
+  const btnOk = document.getElementById("renameOk");
+  const btnCancel = document.getElementById("renameCancel");
+
+  inputField.value = oldTaskName;
+  btnOk.onclick = () => {
+    event.target.innerHTML = event.target.innerHTML.replace(
+      event.target.textContent,
+      inputField.value
+    );
+    modalInputWindow.innerHTML = "";
+  };
+  btnCancel.onclick = () => (modalInputWindow.innerHTML = "");
 }
 
 function customContextMenu(e) {

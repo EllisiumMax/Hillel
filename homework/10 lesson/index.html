@@ -19,6 +19,7 @@
     <ul id="done"></ul>
     <ul id="rejected"></ul>
     <div id="modal-window"></div>
+    <div id="modal-input-window"></div>
 
     <script id="template-list-name" type="text/template">
         <h2>{{listName}}</h2>
@@ -35,6 +36,14 @@
             <hr>
             <a class="context-rename">Rename</a>
     </div>
+    </script>
+
+    <script id="template-modal-input" type="text/template">
+        <div class="modalWindow-input">
+            <input type="text" id="renameInput">
+            <button id="renameOk"> OK </button>
+            <button id="renameCancel"> Cancel </button>
+        </div>
     </script>
 
 </body>
