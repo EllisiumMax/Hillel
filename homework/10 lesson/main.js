@@ -50,7 +50,7 @@ function moveToDone(event) {
   checkbox.forEach((element) => {
     element.setAttribute("checked", "checked");
   });
-  listDone.addEventListener("change", restoreTask);
+  
 }
 
 function restoreTask(event) {
@@ -97,10 +97,17 @@ function moveToRejected(event) {
   }
 }
 
+
 submitButton.addEventListener("click", (e) => {
   if (e.target.tagName != "BUTTON") return;
   addToDo();
 });
+
+listDone.addEventListener("change", (e) => {
+  if (e.target.tagName != "INPUT") return;
+  restoreTask(e);
+});
+
 listToDo.addEventListener("click", (e) => {
   if (e.target.tagName != "BUTTON") return;
   moveToRejected(e);
