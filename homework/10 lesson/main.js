@@ -75,7 +75,7 @@ function restoreTask(event) {
     );
   }
   if (event.target.tagName == "BUTTON") event.target.previousSibling.remove();
-  if (event.target.tagName == "INPUT")  event.target.parentElement.remove();
+  if (event.target.tagName == "INPUT") event.target.parentElement.remove();
   event.target.remove();
   if (listDone.querySelector(".done") === null) listDone.innerHTML = "";
   if (listRejected.querySelector(".rejected") === null)
@@ -89,6 +89,7 @@ function moveToRejected(event) {
       "Rejected"
     );
   }
+  
   listRejected.innerHTML += templateListItem.innerHTML
     .replace("{{class}}", "rejected")
     .replace("{{text}}", event.target.textContent)
@@ -96,7 +97,7 @@ function moveToRejected(event) {
     .replace("{{btn-text}}", "Restore")
     .replace('<input type="checkbox" class="checkbox">', "");
 
-    event.target.remove();
+  event.target.remove();
   if (listToDo.querySelector(".to-do") === null) {
     listToDo.innerHTML = "";
   }
@@ -121,6 +122,11 @@ listRejected.addEventListener("click", (e) => {
   restoreTask(e);
 });
 
+function renameTask(event) {
+  const newTask = prompt("Enter new task name", event.target.textContent);
+  event.target.innerHTML = event.target.innerHTML.replace(event.target.textContent, newTask);
+}
+
 function customContextMenu(e) {
   e.preventDefault();
   if (e.target.tagName != "LI") return;
@@ -128,19 +134,19 @@ function customContextMenu(e) {
   const window = document.querySelector(".modalWindow");
   const btnDelete = document.querySelector(".context-delete");
   const btnRename = document.querySelector(".context-rename");
-  window.style.display = "visible";
   window.style.left = e.pageX + "px";
   window.style.top = e.pageY + "px";
-  document.addEventListener("contextmenu", () => {
-    window.remove();
-  });
+
   btnDelete.onclick = () => {
     moveToRejected(e);
-    window.style.display = "none";
   };
   btnRename.onclick = () => {
-    alert("Rename");
+    renameTask(e);
   };
-}
 
-document.addEventListener("contextmenu", customContextMenu);
+  document.addEventListener("click", (e) => {
+    if (e.target.id != "modal") window.remove();
+  });
+}
+listToDo.addEventListener("contextmenu", customContextMenu);
+document.addEventListener("contextmenu", (e) => e.preventDefault());
