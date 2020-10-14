@@ -50,7 +50,6 @@ function moveToDone(event) {
   checkbox.forEach((element) => {
     element.setAttribute("checked", "checked");
   });
-  
 }
 
 function restoreTask(event) {
@@ -70,11 +69,9 @@ function restoreTask(event) {
   event.target.parentElement.remove();
   event.target.remove();
   if (listDone.querySelector(".done") === null) listDone.innerHTML = "";
-  if (listRejected.querySelector(".rejected") === null) listRejected.innerHTML = "";
+  if (listRejected.querySelector(".rejected") === null)
+    listRejected.innerHTML = "";
 }
-
-// const restoreFromDone = restoreTask(e, nextSibling);
-// const restoreFromRejected = restoreTask(previousSibling);
 
 function moveToRejected(event) {
   if (listRejected.querySelector(".rejected") === null) {
@@ -90,13 +87,15 @@ function moveToRejected(event) {
     .replace("{{reject-restore}}", "btn-restore")
     .replace("{{btn-text}}", "Restore")
     .replace('<input type="checkbox" class="checkbox">', "");
-  console.dir(event.target.parentNode);
   event.target.parentNode.remove();
   if (listToDo.querySelector(".to-do") === null) {
     listToDo.innerHTML = "";
   }
 }
 
+inputField.addEventListener("keydown", (e) => {
+  if (e.code == "Enter") addToDo();
+});
 
 submitButton.addEventListener("click", (e) => {
   if (e.target.tagName != "BUTTON") return;
