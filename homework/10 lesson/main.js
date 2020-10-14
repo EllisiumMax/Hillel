@@ -105,34 +105,12 @@ function moveToRejected(event) {
   }
 }
 
-inputField.addEventListener("keydown", (e) => {
-  if (e.code == "Enter") addToDo();
-});
-
-submitButton.addEventListener("click", (e) => {
-  if (e.target.tagName != "BUTTON") return;
-  addToDo();
-});
-
-listDone.addEventListener("change", (e) => {
-  if (e.target.tagName != "INPUT") return;
-  restoreTask(e);
-});
-
-listRejected.addEventListener("click", (e) => {
-  if (e.target.tagName != "BUTTON") return;
-  restoreTask(e);
-});
-
 function renameTask(event) {
-  // const newTask = prompt("Enter new task name", event.target.textContent);
-  // event.target.innerHTML = event.target.innerHTML.replace(event.target.textContent, newTask);
   const oldTaskName = event.target.textContent;
   modalInputWindow.innerHTML = templateModalInput.innerHTML;
   const inputField = document.getElementById("renameInput");
   const btnOk = document.getElementById("renameOk");
   const btnCancel = document.getElementById("renameCancel");
-
   inputField.value = oldTaskName;
   btnOk.onclick = () => {
     event.target.innerHTML = event.target.innerHTML.replace(
@@ -142,6 +120,7 @@ function renameTask(event) {
     modalInputWindow.innerHTML = "";
   };
   btnCancel.onclick = () => (modalInputWindow.innerHTML = "");
+  
 }
 
 function customContextMenu(e) {
@@ -165,5 +144,24 @@ function customContextMenu(e) {
     if (e.target.id != "modal") window.remove();
   });
 }
+
+inputField.addEventListener("keydown", (e) => {
+  if (e.code == "Enter") addToDo();
+});
+
+submitButton.addEventListener("click", (e) => {
+  if (e.target.tagName != "BUTTON") return;
+  addToDo();
+});
+
+listDone.addEventListener("change", (e) => {
+  if (e.target.tagName != "INPUT") return;
+  restoreTask(e);
+});
+
+listRejected.addEventListener("click", (e) => {
+  if (e.target.tagName != "BUTTON") return;
+  restoreTask(e);
+});
 listToDo.addEventListener("contextmenu", customContextMenu);
 document.addEventListener("contextmenu", (e) => e.preventDefault());
