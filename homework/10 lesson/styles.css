@@ -27,3 +27,11 @@ input[type="checkbox"] {
 .btn-delete {
 	margin-left: 2em;
 }
+
+.btn-restore {
+	margin-left: 2em;
+}
+
+.rejected {
+	text-decoration: line-through;
+}

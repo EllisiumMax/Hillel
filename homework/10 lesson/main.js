@@ -53,23 +53,59 @@ function moveToDone(event) {
   listDone.addEventListener("change", restoreTask);
 }
 
-function restoreTask (event) {
+function restoreTask(event) {
   if (listToDo.querySelector(".to-do") === null) {
     listToDo.innerHTML = templateListName.innerHTML.replace(
       "{{listName}}",
       "To Do"
     );
   }
+  const targetElement =
+    event.target.nextSibling || event.target.previousSibling;
   listToDo.innerHTML += templateListItem.innerHTML
-  .replace("{{text}}", event.target.nextSibling.textContent)
-  .replace("{{class}}", "to-do")
-  .replace("{{reject-restore}}", "btn-delete")
-  .replace("{{btn-text}}", "Delete");
+    .replace("{{text}}", targetElement.textContent)
+    .replace("{{class}}", "to-do")
+    .replace("{{reject-restore}}", "btn-delete")
+    .replace("{{btn-text}}", "Delete");
   event.target.parentElement.remove();
   event.target.remove();
-  if (listDone.querySelector(".done") === null) {
-    listDone.innerHTML = "";
+  if (listDone.querySelector(".done") === null) listDone.innerHTML = "";
+  if (listRejected.querySelector(".rejected") === null) listRejected.innerHTML = "";
+}
+
+// const restoreFromDone = restoreTask(e, nextSibling);
+// const restoreFromRejected = restoreTask(previousSibling);
+
+function moveToRejected(event) {
+  if (listRejected.querySelector(".rejected") === null) {
+    listRejected.innerHTML = templateListName.innerHTML.replace(
+      "{{listName}}",
+      "Rejected"
+    );
+  }
+
+  listRejected.innerHTML += templateListItem.innerHTML
+    .replace("{{class}}", "rejected")
+    .replace("{{text}}", event.target.previousSibling.textContent)
+    .replace("{{reject-restore}}", "btn-restore")
+    .replace("{{btn-text}}", "Restore")
+    .replace('<input type="checkbox" class="checkbox">', "");
+  console.dir(event.target.parentNode);
+  event.target.parentNode.remove();
+  if (listToDo.querySelector(".to-do") === null) {
+    listToDo.innerHTML = "";
   }
 }
 
-submitButton.addEventListener("click", addToDo);
+submitButton.addEventListener("click", (e) => {
+  if (e.target.tagName != "BUTTON") return;
+  addToDo();
+});
+listToDo.addEventListener("click", (e) => {
+  if (e.target.tagName != "BUTTON") return;
+  moveToRejected(e);
+});
+listRejected.addEventListener("click", (e) => {
+  if (e.target.tagName != "BUTTON") return;
+  restoreTask(e);
+});
