@@ -7,6 +7,8 @@ const listDone = document.getElementById("done");
 const listRejected = document.getElementById("rejected");
 const templateListName = document.getElementById("template-list-name");
 const templateListItem = document.getElementById("template-list-item");
+const modalWindow = document.getElementById("modal-window");
+const templateModalWindow = document.getElementById("template-modal-window");
 
 function addToDo() {
   const value = inputField.value;
@@ -21,8 +23,7 @@ function addToDo() {
     listToDo.innerHTML += templateListItem.innerHTML
       .replace("{{text}}", inputField.value)
       .replace("{{class}}", "to-do")
-      .replace("{{reject-restore}}", "btn-delete")
-      .replace("{{btn-text}}", "Delete");
+      .replace('<button class="{{reject-restore}}">{{btn-text}}</button>', "");
     inputField.value = "";
     const checkbox = document.querySelector(".checkbox");
     listToDo.addEventListener("change", moveToDone);
@@ -51,7 +52,6 @@ function moveToDone(event) {
     element.setAttribute("checked", "checked");
   });
 }
-
 function restoreTask(event) {
   if (listToDo.querySelector(".to-do") === null) {
     listToDo.innerHTML = templateListName.innerHTML.replace(
@@ -59,14 +59,23 @@ function restoreTask(event) {
       "To Do"
     );
   }
-  const targetElement =
-    event.target.nextSibling || event.target.previousSibling;
   listToDo.innerHTML += templateListItem.innerHTML
-    .replace("{{text}}", targetElement.textContent)
     .replace("{{class}}", "to-do")
-    .replace("{{reject-restore}}", "btn-delete")
-    .replace("{{btn-text}}", "Delete");
-  event.target.parentElement.remove();
+    .replace('<button class="{{reject-restore}}">{{btn-text}}</button>', "");
+  if (event.target.tagName == "BUTTON") {
+    listToDo.innerHTML = listToDo.innerHTML.replace(
+      "{{text}}",
+      event.target.previousSibling.textContent
+    );
+  }
+  if (event.target.tagName == "INPUT") {
+    listToDo.innerHTML = listToDo.innerHTML.replace(
+      "{{text}}",
+      event.target.nextSibling.textContent
+    );
+  }
+  if (event.target.tagName == "BUTTON") event.target.previousSibling.remove();
+  if (event.target.tagName == "INPUT")  event.target.parentElement.remove();
   event.target.remove();
   if (listDone.querySelector(".done") === null) listDone.innerHTML = "";
   if (listRejected.querySelector(".rejected") === null)
@@ -80,14 +89,14 @@ function moveToRejected(event) {
       "Rejected"
     );
   }
-
   listRejected.innerHTML += templateListItem.innerHTML
     .replace("{{class}}", "rejected")
-    .replace("{{text}}", event.target.previousSibling.textContent)
+    .replace("{{text}}", event.target.textContent)
     .replace("{{reject-restore}}", "btn-restore")
     .replace("{{btn-text}}", "Restore")
     .replace('<input type="checkbox" class="checkbox">', "");
-  event.target.parentNode.remove();
+
+    event.target.remove();
   if (listToDo.querySelector(".to-do") === null) {
     listToDo.innerHTML = "";
   }
@@ -107,11 +116,31 @@ listDone.addEventListener("change", (e) => {
   restoreTask(e);
 });
 
-listToDo.addEventListener("click", (e) => {
-  if (e.target.tagName != "BUTTON") return;
-  moveToRejected(e);
-});
 listRejected.addEventListener("click", (e) => {
   if (e.target.tagName != "BUTTON") return;
   restoreTask(e);
 });
+
+function customContextMenu(e) {
+  e.preventDefault();
+  if (e.target.tagName != "LI") return;
+  modalWindow.innerHTML = templateModalWindow.innerHTML;
+  const window = document.querySelector(".modalWindow");
+  const btnDelete = document.querySelector(".context-delete");
+  const btnRename = document.querySelector(".context-rename");
+  window.style.display = "visible";
+  window.style.left = e.pageX + "px";
+  window.style.top = e.pageY + "px";
+  document.addEventListener("contextmenu", () => {
+    window.remove();
+  });
+  btnDelete.onclick = () => {
+    moveToRejected(e);
+    window.style.display = "none";
+  };
+  btnRename.onclick = () => {
+    alert("Rename");
+  };
+}
+
+document.addEventListener("contextmenu", customContextMenu);

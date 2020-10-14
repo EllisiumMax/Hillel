@@ -18,6 +18,7 @@
     <ul id="toDo"></ul>
     <ul id="done"></ul>
     <ul id="rejected"></ul>
+    <div id="modal-window"></div>
 
     <script id="template-list-name" type="text/template">
         <h2>{{listName}}</h2>
@@ -25,8 +26,15 @@
     </script>
 
     <script id="template-list-item" type="text/template">
-        <li class="{{class}}"><input type="checkbox" class="checkbox">{{text}}<button class="{{reject-restore}}">{{btn-text}}</button></li>
-        
+        <li class="{{class}}"><input type="checkbox" class="checkbox">{{text}}</li><button class="{{reject-restore}}">{{btn-text}}</button>
+    </script>
+
+    <script id="template-modal-window" type="text/template">
+        <div class="modalWindow">
+            <a class="context-delete">Delete</a>
+            <hr>
+            <a class="context-rename">Rename</a>
+    </div>
     </script>
 
 </body>
