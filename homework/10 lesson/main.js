@@ -12,6 +12,7 @@ const templateListItem = document.getElementById("template-list-item");
 const templateModalWindow = document.getElementById("template-modal-window");
 const templateModalInput = document.getElementById("template-modal-input");
 
+
 function addToDo() {
   const value = inputField.value;
 

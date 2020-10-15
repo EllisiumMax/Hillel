@@ -1,3 +1,8 @@
+:root {
+	font-size: calc(0.8em + 0.3vw);
+	user-select: none;
+}
+
 body {
 	margin: 0;
 	background-image: linear-gradient(to top, #ffffff, #f8f7fb, #f0f0f7, #e9e8f4, #e1e1f0);
@@ -17,7 +22,7 @@ body {
 	border-radius: 7px;
 	border-color: rgb(100, 32, 163);
 	background-color: whitesmoke;
-	width: 25em;
+	width: 20em;
 	text-align: center;
 	color: rgb(5, 5, 4);
 	font-family: 'Roboto', sans-serif;
