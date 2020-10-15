@@ -152,35 +152,35 @@ h2 {
 	border-radius: 10px;
 	box-shadow: 0 0 5px 1px rgb(255, 255, 255);
 	background-color: rgb(253, 254, 255);
-	width: 30rem;
-	height: 1.6em;
+	width: 14em;
+	height: 1.5em;
 	text-align: center;
 	color: rgb(30, 9, 49);
 	font-family: 'Roboto', sans-serif;
-	font-size: 2em;
+	font-size: 1.5em;
 }
 
 #renameOk {
-	margin-left: 2rem;
+	margin-left: 1em;
 	outline: none;
 	border-radius: 15px;
 	box-shadow: 0 0 5px 1px white;
 	background-color: rgb(30, 9, 49);
-	width: 4rem;
-	height: 3rem;
+	width: 4em;
+	height: 3em;
 	color: white;
 	font-family: 'Roboto', sans-serif;
 	font-size: 1em;
 }
 
 #renameCancel {
-	margin-left: 2rem;
+	margin-left: 1em;
 	outline: none;
 	border-radius: 15px;
 	box-shadow: 0 0 5px 1px white;
 	background-color: rgb(30, 9, 49);
-	width: 5rem;
-	height: 3rem;
+	width: 4.5em;
+	height: 3em;
 	color: white;
 	font-family: 'Roboto', sans-serif;
 	font-size: 1em;
