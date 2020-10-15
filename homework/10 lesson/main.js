@@ -5,10 +5,10 @@ const submitButton = document.getElementById("btn-submit");
 const listToDo = document.getElementById("toDo");
 const listDone = document.getElementById("done");
 const listRejected = document.getElementById("rejected");
-const templateListName = document.getElementById("template-list-name");
-const templateListItem = document.getElementById("template-list-item");
 const modalWindow = document.getElementById("modal-window");
 const modalInputWindow = document.getElementById("modal-input-window");
+const templateListName = document.getElementById("template-list-name");
+const templateListItem = document.getElementById("template-list-item");
 const templateModalWindow = document.getElementById("template-modal-window");
 const templateModalInput = document.getElementById("template-modal-input");
 
@@ -98,10 +98,13 @@ function moveToRejected(event) {
     .replace("{{reject-restore}}", "btn-restore")
     .replace("{{btn-text}}", "Restore")
     .replace('<input type="checkbox" class="checkbox">', "");
-
   event.target.remove();
+
   if (listToDo.querySelector(".to-do") === null) {
     listToDo.innerHTML = "";
+  }
+  if (listDone.querySelector(".done") === null) {
+    listDone.innerHTML = "";
   }
 }
 
@@ -163,4 +166,5 @@ listRejected.addEventListener("click", (e) => {
   restoreTask(e);
 });
 listToDo.addEventListener("contextmenu", customContextMenu);
+listDone.addEventListener("contextmenu", customContextMenu);
 document.addEventListener("contextmenu", (e) => e.preventDefault());
