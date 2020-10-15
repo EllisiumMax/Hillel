@@ -1,31 +1,72 @@
+body {
+	margin: 0;
+	background-image: linear-gradient(to top, #ffffff, #f8f7fb, #f0f0f7, #e9e8f4, #e1e1f0);
+	height: 100vh;
+	font-family: 'Roboto', sans-serif;
+}
+
 .input-container {
-	text-align: center;
 	margin-top: 4rem;
 	width: 100%;
+	text-align: center;
 }
 
 #input-field {
-	width: 25%;
-	font-size: 1em;
+	outline: none;
+	border-width: 4px;
+	border-radius: 7px;
+	border-color: rgb(100, 32, 163);
+	background-color: whitesmoke;
+	width: 25em;
+	text-align: center;
+	color: rgb(5, 5, 4);
+	font-family: 'Roboto', sans-serif;
+	font-size: 1.1em;
 }
 
 #btn-submit {
-	width: 5%;
-	font-size: 1em;
+	margin-left: 0;
+	outline: none;
+	border-width: 3px;
+	border-radius: 7px;
+	border-color: rgb(100, 32, 163);
+	background-color: rgb(100, 32, 163);
+	width: 2.5em;
+	color: white;
+	font-family: 'Roboto', sans-serif;
+	font-size: 1.18em;
+}
 
+ul {
+	text-align: center;
+	font-size: 1.2em;
 }
 
 li {
+	display: block;
+	margin: 1em 1em;
 	list-style: none;
-	margin-bottom: 1em;
 }
 
 input[type="checkbox"] {
-	margin-right: 0.8em;
+	margin-right: 0.9em;
+	cursor: pointer;
 }
 
+
 h2 {
-	margin-top: 2em;
+	margin-top: 3em;
+	margin-bottom: -0.1em;
+	color: rgb(71, 23, 116);
+}
+
+.list-divider {
+	background-color: blueviolet;
+	width: 25%;
+	min-width: 16em;
+	height: 1px;
+	color: white;
+	margin-bottom: 1em;
 }
 
 .btn-delete {
@@ -33,7 +74,13 @@ h2 {
 }
 
 .btn-restore {
-	margin-left: 2em;
+	margin-left: 1em;
+	outline: none;
+	border-radius: 5px;
+	border-color: rgb(100, 32, 163);
+	background-color: rgb(100, 32, 163);
+	color: white;
+	font-family: 'Roboto', sans-serif;
 }
 
 .rejected {
@@ -44,74 +91,83 @@ h2 {
 	position: absolute;
 	top: 0;
 	left: 0;
-	width: 8em;
-	background-color: white;
-	border: 1px solid black;
-	list-style: none;
 	margin: 0;
-	padding: 0;
-	text-align: center;
 	margin-top: 0.5em;
+	border: 1px solid black;
 	border-radius: 6px;
-	
+	background-color: white;
+	padding: 0;
+	width: 8em;
+	list-style: none;
+	text-align: center;
 }
 
-
-
 .modalWindow hr {
-	padding: 0;
 	margin: 0;
+	padding: 0;
 }
 
 .modalWindow a {
-	padding: 0.5em 1em;
-	cursor: pointer;
 	display: block;
-
+	cursor: pointer;
+	padding: 0.5em 1em;
 }
 
 .modalWindow a:hover {
-	font-weight: 900;
+	font-weight: 600;
+	text-shadow: 0 0 2px rgb(219, 167, 240);
 }
-
 
 .modalWindow-input {
-	position: fixed;
 	display: inline-flex;
-	flex-direction: row;
-	justify-content: center;
-	align-items: center;
-	align-content: center;
+	position: fixed;
 	top: 0;
-	left: 0;
 	right: 0;
 	bottom: 0;
-	background-color: rgb(7, 15, 7);
+	left: 0;
+	flex-direction: row;
+	align-content: center;
+	align-items: center;
+	justify-content: center;
 	opacity: 0.9;
-
+	background-color: rgb(7, 15, 7);
 }
 
-#renameInput{
-	height: 2em;
-	width: 35rem;
-	font-size: 2.5em;
+#renameInput {
+	outline: none;
 	border-radius: 10px;
-	background-color: rgb(62, 67, 71);
-	color: white;
+	box-shadow: 0 0 5px 1px rgb(255, 255, 255);
+	background-color: rgb(253, 254, 255);
+	width: 30rem;
+	height: 1.6em;
 	text-align: center;
-}
-#renameOk{
-	height: 5.5rem;
-	width: 5.5rem;
-	margin-left: 1rem;
-	border-radius: 10px;
-	background-color: green;
-}
-#renameCancel{
-	height: 5.5rem;
-	width: 5.5rem;
-	margin-left: 1rem;
-	border-radius: 10px;
-	background-color: yellowgreen;
+	color: rgb(30, 9, 49);
+	font-family: 'Roboto', sans-serif;
+	font-size: 2em;
 }
 
+#renameOk {
+	margin-left: 2rem;
+	outline: none;
+	border-radius: 15px;
+	box-shadow: 0 0 5px 1px white;
+	background-color: rgb(30, 9, 49);
+	width: 4rem;
+	height: 3rem;
+	color: white;
+	font-family: 'Roboto', sans-serif;
+	font-size: 1em;
+}
+
+#renameCancel {
+	margin-left: 2rem;
+	outline: none;
+	border-radius: 15px;
+	box-shadow: 0 0 5px 1px white;
+	background-color: rgb(30, 9, 49);
+	width: 5rem;
+	height: 3rem;
+	color: white;
+	font-family: 'Roboto', sans-serif;
+	font-size: 1em;
+}

@@ -19,7 +19,7 @@ function addToDo() {
     if (listToDo.querySelector(".to-do") === null) {
       listToDo.innerHTML = templateListName.innerHTML.replace(
         "{{listName}}",
-        "To Do"
+        "To Do tasks list"
       );
     }
     listToDo.innerHTML += templateListItem.innerHTML
@@ -36,7 +36,7 @@ function moveToDone(event) {
   if (listDone.querySelector(".done") === null) {
     listDone.innerHTML = templateListName.innerHTML.replace(
       "{{listName}}",
-      "Done"
+      "Done tasks list"
     );
   }
 
@@ -58,7 +58,7 @@ function restoreTask(event) {
   if (listToDo.querySelector(".to-do") === null) {
     listToDo.innerHTML = templateListName.innerHTML.replace(
       "{{listName}}",
-      "To Do"
+      "To Do tasks list"
     );
   }
   listToDo.innerHTML += templateListItem.innerHTML
@@ -76,7 +76,7 @@ function restoreTask(event) {
       event.target.nextSibling.textContent
     );
   }
-  if (event.target.tagName == "BUTTON") event.target.previousSibling.remove();
+  if (event.target.tagName == "BUTTON") event.target.parentNode.remove();
   if (event.target.tagName == "INPUT") event.target.parentElement.remove();
   event.target.remove();
   if (listDone.querySelector(".done") === null) listDone.innerHTML = "";
@@ -88,7 +88,7 @@ function moveToRejected(event) {
   if (listRejected.querySelector(".rejected") === null) {
     listRejected.innerHTML = templateListName.innerHTML.replace(
       "{{listName}}",
-      "Rejected"
+      "Rejected tasks list"
     );
   }
 
@@ -120,7 +120,6 @@ function renameTask(event) {
     modalInputWindow.innerHTML = "";
   };
   btnCancel.onclick = () => (modalInputWindow.innerHTML = "");
-  
 }
 
 function customContextMenu(e) {
