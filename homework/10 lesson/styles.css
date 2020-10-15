@@ -152,12 +152,11 @@ h2 {
 	border-radius: 10px;
 	box-shadow: 0 0 5px 1px rgb(255, 255, 255);
 	background-color: rgb(253, 254, 255);
-	width: 14em;
 	height: 1.5em;
 	text-align: center;
 	color: rgb(30, 9, 49);
 	font-family: 'Roboto', sans-serif;
-	font-size: 1.5em;
+	font-size: 1.4em;
 }
 
 #renameOk {
@@ -170,7 +169,7 @@ h2 {
 	height: 3em;
 	color: white;
 	font-family: 'Roboto', sans-serif;
-	font-size: 1em;
+	font-size: 0.8em;
 }
 
 #renameCancel {
@@ -183,5 +182,5 @@ h2 {
 	height: 3em;
 	color: white;
 	font-family: 'Roboto', sans-serif;
-	font-size: 1em;
+	font-size: 0.8em;
 }
