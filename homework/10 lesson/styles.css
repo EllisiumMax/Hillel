@@ -1,6 +1,7 @@
 :root {
 	font-size: calc(0.8em + 0.3vw);
 	user-select: none;
+	
 }
 
 body {
@@ -8,6 +9,7 @@ body {
 	background-image: linear-gradient(to top, #ffffff, #f8f7fb, #f0f0f7, #e9e8f4, #e1e1f0);
 	height: 100vh;
 	font-family: 'Roboto', sans-serif;
+	padding: 0;
 }
 
 .input-container {
@@ -45,11 +47,13 @@ body {
 ul {
 	text-align: center;
 	font-size: 1.2em;
+	margin: 0;
+	padding: 0;
 }
 
 li {
 	display: block;
-	margin: 1em 1em;
+	margin: 1em 1em 1em 0;
 	list-style: none;
 }
 
@@ -62,6 +66,7 @@ input[type="checkbox"] {
 h2 {
 	margin-top: 3em;
 	margin-bottom: -0.1em;
+	margin-left: 0;
 	color: rgb(71, 23, 116);
 }
 
