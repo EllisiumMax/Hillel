@@ -14,14 +14,15 @@
     <h1 id="header">&ThickSpace; &ThickSpace; Comments</h1>
     <div id="user_comments"></div>
     <form action="" id="input_area">
-        <label>Name</label>
+        <label>Name:</label>
         <input type="text" id="input_name" autocomplete="off" value="Enter your name..">
-        <br>
-        <br>
         <label>Comment:</label>
-        <textarea name="comment" id="input_comment" cols="70" rows="2" maxlength="300">Leave a comment..</textarea>
-        <button id="submit">Submit</button>
+        <input name="comment" id="input_comment" cols="70" maxlength="300" autocomplete="off" value="Leave a comment.."></input>
+        <button class="submit" type="button">Submit</button>
     </form>
+    <script type="text/template" id="template_comment">
+        <div class="comment"><p class="user_name">{{name}}</p><p class="user_comment">{{comment}}</p><p class="date">{{date}}</p><button>Edit</button><button>Delete</button></div>
+    </script>
 </body>
 
 </html>
