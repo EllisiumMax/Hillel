@@ -1,71 +1,93 @@
 :root {
+	background-color: rgb(77, 77, 77);
+	color: white;
+	font-family: 'Roboto', sans-serif;
 	font-size: calc(0.8em + 0.3vw);
 	user-select: none;
-	font-family: 'Roboto', sans-serif;
-	background-color: aliceblue;
+}
+
+body {
+	margin: 0;
+	padding: 0;
+	
+}
+
+#header {
+	position: fixed;
+	z-index: 2;
+	margin: 0;
+	background-color: gray;
+	width: 100%;
+	color: white;
+	font-size: 1.3em;
+	text-align: center;
 }
 
 .comment {
-	border: 1px solid brown;
-	width: auto;
-	max-width: 70%;
 	margin: 1em;
 }
 
 #user_comments {
-	position: absolute;
-	width: 65%;
 	display: flex;
+	position: absolute;
+	top: 2em;
+	right: 0;
+	left: 0;
 	flex-direction: column;
 	flex-wrap: wrap;
-	top: 2em;
-	left: 0;
-	margin-left: 2em;
-}
-
-#user_comments p {
+	margin: auto;
 	width: 90%;
 }
 
+#user_comments:last-child {
+	padding-bottom: 20em;
+}
+
+#user_comments p {}
+
 #user_comments button {
-	width: 80px;
-	margin: 1em;
 	position: relative;
+	margin: 1em;
+	width: 80px;
 }
 
 #input_comment {
+	border: none;
+	background-color: gray;
+	width: 90%;
+	overflow: hidden;
+	color: white;
+	caret-color: white;
 	resize: none;
+	outline: none;
 }
 
-
 #input_area {
-	position: fixed;
-	width: 30%;
-	top: 2em;
 	display: flex;
+	position: fixed;
+	bottom: 0;
 	flex-direction: column;
-	right: 1.5em;
-	border: 1px solid black;
+	background-color: gray;
 	padding: 1em;
-	background-color: antiquewhite;
+	width: 100%;
 
 }
 
 #input_name {
+	outline: none;
+	border: none;
+	background-color: gray;
 	width: 60%;
-}
-
-#input_comment {
-
+	color: white;
+	caret-color: white;
 }
 
 label {
 	margin-left: 0;
-
+	color: white;
 }
 
 #submit {
 	margin: auto;
 	width: 70px;
 }
-

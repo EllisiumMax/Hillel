@@ -11,14 +11,15 @@
 </head>
 
 <body>
+    <h1 id="header">&ThickSpace; &ThickSpace; Comments</h1>
     <div id="user_comments"></div>
     <form action="" id="input_area">
         <label>Name</label>
-        <input type="text" id="input_name">
+        <input type="text" id="input_name" autocomplete="off" value="Enter your name..">
+        <br>
         <br>
         <label>Comment:</label>
-        <textarea name="comment" id="input_comment" cols="70" rows="6"></textarea>
-            <br>
+        <textarea name="comment" id="input_comment" cols="70" rows="2" maxlength="300">Leave a comment..</textarea>
         <button id="submit">Submit</button>
     </form>
 </body>
