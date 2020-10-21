@@ -2,12 +2,14 @@
 	background-color: rgb(77, 77, 77);
 	font-size: calc(0.8em + 0.4vw);
 }
+
 body {
 	margin: 0;
 	color: rgb(212, 212, 212);
 	font-family: 'Roboto', sans-serif;
 	font-size: 0.8em;
 }
+
 #header {
 	position: fixed;
 	z-index: 2;
@@ -16,6 +18,7 @@ body {
 	width: 100%;
 	font-size: 1.3em;
 }
+
 #user_comments {
 	display: flex;
 	position: absolute;
@@ -26,6 +29,7 @@ body {
 	width: calc(35em + 8vw);
 	text-align: center;
 }
+
 .comment {
 	display: flex;
 	flex-direction: column;
@@ -35,19 +39,21 @@ body {
 	box-shadow: 0 0 3px 0px rgb(245, 255, 108);
 	padding: 0.4em;
 }
-#user_comments > div > button {
+
+#user_comments>div>button {
 	align-self: flex-end;
-	margin-top: 0.5em;
+	margin-top: 0.3em;
 	border: 1px solid rgb(195, 202, 89);
 	background-color: rgb(77, 77, 77);
 	color: rgb(171, 179, 72);
 }
 
-#user_comments > div > button:hover {
-	border-color:  rgb(255, 243, 72);
-	color: rgb(255, 226, 61);
+#user_comments>div>button:hover {
+	border-color: rgb(255, 243, 72);
 	box-shadow: 0 0 5px 0 rgb(255, 187, 187);
+	color: rgb(255, 226, 61);
 }
+
 #input_area {
 	display: flex;
 	position: fixed;
@@ -57,6 +63,7 @@ body {
 	padding: 0.2em 0;
 	width: 100%;
 }
+
 #input_name {
 	flex-basis: 10%;
 	outline: none;
@@ -67,8 +74,9 @@ body {
 	font-size: 0.9em;
 	caret-color: white;
 }
+
 #input_comment {
-	flex-basis: 73%;
+	flex-basis: 71%;
 	outline: none;
 	border: none;
 	background-color: gray;
@@ -80,6 +88,7 @@ body {
 	font-size: 0.9em;
 	caret-color: white;
 }
+
 label {
 	margin: 1em;
 	letter-spacing: 0.5px;
@@ -87,6 +96,7 @@ label {
 	font-family: 'Roboto', sans-serif;
 	font-weight: 400;
 }
+
 button {
 	margin-left: 2em;
 	outline: none;
@@ -96,21 +106,97 @@ button {
 	color: rgb(255, 238, 0);
 	font-weight: 100;
 }
+
 .user_name {
 	margin-left: 1em;
 	text-align: left;
-	color: rgb(74, 148, 158);
-	font-size: 0.85em;
+	color: rgb(84, 167, 179);
+	font-size: 0.95em;
+	font-weight: 900;
 }
+
 .user_comment {
 	padding: 1em;
 	text-align: left;
-	color: rgb(183, 190, 76);
+	color: rgb(205, 214, 82);
 	font-size: 0.9em;
+	font-weight: 400;
 }
+
 .date {
 	margin-left: 1em;
+	margin-bottom: 0;
 	text-align: left;
 	color: rgb(128, 123, 123);
 	font-size: 0.75em;
+}
+
+.modal-wrapper {
+	display: none;
+	position: fixed;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	z-index: 3;
+	background-color: rgba(77, 104, 102, 0.918);
+}
+
+.modal-window {
+	display: flex;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	flex-direction: column;
+	align-content: center;
+	align-items: center;
+	justify-content: center;
+	transform: translate(-50%, -50%);
+	border: 1px solid transparent;
+	border-radius: 5px;
+	background-color: rgb(59, 59, 59);
+	box-shadow: 0 0 3px 0px rgb(245, 255, 108);
+	width: 25em;
+	text-align: center;
+}
+
+.modal-name {
+	outline: none;
+	border: none;
+	background-color: gray;
+	cursor: default;
+	width: 90%;
+	height: 2em;
+	text-align: center;
+	color: rgb(238, 255, 0);
+	font-family: 'Roboto', sans-serif;
+}
+
+.modal-comment {
+	outline: none;
+	border: none;
+	background-color: gray;
+	cursor: default;
+	width: 90%;
+	height: 12em;
+	overflow: hidden;
+	resize: none;
+	color: rgb(238, 255, 0);
+	font-family: 'Roboto', sans-serif;
+}
+
+.modal-ok {
+	margin: 1em auto 0;
+}
+
+.modal-cancel {
+	margin: 0.5em auto;
+}
+
+.edited {
+	color: rgb(165, 170, 167);
+	letter-spacing: 5px;
+	text-align: left;
+	margin-left: 1.1em;
+	font-size: 0.55rem;
 }

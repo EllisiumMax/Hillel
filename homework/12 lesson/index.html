@@ -17,11 +17,28 @@
         <label>Name:</label>
         <input type="text" id="input_name" autocomplete="off" value="Enter your name..">
         <label>Comment:</label>
-        <input name="comment" id="input_comment" cols="70" maxlength="300" autocomplete="off" value="Leave a comment.."></input>
+        <input name="comment" id="input_comment" cols="70" maxlength="300" autocomplete="off"
+            value="Leave a comment.."></input>
         <button class="submit" type="button">Submit</button>
     </form>
+    <div class="modal-wrapper">
+        <div class="modal-window">
+            <label>Name</label>
+            <input type="text" class="modal-name">
+            <label>Comment</label>
+            <textarea class="modal-comment"></textarea>
+            <button class="modal-ok">Ok</button>
+            <button class="modal-cancel">Cancel</button>
+        </div>
+    </div>
     <script type="text/template" id="template_comment">
-        <div class="comment"><p class="user_name">{{name}}</p><p class="user_comment">{{comment}}</p><p class="date">{{date}}</p><button>Edit</button><button>Delete</button></div>
+        <div class="comment">
+            <p class="user_name">{{name}}</p>
+            <p class="user_comment">{{comment}}</p>
+            <p class="date">{{date}}</p>
+            <button class="btn-edit">Edit</button>
+            <button class="btn-delete">Delete</button>
+        </div>
     </script>
 </body>
 
