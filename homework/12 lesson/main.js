@@ -6,6 +6,14 @@ const USER_NAME = document.querySelector("#input_name");
 const USER_COMMENT = document.querySelector("#input_comment");
 const TEMPLATE_COMMENT = document.querySelector("#template_comment");
 const MODAL_WINDOW = document.querySelector(".modal-wrapper");
+const data = {
+  comments: "",
+};
+
+function saveData () {
+  data.comments = COMMENTS_AREA.innerHTML;
+  localStorage.setItem("comments", data.comments);
+}
 
 function getDate() {
   const currentDate = new Date();
@@ -30,10 +38,12 @@ function insertComment() {
     .replace("{{date}}", getDate());
 
   COMMENTS_AREA.lastElementChild.scrollIntoView({ behavior: "smooth" });
+  saveData();
 }
 
 function deleteComment(e) {
   e.target.parentElement.remove();
+  saveData();
 }
 
 function editComment(e) {
@@ -58,13 +68,16 @@ function editComment(e) {
       userComment.innerText = inputComment.value;
       dateCreated.textContent = getDate();
       MODAL_WINDOW.style.display = "none";
+      saveData();
       if (e.target.parentElement.querySelector(".edited")) return;
       else {
         edited.innerText = "EDITED";
         e.target.before(edited);
+        saveData();
       }
     }
   };
+  
 }
 
 document.addEventListener("click", (e) => {
@@ -91,3 +104,10 @@ document.addEventListener("focusin", (e) => {
   if (e.target.tagName !== "INPUT") return;
   e.target.value = "";
 });
+
+function restoreData() {
+  let data = localStorage.getItem("comments");
+  COMMENTS_AREA.innerHTML = data;
+}
+
+window.onload = restoreData;
