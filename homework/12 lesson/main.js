@@ -6,6 +6,8 @@ const USER_NAME = document.querySelector("#input_name");
 const USER_COMMENT = document.querySelector("#input_comment");
 const TEMPLATE_COMMENT = document.querySelector("#template_comment");
 const MODAL_WINDOW = document.querySelector(".modal-wrapper");
+const MODAL_NAME = document.querySelector(".modal-name");
+const MODAL_COMMENT = document.querySelector(".modal-comment");
 let commentsData = {
   counter: 0,
 };
@@ -30,23 +32,24 @@ function getDate() {
 }
 
 function insertComment() {
-  if (!USER_NAME.value.trim() || !USER_COMMENT.value.trim()) return;
-  commentsData.counter += 1;
-  COMMENTS_AREA.innerHTML += TEMPLATE_COMMENT.innerHTML
-    .replace("{{name}}", USER_NAME.value)
-    .replace("{{comment}}", USER_COMMENT.value)
-    .replace("{{date}}", getDate())
-    .replace("{{index}}", "comment_0" + commentsData.counter);
+  if (validateName(event)) {
+    commentsData.counter += 1;
+    COMMENTS_AREA.innerHTML += TEMPLATE_COMMENT.innerHTML
+      .replace("{{name}}", USER_NAME.value)
+      .replace("{{comment}}", USER_COMMENT.value)
+      .replace("{{date}}", getDate())
+      .replace("{{index}}", "comment_0" + commentsData.counter);
 
-  COMMENTS_AREA.lastElementChild.scrollIntoView({ behavior: "smooth" });
-  commentsData["comment_0" +   commentsData.counter] = {
-    name: USER_NAME.value,
-    comment: USER_COMMENT.value,
-    date: getDate(),
-    edited: false,
-    index: "comment_0" + commentsData.counter,
-  };
-  saveData();
+    COMMENTS_AREA.lastElementChild.scrollIntoView({ behavior: "smooth" });
+    commentsData["comment_0" + commentsData.counter] = {
+      name: USER_NAME.value,
+      comment: USER_COMMENT.value,
+      date: getDate(),
+      edited: false,
+      index: "comment_0" + commentsData.counter,
+    };
+    saveData();
+  }
 }
 
 function deleteComment(e) {
@@ -76,22 +79,24 @@ function editComment(e) {
       userName.innerText !== inputName.value ||
       userComment.innerText !== inputComment.value
     ) {
-      userName.innerText = inputName.value;
-      userComment.innerText = inputComment.value;
-      dateCreated.textContent = getDate();
-      MODAL_WINDOW.style.display = "none";
-      commentsData[commentID].name = inputName.value;
-      commentsData[commentID].comment = inputComment.value;
-      commentsData[commentID].date = getDate();
-      commentsData[commentID].edited = true;
-      saveData();
-      if (e.target.parentElement.querySelector(".edited")) return;
-      else {
-        edited.innerText = "EDITED";
-        e.target.before(edited);
+      if (validateName()) {
+        userName.innerText = inputName.value;
+        userComment.innerText = inputComment.value;
+        dateCreated.textContent = getDate();
+        MODAL_WINDOW.style.display = "none";
+        commentsData[commentID].name = inputName.value;
+        commentsData[commentID].comment = inputComment.value;
+        commentsData[commentID].date = getDate();
+        commentsData[commentID].edited = true;
+        saveData();
+        if (e.target.parentElement.querySelector(".edited")) return;
+        else {
+          edited.innerText = "EDITED";
+          e.target.before(edited);
+        }
       }
+      saveData();
     }
-    saveData();
   };
 }
 
@@ -130,7 +135,7 @@ document.addEventListener("focusin", (e) => {
 
 function restoreLocalStorageData() {
   if (localStorage.getItem("comments")) {
-  commentsData = JSON.parse(localStorage.getItem("comments"));
+    commentsData = JSON.parse(localStorage.getItem("comments"));
   }
 }
 
@@ -146,7 +151,7 @@ function buildFromObj() {
         let date = object[key].date;
         let edited = object[key].edited;
         let index = object[key].index;
-       
+
         commentsData.counter += 1;
         COMMENTS_AREA.innerHTML += TEMPLATE_COMMENT.innerHTML
           .replace("{{name}}", name)
@@ -166,6 +171,38 @@ function buildFromObj() {
       }
     }
   }
+}
+
+function validateName(event) {
+  let name;
+  let comment;
+  let modal = MODAL_WINDOW.style.display;
+
+  if (modal == "block") {
+    name = MODAL_NAME.value.trim();
+    comment = MODAL_COMMENT.value.trim();
+  }
+  if (modal != "block") {
+    name = USER_NAME.value.trim();
+    comment = USER_COMMENT.value.trim();
+  }
+
+  if (!name) {
+    alert("Input name");
+    return;
+  } else if (name.length < 3) {
+    alert("Name length must be at least 3 symbols");
+    return;
+  } else if (name.length > 50) {
+    alert("Name length must be less than 50 symbols");
+    return;
+  } else if (!comment) {
+    alert("Input comment");
+  } else if (comment.length < 2) {
+    alert("Comment should have at least 2 symbols");
+  } else if (comment.length > 300) {
+    alert("Comment maximum length must be less than 300 symbols");
+  } else return true;
 }
 
 window.onload = buildFromObj(restoreLocalStorageData());
