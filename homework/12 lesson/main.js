@@ -32,7 +32,7 @@ function getDate() {
 }
 
 function insertComment() {
-  if (validateName(event)) {
+  if (validateInput()) {
     commentsData.counter += 1;
     COMMENTS_AREA.innerHTML += TEMPLATE_COMMENT.innerHTML
       .replace("{{name}}", USER_NAME.value)
@@ -79,7 +79,7 @@ function editComment(e) {
       userName.innerText !== inputName.value ||
       userComment.innerText !== inputComment.value
     ) {
-      if (validateName()) {
+      if (validateInput()) {
         userName.innerText = inputName.value;
         userComment.innerText = inputComment.value;
         dateCreated.textContent = getDate();
@@ -173,7 +173,7 @@ function buildFromObj() {
   }
 }
 
-function validateName(event) {
+function validateInpute() {
   let name;
   let comment;
   let modal = MODAL_WINDOW.style.display;
