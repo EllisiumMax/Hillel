@@ -6,13 +6,13 @@ const USER_NAME = document.querySelector("#input_name");
 const USER_COMMENT = document.querySelector("#input_comment");
 const TEMPLATE_COMMENT = document.querySelector("#template_comment");
 const MODAL_WINDOW = document.querySelector(".modal-wrapper");
-const data = {
-  comments: "",
+let commentsData = {
+  counter: 0,
 };
 
-function saveData () {
-  data.comments = COMMENTS_AREA.innerHTML;
-  localStorage.setItem("comments", data.comments);
+function saveData() {
+  let jsonObj = JSON.stringify(commentsData);
+  localStorage.setItem("comments", jsonObj);
 }
 
 function getDate() {
@@ -31,18 +31,28 @@ function getDate() {
 
 function insertComment() {
   if (!USER_NAME.value.trim() || !USER_COMMENT.value.trim()) return;
-
+  commentsData.counter += 1;
   COMMENTS_AREA.innerHTML += TEMPLATE_COMMENT.innerHTML
     .replace("{{name}}", USER_NAME.value)
     .replace("{{comment}}", USER_COMMENT.value)
-    .replace("{{date}}", getDate());
+    .replace("{{date}}", getDate())
+    .replace("{{index}}", "comment_0" + commentsData.counter);
 
   COMMENTS_AREA.lastElementChild.scrollIntoView({ behavior: "smooth" });
+  commentsData["comment_0" +   commentsData.counter] = {
+    name: USER_NAME.value,
+    comment: USER_COMMENT.value,
+    date: getDate(),
+    edited: false,
+    index: "comment_0" + commentsData.counter,
+  };
   saveData();
 }
 
 function deleteComment(e) {
+  const commentID = e.target.parentElement.dataset.index;
   e.target.parentElement.remove();
+  delete commentsData[commentID];
   saveData();
 }
 
@@ -50,6 +60,8 @@ function editComment(e) {
   let userName = e.target.parentElement.children[0];
   let userComment = e.target.parentElement.children[1];
   let dateCreated = e.target.parentElement.children[2];
+  const commentID = e.target.parentElement.dataset.index;
+  console.log(commentID);
   const okBtn = document.querySelector(".modal-ok");
   const inputName = document.querySelector(".modal-name");
   const inputComment = document.querySelector(".modal-comment");
@@ -68,16 +80,19 @@ function editComment(e) {
       userComment.innerText = inputComment.value;
       dateCreated.textContent = getDate();
       MODAL_WINDOW.style.display = "none";
+      commentsData[commentID].name = inputName.value;
+      commentsData[commentID].comment = inputComment.value;
+      commentsData[commentID].date = getDate();
+      commentsData[commentID].edited = true;
       saveData();
       if (e.target.parentElement.querySelector(".edited")) return;
       else {
         edited.innerText = "EDITED";
         e.target.before(edited);
-        saveData();
       }
     }
+    saveData();
   };
-  
 }
 
 document.addEventListener("click", (e) => {
@@ -101,7 +116,11 @@ document.addEventListener("click", (e) => {
 });
 
 document.addEventListener("keydown", (e) => {
-  if (e.code == "Enter" && (MODAL_WINDOW.style.display == "" || MODAL_WINDOW.style.display == "none")) insertComment();
+  if (
+    e.code == "Enter" &&
+    (MODAL_WINDOW.style.display == "" || MODAL_WINDOW.style.display == "none")
+  )
+    insertComment();
 });
 
 document.addEventListener("focusin", (e) => {
@@ -109,9 +128,44 @@ document.addEventListener("focusin", (e) => {
   e.target.value = "";
 });
 
-function restoreData() {
-  let data = localStorage.getItem("comments");
-  COMMENTS_AREA.innerHTML = data;
+function restoreLocalStorageData() {
+  if (localStorage.getItem("comments")) {
+  commentsData = JSON.parse(localStorage.getItem("comments"));
+  }
 }
 
-window.onload = restoreData;
+function buildFromObj() {
+  if (!localStorage.getItem("comments")) return;
+  getValues(commentsData);
+
+  function getValues(object) {
+    for (let key in object) {
+      if (typeof object[key] === "object") {
+        let name = object[key].name;
+        let comment = object[key].comment;
+        let date = object[key].date;
+        let edited = object[key].edited;
+        let index = object[key].index;
+       
+        commentsData.counter += 1;
+        COMMENTS_AREA.innerHTML += TEMPLATE_COMMENT.innerHTML
+          .replace("{{name}}", name)
+          .replace("{{comment}}", comment)
+          .replace("{{date}}", date)
+          .replace("{{index}}", index);
+
+        if (edited) {
+          const comment = document.querySelector(`[data-index="${index}"]`);
+          const edited = document.createElement("p");
+          edited.className = "edited";
+          edited.innerText = "EDITED";
+          comment.children[2].after(edited);
+        }
+
+        getValues(object[key]);
+      }
+    }
+  }
+}
+
+window.onload = buildFromObj(restoreLocalStorageData());
