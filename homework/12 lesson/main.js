@@ -173,7 +173,7 @@ function buildFromObj() {
   }
 }
 
-function validateInpute() {
+function validateInput() {
   let name;
   let comment;
   let modal = MODAL_WINDOW.style.display;
