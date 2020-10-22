@@ -100,6 +100,10 @@ document.addEventListener("click", (e) => {
   }
 });
 
+document.addEventListener("keydown", (e) => {
+  if (e.code == "Enter" && (MODAL_WINDOW.style.display == "" || MODAL_WINDOW.style.display == "none")) insertComment();
+});
+
 document.addEventListener("focusin", (e) => {
   if (e.target.tagName !== "INPUT") return;
   e.target.value = "";
