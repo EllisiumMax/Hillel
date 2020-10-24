@@ -1,208 +1,70 @@
 "use strict";
 
-const SUBMIT = document.querySelector(".submit");
-const COMMENTS_AREA = document.querySelector("#user_comments");
-const USER_NAME = document.querySelector("#input_name");
-const USER_COMMENT = document.querySelector("#input_comment");
-const TEMPLATE_COMMENT = document.querySelector("#template_comment");
-const MODAL_WINDOW = document.querySelector(".modal-wrapper");
-const MODAL_NAME = document.querySelector(".modal-name");
-const MODAL_COMMENT = document.querySelector(".modal-comment");
+// 1. при нажатии кнпоки сабмит или энтер получить значение инпутов DONE
+// 2. создать элемент комментария, добавить значение ипнутов и кнопки удалить и изменить, добавить датау используя момент джс DONE
+// 3. реализовать работу кнопоки удалить DONE
+// 4. реализовать появление модального окна для кнопки редактировать DONE
+// 5. реализовать работу модального окна
+// 6. реализовать валидацию всех полей
+// 7. сохранить базу комментариев в обьект и в локал сторадж через JSON
+// 8. реализовать построение комментариев из локал сторадж через JSON
+
+
 let commentsData = {
   counter: 0,
 };
 
-function saveData() {
-  let jsonObj = JSON.stringify(commentsData);
-  localStorage.setItem("comments", jsonObj);
-}
-
-function getDate() {
-  const currentDate = new Date();
-  const dateOptions = {
-    year: "numeric",
-    month: "numeric",
-    day: "numeric",
-    hour: "numeric",
-    minute: "numeric",
-    second: "numeric",
-  };
-  const timeStamp = currentDate.toLocaleString("ru", dateOptions);
-  return timeStamp;
+function clearInput(e) {
+  if ($(e.target).prop("tagName") == "INPUT") $(e.target).val("");
 }
 
 function insertComment() {
-  if (validateInput()) {
-    commentsData.counter += 1;
-    COMMENTS_AREA.innerHTML += TEMPLATE_COMMENT.innerHTML
-      .replace("{{name}}", USER_NAME.value)
-      .replace("{{comment}}", USER_COMMENT.value)
-      .replace("{{date}}", getDate())
-      .replace("{{index}}", "comment_0" + commentsData.counter);
-
-    COMMENTS_AREA.lastElementChild.scrollIntoView({ behavior: "smooth" });
-    commentsData["comment_0" + commentsData.counter] = {
-      name: USER_NAME.value,
-      comment: USER_COMMENT.value,
-      date: getDate(),
-      edited: false,
-      index: "comment_0" + commentsData.counter,
-    };
-    saveData();
+  let $name;
+  let $comment;
+  let $oldHtml = $("#user_comments").html();
+  if ($(".modal-wrapper").css("display", "none")) {
+    $name = $("#input_name").val();
+    $comment = $("#input_comment").val();
+  } else {
+    $name = $(".modal-name").val();
+    $comment = $(".modal-comment").val();
   }
+  let $template = $("#template_comment").html();
+  ++commentsData.counter;
+  let $newComment = $template
+    .replace("{{name}}", $name)
+    .replace("{{comment}}", $comment)
+    .replace("{{date}}", moment().format("D/MM/YYYY, HH:mm:ss"))
+    .replace("{{index}}", "comment_0" + commentsData.counter);
+  $("#user_comments").html($oldHtml + $newComment);
+  $("#user_comments")[0].lastElementChild.scrollIntoView({ behavior: "smooth" });
 }
 
 function deleteComment(e) {
-  const commentID = e.target.parentElement.dataset.index;
-  e.target.parentElement.remove();
-  delete commentsData[commentID];
-  saveData();
+  if ($(e.target).hasClass("btn-delete")) {
+      let $comment = $(e.target).parent();
+    $comment.slideUp(300);
+    setTimeout((e) => $comment.remove(), 300);
+  }
 }
 
 function editComment(e) {
-  let userName = e.target.parentElement.children[0];
-  let userComment = e.target.parentElement.children[1];
-  let dateCreated = e.target.parentElement.children[2];
-  const commentID = e.target.parentElement.dataset.index;
-  console.log(commentID);
-  const okBtn = document.querySelector(".modal-ok");
-  const inputName = document.querySelector(".modal-name");
-  const inputComment = document.querySelector(".modal-comment");
-  const edited = document.createElement("p");
-  edited.className = "edited";
-
-  inputName.value = userName.innerText;
-  inputComment.value = userComment.innerText;
-  MODAL_WINDOW.style.display = "block";
-  okBtn.onclick = () => {
-    if (
-      userName.innerText !== inputName.value ||
-      userComment.innerText !== inputComment.value
-    ) {
-      if (validateInput()) {
-        userName.innerText = inputName.value;
-        userComment.innerText = inputComment.value;
-        dateCreated.textContent = getDate();
-        MODAL_WINDOW.style.display = "none";
-        commentsData[commentID].name = inputName.value;
-        commentsData[commentID].comment = inputComment.value;
-        commentsData[commentID].date = getDate();
-        commentsData[commentID].edited = true;
-        saveData();
-        if (e.target.parentElement.querySelector(".edited")) return;
-        else {
-          edited.innerText = "EDITED";
-          e.target.before(edited);
-        }
-      }
-      saveData();
-    }
-  };
+    if ($(e.target).hasClass("btn-edit")) {
+        $(".modal-wrapper").slideDown(200);
+       
+}
 }
 
-document.addEventListener("click", (e) => {
-  const tar = e.target.className;
-  switch (tar) {
-    case "submit":
+$(".submit").on("click", insertComment);
+$("#input_area").on("keydown", (e) => {
+  switch (e.which) {
+    case 13:
       insertComment();
       break;
-    case "btn-delete":
-      deleteComment(e);
+    case 27:
+      clearInput(e);
       break;
-    case "btn-edit":
-      editComment(e);
-      break;
-    case "modal-cancel":
-      MODAL_WINDOW.style.display = "none";
-      return;
-    default:
-      return;
   }
 });
-
-document.addEventListener("keydown", (e) => {
-  if (
-    e.code == "Enter" &&
-    (MODAL_WINDOW.style.display == "" || MODAL_WINDOW.style.display == "none")
-  )
-    insertComment();
-});
-
-document.addEventListener("focusin", (e) => {
-  if (e.target.tagName !== "INPUT") return;
-  e.target.value = "";
-});
-
-function restoreLocalStorageData() {
-  if (localStorage.getItem("comments")) {
-    commentsData = JSON.parse(localStorage.getItem("comments"));
-  }
-}
-
-function buildFromObj() {
-  if (!localStorage.getItem("comments")) return;
-  getValues(commentsData);
-
-  function getValues(object) {
-    for (let key in object) {
-      if (typeof object[key] === "object") {
-        let name = object[key].name;
-        let comment = object[key].comment;
-        let date = object[key].date;
-        let edited = object[key].edited;
-        let index = object[key].index;
-
-        commentsData.counter += 1;
-        COMMENTS_AREA.innerHTML += TEMPLATE_COMMENT.innerHTML
-          .replace("{{name}}", name)
-          .replace("{{comment}}", comment)
-          .replace("{{date}}", date)
-          .replace("{{index}}", index);
-
-        if (edited) {
-          const comment = document.querySelector(`[data-index="${index}"]`);
-          const edited = document.createElement("p");
-          edited.className = "edited";
-          edited.innerText = "EDITED";
-          comment.children[2].after(edited);
-        }
-
-        getValues(object[key]);
-      }
-    }
-  }
-}
-
-function validateInput() {
-  let name;
-  let comment;
-  let modal = MODAL_WINDOW.style.display;
-
-  if (modal == "block") {
-    name = MODAL_NAME.value.trim();
-    comment = MODAL_COMMENT.value.trim();
-  }
-  if (modal != "block") {
-    name = USER_NAME.value.trim();
-    comment = USER_COMMENT.value.trim();
-  }
-
-  if (!name) {
-    alert("Input name");
-    return;
-  } else if (name.length < 3) {
-    alert("Name length must be at least 3 symbols");
-    return;
-  } else if (name.length > 50) {
-    alert("Name length must be less than 50 symbols");
-    return;
-  } else if (!comment) {
-    alert("Input comment");
-  } else if (comment.length < 2) {
-    alert("Comment should have at least 2 symbols");
-  } else if (comment.length > 300) {
-    alert("Comment maximum length must be less than 300 symbols");
-  } else return true;
-}
-
-window.onload = buildFromObj(restoreLocalStorageData());
+$("#user_comments").on("click", deleteComment).on("click", editComment);
+$(".modal-cancel").on("click", () => $(".modal-wrapper").slideUp(200));
