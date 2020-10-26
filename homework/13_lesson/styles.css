@@ -16,6 +16,18 @@ body {
     margin-left: 1em;
 }
 
+#bullet {
+    position: fixed;
+    width: 1em;
+    top: 1.3em;
+    left: -100em;
+    height: 7px;
+    background-color: black;
+    border: none;
+    z-index: 2;
+    box-shadow: 0 0 20px 10px rgb(0, 255, 42);
+}
+
 #header {
     position: fixed;
     display: inline-flex;
@@ -26,9 +38,9 @@ body {
     width: 100%;
     font-size: 1.3em;
     color: rgb(255, 255, 255);
-	text-shadow: 0 0 4px black;
-	font-weight: 600;
-	letter-spacing: 2px;
+    text-shadow: 0 0 4px black;
+    font-weight: 600;
+    letter-spacing: 2px;
 }
 
 #user_comments {
@@ -167,7 +179,7 @@ button {
     border: 1px solid transparent;
     border-radius: 5px;
     background-color: rgb(59, 59, 59);
-    box-shadow: 0 0 3px 0px rgb(245, 255, 108);
+    box-shadow: 0 0 25px 2px rgba(0, 114, 66, 0.452);
     width: 25em;
     text-align: center;
 }
@@ -222,4 +234,20 @@ button {
 
 .hidden {
     display: none;
+}
+
+.modal-error {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    display: none;
+    transform: translate(-50%, -50%);
+    background-color: rgb(141, 0, 0);
+    padding: 2em 4em;
+    border: 1px solid rgb(196, 0, 0);
+    color: white;
+    text-shadow: 0 0 2px white;
+    z-index: 999;
+    border-radius: 6px;
+    box-shadow: 0 0 15px 0 rgb(255, 22, 22);
 }
