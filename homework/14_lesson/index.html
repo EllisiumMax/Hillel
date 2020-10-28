@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;400;500;700;900&display=swap" rel="stylesheet">
+    <script defer src="node_modules/jquery/dist/jquery.min.js"></script>
+    <script defer src="node_modules/moment/moment.js"></script>
+    <script defer src="main.js"></script>
+    <title>Comments based on jQuery</title>
+</head>
+
+<body>
+    <hr id="bullet">   
+    <h1 id="header">&ThickSpace; &ThickSpace; Comments based on <img class="jquery-logo" src="https://cdn.worldvectorlogo.com/logos/jquery-1.svg" alt=""></h1>
+    
+    <div id="user_comments"></div>
+    <form action="" id="input_area">
+        <label>Name:</label>
+        <input type="text" id="input_name" maxlength="51" autocomplete="off" value="Enter your name..">
+        <label>Comment:</label>
+        <input name="comment" id="input_comment" cols="70" maxlength="301" autocomplete="off"
+            value="Leave a comment.."></input>
+        <button class="submit" type="button">Submit</button>
+    </form>
+    <div class="modal-wrapper">
+        <div class="modal-window">
+            <label>Name</label>
+            <input type="text" class="modal-name">
+            <label>Comment</label>
+            <textarea class="modal-comment"></textarea>
+            <button class="modal-ok">Ok</button>
+            <button class="modal-cancel">Cancel</button>
+        </div>
+    </div>
+    <div class="modal-error"></div>
+    <script type="text/template" id="template_comment">
+        <div class="comment" data-index={{index}}>
+            <p class="user_name">{{name}}</p>
+            <p class="user_comment">{{comment}}</p>
+            <p class="date">{{date}}</p>
+            <p class="hidden">EDITED</p>
+            <button class="btn-edit">Edit</button>
+            <button class="btn-delete">Delete</button>
+        </div>
+    </script>
+</body>
+
+</html>
