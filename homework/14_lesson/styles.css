@@ -63,6 +63,9 @@ body {
     box-shadow: 0 0 3px 0px rgb(245, 255, 108);
     padding: 0.4em;
 }
+#user_comments > div:last-child {
+    margin-bottom: 6em;
+}
 
 #user_comments>div>button {
     align-self: flex-end;
@@ -79,38 +82,95 @@ body {
 }
 
 #input_area {
-    display: flex;
+    display: grid;
+    grid-template-areas: 
+    ". . ."
+    "label-name name name"
+    "label-comment text-btns ."
+    "comment comment submit"
+    ". . .";
+    grid-template-columns: 5% 90% 5%;
+    grid-template-rows: 8% 23% 21% 45% 3%;
+    align-items: center;
     position: fixed;
     bottom: 0;
-    flex-direction: row;
     background-color: gray;
-    padding: 0.2em 0;
     width: 100%;
+    height: 8em;
+}
+
+.lbl-name {
+    grid-area: label-name;
+    margin: 0;
+    margin-left: 2em;
+    padding: 0;
 }
 
 #input_name {
-    flex-basis: 10%;
+    grid-area: name;
     outline: none;
-    border: none;
+    border: 1px solid rgb(172, 169, 169);
+    border-radius: 5px;
+    width: 30%;
+    height: 80%;
     background-color: gray;
     cursor: default;
     color: rgb(245, 255, 108);
     font-size: 0.9em;
     caret-color: white;
+    padding: 0;
+    text-indent: 15px;
 }
 
+.lbl-comment {
+    grid-area: label-comment;
+    margin: 0;
+    margin-left: 1em;
+    align-self: end;
+}
+
+.input-btns-wrapper {
+    display: flex;
+    grid-area: text-btns;
+    align-self: end;
+    justify-content: center;
+
+}
+
+.btn-text {
+    margin-right: 2em;
+    padding: 0 0.6em;
+    border-radius: 10em;
+    width: auto;
+    font-size: 0.9em;
+    height: 1.6em;
+    background-color: rgb(61, 61, 61);
+    color: rgb(255, 255, 255);
+    font-family: 'Roboto', sans-serif;
+}
+
+
 #input_comment {
-    flex-basis: 71%;
+    grid-area: comment;
     outline: none;
-    border: none;
+    border: 1px solid rgb(172, 169, 169);
+    border-radius: 5px;
     background-color: gray;
     cursor: default;
     overflow: hidden;
-    resize: none;
-    vertical-align: middle;
     color: rgb(245, 255, 108);
     font-size: 0.9em;
     caret-color: white;
+    height: 80%;
+    margin-left: 0.4em;
+    text-indent: 15px;
+}
+
+.submit {
+    grid-area: submit;
+    width: auto;
+    margin: auto;
+    padding: 1em;
 }
 
 label {
@@ -240,6 +300,8 @@ button {
     position: fixed;
     top: 50%;
     left: 50%;
+    max-width: 20%;
+    line-height: 1.5em;
     display: none;
     transform: translate(-50%, -50%);
     background-color: rgb(141, 0, 0);
@@ -251,3 +313,4 @@ button {
     border-radius: 6px;
     box-shadow: 0 0 15px 0 rgb(255, 22, 22);
 }
+

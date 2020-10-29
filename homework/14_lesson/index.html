@@ -13,16 +13,21 @@
 </head>
 
 <body>
-    <hr id="bullet">   
+    <hr id="bullet">
     <h1 id="header">&ThickSpace; &ThickSpace; Comments based on <img class="jquery-logo" src="https://cdn.worldvectorlogo.com/logos/jquery-1.svg" alt=""></h1>
-    
+
     <div id="user_comments"></div>
+    
     <form action="" id="input_area">
-        <label>Name:</label>
-        <input type="text" id="input_name" maxlength="51" autocomplete="off" value="Enter your name..">
-        <label>Comment:</label>
-        <input name="comment" id="input_comment" cols="70" maxlength="301" autocomplete="off"
-            value="Leave a comment.."></input>
+        <label class="lbl-name">Name:</label>
+        <input type="text" id="input_name" maxlength="51" autocomplete="off" tabindex="1" value="Enter your name..">
+        <label class="lbl-comment">Comment</label>
+        <div class="input-btns-wrapper">
+            <button type="button" class="btn-text bold"><strong>Bold</strong></button>
+            <button type="button" class="btn-text strike"><s>Striketrough</s></button>
+            <button type="button" class="btn-text italic"><i>Italic</i></button>
+        </div>
+        <input name="comment" id="input_comment" cols="70" maxlength="301" tabindex="2" autocomplete="off" value="Leave a comment.."></input>
         <button class="submit" type="button">Submit</button>
     </form>
     <div class="modal-wrapper">
@@ -30,6 +35,12 @@
             <label>Name</label>
             <input type="text" class="modal-name">
             <label>Comment</label>
+            <div>
+            <button type="button" class="btn-text bold"><strong>Bold</strong></button>
+            <button type="button" class="btn-text strike"><s>Striketrough</s></button>
+            <button type="button" class="btn-text italic"><i>Italic</i></button>
+            <hr>
+        </div>
             <textarea class="modal-comment"></textarea>
             <button class="modal-ok">Ok</button>
             <button class="modal-cancel">Cancel</button>
