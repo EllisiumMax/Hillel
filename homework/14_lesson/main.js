@@ -258,12 +258,14 @@ function build() {
 $("#input_comment, .modal-comment").on('select', (e) => {
     const selectedText = window.getSelection().toString();
     let comment;
-    if ($(".modal-wrapper").attr("display") == "none") {
+    const $modal = $(".modal-wrapper").css("display");
+    if ($modal == "none") {
         comment = $("#input_comment");
     } else comment = $(".modal-comment");
 
-    if (selectedText && selectedText !== "") {
+    if (selectedText !== "") {
         $(".bold").off().on("click", () => {
+            console.log($modal);
             let editedText = comment.val().replace(
                 selectedText, `**${selectedText}**`);
             comment.val(editedText);
