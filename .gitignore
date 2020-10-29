@@ -1,5 +1,4 @@
 **/node_modules
 .eslintrc.json
 .jsbeautifyrc
-package.json
 package-lock.json

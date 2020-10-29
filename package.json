@@ -1,0 +1,23 @@
+{
+  "name": "hillel",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/EllisiumMax/Hillel.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/EllisiumMax/Hillel/issues"
+  },
+  "homepage": "https://github.com/EllisiumMax/Hillel#readme",
+  "devDependencies": {
+    "eslint": "^7.12.0",
+    "eslint-config-google": "^0.14.0"
+  }
+}
