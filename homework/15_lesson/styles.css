@@ -1,0 +1,83 @@
+@font-face {
+    font-family: "Digital-7";
+    src: url("fonts/digital-7.ttf");
+}
+
+
+:root {
+    font-size: calc(0.3em + 0.5vw);
+}
+
+body {
+    background-color: rgb(4, 6, 17);
+    font-family: "Digital-7";
+}
+
+.clock-body {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border: 3px solid rgb(46, 46, 46);
+    background-color: rgb(24, 24, 24);
+    width: 75%;
+    height: 17em;
+    border-radius: 1em;
+    box-shadow: 0 0 5px 0px rgb(8, 206, 255), inset 0px 0px 15px rgb(0, 0, 0);
+    
+
+}
+
+.clock-screen {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    top: 50%;
+    left: 50%;
+    transform: translate(0%, 2.5%);
+    width: 98%;
+    height: 95%;
+    background-image: linear-gradient(to right bottom, #000000, #080205, #0c050d, #0d0914, #090e1a);
+    margin: auto;
+    border-radius: 0.5em;
+    overflow: hidden;
+    box-shadow: inset 0px 0px 15px rgba(64, 160, 216, 0.932);
+}
+
+.time {
+    display: block;
+    position: relative;
+    color: rgb(8, 206, 255);
+    font-size: 10em;
+    padding: 0;
+    margin: 0;
+    text-align: center;
+    text-shadow: 0 0 10px rgb(0, 140, 255);
+    width: 80%;
+    }
+
+body>div.clock-body>div>p:nth-child(2) {
+    width: auto;
+}
+
+body>div.clock-body>div>p:nth-child(4) {
+    width: auto;
+}
+
+#clock-additional {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    color:rgb(8, 206, 255);
+    font-size: 1.4em;
+    border-left: 1px solid rgb(47, 95, 139);
+    padding: 1em;
+     width: 80%;
+}
+
+#clock-additional > p {
+    padding: 0.6em;
+    margin: 0;
+}
+
