@@ -14,45 +14,45 @@ function clock() {
     const year = document.getElementById("year");
     const timeZone = document.getElementById("time-zone");
     
-    hours0.innerText = currentTime.hours().toString().slice(0, 1);
-    hours1.innerText = currentTime.hours().toString().slice(-1);
-    minutes0.innerText = currentTime.minutes().toString().slice(0, 1);
-    minutes1.innerText = currentTime.minutes().toString().slice(-1);
-    seconds0.innerText = currentTime.seconds().toString().slice(0, 1);
-    seconds1.innerText = currentTime.seconds().toString().slice(-1);
+    hours0.innerText = currentTime.format("HH").slice(0, 1);
+    hours1.innerText = currentTime.format("HH").slice(-1);
+    minutes0.innerText = currentTime.format("mm").slice(0, 1);
+    minutes1.innerText = currentTime.format("mm").slice(-1);
+    seconds0.innerText = currentTime.format("ss").slice(0, 1);
+    seconds1.innerText = currentTime.format("ss").slice(-1);
     day.innerText = currentTime.format("dddd");
     dayMonth.innerText = currentTime.format("DD MMMM");
     year.innerText = currentTime.format("YYYY");
     timeZone.innerText = Intl.DateTimeFormat().resolvedOptions().timeZone;
 
     setTimeout(function clockWork() {
-        if (+seconds1.innerText <= 10) {
-            seconds1.innerText++;
+        if (+seconds1.innerText <= 9) {
+            ++seconds1.innerText;
             animate(seconds1);
         }
-        if (+seconds1.innerText >= 10) {
+        if (+seconds1.innerText > 9) {
             seconds1.innerText = 0;
-            seconds0.innerText++;
+            ++seconds0.innerText;
             animate(seconds0);
         }
         if (+seconds0.innerText >= 6) {
             seconds0.innerText = 0;
-            minutes1.innerText++;
+            ++minutes1.innerText;
             animate(minutes1);
         }
-        if (+minutes1.innerText >= 10) {
+        if (+minutes1.innerText > 9) {
             minutes1.innerText = 0;
-            minutes0.innerText++;
+            ++minutes0.innerText;
             animate(minutes0);
         }
         if (+minutes0.innerText >= 6) {
             minutes0.innerText = 0;
-            hours1.innerText++;
+            ++hours1.innerText;
             animate(hours1);
         }
-        if (+hours1.innerText >= 10) {
+        if (+hours1.innerText > 9) {
             hours1.innerText = 0;
-            hours0.innerText++;
+            ++hours0.innerText;
             animate(hours0);
         }
         if (+hours0.innerText == 2 && +hours1.innerText >= 4) {
@@ -85,4 +85,4 @@ function animate(element) {
     });
 }
 
-clock();
+clock(); 
