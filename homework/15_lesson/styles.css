@@ -20,17 +20,24 @@ body {
     transform: translate(-50%, -50%);
     border: 3px solid rgb(46, 46, 46);
     background-color: rgb(24, 24, 24);
-    width: 85%;
+    width: 55%;
     height: 17em;
     border-radius: 1em;
     box-shadow: 0 0 5px 0px rgb(8, 206, 255), inset 0px 0px 15px rgb(0, 0, 0);
 }
 
-@media (min-width: 850px) {
+@media (min-width: 300px) {
     .clock-body {
-        width: 57%;
+        width: 85%;
     }
 }
+
+@media (min-width: 600px) {
+    .clock-body {
+        width: 77%;
+    }
+}
+
 
 
 

@@ -1,0 +1,175 @@
+@font-face {
+    font-family: "STARWARS";
+    src: url("fonts/Starjedi.ttf");
+    font-family: "Turret-road";
+    src: url("fonts/TurretRoad-Regular.ttf");
+
+}
+
+:root {
+    font-size: calc(0.3em + 0.5vw);
+    overflow-x: hidden;
+}
+/* width */
+::-webkit-scrollbar {
+    width: 3px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px rgb(6, 9, 51);
+  }
+  
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: rgb(255, 0, 242);
+    border-radius: 4px;
+    box-shadow: 0 0 22px 1px rgb(255, 138, 255);
+
+  }
+  
+
+body {
+    background-image: url(img/Star-Wars-Background.jpg);
+    margin: 0;
+    padding: 0;
+    font-family: "Turret-road";
+    font-size: 1.6em;
+}
+
+
+
+.grid-container {
+    display: grid;
+    grid-template-areas:
+        "header phrase phrase"
+        "cat-list cat-name elem-info";
+    grid-template-columns: 15% 35% 48.7%;
+    grid-template-rows: 10vh 87vh;
+    grid-gap: 8px;
+    margin-top: 6px;
+}
+
+.area {
+    width: 100%;
+    height: 100%;
+    border-radius: 5px;
+    margin: 0.1em;
+    background-color: rgba(16, 12, 32, 0.87);
+    color: rgb(188, 199, 33);
+    border: 1px solid rgb(65, 63, 63);
+    box-shadow: inset 0 0 9px 3px rgba(68, 2, 153, 0.322);
+
+}
+
+.header {
+    grid-area: header;
+    font-size: 0.7em;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo {
+    width: 7em;
+
+}
+
+.logo-label {
+    margin-top: 0.2em;
+    margin-bottom: 0;
+}
+
+
+.phrase {
+    grid-area: phrase;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.quote {
+    font-size: 1em;
+}
+
+.author {
+    font-size: 0.65em;
+    font-style: italic;
+    align-self: flex-end;
+    width: 38%;
+}
+
+.cat-list {
+    grid-area: cat-list;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.nav-btn {
+    display: block;
+    text-decoration: none;
+    text-align: center;
+    border: 1px solid yellow;
+    border-radius: 5px;
+    margin: 1em 0;
+    font-size: 1.3em;
+    font-variant: small-caps;
+    width: 4.5em;
+    padding: 0.4em 0;
+    color: yellow;
+    background-color: rgba(7, 18, 29, 0.616);
+    font-family: "Turret-road";
+    cursor: pointer;
+
+}
+
+.nav-btn:hover {
+    border-color: rgb(255, 255, 255);
+    text-shadow: 0 0 15px rgb(255, 238, 0);
+    box-shadow: 0 0 5px 3px rgb(255, 238, 0);
+    color: rgb(255, 255, 255);
+}
+
+
+
+.elem-name {
+    grid-area: cat-name;
+    overflow: auto;
+
+}
+
+.elem-name.area > h2 {
+    margin-top: 0.4em;
+    margin-left: 0.4em;
+}
+
+.element {
+    margin-left: 1.2em;
+}
+
+.element:hover {
+   text-shadow: 0 0 25px rgb(255, 238, 0);
+   font-weight: 700;
+    color: rgb(255, 255, 255);
+    cursor: pointer;
+}
+
+.elem-info {
+    grid-area: elem-info;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+.elem-info.area > h2 {
+    margin-top: 0.4em;
+    margin-left: 0.4em;
+}
+
+.info {
+    margin-left: 1.2em;
+}
