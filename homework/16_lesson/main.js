@@ -138,7 +138,7 @@ elementsName.addEventListener("click", (e) => {
         let p = document.createElement("p");
         p.className = "info";
         p.innerText = key[0].toUpperCase() + key.slice(1)
-            .replace("_", " ") + ": " + targetObj[key];
+            .replace(/_/gm, " ") + ": " + targetObj[key];
         elementDescription.append(p);
     };
 });
