@@ -3,14 +3,17 @@
 const contentList = document.querySelector(".cat-list");
 const elementsName = document.querySelector(".elem-name");
 const elementDescription = document.querySelector(".elem-info");
+const loadingAnimation1 = document.querySelector("#loader1");
+let eventTargetText = "";
 let elementFullInfo = {};
-
+let elementsList = {};
 let xhr = new XMLHttpRequest();
 
 xhr.open("GET", "https://swapi.dev/api/");
 xhr.responseType = "json";
 xhr.send();
-xhr.onload = () => {
+xhr.onloadend = () => {
+    loadingAnimation1.style = "display: none";
     for(let key in xhr.response) {
         const btn = document.createElement("button");
         btn.className = "nav-btn";
@@ -20,8 +23,7 @@ xhr.onload = () => {
 };
 
 function load(url) {
-
-    let infoArray = [];
+    let loadingComplete = false;
     let xhr = new XMLHttpRequest();
     xhr.open("GET", url);
     xhr.responseType = "json";
@@ -29,16 +31,33 @@ function load(url) {
     xhr.onload = () => {
         const resObj = xhr.response.results;
         for(let key of resObj) {
-            const p = document.createElement("p");
-            p.className = "element"
-            p.innerText = key.name || key.title;
-            elementsName.append(p);
             elementFullInfo[key.name || key.title] = key;
-
+            elementsList[key.name || key.title] = "";
         }
         if(xhr.response.next !== null) load(xhr.response.next);
+        else if(xhr.response.next === null) loadingComplete = true;
+        if(loadingComplete) {
+            const loadingAnimation2 = document.querySelector("#loader2");
+            loadingAnimation2.style = "display: none";
+            buildElementsName(eventTargetText);
+        }
     }
 }
+
+function buildElementsName(headerText) {
+    const contentHead = document.createElement("h2");
+    contentHead.innerText = headerText.toUpperCase() + ":";
+    elementsName.append(contentHead);
+    for(let key in elementsList) {
+        const p = document.createElement("p");
+        p.className = "element"
+        p.innerText = key;
+        elementsName.append(p);
+    }
+    elementsList = {};
+}
+
+
 
 function deleteKeys(obj) {
     for(let key in obj) {
@@ -48,6 +67,7 @@ function deleteKeys(obj) {
                 .test(subObj[val]) || subObj[val] == "") {
                 delete obj[key][val];
             }
+            if(val == "name" || val == "title") delete obj[key][val];
         }
     }
 }
@@ -88,38 +108,30 @@ randomQuote();
 contentList.addEventListener("click", (e) => {
     if(e.target.tagName !== "BUTTON") return;
     elementDescription.innerHTML = "";
+    const loader2 = document.createElement("div");
+    loader2.id = "loader2";
+    loader2.style = "display: inline-block";
     elementsName.innerHTML = "";
+    elementsName.append(loader2);
     const btn = e.target.innerText;
-    const contentHead = document.createElement("h2");
+    eventTargetText = btn;
     switch (btn) {
     case "people":
-        contentHead.innerText = e.target.innerText.toUpperCase() + ":";
-        elementsName.append(contentHead);
         load("https://swapi.dev/api/people/");
         break;
     case "planets":
-        contentHead.innerText = e.target.innerText.toUpperCase() + ":";
-        elementsName.append(contentHead);
         load("https://swapi.dev/api/planets/");
         break;
     case "films":
-        contentHead.innerText = e.target.innerText.toUpperCase() + ":";
-        elementsName.append(contentHead);
         load("https://swapi.dev/api/films/");
         break;
     case "species":
-        contentHead.innerText = e.target.innerText.toUpperCase() + ":";
-        elementsName.append(contentHead);
         load("https://swapi.dev/api/species/");
         break;
     case "vehicles":
-        contentHead.innerText = e.target.innerText.toUpperCase() + ":";
-        elementsName.append(contentHead);
         load("https://swapi.dev/api/vehicles/");
         break;
     case "starships":
-        contentHead.innerText = e.target.innerText.toUpperCase() + ":";
-        elementsName.append(contentHead);
         load("https://swapi.dev/api/starships/");
         break;
     }
