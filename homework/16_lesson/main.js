@@ -57,8 +57,6 @@ function buildElementsName(headerText) {
     elementsList = {};
 }
 
-
-
 function deleteKeys(obj) {
     for(let key in obj) {
         let subObj = obj[key];
@@ -67,7 +65,14 @@ function deleteKeys(obj) {
                 .test(subObj[val]) || subObj[val] == "") {
                 delete obj[key][val];
             }
-            if(val == "name" || val == "title") delete obj[key][val];
+            switch (val) {
+            case "name":
+            case "title":
+            case "created":
+            case "edited":
+                delete obj[key][val];
+                break;
+            }
         }
     }
 }
@@ -107,6 +112,12 @@ randomQuote();
 
 contentList.addEventListener("click", (e) => {
     if(e.target.tagName !== "BUTTON") return;
+    if(contentList.querySelector(".selected-btn")) {
+        const selectedButton = contentList.querySelector(
+            ".selected-btn");
+        selectedButton.className = "nav-btn";
+    }
+    e.target.className = "selected-btn";
     elementDescription.innerHTML = "";
     const loader2 = document.createElement("div");
     loader2.id = "loader2";
@@ -140,6 +151,12 @@ contentList.addEventListener("click", (e) => {
 
 elementsName.addEventListener("click", (e) => {
     if(e.target.className !== "element") return;
+    if(elementsName.querySelector(".selected-text")) {
+        const selectedText = elementsName.querySelector(
+            ".selected-text");
+        selectedText.className = "element";
+    }
+    e.target.className = "selected-text";
     deleteKeys(elementFullInfo);
     const targetObj = elementFullInfo[e.target.innerText];
     const h2 = document.createElement("h2");
