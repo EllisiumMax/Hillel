@@ -1,0 +1,39 @@
+:root {
+    font-family: 'Roboto', sans-serif;
+    background-color: #d5e9ff;
+}
+
+h1 {
+    text-align: center;
+    margin-top: 2em;
+    font-size: 2.5em;
+    margin-bottom: 0.5em;
+    color: rgb(93, 163, 255);
+    text-shadow: 0 0 13px rgb(255, 255, 255);
+    font-family: 'Comfortaa', cursive;
+}
+
+.title {
+    background-image: linear-gradient(to bottom, rgb(2, 204, 255), #55a6ff, #499efe, #3c96fd, #308efb, #2286f9, #2286f9, #2286f9, #2286f9, #308efb, #3c96fd, #499efe, #55a6ff, rgb(2, 204, 255));
+    color: white;
+    border: 1px solid black;
+    border-radius: 5px;
+    font-variant: small-caps;
+    font-size: 1.4em;
+    padding-left: 0.5em;
+    text-shadow: 0 0 3px rgb(0, 0, 0);
+    width: 40vw;
+    margin: auto;
+    cursor: pointer;
+}
+
+.body {
+    display: none;
+    background-image: linear-gradient(to right bottom, #fbfbfb, #f8f9fd, #f2f9ff, #eaf9ff, #e2f9fb);
+    border: 1px solid black;
+    border-top: none;
+    padding: 0.7em;
+    box-shadow: inset 0 0 3px 0 rgb(44, 44, 44);
+    width: 39vw;
+    margin: auto;
+}

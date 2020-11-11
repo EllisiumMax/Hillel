@@ -1,0 +1,28 @@
+{
+  "name": "lesson_18",
+  "version": "0.5.0",
+  "description": "Accordion based on object prototypes and getter/setter",
+  "main": "main.js",
+  "scripts": {
+    "start": "npx babel main.js -o babel-main.js -w"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/EllisiumMax/Hillel.git"
+  },
+  "keywords": [
+    "lesson",
+    "18"
+  ],
+  "author": "Khaiuk Maksym",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/EllisiumMax/Hillel/issues"
+  },
+  "homepage": "https://github.com/EllisiumMax/Hillel#readme",
+  "devDependencies": {
+    "@babel/cli": "^7.12.1",
+    "@babel/core": "^7.12.3",
+    "@babel/preset-env": "^7.12.1"
+  }
+}
