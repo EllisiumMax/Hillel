@@ -4,7 +4,7 @@
     "description": "Brainless Chat Bot",
     "main": "code.js",
     "scripts": {
-        "start": "npx babel code.js -o babel-code.js -w"
+        "start": "npx babel original-code.js -o babel-code.js -w"
     },
     "repository": {
         "type": "git",
