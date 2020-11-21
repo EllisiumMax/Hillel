@@ -1,5 +1,6 @@
 "use strict";
 
+
 const CHAT_SCREEN = document.querySelector(".chat-screen");
 const CHAT_INPUT_AREA = document.querySelector(".input-field");
 const CHAT_SEND_BUTTON = document.querySelector(".input-button");

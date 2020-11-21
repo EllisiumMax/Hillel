@@ -1,0 +1,27 @@
+{
+    "name": "chat_bot",
+    "version": "0.5.0",
+    "description": "Brainless Chat Bot",
+    "main": "code.js",
+    "scripts": {
+        "start": "npx babel code.js -o babel-code.js -w"
+    },
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/EllisiumMax/Hillel/tree/master/homework/20_lesson"
+    },
+    "author": "Khaiuk Maksym",
+    "license": "ISC",
+    "devDependencies": {
+        "@babel/cli": "^7.12.1",
+        "@babel/core": "^7.12.3",
+        "@babel/plugin-transform-runtime": "^7.12.1",
+        "@babel/preset-env": "^7.12.1",
+        "webpack": "^5.6.0",
+        "webpack-cli": "^4.2.0"
+    },
+    "dependencies": {
+        "@babel/runtime": "^7.12.5",
+        "regenerator-runtime": "^0.13.7"
+    }
+}
