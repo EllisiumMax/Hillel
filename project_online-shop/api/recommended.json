@@ -1,0 +1,22 @@
+[
+  {
+    "id": "product1",
+    "brand": "brand 1",
+    "model": "model",
+    "price": 100,
+    "description": "description",
+    "rating": 3.1,
+    "image": "./images/category1/product1/main.png",
+    "added": "01.01.2019 10:10"
+  },
+  {
+    "id": "product12",
+    "brand": "brand 3",
+    "model": "model",
+    "price": 150,
+    "description": "description",
+    "rating": 5,
+    "image": "./images/category1/product1/main.png",
+    "added": "02.01.2019 10:10"
+  }
+]
