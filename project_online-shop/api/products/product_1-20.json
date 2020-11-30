@@ -1,49 +1,56 @@
 {
-  "id": "product_1-",
-  "brand": "brand 3",
-  "model": "model",
-  "price": 150,
-  "description": "description",
-  "rating": 5,
-  "added": "01.01.2019 10:10",
+    "id": "product_1-20",
+    "brand": "BMW",
+    "model": "5 Series",
+    "year": 2020,
+    "gearbox": "Automatic",
+    "drive": "RWD",
+    "engine_type": "Petrol",
+    "price": 71900,
+    "description": "Rear-drive sedan of class E (factory index G30). Restyling of the seventh generation of the model. The presentation of the model took place on May 27 in an online format.",
+    "rating": 4.5,
+    "added": "08.08.2020 14:05",
 
-  "available": true,
-  "images": [
-    "./images/category1/product1/1.png",
-    "./images/category1/product1/2.png",
-    "./images/category1/product1/3.png",
-    "./images/category1/product1/4.png",
-    "./images/category1/product1/5.png"
-  ],
-  "overview": "Lorem **ipsum** dolor __sit__ amet consectetur adipisicing elit. Minima quibusdam, veniam ad corporis suscipit nam eius totam impedit, quo quia soluta ea non dicta quod reiciendis rerum, unde aliquid iste?",
-  "specifications": [
-    {
-      "name": "Screen ResolutionInfo",
-      "value": "1920 x 1080 (Full HD)",
-      "hint": "Screens come in a range of resolutions (measured in pixels, horizontal x vertical). The higher the resolution, the greater the picture quality."
-    },
-    {
-      "name": "Graphics",
-      "value": "Intel UHD Graphics",
-      "hint": "Often referred to as a \"graphics processing unit\" (GPU), this device is responsible for displaying image content and decoding/encoding video content in programs and games."
-    },
-    {
-      "name": "Operating System",
-      "value": "Windows 10"
-    }
-  ],
-  "reviews": [
-    {
-      "user": "User Name",
-      "comment": "**Lorem** ipsum dolor sit amet consectetur adipisicing elit. Minima quibusdam, veniam ad corporis suscipit nam eius totam impedit, quo quia soluta ea non dicta quod reiciendis rerum, unde aliquid iste?",
-      "date": "01.01.2020 13:15",
-      "rating": "7/10"
-    },
-    {
-      "user": "User Name 2",
-      "comment": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima quibusdam, veniam ad corporis suscipit nam eius totam impedit, quo quia soluta ea non dicta quod reiciendis rerum, unde aliquid iste?",
-      "date": "01.01.2020 20:01",
-      "rating": "1/10"
-    }
-  ]
+    "available": true,
+    "images": [
+        "../images/category_1/product_1-20/1.jpg",
+        "../images/category_1/product_1-20/2.jpg",
+        "../images/category_1/product_1-20/3.jpg",
+        "../images/category_1/product_1-20/4.jpg",
+        "../images/category_1/product_1-20/5.jpg"
+    ],
+    "overview": "After the modernization, the 5 Series sedan retained its recognizability, changing in details. The now narrower head optics received L-shaped DRLs, the proprietary elements of the false radiator grille are now made in a single unit, and the front bumper (in the basic version and Luxury Line) has a smile of the air intake with vertical sections on the sides. The car's profile has not undergone changes, but the stern received lamps with a modified pattern, a redrawn bumper, as well as trapezoidal exhaust pipes already in the base. 17-inch rims are standard, as are all-diode optics. Changes in the interior of the sedan are much less than in the exterior. Of the most notable - the modernized design of the graphics of the virtual dashboard, as well as the diagonal of the multimedia touch display increased to 12.3 inches (the basic versions are equipped with a 10.25-inch one). The latter is now running a seventh generation operating system for increased responsiveness; remote software updates are also now available. Earlier, a wireless connection with a phone was only available for Apple CarPlay, after restyling, Android Auto was also connected (moreover, data from the smartphone is also displayed on the head-up display). The changed buttons on the steering wheel are less visible.",
+    "specifications": [{
+            "name": "Engine capacity(l):",
+            "value": 3.0,
+            "hint": "Engine capacity refers to the volume swept by all the pistons of an engine, within their bores, from the top to the bottom of their travel."
+        },
+        {
+            "name": "Horse power(hp):",
+            "value": 333,
+            "hint": "Horsepower (hp) is a unit of measurement of power, or the rate at which work is done, usually in reference to the output of engines or motors."
+        },
+        {
+            "name": "Torque(Nm):",
+            "value": 450,
+            "hint": "Torque is a twisting force that speaks to the engine's rotational force and measures how much of that twisting force is available when an engine exerts itself."
+        },
+        {
+            "name": "Maximum speed(km/h):",
+            "value": 250
+        }
+    ],
+    "reviews": [{
+            "user": "Sam",
+            "comment": "**Lorem** ipsum dolor sit amet consectetur adipisicing elit. Minima quibusdam, veniam ad corporis suscipit nam eius totam impedit, quo quia soluta ea non dicta quod reiciendis rerum, unde aliquid iste?",
+            "date": "01.01.2020 13:15",
+            "rating": "7/10"
+        },
+        {
+            "user": "Albert",
+            "comment": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima quibusdam, veniam ad corporis suscipit nam eius totam impedit, quo quia soluta ea non dicta quod reiciendis rerum, unde aliquid iste?",
+            "date": "01.01.2020 20:01",
+            "rating": "1/10"
+        }
+    ]
 }

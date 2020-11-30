@@ -1,49 +1,56 @@
 {
-  "id": "product_1-",
-  "brand": "brand 3",
-  "model": "model",
-  "price": 150,
-  "description": "description",
-  "rating": 5,
-  "added": "01.01.2019 10:10",
+    "id": "product_1-15",
+    "brand": "Ford",
+    "model": "Focus",
+    "year": 2018,
+    "gearbox": "Automatic",
+    "drive": "FWD",
+    "engine_type": "Petrol",
+    "price": 23765,
+    "description": "Front-wheel drive sedan class C. The fourth generation sedan made its debut in China in the spring of 2018.",
+    "rating": 3.9,
+    "added": "02.01.2019 10:10",
 
-  "available": true,
-  "images": [
-    "./images/category1/product1/1.png",
-    "./images/category1/product1/2.png",
-    "./images/category1/product1/3.png",
-    "./images/category1/product1/4.png",
-    "./images/category1/product1/5.png"
-  ],
-  "overview": "Lorem **ipsum** dolor __sit__ amet consectetur adipisicing elit. Minima quibusdam, veniam ad corporis suscipit nam eius totam impedit, quo quia soluta ea non dicta quod reiciendis rerum, unde aliquid iste?",
-  "specifications": [
-    {
-      "name": "Screen ResolutionInfo",
-      "value": "1920 x 1080 (Full HD)",
-      "hint": "Screens come in a range of resolutions (measured in pixels, horizontal x vertical). The higher the resolution, the greater the picture quality."
-    },
-    {
-      "name": "Graphics",
-      "value": "Intel UHD Graphics",
-      "hint": "Often referred to as a \"graphics processing unit\" (GPU), this device is responsible for displaying image content and decoding/encoding video content in programs and games."
-    },
-    {
-      "name": "Operating System",
-      "value": "Windows 10"
-    }
-  ],
-  "reviews": [
-    {
-      "user": "User Name",
-      "comment": "**Lorem** ipsum dolor sit amet consectetur adipisicing elit. Minima quibusdam, veniam ad corporis suscipit nam eius totam impedit, quo quia soluta ea non dicta quod reiciendis rerum, unde aliquid iste?",
-      "date": "01.01.2020 13:15",
-      "rating": "7/10"
-    },
-    {
-      "user": "User Name 2",
-      "comment": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima quibusdam, veniam ad corporis suscipit nam eius totam impedit, quo quia soluta ea non dicta quod reiciendis rerum, unde aliquid iste?",
-      "date": "01.01.2020 20:01",
-      "rating": "1/10"
-    }
-  ]
+    "available": true,
+    "images": [
+        "../images/category_1/product_1-15/1.jpg",
+        "../images/category_1/product_1-15/2.jpg",
+        "../images/category_1/product_1-15/3.jpg",
+        "../images/category_1/product_1-15/4.jpg",
+        "../images/category_1/product_1-15/5.jpg"
+    ],
+    "overview": "Ford's designers did a lot of work on the interior as well. No more bulky heaps - from now on, solid minimalism with a protruding 8-inch screen of the multimedia system (as a tribute to fashion) and neatly located buttons and twists of the air conditioning system. The new automatic washer, replacing the usual automatic transmission selector, gives the car a feeling of a certain premium. Equipped with a sedan is also not bad. Already in the base, the Focus boasts six airbags, emergency braking and lane-keeping systems, air conditioning, cruise control and automatic lights. Subsequent trim levels will include a parking assistant (very helpful for novice drivers), adaptive cruise, traffic sign recognition, LED optics, dual-zone climate control, Apple CarPlay and Android Auto support, projection and 675W B&O premium audio system, and much more.",
+    "specifications": [{
+            "name": "Engine capacity(l):",
+            "value": 1.0,
+            "hint": "Engine capacity refers to the volume swept by all the pistons of an engine, within their bores, from the top to the bottom of their travel."
+        },
+        {
+            "name": "Horse power(hp):",
+            "value": 125,
+            "hint": "Horsepower (hp) is a unit of measurement of power, or the rate at which work is done, usually in reference to the output of engines or motors."
+        },
+        {
+            "name": "Torque(Nm):",
+            "value": 170,
+            "hint": "Torque is a twisting force that speaks to the engine's rotational force and measures how much of that twisting force is available when an engine exerts itself."
+        },
+        {
+            "name": "Maximum speed(km/h):",
+            "value": 198
+        }
+    ],
+    "reviews": [{
+            "user": "Sam",
+            "comment": "**Lorem** ipsum dolor sit amet consectetur adipisicing elit. Minima quibusdam, veniam ad corporis suscipit nam eius totam impedit, quo quia soluta ea non dicta quod reiciendis rerum, unde aliquid iste?",
+            "date": "01.01.2020 13:15",
+            "rating": "7/10"
+        },
+        {
+            "user": "Albert",
+            "comment": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima quibusdam, veniam ad corporis suscipit nam eius totam impedit, quo quia soluta ea non dicta quod reiciendis rerum, unde aliquid iste?",
+            "date": "01.01.2020 20:01",
+            "rating": "1/10"
+        }
+    ]
 }

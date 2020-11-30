@@ -1,3 +1,13 @@
+:root {
+    --main-bg-color: rgb(232, 234, 236);
+    --header-color: rgb(243, 238, 248);
+    --links-color: rgb(0, 116, 136);
+    --text-color: rgb(22, 22, 22);
+    --border-color: rgb(238, 237, 238);
+    --area-color: transparent;
+
+}
+
 *,
 *:before,
 *:after {
@@ -10,9 +20,15 @@ body {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
-        Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
-    font-size: 24px;
+    font-family: 'Roboto', sans-serif;
+    font-size: 1em;
+    background-color: var(--main-bg-color);
+    color: var(--text-color);
+}
+
+a {
+    text-decoration: none;
+    color: var(--links-color);
 }
 
 header {
@@ -20,6 +36,26 @@ header {
     align-items: center;
     justify-content: space-between;
     min-height: 3rem;
+}
+
+button {
+    font-family: 'Roboto', sans-serif;
+}
+
+.area {
+    border: 1px solid var(--border-color);
+    padding: 0.5rem;
+    margin: 0.5rem;
+    border-radius: 3px;
+    background-color: var(--area-color);
+}
+
+
+header.area {
+    padding: 0;
+    margin: 0;
+    height: 5em;
+    background-color: var(--header-color);
 }
 
 header form {
@@ -31,6 +67,112 @@ header form input {
     flex: 1 1 auto;
 }
 
+div.logo.area {
+    padding: 0;
+    margin: 2em;
+    border: none;
+}
+
+div.logo.area>a {
+    padding: 0;
+    margin: 0;
+
+}
+
+.main-logo {
+    display: block;
+    height: 5em;
+    padding: 0;
+    margin: 0;
+}
+
+#btn-login {
+    font-size: 1em;
+    border-radius: 3px;
+    border: solid 0px #255e8c;
+    color: #FFFFFF;
+    background: linear-gradient(360deg, #4e1386 100%, #aa22e9 56%);
+    box-shadow: 0px 10px 14px -7px #616174;
+    cursor: pointer;
+    text-align: center;
+    user-select: none;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    outline: none;
+    margin: 1em;
+}
+
+#btn-login:hover {
+    background: linear-gradient(360deg, #b72bca 26%, #451386 100%);
+}
+
+#btn-login:active {
+    position: relative;
+    top: 1px;
+}
+
+#btn-login>span {
+    display: block;
+}
+
+.btn-login-icon {
+    padding: 0.6em 1em;
+    border-right: 1px solid rgba(255, 255, 255, 0.16);
+    box-shadow: rgba(0, 0, 0, 0.14) -1px 0px 0px inset;
+}
+
+.btn-login-icon svg {
+    vertical-align: middle;
+}
+
+.btn-login-text {
+    padding: 0.6em 1em;
+}
+
+#cart {
+    font-size: 1em;
+    border-radius: 3px;
+    border: solid 0px #255e8c;
+    color: #FFFFFF;
+    background: linear-gradient(360deg, #4e1386 100%, #aa22e9 56%);
+    box-shadow: 0px 10px 14px -7px #616174;
+    cursor: pointer;
+    text-align: center;
+    user-select: none;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    margin: 1em 3em 1em 0;
+    outline: none;
+}
+
+#cart:hover {
+    background: linear-gradient(360deg, #b72bca 26%, #451386 100%);
+}
+
+#cart:active {
+    position: relative;
+    top: 1px;
+}
+
+#cart>span {
+    display: block;
+}
+
+.cart-icon {
+    display: block;
+    margin: auto;
+    padding: 0.6em 1em;
+    border-right: 1px solid rgba(255, 255, 255, 0.16);
+    box-shadow: rgba(0, 0, 0, 0.14) -1px 0px 0px inset;
+
+}
+
+#cart-text {
+    padding: 0.6em 1em;
+}
+
 .content {
     flex: 1 1 auto;
     align-items: flex-start;
@@ -40,11 +182,6 @@ footer {
     min-height: 5rem;
 }
 
-.area {
-    border: 1px solid black;
-    padding: 0.5rem;
-    margin: 0.5rem;
-}
 
 .sales-slider {
     min-height: 5rem;
@@ -140,40 +277,11 @@ footer {
     background: rgb(230, 230, 230);
 }
 
-
-
-/* MY CSS */
-
-img {
-    display: block;
-}
-
-[class$="-slider"] {
+.products-panel {
     display: flex;
     flex-direction: column;
-    width: 90%;
-    justify-content: center;
-    align-items: center;
-    margin: 1em auto;
 }
 
-.slider-flex-container {
-    display: flex;
-}
-
-.slider-btn {
-}
-
-.slider-bullets-area {
-    display: flex;
-    flex-direction: row;
-}
-
-.slider-bullet {
-    width: 2em;
-    height: 2em;
-    border: 1px solid rgba(0, 0, 0, 0.473);
-    border-radius: 500px;
-    background-color: rgba(30, 60, 143, 0.767);
-    margin: 1em;
+.products-panel>*:nth-child(2) {
+    flex-grow: 1;
 }

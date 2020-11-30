@@ -1,49 +1,55 @@
 {
-  "id": "product_1-",
-  "brand": "brand 3",
-  "model": "model",
-  "price": 150,
-  "description": "description",
-  "rating": 5,
-  "added": "01.01.2019 10:10",
+    "id": "product_1-17",
+    "model": "S-Class",
+    "year": 2020,
+    "gearbox": "Automatic",
+    "drive": "AWD",
+    "engine_type": "Diesel",
+    "price": 112900,
+    "description": "All-wheel drive sedan class F1. The official presentation of the model took place on September 2, 2020.",
+    "rating": 4.9,
+    "added": "15.11.2019 14:53",
 
-  "available": true,
-  "images": [
-    "./images/category1/product1/1.png",
-    "./images/category1/product1/2.png",
-    "./images/category1/product1/3.png",
-    "./images/category1/product1/4.png",
-    "./images/category1/product1/5.png"
-  ],
-  "overview": "Lorem **ipsum** dolor __sit__ amet consectetur adipisicing elit. Minima quibusdam, veniam ad corporis suscipit nam eius totam impedit, quo quia soluta ea non dicta quod reiciendis rerum, unde aliquid iste?",
-  "specifications": [
-    {
-      "name": "Screen ResolutionInfo",
-      "value": "1920 x 1080 (Full HD)",
-      "hint": "Screens come in a range of resolutions (measured in pixels, horizontal x vertical). The higher the resolution, the greater the picture quality."
-    },
-    {
-      "name": "Graphics",
-      "value": "Intel UHD Graphics",
-      "hint": "Often referred to as a \"graphics processing unit\" (GPU), this device is responsible for displaying image content and decoding/encoding video content in programs and games."
-    },
-    {
-      "name": "Operating System",
-      "value": "Windows 10"
-    }
-  ],
-  "reviews": [
-    {
-      "user": "User Name",
-      "comment": "**Lorem** ipsum dolor sit amet consectetur adipisicing elit. Minima quibusdam, veniam ad corporis suscipit nam eius totam impedit, quo quia soluta ea non dicta quod reiciendis rerum, unde aliquid iste?",
-      "date": "01.01.2020 13:15",
-      "rating": "7/10"
-    },
-    {
-      "user": "User Name 2",
-      "comment": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima quibusdam, veniam ad corporis suscipit nam eius totam impedit, quo quia soluta ea non dicta quod reiciendis rerum, unde aliquid iste?",
-      "date": "01.01.2020 20:01",
-      "rating": "1/10"
-    }
-  ]
+    "available": true,
+    "images": [
+        "../images/category_1/product_1-17/1.jpg",
+        "../images/category_1/product_1-17/2.jpg",
+        "../images/category_1/product_1-17/3.jpg",
+        "../images/category_1/product_1-17/4.jpg",
+        "../images/category_1/product_1-17/5.jpg"
+    ],
+    "overview": "The cars of the previous generation of the S-class were chosen by more than 500 thousand buyers around the world. And the loyalty of Mercedes customers is high: 80% of those who bought an S-Class in Western Europe choose a car of the same brand as the next car, in the USA this figure is 70%. It is this status of the model, as well as the reputation of the most progressive Mercedes in the brand's lineup, that are the reason for the maximum implementation of technologies related to the level of user experience, safety, dynamics and environmental friendliness of the S-Class W223. Despite the pedestal of the brand's flagship, the S-Class in appearance still inherits several features from other, earlier models. In particular, some notes from the junior E-Class (design of the head optics and front bumper) are read from the front, the triangular rear optics reminds of the CLS model. On the other hand, the overall look still turned out to be isolated, and the dimensions of the S-Class will not allow it to be confused with other models of the brand.",
+    "specifications": [{
+            "name": "Engine capacity(l):",
+            "value": 3.0,
+            "hint": "Engine capacity refers to the volume swept by all the pistons of an engine, within their bores, from the top to the bottom of their travel."
+        },
+        {
+            "name": "Horse power(hp):",
+            "value": 286,
+            "hint": "Horsepower (hp) is a unit of measurement of power, or the rate at which work is done, usually in reference to the output of engines or motors."
+        },
+        {
+            "name": "Torque(Nm):",
+            "value": 600,
+            "hint": "Torque is a twisting force that speaks to the engine's rotational force and measures how much of that twisting force is available when an engine exerts itself."
+        },
+        {
+            "name": "Maximum speed(km/h):",
+            "value": 250
+        }
+    ],
+    "reviews": [{
+            "user": "Sam",
+            "comment": "**Lorem** ipsum dolor sit amet consectetur adipisicing elit. Minima quibusdam, veniam ad corporis suscipit nam eius totam impedit, quo quia soluta ea non dicta quod reiciendis rerum, unde aliquid iste?",
+            "date": "01.01.2020 13:15",
+            "rating": "7/10"
+        },
+        {
+            "user": "Albert",
+            "comment": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima quibusdam, veniam ad corporis suscipit nam eius totam impedit, quo quia soluta ea non dicta quod reiciendis rerum, unde aliquid iste?",
+            "date": "01.01.2020 20:01",
+            "rating": "1/10"
+        }
+    ]
 }

@@ -1,49 +1,56 @@
 {
-  "id": "product_1-",
-  "brand": "brand 3",
-  "model": "model",
-  "price": 150,
-  "description": "description",
-  "rating": 5,
-  "added": "01.01.2019 10:10",
+    "id": "product_1-5",
+    "brand": "Toyota",
+    "model": "Camry",
+    "year": 2018,
+    "gearbox": "Automatic",
+    "drive": "FWD",
+    "engine_type": "Petrol",
+    "price": 31459,
+    "description": "Front wheel drive sedan class D. The debut of the eighth generation of the model took place at the Detroit Auto Show in January 2017.",
+    "rating": 4.3,
+    "added": "12.04.2019 10:45",
 
-  "available": true,
-  "images": [
-    "./images/category1/product1/1.png",
-    "./images/category1/product1/2.png",
-    "./images/category1/product1/3.png",
-    "./images/category1/product1/4.png",
-    "./images/category1/product1/5.png"
-  ],
-  "overview": "Lorem **ipsum** dolor __sit__ amet consectetur adipisicing elit. Minima quibusdam, veniam ad corporis suscipit nam eius totam impedit, quo quia soluta ea non dicta quod reiciendis rerum, unde aliquid iste?",
-  "specifications": [
-    {
-      "name": "Screen ResolutionInfo",
-      "value": "1920 x 1080 (Full HD)",
-      "hint": "Screens come in a range of resolutions (measured in pixels, horizontal x vertical). The higher the resolution, the greater the picture quality."
-    },
-    {
-      "name": "Graphics",
-      "value": "Intel UHD Graphics",
-      "hint": "Often referred to as a \"graphics processing unit\" (GPU), this device is responsible for displaying image content and decoding/encoding video content in programs and games."
-    },
-    {
-      "name": "Operating System",
-      "value": "Windows 10"
-    }
-  ],
-  "reviews": [
-    {
-      "user": "User Name",
-      "comment": "**Lorem** ipsum dolor sit amet consectetur adipisicing elit. Minima quibusdam, veniam ad corporis suscipit nam eius totam impedit, quo quia soluta ea non dicta quod reiciendis rerum, unde aliquid iste?",
-      "date": "01.01.2020 13:15",
-      "rating": "7/10"
-    },
-    {
-      "user": "User Name 2",
-      "comment": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima quibusdam, veniam ad corporis suscipit nam eius totam impedit, quo quia soluta ea non dicta quod reiciendis rerum, unde aliquid iste?",
-      "date": "01.01.2020 20:01",
-      "rating": "1/10"
-    }
-  ]
+    "available": true,
+    "images": [
+        "../images/category_1/product_1-5/1.jpg",
+        "../images/category_1/product_1-5/2.jpg",
+        "../images/category_1/product_1-5/3.jpg",
+        "../images/category_1/product_1-5/4.jpg",
+        "../images/category_1/product_1-5/5.jpg"
+    ],
+    "overview": "The 2018 Toyota Camry enters its eighth generation and 35th model year with a bang. Long hailed as the “safe but boring” pick of the mid-size sedan segment, much as vanilla is to ice cream, the Toyota Camry has looked to remake itself into something a little more dynamic without losing its family-friendly appeal. As far as we can tell, it worked.",
+    "specifications": [{
+            "name": "Engine capacity(l):",
+            "value": 2.5,
+            "hint": "Engine capacity refers to the volume swept by all the pistons of an engine, within their bores, from the top to the bottom of their travel."
+        },
+        {
+            "name": "Horse power(hp):",
+            "value": 181,
+            "hint": "Horsepower (hp) is a unit of measurement of power, or the rate at which work is done, usually in reference to the output of engines or motors."
+        },
+        {
+            "name": "Torque(Nm):",
+            "value": 231,
+            "hint": "Torque is a twisting force that speaks to the engine's rotational force and measures how much of that twisting force is available when an engine exerts itself."
+        },
+        {
+            "name": "Maximum speed(km/h):",
+            "value": 210
+        }
+    ],
+    "reviews": [{
+            "user": "Sam",
+            "comment": "**Lorem** ipsum dolor sit amet consectetur adipisicing elit. Minima quibusdam, veniam ad corporis suscipit nam eius totam impedit, quo quia soluta ea non dicta quod reiciendis rerum, unde aliquid iste?",
+            "date": "01.01.2020 13:15",
+            "rating": "7/10"
+        },
+        {
+            "user": "Albert",
+            "comment": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima quibusdam, veniam ad corporis suscipit nam eius totam impedit, quo quia soluta ea non dicta quod reiciendis rerum, unde aliquid iste?",
+            "date": "01.01.2020 20:01",
+            "rating": "1/10"
+        }
+    ]
 }

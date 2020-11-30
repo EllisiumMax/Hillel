@@ -1,49 +1,55 @@
 {
-  "id": "product_1-",
-  "brand": "brand 3",
-  "model": "model",
-  "price": 150,
-  "description": "description",
-  "rating": 5,
-  "added": "01.01.2019 10:10",
-
-  "available": true,
-  "images": [
-    "./images/category1/product1/1.png",
-    "./images/category1/product1/2.png",
-    "./images/category1/product1/3.png",
-    "./images/category1/product1/4.png",
-    "./images/category1/product1/5.png"
-  ],
-  "overview": "Lorem **ipsum** dolor __sit__ amet consectetur adipisicing elit. Minima quibusdam, veniam ad corporis suscipit nam eius totam impedit, quo quia soluta ea non dicta quod reiciendis rerum, unde aliquid iste?",
-  "specifications": [
-    {
-      "name": "Screen ResolutionInfo",
-      "value": "1920 x 1080 (Full HD)",
-      "hint": "Screens come in a range of resolutions (measured in pixels, horizontal x vertical). The higher the resolution, the greater the picture quality."
-    },
-    {
-      "name": "Graphics",
-      "value": "Intel UHD Graphics",
-      "hint": "Often referred to as a \"graphics processing unit\" (GPU), this device is responsible for displaying image content and decoding/encoding video content in programs and games."
-    },
-    {
-      "name": "Operating System",
-      "value": "Windows 10"
-    }
-  ],
-  "reviews": [
-    {
-      "user": "User Name",
-      "comment": "**Lorem** ipsum dolor sit amet consectetur adipisicing elit. Minima quibusdam, veniam ad corporis suscipit nam eius totam impedit, quo quia soluta ea non dicta quod reiciendis rerum, unde aliquid iste?",
-      "date": "01.01.2020 13:15",
-      "rating": "7/10"
-    },
-    {
-      "user": "User Name 2",
-      "comment": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima quibusdam, veniam ad corporis suscipit nam eius totam impedit, quo quia soluta ea non dicta quod reiciendis rerum, unde aliquid iste?",
-      "date": "01.01.2020 20:01",
-      "rating": "1/10"
-    }
-  ]
+    "id": "product_1-13",
+    "brand": "Infiniti",
+    "model": "Q50",
+    "year": 2017,
+    "gearbox": "Automatic",
+    "drive": "AWD",
+    "engine_type": "Petrol",
+    "price": 39555,
+    "description": "Class D sedan with all-wheel drive. The premiere show of the car took place at the Geneva Motor Show in March 2017.",
+    "rating": 4.4,
+    "added": "01.05.2018 12:18",
+    "available": true,
+    "images": [
+        "../images/category_1/product_1-13/1.jpg",
+        "../images/category_1/product_1-13/2.jpg",
+        "../images/category_1/product_1-13/3.jpg",
+        "../images/category_1/product_1-13/4.jpg",
+        "../images/category_1/product_1-13/5.jpg"
+    ],
+    "overview": "In order to call the external differences of the current version of the Q50 significant from the previous one, you need to be a fan of the brand. The shape of the radiator grille and the relief of the front bumpers have slightly changed. At the back, the design of the lanterns has changed - L-shaped dimensions have appeared; the shape of the rear bumper has also changed. As for the interior decoration, here the differences also need to be looked for: these are minor changes in the design of the steering wheel (lower spoke), as well as in the design of the gearbox selector. There is also a stitching on the front panel. That's all. But it's worth adding that the Sport and Sport Tech modifications are highlighted by a distinct front end design with a more aggressive front bumper and 19-inch wheels.",
+    "specifications": [{
+            "name": "Engine capacity(l):",
+            "value": 3.0,
+            "hint": "Engine capacity refers to the volume swept by all the pistons of an engine, within their bores, from the top to the bottom of their travel."
+        },
+        {
+            "name": "Horse power(hp):",
+            "value": 300,
+            "hint": "Horsepower (hp) is a unit of measurement of power, or the rate at which work is done, usually in reference to the output of engines or motors."
+        },
+        {
+            "name": "Torque(Nm):",
+            "value": 400,
+            "hint": "Torque is a twisting force that speaks to the engine's rotational force and measures how much of that twisting force is available when an engine exerts itself."
+        },
+        {
+            "name": "Maximum speed(km/h):",
+            "value": 250
+        }
+    ],
+    "reviews": [{
+            "user": "Sam",
+            "comment": "**Lorem** ipsum dolor sit amet consectetur adipisicing elit. Minima quibusdam, veniam ad corporis suscipit nam eius totam impedit, quo quia soluta ea non dicta quod reiciendis rerum, unde aliquid iste?",
+            "date": "01.01.2020 13:15",
+            "rating": "7/10"
+        },
+        {
+            "user": "Albert",
+            "comment": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima quibusdam, veniam ad corporis suscipit nam eius totam impedit, quo quia soluta ea non dicta quod reiciendis rerum, unde aliquid iste?",
+            "date": "01.01.2020 20:01",
+            "rating": "1/10"
+        }
+    ]
 }

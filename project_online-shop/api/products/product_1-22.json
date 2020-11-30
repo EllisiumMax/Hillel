@@ -1,49 +1,56 @@
 {
-  "id": "product_1-",
-  "brand": "brand 3",
-  "model": "model",
-  "price": 150,
-  "description": "description",
-  "rating": 5,
-  "added": "01.01.2019 10:10",
+    "id": "product_1-22",
+    "brand": "Subaru",
+    "model": "WRX",
+    "year": 2017,
+    "gearbox": "Automatic",
+    "drive": "AWD",
+    "engine_type": "Petrol",
+    "price": 36750,
+    "description": "Class C super sedan. An upgraded version of the first generation of the car that has been completely decoupled from the Subaru Impresa lineup. The car made its debut at the Detroit Auto Show in January 2017.",
+    "rating": 4.0,
+    "added": "24.05.2018 11:28",
 
-  "available": true,
-  "images": [
-    "./images/category1/product1/1.png",
-    "./images/category1/product1/2.png",
-    "./images/category1/product1/3.png",
-    "./images/category1/product1/4.png",
-    "./images/category1/product1/5.png"
-  ],
-  "overview": "Lorem **ipsum** dolor __sit__ amet consectetur adipisicing elit. Minima quibusdam, veniam ad corporis suscipit nam eius totam impedit, quo quia soluta ea non dicta quod reiciendis rerum, unde aliquid iste?",
-  "specifications": [
-    {
-      "name": "Screen ResolutionInfo",
-      "value": "1920 x 1080 (Full HD)",
-      "hint": "Screens come in a range of resolutions (measured in pixels, horizontal x vertical). The higher the resolution, the greater the picture quality."
-    },
-    {
-      "name": "Graphics",
-      "value": "Intel UHD Graphics",
-      "hint": "Often referred to as a \"graphics processing unit\" (GPU), this device is responsible for displaying image content and decoding/encoding video content in programs and games."
-    },
-    {
-      "name": "Operating System",
-      "value": "Windows 10"
-    }
-  ],
-  "reviews": [
-    {
-      "user": "User Name",
-      "comment": "**Lorem** ipsum dolor sit amet consectetur adipisicing elit. Minima quibusdam, veniam ad corporis suscipit nam eius totam impedit, quo quia soluta ea non dicta quod reiciendis rerum, unde aliquid iste?",
-      "date": "01.01.2020 13:15",
-      "rating": "7/10"
-    },
-    {
-      "user": "User Name 2",
-      "comment": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima quibusdam, veniam ad corporis suscipit nam eius totam impedit, quo quia soluta ea non dicta quod reiciendis rerum, unde aliquid iste?",
-      "date": "01.01.2020 20:01",
-      "rating": "1/10"
-    }
-  ]
+    "available": true,
+    "images": [
+        "../images/category_1/product_1-22/1.jpg",
+        "../images/category_1/product_1-22/2.jpg",
+        "../images/category_1/product_1-22/3.jpg",
+        "../images/category_1/product_1-22/4.jpg",
+        "../images/category_1/product_1-22/5.jpg"
+    ],
+    "overview": "It is impossible to imagine Subaru without permanent all-wheel drive, and therefore the WRX got it what is called default. This is the well-known Symmetrical AWD system for brand fans, the principle of operation of which differs depending on the type of transmission. With a manual gearbox, thrust is distributed between the axles in a 50:50 ratio. With a variator, most of the thrust falls on the rear axle - 45:55. In all Subaru cars, the interior design has long been distinguished by practicality, comfort, and high build quality. But the key word here is long time ago. So long ago that I can't even remember whether the constellation of the Pleiades had other interiors. However, conservatives probably like this approach, and it has a right to exist.",
+    "specifications": [{
+            "name": "Engine capacity(l):",
+            "value": 2.0,
+            "hint": "Engine capacity refers to the volume swept by all the pistons of an engine, within their bores, from the top to the bottom of their travel."
+        },
+        {
+            "name": "Horse power(hp):",
+            "value": 184,
+            "hint": "Horsepower (hp) is a unit of measurement of power, or the rate at which work is done, usually in reference to the output of engines or motors."
+        },
+        {
+            "name": "Torque(Nm):",
+            "value": 300,
+            "hint": "Torque is a twisting force that speaks to the engine's rotational force and measures how much of that twisting force is available when an engine exerts itself."
+        },
+        {
+            "name": "Maximum speed(km/h):",
+            "value": 240
+        }
+    ],
+    "reviews": [{
+            "user": "Sam",
+            "comment": "**Lorem** ipsum dolor sit amet consectetur adipisicing elit. Minima quibusdam, veniam ad corporis suscipit nam eius totam impedit, quo quia soluta ea non dicta quod reiciendis rerum, unde aliquid iste?",
+            "date": "01.01.2020 13:15",
+            "rating": "7/10"
+        },
+        {
+            "user": "Albert",
+            "comment": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima quibusdam, veniam ad corporis suscipit nam eius totam impedit, quo quia soluta ea non dicta quod reiciendis rerum, unde aliquid iste?",
+            "date": "01.01.2020 20:01",
+            "rating": "1/10"
+        }
+    ]
 }

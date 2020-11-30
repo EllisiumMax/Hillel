@@ -1,49 +1,56 @@
 {
-  "id": "product_1-",
-  "brand": "brand 3",
-  "model": "model",
-  "price": 150,
-  "description": "description",
-  "rating": 5,
-  "added": "01.01.2019 10:10",
+    "id": "product_1-19",
+    "brand": "BMW",
+    "model": "3 Series",
+    "year": 2018,
+    "gearbox": "Automatic",
+    "drive": "RWD",
+    "engine_type": "Petrol",
+    "price": 49600,
+    "description": "Rear-wheel drive class D sedan with factory index G20. The premiere of the seventh generation of the model took place at the Paris Motor Show in October 2018.",
+    "rating": 4.4,
+    "added": "04.02.2019 11:15",
 
-  "available": true,
-  "images": [
-    "./images/category1/product1/1.png",
-    "./images/category1/product1/2.png",
-    "./images/category1/product1/3.png",
-    "./images/category1/product1/4.png",
-    "./images/category1/product1/5.png"
-  ],
-  "overview": "Lorem **ipsum** dolor __sit__ amet consectetur adipisicing elit. Minima quibusdam, veniam ad corporis suscipit nam eius totam impedit, quo quia soluta ea non dicta quod reiciendis rerum, unde aliquid iste?",
-  "specifications": [
-    {
-      "name": "Screen ResolutionInfo",
-      "value": "1920 x 1080 (Full HD)",
-      "hint": "Screens come in a range of resolutions (measured in pixels, horizontal x vertical). The higher the resolution, the greater the picture quality."
-    },
-    {
-      "name": "Graphics",
-      "value": "Intel UHD Graphics",
-      "hint": "Often referred to as a \"graphics processing unit\" (GPU), this device is responsible for displaying image content and decoding/encoding video content in programs and games."
-    },
-    {
-      "name": "Operating System",
-      "value": "Windows 10"
-    }
-  ],
-  "reviews": [
-    {
-      "user": "User Name",
-      "comment": "**Lorem** ipsum dolor sit amet consectetur adipisicing elit. Minima quibusdam, veniam ad corporis suscipit nam eius totam impedit, quo quia soluta ea non dicta quod reiciendis rerum, unde aliquid iste?",
-      "date": "01.01.2020 13:15",
-      "rating": "7/10"
-    },
-    {
-      "user": "User Name 2",
-      "comment": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima quibusdam, veniam ad corporis suscipit nam eius totam impedit, quo quia soluta ea non dicta quod reiciendis rerum, unde aliquid iste?",
-      "date": "01.01.2020 20:01",
-      "rating": "1/10"
-    }
-  ]
+    "available": true,
+    "images": [
+        "../images/category_1/product_1-19/1.jpg",
+        "../images/category_1/product_1-19/2.jpg",
+        "../images/category_1/product_1-19/3.jpg",
+        "../images/category_1/product_1-19/4.jpg",
+        "../images/category_1/product_1-19/5.jpg"
+    ],
+    "overview": "With the change of generation, the third series with the proprietary index G20, the first of the entire line, received a voice assistant. To revive him, just say “Ok” or “Hey, BMW” (you can call him whatever you like), after which he will immediately offer you his help. Moreover, in addition to simple commands, such as climate control or music control, the assistant is able to give you a full instruction on how this or that function works and also teach you how to use them. And to make your friend even smarter, you don't even have to go to the service for constant updates. The software is updated as on a smartphone online. The exterior of the car was completely redrawn. The desire of designers to get away from those angular lines of its predecessor and to fit the sedan into the general style of the latest models of the brand is immediately evident. From certain angles, the 3 series even resembles the 8-Series and the Z4 roadster. In this case, the model has grown decently. It is 76 mm longer (4709) longer than the F30, 16 mm wider, and now has a wheelbase of 2851 - even more than the previous fifth-series models. And thanks to the transition to the proprietary CLAR platform, the weight of the car has decreased by 55 kg. Of course, this was achieved thanks to the introduction of aluminum components into the body structure. At the same time, the stiffness increased by at least a quarter.",
+    "specifications": [{
+            "name": "Engine capacity(l):",
+            "value": 2.0,
+            "hint": "Engine capacity refers to the volume swept by all the pistons of an engine, within their bores, from the top to the bottom of their travel."
+        },
+        {
+            "name": "Horse power(hp):",
+            "value": 184,
+            "hint": "Horsepower (hp) is a unit of measurement of power, or the rate at which work is done, usually in reference to the output of engines or motors."
+        },
+        {
+            "name": "Torque(Nm):",
+            "value": 300,
+            "hint": "Torque is a twisting force that speaks to the engine's rotational force and measures how much of that twisting force is available when an engine exerts itself."
+        },
+        {
+            "name": "Maximum speed(km/h):",
+            "value": 235
+        }
+    ],
+    "reviews": [{
+            "user": "Sam",
+            "comment": "**Lorem** ipsum dolor sit amet consectetur adipisicing elit. Minima quibusdam, veniam ad corporis suscipit nam eius totam impedit, quo quia soluta ea non dicta quod reiciendis rerum, unde aliquid iste?",
+            "date": "01.01.2020 13:15",
+            "rating": "7/10"
+        },
+        {
+            "user": "Albert",
+            "comment": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima quibusdam, veniam ad corporis suscipit nam eius totam impedit, quo quia soluta ea non dicta quod reiciendis rerum, unde aliquid iste?",
+            "date": "01.01.2020 20:01",
+            "rating": "1/10"
+        }
+    ]
 }
