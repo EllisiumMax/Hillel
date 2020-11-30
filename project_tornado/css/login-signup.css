@@ -1,0 +1,121 @@
+:root {
+    --logreg-window-background: rgb(39, 23, 61);
+    --logreg-wrapper: rgba(85, 84, 84, 0.932);
+    --logreg-border: grey;
+    --login-signup-text: white;
+    --login-signup-hover: rgb(255, 0, 255);
+    --logreg-text: white;
+    --logreg-input-border: rgb(0, 255, 255);
+    --logreg-input-background: rgb(27, 18, 44);
+    --logreg-button-text: white;
+    --logreg-button-background-1: #4e1386;
+    --logreg-button-background-2: #aa22e9;
+}
+
+/* Login */
+
+.window-wrapper {
+    display: flex;
+    position: absolute;
+    background-color: var(--logreg-wrapper);
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+.login-area {
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    border: 1px solid var(--logreg-border);
+    background-color: var(--logreg-window-background);
+    height: 19em;
+    width: 20em;
+    padding: 2em;
+    border-radius: 3px;
+}
+
+
+
+.login-area>a {
+    margin-top: 3em;
+    color: var(--login-signup-text);
+    text-align: center;
+    cursor: pointer;
+    user-select: none;
+}
+
+.login-area>a:hover {
+    color: var(--login-signup-hover);
+}
+
+.signup-area {
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    border: 1px solid var(--logreg-border);
+    background-color: var(--logreg-window-background);
+    height: 21em;
+    width: 20em;
+    padding: 2em;
+    border-radius: 3px;
+}
+
+.lr-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.lr-form>h3 {
+    color: var(--logreg-text);
+    margin: 0;
+    font-weight: 350;
+    font-size: 1em;
+    padding-bottom: 0.5em;
+
+}
+
+.lr-form>input {
+    margin: 0.5em;
+    height: 2.5em;
+    width: 18em;
+    text-align: center;
+    color: var(--logreg-text);
+    border: 1px solid var(--logreg-border);
+    border-radius: 3px;
+    background-color: var(--logreg-input-background);
+    outline: none;
+    caret-color: var(--logreg-text);
+}
+
+.lr-form>input:hover {
+    border-color: var(--login-signup-hover);
+}
+
+.lr-form>button {
+    font-size: 1.1em;
+    margin-top: 0.5em;
+    height: 2.5em;
+    width: 15rem;
+    padding: 0.3em 1.5em;
+    border-radius: 3px;
+    border: solid 0px;
+    color: var(--logreg-button-text);
+    background: linear-gradient(360deg, var(--logreg-button-background-1) 100%, var(--logreg-button-background-2) 56%);
+    cursor: pointer;
+    text-align: center;
+    user-select: none;
+    outline: none;
+
+}
+
+.lr-form>button:hover {
+    background: linear-gradient(360deg, var(--logreg-button-background-2), var(--logreg-button-background-1) 100%);
+}
+
+.lr-form>button:active {
+    position: relative;
+    top: 1px;
+}
