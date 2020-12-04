@@ -26,6 +26,22 @@ body {
     color: var(--text-color);
 }
 
+body::-webkit-scrollbar {
+    width: 0.7em;
+  }
+   
+  body::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+    background-color: rgb(207, 198, 209);
+   
+  }
+   
+  body::-webkit-scrollbar-thumb {
+    background-color: rgb(98, 91, 109);
+    outline: 2px solid rgb(255, 255, 255);
+    
+  }
+
 a {
     text-decoration: none;
     color: var(--links-color);
@@ -110,6 +126,12 @@ div.logo.area>a {
     margin-left: -1.2em;
 }
 
+.account-buttons {
+    display: flex;
+    align-items: center;
+    align-content: center;
+}
+
 #btn-login {
     font-size: 1em;
     border-radius: 3px;
@@ -124,7 +146,8 @@ div.logo.area>a {
     justify-content: center;
     align-items: center;
     outline: none;
-    margin: 1em;
+    margin: 0 4em;
+    height: 3em;
 }
 
 #btn-login:hover {
@@ -140,17 +163,16 @@ div.logo.area>a {
     display: block;
 }
 
-.btn-login-icon {
-    padding: 0.6em 1em;
+#btn-login-icon {
     border-right: 1px solid rgba(255, 255, 255, 0.16);
     box-shadow: rgba(0, 0, 0, 0.14) -1px 0px 0px inset;
+    width: 3.5em;
+    padding-left: 0.3em;
+    padding-right: 0.5em;
+
 }
 
-.btn-login-icon svg {
-    vertical-align: middle;
-}
-
-.btn-login-text {
+#btn-login-text {
     padding: 0.6em 1em;
 }
 
@@ -167,8 +189,9 @@ div.logo.area>a {
     display: inline-flex;
     justify-content: center;
     align-items: center;
-    margin: 1em 3em 1em 0;
+    margin-right: 2em;
     outline: none;
+    height: 3em;
 }
 
 #cart:hover {
@@ -184,19 +207,21 @@ div.logo.area>a {
     display: block;
 }
 
-.cart-icon {
-    display: block;
-    margin: auto;
-    padding: 0.6em 1em;
+#cart-icon {
     border-right: 1px solid rgba(255, 255, 255, 0.16);
     box-shadow: rgba(0, 0, 0, 0.14) -1px 0px 0px inset;
-
+    width: 3.5em;
+    padding-left: 0.3em;
+    padding-right: 0.5em;
 }
 
 #cart-text {
     padding: 0.6em 1em;
 }
 
+.section-name {
+    font-size: 1em;
+}
 .content {
     flex: 1 1 auto;
     align-items: flex-start;

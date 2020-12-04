@@ -10,8 +10,10 @@
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/login-signup.css">
     <link rel="stylesheet" href="css/info-window.css">
+    <link rel="stylesheet" href="css/cart.css">
     <script defer src="js/info-window.js"></script>
     <script defer src="js/login-signup.js"></script>
+    <script defer src="js/cart.js"></script>
     <script defer src="js/main.js"></script>
 </head>
 
@@ -23,23 +25,20 @@
           <img src="images/logo.svg" alt="logo" class="main-logo">
         </a>
         </div>
-        <div>
+        <div class="account-buttons">
             <button id="btn-login">
-                <span class="btn-login-icon"><svg width="1em" height="1em"  id="i_pos" viewBox="4 2 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M5 16s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H5zm5-6a3 3 0 100-6 3 3 0 000 6z" clip-rule="evenodd"/>
-        </svg></span>
-                <span class="btn-login-text">Войти</span>
+                <img id="btn-login-icon" src="images/person-square.svg">
+                <span id="btn-login-text">Войти</span>
             </button>
             <button id="cart">
-                <span class="cart-icon"><svg width="1em" height="0.80em" viewBox="0 0 16 16" class="bi bi-cart-fill" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-            <path fill-rule="evenodd" d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm7 0a1 1 0 1 0 0 2 1 1 0 0 0 0-2z"/>
-          </svg></span>
+                <img id="cart-icon" src="images/cart-fill.svg">
                 <span id="cart-text">0</span>
             </button>
         </div>
     </header>
     <div class="content area">
         <section class="area">
-            <h5>Акции</h5>
+            <h5 class="section-name">Акции</h5>
             <div class="sales-slider">
                 <div>
                     <button>
@@ -56,7 +55,7 @@
             </div>
         </section>
         <section class="area">
-            <h5>Категории</h5>
+            <h5 class="section-name">Категории</h5>
             <div class="categories">
                 <ul>
                     <li><a href="./products.html?id=1">category1</a></li>
@@ -75,7 +74,7 @@
             </div>
         </section>
         <section class="area">
-            <h5>Рекомендованные товары</h5>
+            <h5 class="section-name">Рекомендованные товары</h5>
             <div class="recommended-products">
                 <div class="product area">
                     <div class="area product-img">

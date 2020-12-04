@@ -1,0 +1,46 @@
+:root {
+    --cart-window-background: rgb(39, 23, 61);
+    --cart-wrapper: rgba(85, 84, 84, 0.932);
+    --cart-border: grey;
+    --cart-text: white;
+
+}
+
+.window-wrapper {
+    display: flex;
+    position: fixed;
+    background-color: var(--cart-wrapper);
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+#cart-window {
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    border: 1px solid var(--cart-border);
+    background-color: var(--cart-window-background);
+    color: var(--cart-text);
+    height: auto;
+    width: 20em;
+    padding: 2em;
+    border-radius: 3px;
+}
+
+#mark-close {
+    align-self: flex-end;
+    color: var(--logreg-text);
+    user-select: none;
+    cursor: pointer;    
+    margin: -1.5em -1.2em 0.5em;
+    padding: 0;
+    width: 1em;
+    transition: all 0.5s linear;
+}
+
+#mark-close:hover {
+    color: var(--login-signup-hover);
+
+}

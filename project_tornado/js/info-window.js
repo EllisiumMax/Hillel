@@ -28,6 +28,6 @@ const infoWindowUI = {
                     this.window.remove();
                 }
             }
-        }, 36);
+        }, 32);
     }
 }

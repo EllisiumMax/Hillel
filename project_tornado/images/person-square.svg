@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<svg width="16" height="16" class="bi bi-person-square" viewBox="-7.835 -9.215 33.453 29.793" xmlns="http://www.w3.org/2000/svg">
+  <g>
+    <title>background</title>
+  </g>
+  <g transform="matrix(1, 0, 0, 1, 0.366006, -3.001245)">
+    <title>Layer 1</title>
+    <path fill="#ffffff" stroke-width="0" id="svg_1" d="m14,1l-12,0a1,1 0 0 0 -1,1l0,12a1,1 0 0 0 1,1l12,0a1,1 0 0 0 1,-1l0,-12a1,1 0 0 0 -1,-1zm-12,-1a2,2 0 0 0 -2,2l0,12a2,2 0 0 0 2,2l12,0a2,2 0 0 0 2,-2l0,-12a2,2 0 0 0 -2,-2l-12,0z" fill-rule="evenodd"/>
+    <path fill="#ffffff" id="svg_2" d="m2,15l0,-1c0,-1 1,-4 6,-4s6,3 6,4l0,1l-12,0zm6,-6a3,3 0 1 0 0,-6a3,3 0 0 0 0,6z" fill-rule="evenodd"/>
+  </g>
+</svg>

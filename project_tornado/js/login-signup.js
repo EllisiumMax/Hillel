@@ -5,23 +5,24 @@ const logRegUI = {
     loginWindow: document.createElement("div"),
     authorizationLabel: document.createElement("h3"),
     loginForm: document.createElement("form"),
-    nameField: document.createElement("input"),
-    passwordField: document.createElement("input"),
-    submitBtn: document.createElement("button"),
+    logName: document.createElement("input"),
+    logPassword: document.createElement("input"),
+    logSubmitBtn: document.createElement("button"),
     registrationLink: document.createElement("a"),
     signUpWindow: document.createElement("div"),
     signUpForm: document.createElement("form"),
     signupLabel: document.createElement("h3"),
-    regNameField: document.createElement("input"),
-    regLoginField: document.createElement("input"),
-    regPasswordField: document.createElement("input"),
-    regConfirmPasswordField: document.createElement("input"),
+    regName: document.createElement("input"),
+    regLogin: document.createElement("input"),
+    regPassword: document.createElement("input"),
+    regConfirmPassword: document.createElement("input"),
     regSubmitBtn: document.createElement("button"),
     closeWindowMark: document.createElement("p"),
     nameRegExp: /^(([a-z]+\s?){1,3})$/i,
     loginRegExp: /^(?=.*[a-z])[a-z0-9]{3,12}$/i,
     passwordRegExp: /(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z])[0-9a-zA-Z!@#$%^&*]{5,20}/i,
     allFieldsValid: false,
+    loggedUserName: "",
     validateAllRegFields() {
         this.validateName();
         this.validateLogin();
@@ -34,13 +35,15 @@ const logRegUI = {
         this.wrapper.className = "window-wrapper";
         this.loginWindow.className = "login-area";
         this.loginForm.className = "lr-form";
-        this.nameField.placeholder = "Имя пользователя";
-        this.nameField.autocomplete = "username";
-        this.passwordField.placeholder = "Пароль";
-        this.submitBtn.textContent = "Войти";
+        this.logName.placeholder = "Имя пользователя";
+        this.logName.autocomplete = "username";
+        this.logName.name = "log-login";
+        this.logPassword.placeholder = "Пароль";
+        this.logPassword.name = "log-password";
+        this.logSubmitBtn.textContent = "Войти";
         this.registrationLink.textContent = "Нет записи? Нажмите сюда."
-        this.passwordField.type = "password";
-        this.passwordField.autocomplete = "current-password";
+        this.logPassword.type = "password";
+        this.logPassword.autocomplete = "current-password";
         this.closeWindowMark.innerHTML = "&#10006;";
         this.closeWindowMark.id = "mark-close";
         document.body.append(this.wrapper);
@@ -48,9 +51,9 @@ const logRegUI = {
         this.loginWindow.append(this.closeWindowMark);
         this.loginWindow.append(this.loginForm);
         this.loginForm.append(this.authorizationLabel);
-        this.loginForm.append(this.nameField);
-        this.loginForm.append(this.passwordField);
-        this.loginForm.append(this.submitBtn);
+        this.loginForm.append(this.logName);
+        this.loginForm.append(this.logPassword);
+        this.loginForm.append(this.logSubmitBtn);
         this.loginWindow.append(this.registrationLink);
 
         this.loginWindow.onclick = (e) => {
@@ -61,10 +64,9 @@ const logRegUI = {
             this.wrapper.remove();
         }
 
-        this.submitBtn.onclick = (e) => {
+        this.logSubmitBtn.onclick = (e) => {
             e.preventDefault();
-            this.clearRegForm();
-            this.wrapper.remove();
+            this.login();
         }
 
         this.registrationLink.onclick = () => {
@@ -83,52 +85,44 @@ const logRegUI = {
         this.signUpWindow.className = "signup-area";
         this.signUpForm.className = "lr-form";
         this.signupLabel.textContent = "Регистрация:";
-        this.regNameField.placeholder = "Имя";
-        this.regNameField.name = "reg-name";
-        this.regNameField.autocomplete = "name";
-        this.regLoginField.placeholder = "Логин";
-        this.regLoginField.name = "reg-login";
-        this.regLoginField.autocomplete = "username";
-        this.regPasswordField.placeholder = "Пароль";
-        this.regPasswordField.type = "password";
-        this.regPasswordField.name = "reg-password";
-        this.regPasswordField.autocomplete = "new-password"
-        this.regConfirmPasswordField.placeholder = "Подтверждение пароля";
-        this.regConfirmPasswordField.autocomplete = "new-password";
-        this.regConfirmPasswordField.type = "password";
-        this.regConfirmPasswordField.name = "reg-password-confirm";
+        this.regName.placeholder = "Имя";
+        this.regName.name = "reg-name";
+        this.regName.autocomplete = "name";
+        this.regLogin.placeholder = "Логин";
+        this.regLogin.name = "reg-login";
+        this.regLogin.autocomplete = "username";
+        this.regPassword.placeholder = "Пароль";
+        this.regPassword.type = "password";
+        this.regPassword.name = "reg-password";
+        this.regPassword.autocomplete = "new-password"
+        this.regConfirmPassword.placeholder = "Подтверждение пароля";
+        this.regConfirmPassword.autocomplete = "new-password";
+        this.regConfirmPassword.type = "password";
+        this.regConfirmPassword.name = "reg-password-confirm";
         this.regSubmitBtn.textContent = "Отправить";
         document.body.append(this.wrapper);
         this.wrapper.append(this.signUpWindow);
         this.signUpWindow.append(this.closeWindowMark);
         this.signUpWindow.append(this.signUpForm);
         this.signUpForm.append(this.signupLabel);
-        this.signUpForm.append(this.regNameField);
-        this.signUpForm.append(this.regLoginField);
-        this.signUpForm.append(this.regPasswordField);
-        this.signUpForm.append(this.regConfirmPasswordField);
+        this.signUpForm.append(this.regName);
+        this.signUpForm.append(this.regLogin);
+        this.signUpForm.append(this.regPassword);
+        this.signUpForm.append(this.regConfirmPassword);
         this.signUpForm.append(this.regSubmitBtn);
         this.regSubmitBtn.onclick = (e) => {
             e.preventDefault();
             this.validateAllRegFields();
-            if(this.allFieldsValid) {
-                usersDB[this.regLoginField.value.trim()] = {
-                    userName: this.regNameField.value.trim(),
-                    password: this.regPasswordField.value.trim(),
-                }
-                this.clearRegForm();
-                this.wrapper.remove();
-                infoWindowUI.show("Registration sucessfull!");
-            }
+            this.createUser();
         }
 
         this.signUpWindow.onclick = (e) => {
             e.stopPropagation();
         }
-        this.regNameField.onchange = () => this.validateName();
-        this.regLoginField.onchange = () => this.validateLogin();
-        this.regPasswordField.onchange = () => this.validatePassword();
-        this.regConfirmPasswordField.onchange = () => this
+        this.regName.onchange = () => this.validateName();
+        this.regLogin.onchange = () => this.validateLogin();
+        this.regPassword.onchange = () => this.validatePassword();
+        this.regConfirmPassword.onchange = () => this
             .validateConfirmPassword();
         this.wrapper.onclick = () => {
             this.clearRegForm();
@@ -141,44 +135,44 @@ const logRegUI = {
         }
     },
     validateName() {
-        if(this.nameRegExp.test(this.regNameField.value.trim())) {
-            this.highlightCorrectField(this.regNameField);
+        if(this.nameRegExp.test(this.regName.value.trim())) {
+            this.highlightCorrectField(this.regName);
             this.allFieldsValid = true;
         } else {
-            this.highlightIncorrectField(this.regNameField);
+            this.highlightIncorrectField(this.regName);
             this.allFieldsValid = false;
         }
     },
     validateLogin() {
-        if(usersDB[this.regLoginField.value.trim()]) {
+        if(usersDB[this.regLogin.value.trim()]) {
             this.allFieldsValid = false;
-            return this.highlightIncorrectField(this.regLoginField, "yes");
-        }
-        else if(this.loginRegExp.test(this.regLoginField.value.trim())) {
-            this.highlightCorrectField(this.regLoginField);
+            return this.highlightIncorrectField(this.regLogin, "yes");
+        } else if(this.loginRegExp.test(this.regLogin.value.trim())) {
+            this.highlightCorrectField(this.regLogin);
             this.allFieldsValid = true;
         } else {
-            this.highlightIncorrectField(this.regLoginField);
+            this.highlightIncorrectField(this.regLogin);
             this.allFieldsValid = false;
         }
     },
     validatePassword() {
-        if(this.passwordRegExp.test(this.regPasswordField.value.trim())) {
-            this.highlightCorrectField(this.regPasswordField);
+        if(this.passwordRegExp.test(this.regPassword.value.trim())) {
+            this.highlightCorrectField(this.regPassword);
             this.allFieldsValid = true;
         } else {
-            this.highlightIncorrectField(this.regPasswordField);
+            this.highlightIncorrectField(this.regPassword);
             this.allFieldsValid = false;
         }
     },
     validateConfirmPassword() {
-        if(this.regPasswordField.value.trim() === this.regConfirmPasswordField
+        if(this.regPassword.value.trim() === this.regConfirmPassword
             .value.trim() &&
-            this.passwordRegExp.test(this.regConfirmPasswordField.value.trim())) {
-            this.highlightCorrectField(this.regConfirmPasswordField);
+            this.passwordRegExp.test(this.regConfirmPassword.value.trim())
+        ) {
+            this.highlightCorrectField(this.regConfirmPassword);
             this.allFieldsValid = true;
         } else {
-            this.highlightIncorrectField(this.regConfirmPasswordField);
+            this.highlightIncorrectField(this.regConfirmPassword);
             this.allFieldsValid = false;
         }
     },
@@ -211,12 +205,19 @@ const logRegUI = {
         let error = document.createElement("p");
         error.className = "logReg-error";
         switch (fieldName.name) {
+        case "log-login":
+            error.textContent = "Такого пользователя не существует";
+            break;
+        case "log-password":
+            error.textContent = "Пароль не правильный.";
+            break;
         case "reg-name":
             error.textContent =
                 "Имя должно состоять только из букв, длина имени от 1 буквы, максимум 3 слова."
             break;
         case "reg-login":
-            error.textContent = "Логин должен быть от 3 до 12 символов, без пробелов.";
+            error.textContent =
+                "Логин должен быть от 3 до 12 символов, без пробелов.";
             if(option === "yes") error.textContent = "Логин уже занят";
             break;
         case "reg-password":
@@ -234,9 +235,45 @@ const logRegUI = {
             if(fieldName.nextSibling.tagName == "P") fieldName
                 .nextSibling.remove();
         };
+    },
+    createUser() {
+        if(this.allFieldsValid) {
+            usersDB[this.regLogin.value.trim()] = {
+                name: this.regName.value.trim(),
+                password: this.regPassword.value.trim(),
+            }
+            this.clearRegForm();
+            this.wrapper.remove();
+            infoWindowUI.show("Регистрация завершена успешно.");
+        }
+    },
+    login() {
+        if(usersDB[this.logName.value]) {
+            this.highlightCorrectField(this.logName);
+            if(usersDB[this.logName.value].password === this.logPassword
+                .value.trim()) {
+                    const userAvatarArea = document.getElementById("btn-login-icon");
+                    const loginButtonText = document.getElementById("btn-login-text");
+                    userAvatarArea.src = usersDB[this.logName.value].avatar;
+                    loginButtonText.textContent = usersDB[this.logName.value].name;
+                    this.loggedUserName = usersDB[this.logName.value].name;
+                this.clearRegForm();
+                this.wrapper.remove();
+                infoWindowUI.show("Вы успешно вошли в свой кабинет.");
+                LOGIN_BTN.onclick = "";
+            } else {
+                this.highlightIncorrectField(this.logPassword);
+            }
+        } else {
+            this.highlightIncorrectField(this.logName);
+        }
     }
 }
 
 const usersDB = {
-
+    admin: {
+        name: "Максим",
+        password: "admin",
+        avatar: "images/user_avatars/admin.gif",
+    }
 };
