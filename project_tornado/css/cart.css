@@ -1,9 +1,13 @@
 :root {
     --cart-window-background: rgb(39, 23, 61);
+    --cart-product-area-background: rgb(240, 239, 236);
+    --cart-product-area-text: black;
     --cart-wrapper: rgba(85, 84, 84, 0.932);
     --cart-border: grey;
     --cart-text: white;
-
+    --cart-qtty-text: rgb(7, 6, 6);
+    --cart-qtty-background: rgb(222, 218, 226);
+    --cart-qtty-border: white;
 }
 
 .window-wrapper {
@@ -24,7 +28,7 @@
     background-color: var(--cart-window-background);
     color: var(--cart-text);
     height: auto;
-    width: 20em;
+    width: auto;
     padding: 2em;
     border-radius: 3px;
 }
@@ -33,7 +37,7 @@
     align-self: flex-end;
     color: var(--logreg-text);
     user-select: none;
-    cursor: pointer;    
+    cursor: pointer;
     margin: -1.5em -1.2em 0.5em;
     padding: 0;
     width: 1em;
@@ -43,4 +47,153 @@
 #mark-close:hover {
     color: var(--login-signup-hover);
 
+}
+
+#cart-user-name {
+    color: white;
+    text-align: center;
+    margin: 0;
+    padding-bottom: 0.5em;
+    font-weight: 300;
+}
+
+#products-area {
+    min-width: 45vw;
+    margin: 1em 0;
+    border: 1px solid rgba(138, 137, 137, 0.199);
+    border-radius: 4px;
+    max-height: 60vh;
+    overflow: auto;
+    background-color: var(--cart-product-area-background);
+    color:var(--cart-product-area-text);
+}
+
+#cart-product-wrapper {
+    display: grid;
+    grid-template:
+        "img brand . ." 3em
+        "img model qtty price" 3em
+        "img . . delete" 3em;
+        grid-template-columns:  25% 35% 20% 20%;
+    padding: 1em;
+    justify-content: space-around;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+    justify-items: center;
+    box-shadow: inset 0 0 2px rgba(68, 0, 82, 0.87);
+}
+
+#cart-total-price {
+    align-self: center;
+    padding: 0.7em 2em;
+    margin: 0 0 1em 0;
+    text-align: center;
+    font-size: 1.2em;
+    font-weight: 300;
+    border: 1px solid rgba(240, 119, 7, 0.986);
+    border-radius: 3px;
+    background-color:#6e5e755b;
+    width: 50%;
+}
+
+.cart-item-photo {
+    grid-area: img;
+    width: 10em;
+}
+
+.cart-item-brand {
+    grid-area: brand;
+    align-self: end;
+    margin: 0;
+    justify-self: start;
+}
+
+.cart-item-model {
+    grid-area: model;
+    justify-self: start;
+}
+
+.cart-qtty-container {
+    grid-area: qtty;
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+}
+
+.cart-item-qtty {
+    width: 3em;
+    height: 2em;
+    text-align: center;
+    font-size: 1.1em;
+    background-color:var(--cart-qtty-background);
+    color: var(--cart-qtty-text);
+    border: 1px solid var(--cart-border);
+    border-radius: 4px;
+    box-shadow: inset 0 0 3px 0 rgb(8, 7, 7);
+    margin-left: 0.3em;
+    margin-right: 0.3em;
+}
+
+.cart-item {
+    font-family: 'Roboto', sans-serif;
+    width: 2em;
+    font-size: 1.5em;
+    border: none;
+    background-color: transparent;
+    font-weight: 700;
+    outline: none;
+    border-radius: 5px;
+    user-select: none;
+    transition: all .5s ease-out;
+    
+}
+
+.cart-item.plus:active {
+    background-color: rgb(51, 255, 0);
+    color: rgb(3, 3, 3);
+}
+.cart-item.minus:active {
+    background-color: rgb(255, 0, 0);
+    color: rgb(3, 3, 3);
+}
+
+.cart-item-price {
+    grid-area: price;
+    font-size: 1.2em;
+    align-self: center;
+    margin: 0;
+}
+
+.cart-item-delete {
+    grid-area: delete;
+    box-shadow: 0 0 5px 0 orange;
+    font-variant: small-caps;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    font-size: 0.7em;
+    user-select: none;
+    outline: none;
+    border-radius: 10px;
+}
+
+.cart-item-delete:active {
+    background-color: rgba(218, 82, 4, 0.527);
+    outline: none;
+    color: white;
+}
+
+.confirm-order.button {
+    font-size: 1.1em;
+    font-weight: 500;
+    background: rgba(177, 96, 3, 0.897);
+    border: 1px solid white;
+}
+
+#empty-cart-img {
+    display: block;
+    padding: 2em 1.2em 1em 1.2em;
+    max-width: 400px;
+    margin: auto;
 }

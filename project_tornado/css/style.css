@@ -14,6 +14,7 @@
     box-sizing: border-box;
 }
 
+
 body {
     margin: 0;
     padding: 0;
@@ -26,21 +27,21 @@ body {
     color: var(--text-color);
 }
 
-body::-webkit-scrollbar {
+*::-webkit-scrollbar {
     width: 0.7em;
-  }
-   
-  body::-webkit-scrollbar-track {
+}
+
+*::-webkit-scrollbar-track {
     box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
     background-color: rgb(207, 198, 209);
-   
-  }
-   
-  body::-webkit-scrollbar-thumb {
+
+}
+
+*::-webkit-scrollbar-thumb {
     background-color: rgb(98, 91, 109);
     outline: 2px solid rgb(255, 255, 255);
-    
-  }
+
+}
 
 a {
     text-decoration: none;
@@ -54,9 +55,6 @@ header {
     min-height: 3rem;
 }
 
-button {
-    font-family: 'Roboto', sans-serif;
-}
 
 .area {
     border: 1px solid var(--border-color);
@@ -104,17 +102,18 @@ div.logo.area>a {
     animation-name: spin;
     animation-duration: 29000ms;
     animation-iteration-count: infinite;
-    animation-timing-function: linear; 
+    animation-timing-function: linear;
     margin-right: 0;
     padding-right: 0;
 }
 
 @keyframes spin {
     from {
-        transform:rotate(0deg);
+        transform: rotate(0deg);
     }
+
     to {
-        transform:rotate(360deg);
+        transform: rotate(360deg);
     }
 }
 
@@ -130,6 +129,20 @@ div.logo.area>a {
     display: flex;
     align-items: center;
     align-content: center;
+}
+
+.button {
+    width: 50%;
+    height: 3em;
+    background: linear-gradient(360deg, #4e1386 100%, #aa22e9 56%);
+    box-shadow: 0px 0px 5px 1px #f2f2ff5e;
+    color: #FFFFFF;
+    cursor: pointer;
+    user-select: none;
+    outline: none;
+    font-family: 'Roboto', sans-serif;
+    align-self: center;
+    border-radius: 3px;
 }
 
 #btn-login {
@@ -222,6 +235,7 @@ div.logo.area>a {
 .section-name {
     font-size: 1em;
 }
+
 .content {
     flex: 1 1 auto;
     align-items: flex-start;
