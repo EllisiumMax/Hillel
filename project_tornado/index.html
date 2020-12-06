@@ -11,9 +11,11 @@
     <link rel="stylesheet" href="css/login-signup.css">
     <link rel="stylesheet" href="css/info-window.css">
     <link rel="stylesheet" href="css/cart.css">
+    <link rel="stylesheet" href="css/slider.css">
     <script defer src="js/info-window.js"></script>
     <script defer src="js/login-signup.js"></script>
     <script defer src="js/cart.js"></script>
+    <script defer src="js/slider.js"></script>
     <script defer src="js/main.js"></script>
 </head>
 
@@ -39,43 +41,44 @@
     <div class="content area">
         <section class="area">
             <h5 class="section-name">Акции</h5>
-            <div class="sales-slider">
-                <div>
-                    <button>
-                        <</button> carousel <button>>
-                    </button>
-                </div>
-                <div class="dots">
-                    <button>.</button>
-                    <button>.</button>
-                    <button>.</button>
-                    <button>.</button>
-                    <button>.</button>
-                </div>
+            <div id="sales-slider"></div>
+    </div>
+    </section>
+    <section class="area">
+        <h5 class="section-name">Категории</h5>
+        <div class="categories">
+            <ul>
+                <li><a href="./products.html?id=1">category1</a></li>
+                <li><a href="./products.html?id=2">category2</a></li>
+                <li><a href="./products.html?id=3">category3</a></li>
+                <li><a href="./products.html?id=4">category4</a></li>
+                <li><a href="./products.html?id=5">category5</a></li>
+            </ul>
+            <ul>
+                <li><a href="./products.html?id=6">category6</a></li>
+                <li><a href="./products.html?id=7">category7</a></li>
+                <li><a href="./products.html?id=8">category8</a></li>
+                <li><a href="./products.html?id=9">category9</a></li>
+                <li><a href="./products.html?id=10">category10</a></li>
+            </ul>
+        </div>
+        
+    </section>
+    <section class="area">
+        <h5 class="section-name">Рекомендованные товары</h5>
+        <div class="recommended-products">
+            <div class="product area">
+                <div class="area product-img">
+                    <img
+                src="https://freepngimg.com/thumb/samsung_mobile_phone/5-2-samsung-mobile-phone-png-hd-thumb.png"
+                alt="product name"
+              />
             </div>
-        </section>
-        <section class="area">
-            <h5 class="section-name">Категории</h5>
-            <div class="categories">
-                <ul>
-                    <li><a href="./products.html?id=1">category1</a></li>
-                    <li><a href="./products.html?id=2">category2</a></li>
-                    <li><a href="./products.html?id=3">category3</a></li>
-                    <li><a href="./products.html?id=4">category4</a></li>
-                    <li><a href="./products.html?id=5">category5</a></li>
-                </ul>
-                <ul>
-                    <li><a href="./products.html?id=6">category6</a></li>
-                    <li><a href="./products.html?id=7">category7</a></li>
-                    <li><a href="./products.html?id=8">category8</a></li>
-                    <li><a href="./products.html?id=9">category9</a></li>
-                    <li><a href="./products.html?id=10">category10</a></li>
-                </ul>
-            </div>
-        </section>
-        <section class="area">
-            <h5 class="section-name">Рекомендованные товары</h5>
-            <div class="recommended-products">
+                    <a href="./item_info.html?id=1">product name</a>
+                    <div>product description</div>
+                    <div>Price: 100$</div>
+                    <button>add to cart</button>
+                </div>
                 <div class="product area">
                     <div class="area product-img">
                         <img
@@ -112,22 +115,26 @@
                                 <div>Price: 100$</div>
                                 <button>add to cart</button>
                             </div>
-                            <div class="product area">
-                                <div class="area product-img">
-                                    <img
-                src="https://freepngimg.com/thumb/samsung_mobile_phone/5-2-samsung-mobile-phone-png-hd-thumb.png"
-                alt="product name"
-              />
-            </div>
-                                    <a href="./item_info.html?id=1">product name</a>
-                                    <div>product description</div>
-                                    <div>Price: 100$</div>
-                                    <button>add to cart</button>
-                                </div>
-                            </div>
-        </section>
+                        </div>
+    </section>
     </div>
-    <footer>TORNADO™ 2020</footer>
+    <footer>
+        <p>© Интернет-магазин электроники TORNADO™ 2020</p>
+        <img src="images/visa.svg" class="visa" alt="visa certified logo">
+        <img src="images/mastercard.svg" class="mastercard" alt="mastercard certified logo">
+        <div class="social-networks-block">
+            <a href="http://www.instagram.com" class="social-network-ico">
+                <img src="images/instagram.svg" alt="instagram logo"></a>
+            <a href="http://www.facebook.com" class="social-network-ico">
+                <img src="images/facebook.svg" alt="facebook  logo"></a>
+            <a href="http://www.youtube.com" class="social-network-ico">
+                <img src="images/youtube.svg" alt="youtube  logo"></a>
+            <a href="https://t.me/subarumax" class="social-network-ico">
+                <img src="images/telegram.svg" alt="telegram  logo"></a>
+            <a href="https://viber.com/" class="social-network-ico">
+                <img src="images/viber.svg" alt="viber  logo"></a>
+        </div>
+    </footer>
 </body>
 
 </html>

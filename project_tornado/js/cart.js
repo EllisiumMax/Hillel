@@ -6,6 +6,7 @@ const cartUI = {
     userNameLabel: document.createElement("h3"),
     productsArea: document.createElement("div"),
     confirmOrderBtn: document.createElement("button"),
+    cleanCartBtn: document.createElement("button"),
     closeWindowMark: document.createElement("p"),
     totalPrice: document.createElement("p"),
     emptyCart: document.createElement("img"),
@@ -26,6 +27,8 @@ const cartUI = {
         this.totalPrice.id = "cart-total-price";
         this.confirmOrderBtn.textContent = "Купить";
         this.confirmOrderBtn.className = "confirm-order button";
+        this.cleanCartBtn.id = "btn-clean-cart";
+        this.cleanCartBtn.textContent = "Очистить корзину";
         document.body.append(this.wrapper);
         this.wrapper.append(this.cartWindow);
 
@@ -52,8 +55,12 @@ const cartUI = {
             this.wrapper.remove();
         }
         this.confirmOrderBtn.onclick = () => {
-            this.addProduct(
-                "images/test.png", "Samsung", "Galaxy S11", 7500);
+            this.cleanCart();
+            this.wrapper.remove();
+            infoWindowUI.show("Спасибо за покупку", 60);
+        }
+        this.cleanCartBtn.onclick = () => {
+            this.cleanCart();
         }
     },
     addProduct(img, brand, model, price) {
@@ -66,6 +73,7 @@ const cartUI = {
             this.cartWindow.append(this.productsArea);
             this.cartWindow.append(this.totalPrice);
             this.cartWindow.append(this.confirmOrderBtn);
+            this.cartWindow.append(this.cleanCartBtn);
         }
         this.productsInCart.textContent++;
         this.priceCounter += price;
@@ -164,10 +172,17 @@ const cartUI = {
                 this.totalPrice.remove();
                 this.confirmOrderBtn.remove();
                 this.cartWindow.append(this.emptyCart);
-                setTimeout( () => {
-                    this.wrapper.remove()
-                }, 3000);
             }
         }
     },
+    cleanCart() {
+        this.productsArea.innerHTML = "";
+        this.productsArea.remove();
+        this.totalPrice.remove();
+        this.confirmOrderBtn.remove();
+        this.cleanCartBtn.remove();
+        this.cartWindow.append(this.emptyCart);
+        this.priceCounter = 0;
+        this.productsInCart.textContent = 0;
+    }
 }

@@ -168,7 +168,7 @@
 
 .cart-item-delete {
     grid-area: delete;
-    box-shadow: 0 0 5px 0 orange;
+    box-shadow: 0 0 5px 0 rgb(255, 102, 0);
     font-variant: small-caps;
     font-family: 'Roboto', sans-serif;
     font-weight: 400;
@@ -196,4 +196,20 @@
     padding: 2em 1.2em 1em 1.2em;
     max-width: 400px;
     margin: auto;
+}
+
+#btn-clean-cart {
+    margin: 3em 0 0 0;
+    width: 10em;
+    align-self: center;
+    background: var(--cart-window-background);
+    color: white;
+    outline: none;
+    border: 1px solid white;
+    border-radius: 5px;
+}
+
+#btn-clean-cart:active {
+    box-shadow: inset 0 0 15px 2px rgb(201, 97, 0);
+    border-color: rgb(199, 90, 1);
 }

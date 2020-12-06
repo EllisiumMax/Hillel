@@ -5,18 +5,19 @@ const infoWindowUI = {
     text: document.createElement("p"),
     timer: 100,
     opacity: 100,
+
     interval: "",
-    show(message) {
+    show(message, ms) {
         this.timer = 100;
         this.opacity = 100;
         this.window.className = "info-window";
         document.body.append(this.window);
         this.window.append(this.text);
         this.text.textContent = message;
-        this.hide();
+        this.hide(ms);
 
     },
-    hide() {
+    hide(ms = 32) {
         this.window.style.opacity = this.opacity + "%";
         this.interval = setInterval(() => {
             if(this.timer > 40) {
@@ -28,6 +29,6 @@ const infoWindowUI = {
                     this.window.remove();
                 }
             }
-        }, 32);
+        }, ms);
     }
 }

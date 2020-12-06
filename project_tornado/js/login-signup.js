@@ -257,6 +257,7 @@ const logRegUI = {
                     userAvatarArea.src = usersDB[this.logName.value].avatar;
                     loginButtonText.textContent = usersDB[this.logName.value].name;
                     this.loggedUserName = usersDB[this.logName.value].name;
+                    cartUI.cleanCart();
                 this.clearRegForm();
                 this.wrapper.remove();
                 infoWindowUI.show("Вы успешно вошли в свой кабинет.");

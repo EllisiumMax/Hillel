@@ -1,0 +1,85 @@
+#sales-slider {
+    margin: 0;
+    padding: 0;
+    height: 400px;
+
+}
+
+.slider-flex-container {
+    display: flex;
+    width: 70%;
+    margin: auto;
+    justify-content: center;
+
+}
+
+.slider-flex-container>img {
+    width: 600px;
+    height: 350px;
+    background-size: contain;
+    border-radius: 7px;
+    user-select: none;
+    box-shadow: 0 0 8px 2px rgb(40, 1, 58);
+}
+
+.slider-btn {
+    position: relative;
+    background-color: transparent;
+    border: none;
+    color: white;
+    user-select: none;
+    outline: none;
+    cursor: pointer;
+    font-size: 4em;
+    height: 1em;
+    top: 2em;
+    bottom: 50%;
+    text-shadow: 0 0 5px black;
+    filter: blur(1px);
+    transition: all 0.4s;
+}
+
+.slider-btn:hover {
+    filter: blur(0);
+    transform: scale(1.5);
+    top: 1.9em;
+}
+
+.slider-btn.left {
+left: 1em;
+
+}
+
+.slider-btn.right{
+    right: 1em;
+}
+
+.slider-bullets-area {
+    position: relative;
+    top: -3em;
+    display: flex;
+    margin: auto;
+    justify-content: center;
+    background-color: rgba(255, 255, 255, 0.329);
+    width: 20em;
+    border-radius: 10em;
+    padding: 0.3em 1em;
+   
+}
+
+.slider-bullet {
+    width: 2em;
+    height: 2em;
+    border-radius: 50em;
+    box-shadow: 0 0 5px 3px rgb(8, 7, 7), inset 0 0 5px 3px rgb(0, 0, 0);
+    margin: 0 0.4em;
+    user-select: none;
+    cursor: pointer;
+    outline: none;
+    transition: all 0.3s;
+}
+
+.slider-bullet:hover {
+    transform: scale(1.5);
+    border: 1px solid white;
+}

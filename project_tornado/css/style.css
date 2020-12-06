@@ -234,26 +234,16 @@ div.logo.area>a {
 
 .section-name {
     font-size: 1em;
+    margin: 0;
 }
 
 .content {
     flex: 1 1 auto;
-    align-items: flex-start;
-}
-
-footer {
-    min-height: 3rem;
-    text-align: center;
-}
-
-
-.sales-slider {
-    min-height: 5rem;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
     align-items: center;
+    justify-content: center;
+    justify-items: center;
 }
+
 
 .categories {
     display: flex;
@@ -348,4 +338,52 @@ footer {
 
 .products-panel>*:nth-child(2) {
     flex-grow: 1;
+}
+
+footer {
+    display: grid;
+    grid-template: 
+    "visa footer mastercard"
+    "visa social mastercard";
+    flex-direction: column;
+    min-height: 3rem;
+    text-align: center;
+    align-items: center;
+    justify-items: center;
+    background-color: #4e1386;
+    color: white;
+}
+
+footer > p {
+    grid-area: footer;
+    font-weight: 300;
+    margin: 0;
+    padding-top: 2em;
+}
+
+
+.visa {
+grid-area: visa;
+width: 7em;
+}
+
+.mastercard {
+    grid-area: mastercard;
+    width: 7em;
+}
+
+.social-networks-block {
+    grid-area: social;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.social-network-ico {
+    margin: 2em 1em 2em;
+    user-select: none;
+}
+
+.social-network-ico>img {
+    width: 2em;
 }
