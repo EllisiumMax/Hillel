@@ -1,20 +1,56 @@
 [
   {
     "id": "1",
-    "title": "Black friday",
-    "description": "...",
-    "sale": "10%",
-    "start_date": "...",
-    "end_date": "...",
-    "image": "./images/promotions/1.jpg"
+    "title": "Черная Пятница",
+    "description": "Скидки на все товары",
+    "sale": "-30%",
+    "start_date": "20.11.2020",
+    "end_date": "27.11.2020",
+    "image": "./images/promotions/1.png"
+  },
+  {
+    "id": "2",
+    "title": "Samsung Sale",
+    "description": "Скидки на телевизоры Samsung",
+    "sale": "-20%",
+    "start_date": "21.12.2020",
+    "end_date": "25.12.2020",
+    "image": "./images/promotions/2.png"
+  },
+  {
+    "id": "3",
+    "title": "Apple Sale",
+    "description": "Скидки на телефоны Apple",
+    "sale": "-5%",
+    "start_date": "25.12.2020",
+    "end_date": "28.12.2020",
+    "image": "./images/promotions/3.png"
+  },
+  {
+    "id": "4",
+    "title": "Распродажа от Xiaomi",
+    "description": "Большие скидки на телефоны 2019 года, успей купить!",
+    "sale": "-35%",
+    "start_date": "01.12.2020",
+    "end_date": "10.12.2020",
+    "image": "./images/promotions/4.png"
+  },
+  {
+    "id": "5",
+    "title": "Подарки от LG",
+    "description": "Купи телевизор LG со скидкой + получи годовую подписку MEGATV в подарок!",
+    "sale": "-5%",
+    "start_date": "25.12.2020",
+    "end_date": "05.01.2021",
+    "image": "./images/promotions/5.png"
   },
   {
     "id": "6",
-    "title": "Christmas",
-    "description": "...",
-    "sale": "15%",
-    "start_date": "...",
-    "end_date": "...",
-    "image": "./images/promotions/6.jpg"
+    "title": "Рождественская распродажа",
+    "description": "Финальная, зимняя новогодняя распродажа 2020, большие скидки на все товары!",
+    "sale": "-20%",
+    "start_date": "23.12.2020",
+    "end_date": "01.01.2021",
+    "image": "./images/promotions/6.png"
   }
 ]

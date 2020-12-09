@@ -6,4 +6,4 @@ const CART_BTN = document.getElementById("cart");
 CART_BTN.onclick = () => cartUI.openCart();
 LOGIN_BTN.onclick = () => logRegUI.createLoginWindow();
 
-sliderUI.createSlider("#sales-slider", imgArray);
+sliderUI.createSlider("#sales-slider", "./api/promotions.json", 300);

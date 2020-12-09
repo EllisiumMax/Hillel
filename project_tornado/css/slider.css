@@ -1,25 +1,115 @@
 #sales-slider {
-    margin: 0;
+    margin: auto;
     padding: 0;
-    height: 400px;
-
+    height: 20em;
+    width: 850px;
 }
 
 .slider-flex-container {
     display: flex;
-    width: 70%;
-    margin: auto;
+    width: 100%;
+    height: 100%;
+    margin: 1em auto;
     justify-content: center;
+    box-shadow: 0 0 8px 2px rgb(40, 1, 58);
+    border-radius: 7px;
+    overflow: hidden;
+}
+
+.promotions-wrapper {
+    position: relative;
+    display: grid;
+    align-items: center;
+    grid-template: 
+    "title title start" 10%
+    "title title end" 10%
+    "desc desc desc" 20%
+    ". . ." 20%
+    ". . disc" 40%;
+    top: -21em;
+    width: 100%;
+    height: 100%;
+    margin: auto;
+    color: white;
+    z-index: 1;
+    text-shadow: 0 0 1px black, 0 0 3px black, 0 0 8px black;
+    user-select: none;
+    transition: all 0.5s;
+    
+}
+.promotions-title {
+    grid-area: title;
+    padding-left: 1.5em;
+    margin: 0;
+    font-size: 2.5em;
+}
+.promotions-description {
+    grid-area: desc;
+    padding-left: 3em;
+    padding-right: 1em;
+    margin: 0;
+    font-weight: 800;
+    text-shadow: none;
+    color: black;
+    background-color: rgba(255, 255, 255, 0.87);
+    font-size: 1.1em;
+    justify-self: flex-start;
+    border-top-right-radius: 10em;
+    border-bottom-right-radius: 10em;
+}
+.promotions-discount {
+    grid-area: disc;
+    margin: 0 0.5em 0;
+    font-size: 2.2em;
+    align-self: center;
+    justify-self: flex-end;
+    height: 2.5em;
+    width: 2.5em;
+    background-color: rgb(255, 0, 0);
+    box-shadow: 0 0 15px 2px rgb(8, 7, 7), inset 0 0 25px rgb(247, 247, 247);
+    border-radius: 10em;
+    line-height: 2.5em;
+    text-align: center;
+}
+.promotions-start {
+    grid-area: start;
+    margin: 0;
+    width: 100%;
+    align-self: flex-end;
+    justify-self: center;
+    text-align: center;
+    font-size: 0.9em;
+    background-color:  rgba(255, 255, 255, 0.87);
+    color: rgb(0, 0, 0);
+    text-shadow: none;
+    border-top-left-radius: 10em;
+
+
+}
+.promotions-end {
+    grid-area: end;
+    margin: 0;
+    width: 100%;
+    align-self: flex-start;
+    justify-self: center;
+    text-align: center;
+    font-size: 0.9em;
+    background-color: rgba(255, 255, 255, 0.87);
+    color: rgb(0, 0, 0);
+    text-shadow: none;
+    border-bottom-left-radius: 10em;
 
 }
 
 .slider-flex-container>img {
-    width: 600px;
-    height: 350px;
-    background-size: contain;
-    border-radius: 7px;
+    position: relative;
+    flex-shrink: 0;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    border-radius: 6px;
     user-select: none;
-    box-shadow: 0 0 8px 2px rgb(40, 1, 58);
+    object-fit: cover;
 }
 
 .slider-btn {
@@ -31,32 +121,32 @@
     outline: none;
     cursor: pointer;
     font-size: 4em;
-    height: 1em;
-    top: 2em;
-    bottom: 50%;
+    height: 2em;
+    top: 1.2em;
     text-shadow: 0 0 5px black;
     filter: blur(1px);
     transition: all 0.4s;
+    z-index: 2;
 }
 
 .slider-btn:hover {
     filter: blur(0);
     transform: scale(1.5);
-    top: 1.9em;
+    top: 1.1em;
 }
 
 .slider-btn.left {
-left: 1em;
+left: 14em;
 
 }
 
 .slider-btn.right{
-    right: 1em;
+    right: 14em;
 }
 
 .slider-bullets-area {
     position: relative;
-    top: -3em;
+    top: -24em;
     display: flex;
     margin: auto;
     justify-content: center;
@@ -64,22 +154,39 @@ left: 1em;
     width: 20em;
     border-radius: 10em;
     padding: 0.3em 1em;
+    z-index: 1;
    
 }
 
 .slider-bullet {
     width: 2em;
     height: 2em;
-    border-radius: 50em;
+    border-radius: 10em;
     box-shadow: 0 0 5px 3px rgb(8, 7, 7), inset 0 0 5px 3px rgb(0, 0, 0);
     margin: 0 0.4em;
     user-select: none;
     cursor: pointer;
     outline: none;
+    object-fit: cover;
     transition: all 0.3s;
 }
 
 .slider-bullet:hover {
     transform: scale(1.5);
     border: 1px solid white;
+}
+
+#previous {
+    position: relative;
+    left: 3em;
+    z-index: 1;
+    transition: all 0.5s ease-out;
+}
+
+#next {
+    position: relative;
+    left: -3em;
+    z-index: 1;
+    transition: all 0.5s ease-out;
+
 }
