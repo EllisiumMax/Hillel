@@ -1,52 +1,45 @@
 [
   {
     "id": "category_1",
-    "name": "Sedan",
-    "description": "A sedan (/sɪˈdæn/), or saloon, is a passenger car in a three-box configuration with separate compartments for engine, passenger, and cargo."
+    "name": "Мобильные телефоны"
   },
   {
     "id": "category_2",
-    "name": "Liftback",
-    "description": "A car having a sloping rear end with a single door that is lifted to open."
+    "name": "Планшеты"
   },
   {
     "id": "category_3",
-    "name": "Hatchback",
-    "description": "A hatchback is a car body configuration with a rear door that swings upward to provide access to a cargo area."
+    "name": "Ноутбуки"
   },
   {
     "id": "category_4",
-    "name": "Coupe",
-    "description": "A coupe is a passenger car with a sloping or truncated rear roofline and two or three doors."
+    "name": "Настольные компьютеры"
   },
   {
     "id": "category_5",
-    "name": "Wagon",
-    "description": "A car with a comparatively long body containing a large carrying space, reached through a rear door: usually the back seats can be folded forward to increase the carrying space."
+    "name": "Мониторы"
+
   },
   {
     "id": "category_6",
-    "name": "Pickup",
-    "description": "A pickup truck or pickup is a light-duty truck having an enclosed cab and an open cargo area with low sides and tailgate."
+    "name": "Клавиатуры"
   },
   {
     "id": "category_7",
-    "name": "SUV",
-    "description": "A sport utility vehicle or SUV is a car classification that combines elements of road-going passenger cars with features from off-road vehicles, such as raised ground clearance and four-wheel drive."
+    "name": "Мыши"
   },
   {
     "id": "category_8",
-    "name": "Convertible",
-    "description": "A convertible, cabriolet or spyder/spider is a passenger car that can be driven with or without a roof in place."
+    "name": "Электронные книги"
   },
   {
     "id": "category_9",
-    "name": "Van",
-    "description": "A van is a type of road vehicle used for transporting goods or people. Depending on the type of van, it can be bigger or smaller than a truck and SUV, and bigger than a common car."
+    "name": "Защитные стекла для мобильных"
+
   },
   {
     "id": "category_10",
-    "name": "Sport",
-    "description": "A sports car is a car designed with an emphasis on dynamic performance, such as handling, acceleration, top speed, or thrill of driving."
+    "name": "Чехлы для мобильных"
+
   }
 ]

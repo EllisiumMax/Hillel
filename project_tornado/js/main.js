@@ -7,3 +7,4 @@ CART_BTN.onclick = () => cartUI.openCart();
 LOGIN_BTN.onclick = () => logRegUI.createLoginWindow();
 
 sliderUI.createSlider("#sales-slider", "./api/promotions.json", 300);
+loadCategories("./api/categories.json");
