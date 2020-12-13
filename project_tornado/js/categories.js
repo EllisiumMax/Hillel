@@ -3,17 +3,18 @@
 async function loadCategories(url) {
     const CATEGORIES_FIRST_COLUMN = document.getElementById("categories-first");
     const CATEGORIES_SECOND_COLUMN = document.getElementById("categories-second");
-    let response = await fetch(url);
-    let allCategories = await response.json();
-    let numberOfCategories = allCategories.length;
-    let itemsInColumn = Math.round(numberOfCategories/2);
+    const RESPONSE = await fetch(url);
+    const ALL_CATEGORIES = await RESPONSE.json();
+    const NUMBER_OF_CATEGORIES = ALL_CATEGORIES.length;
+    const ITEM_IN_COLUMN = Math.round(NUMBER_OF_CATEGORIES/2);
     let categoryFillStep = 0;
-    for (let item of allCategories) {
+    for (let item of ALL_CATEGORIES) {
         const categoryElement = document.createElement("li");
         const categoryName = document.createElement("a");
         categoryName.textContent = item.name;
         categoryName.id = item.id;
-        if (categoryFillStep != itemsInColumn) {
+        categoryName.href = `products.html?id=${item.id}`
+        if (categoryFillStep != ITEM_IN_COLUMN) {
         categoryFillStep++;
         CATEGORIES_FIRST_COLUMN.append(categoryElement);
         categoryElement.append(categoryName);
@@ -22,16 +23,6 @@ async function loadCategories(url) {
         categoryElement.append(categoryName);
         }
     }
-    
-
-    console.log(allCategories);
-
-
-
-
-
-
-
-        return allCategories;
-
 }
+
+loadCategories("./api/categories.json");

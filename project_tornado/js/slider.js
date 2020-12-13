@@ -7,6 +7,7 @@ const sliderUI = {
         return result;
     },
     async createSlider(divId, url, transitionTime = 550) {
+        if (divId) {
         const RESULT = await this.request(url);
         let counter = 0;
         let autoChangeSlide = setInterval(next, 10000);
@@ -209,4 +210,8 @@ const sliderUI = {
             }, transitionTime);
         }
     }
+}
 };
+
+
+sliderUI.createSlider("#sales-slider", "./api/promotions.json", 300);

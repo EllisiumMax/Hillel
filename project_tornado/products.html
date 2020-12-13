@@ -3,36 +3,62 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Products</title>
-    <link rel="stylesheet" href="style.css" />
+    <title> - TORNADO</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,500;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/login-signup.css">
+    <link rel="stylesheet" href="css/info-window.css">
+    <link rel="stylesheet" href="css/cart.css">
+    <link rel="stylesheet" href="css/slider.css">
+    <script defer src="js/info-window.js"></script>
+    <script defer src="js/login-signup.js"></script>
+    <script defer src="js/cart.js"></script>
+    <script defer src="js/products.js"></script>
+    <script defer src="js/main.js"></script>
   </head>
   <body>
     <header class="area">
-      <div class="area">logo</div>
-      <div>
-        <button class="area">login</button>
-        <button class="area">cart</button>
+      <div class="logo area">
+          <a href="index.html">
+          <img src="images/tornado.svg" alt="tornado" id="tornado">
+        <img src="images/logo.svg" alt="logo" class="main-logo">
+      </a>
       </div>
-    </header>
+      <div class="account-buttons">
+          <button id="btn-login" class="log-btn">
+              <img id="btn-login-icon" class="log-btn-img" src="images/person-square.svg">
+              <span id="btn-login-text" class="log-btn-text">Войти</span>
+          </button>
+          <button id="btn-logout" class="log-btn">
+              <img id="btn-login-icon" class="log-btn-img" src="images/power.svg">
+              <span id="btn-login-text" class="log-btn-text">Выйти</span>
+          </button>
+          <button id="cart">
+              <img id="cart-icon"  class="log-btn-img" src="images/cart-fill.svg">
+              <span id="cart-text" class="log-btn-text">0</span>
+          </button>
+      </div>
+  </header>
     <div class="content area products-content">
       <div class="products-panel">
         <form class="area">
-          <h5>Search</h5>
+          <h5 class="section-name">Поиск</h5>
           <input type="text" placeholder="Type to search" />
-          <button>search</button>
+          <button>Найти</button>
         </form>
         <div class="filters area">
-          <h5>Filters</h5>
+          <h5 class="section-name">Фильтры</h5>
           <form>
             <div class="area">
-              <label for="">sort by: </label>
-              <select name="sort by" id="">
-                <option value="">Rating</option>
-                <option value="">Price low to high</option>
-                <option value="">Price high to low</option>
-                <option value="">Brand A-Z</option>
-                <option value="">Brand Z-A</option>
-                <option value="">New arrivals</option>
+              <label for="">Сортировать по: </label>
+              <select name="sort by" id="sort">
+                <option value="">Рейтингу</option>
+                <option value="">Цене от дешевой к дорогой</option>
+                <option value="">Цене от дорогой к дешевой</option>
+                <option value="">Производителю от A до Z</option>
+                <option value="">Производителю от Z до A</option>
+                <option value="">Новизне</option>
               </select>
             </div>
             <div class="area">
@@ -44,70 +70,38 @@
               <div><input type="checkbox" name="" id="" />brand 5</div>
             </div>
             <div class="area">
-              <div>price</div>
-              <label for="">from</label>
+              <div>Цена</div>
+              <label for="">от</label>
               <input type="number" />
-              <label for="">to</label>
+              <label for="">до</label>
               <input type="number" />
             </div>
-            <button>apply</button>
+            <button>Применить</button>
       </div>
         </form>
       </div>
       <div class="products area">
-        <h5>[Category name]</h5>
+        <h5 class="section-name" id="category-name"></h5>
         <div class="area products-list">
-          <div class="product area">
-            <div class="area product-img">
-              <img
-                src="https://freepngimg.com/thumb/samsung_mobile_phone/5-2-samsung-mobile-phone-png-hd-thumb.png"
-                alt="product name"
-              />
-            </div>
-            <a href="./item_info.html?id=1">product name</a>
-            <div>product description</div>
-            <div>Price: 100$</div>
-            <button>add to cart</button>
-          </div>
-          <div class="product area">
-            <div class="area product-img">
-              <img
-                src="https://freepngimg.com/thumb/samsung_mobile_phone/5-2-samsung-mobile-phone-png-hd-thumb.png"
-                alt="product name"
-              />
-            </div>
-            <a href="./item_info.html?id=1">product name</a>
-            <div>product description</div>
-            <div>Price: 100$</div>
-            <button>add to cart</button>
-          </div>
-          <div class="product area">
-            <div class="area product-img">
-              <img
-                src="https://freepngimg.com/thumb/samsung_mobile_phone/5-2-samsung-mobile-phone-png-hd-thumb.png"
-                alt="product name"
-              />
-            </div>
-            <a href="./item_info.html?id=1">product name</a>
-            <div>product description</div>
-            <div>Price: 100$</div>
-            <button>add to cart</button>
-          </div>
-          <div class="product area">
-            <div class="area product-img">
-              <img
-                src="https://freepngimg.com/thumb/samsung_mobile_phone/5-2-samsung-mobile-phone-png-hd-thumb.png"
-                alt="product name"
-              />
-            </div>
-            <a href="./item_info.html?id=1">product name</a>
-            <div>product description</div>
-            <div>Price: 100$</div>
-            <button>add to cart</button>
-          </div>
-        </div>
-      </div>
     </div>
-    <footer class="area">[company name]™ 2020</footer>
+    </div>
+    </div>
+    <footer>
+      <p>© Интернет-магазин электроники TORNADO™ 2020</p>
+      <img src="images/visa.svg" class="visa" alt="visa certified logo">
+      <img src="images/mastercard.svg" class="mastercard" alt="mastercard certified logo">
+      <div class="social-networks-block">
+          <a href="http://www.instagram.com" class="social-network-ico">
+              <img src="images/instagram.svg" alt="instagram logo"></a>
+          <a href="http://www.facebook.com" class="social-network-ico">
+              <img src="images/facebook.svg" alt="facebook  logo"></a>
+          <a href="http://www.youtube.com" class="social-network-ico">
+              <img src="images/youtube.svg" alt="youtube  logo"></a>
+          <a href="https://t.me/subarumax" class="social-network-ico">
+              <img src="images/telegram.svg" alt="telegram  logo"></a>
+          <a href="https://viber.com/" class="social-network-ico">
+              <img src="images/viber.svg" alt="viber  logo"></a>
+      </div>
+  </footer>
   </body>
 </html>

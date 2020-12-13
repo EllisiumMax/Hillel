@@ -7,7 +7,7 @@ const infoWindowUI = {
     opacity: 100,
 
     interval: "",
-    show(message, ms) {
+    show(message, ms = 32) {
         this.timer = 100;
         this.opacity = 100;
         this.window.className = "info-window";

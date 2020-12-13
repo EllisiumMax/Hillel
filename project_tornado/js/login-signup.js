@@ -18,11 +18,17 @@ const logRegUI = {
     regConfirmPassword: document.createElement("input"),
     regSubmitBtn: document.createElement("button"),
     closeWindowMark: document.createElement("p"),
+    userAvatarArea: document.getElementById("btn-login-icon"),
+    loginButtonText:  document.getElementById("btn-login-text"),
     nameRegExp: /^(([a-z]+\s?){1,3})$/i,
     loginRegExp: /^(?=.*[a-z])[a-z0-9]{3,12}$/i,
     passwordRegExp: /(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z])[0-9a-zA-Z!@#$%^&*]{5,20}/i,
     allFieldsValid: false,
-    loggedUserName: "",
+    loggedUserName: localStorage.getItem("CURRENT_LOGGED_USER_PROFILE") || "guest",
+    
+    initiateUser() {
+        if (!localStorage.getItem("CURRENT_LOGGED_USER_PROFILE")) localStorage.setItem("CURRENT_LOGGED_USER_PROFILE", "guest");
+    },
     validateAllRegFields() {
         this.validateName();
         this.validateLogin();
@@ -240,6 +246,7 @@ const logRegUI = {
         if(this.allFieldsValid) {
             usersDB[this.regLogin.value.trim()] = {
                 name: this.regName.value.trim(),
+                login: this.regLogin.value.trim(),
                 password: this.regPassword.value.trim(),
             }
             this.clearRegForm();
@@ -252,28 +259,58 @@ const logRegUI = {
             this.highlightCorrectField(this.logName);
             if(usersDB[this.logName.value].password === this.logPassword
                 .value.trim()) {
-                    const userAvatarArea = document.getElementById("btn-login-icon");
-                    const loginButtonText = document.getElementById("btn-login-text");
-                    userAvatarArea.src = usersDB[this.logName.value].avatar;
-                    loginButtonText.textContent = usersDB[this.logName.value].name;
-                    this.loggedUserName = usersDB[this.logName.value].name;
-                    cartUI.cleanCart();
+                    this.userAvatarArea.src = usersDB[this.logName.value].avatar;
+                    this.loginButtonText.textContent = usersDB[this.logName.value].name;
+                    this.loggedUserName = usersDB[this.logName.value].login;
+                    this.saveLogin();
+                    cartUI.restoreCart();
                 this.clearRegForm();
                 this.wrapper.remove();
                 infoWindowUI.show("Вы успешно вошли в свой кабинет.");
                 LOGIN_BTN.onclick = "";
+                LOGOUT_BTN.style.display = "flex";
+                LOGOUT_BTN.onclick = () => this.logOut();
             } else {
                 this.highlightIncorrectField(this.logPassword);
             }
         } else {
             this.highlightIncorrectField(this.logName);
         }
+    },
+    saveLogin() {
+        localStorage.setItem("CURRENT_LOGGED_USER_PROFILE", JSON.stringify(usersDB[this.logName.value]));
+        
+    },
+    restoreLogin() {
+       
+        if(localStorage.getItem("CURRENT_LOGGED_USER_PROFILE") != "guest") {
+            const JSON_ANSWEAR = localStorage.getItem("CURRENT_LOGGED_USER_PROFILE");
+            const RESULTS = JSON.parse(JSON_ANSWEAR);
+            if (RESULTS){
+            this.loggedUserName = RESULTS.login;
+            this.loginButtonText.textContent = RESULTS.name;
+            this.userAvatarArea.src = RESULTS.avatar;
+            }
+            LOGIN_BTN.onclick = "";
+            LOGOUT_BTN.style.display = "flex";
+            LOGOUT_BTN.onclick = () => this.logOut();
+        }
+},
+    logOut() {
+        this.loggedUserName = "guest";
+        this.userAvatarArea.src = "images/person-square.svg";
+        this.loginButtonText.textContent = "Войти";
+        LOGOUT_BTN.style.display = "none";
+        LOGIN_BTN.onclick = () => logRegUI.createLoginWindow();
+        localStorage.setItem("CURRENT_LOGGED_USER_PROFILE", "guest");
+        location.reload();
     }
 }
 
 const usersDB = {
     admin: {
         name: "Максим",
+        login: "admin",
         password: "admin",
         avatar: "images/user_avatars/admin.gif",
     }
