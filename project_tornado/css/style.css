@@ -441,7 +441,7 @@ ul.products-column>li>a {
 
 }
 
-.recommended.product-container>p {
+.recommended.product-container> p {
     font-size: 0.8em;
     margin: auto 0.3em 1.5em 0.3em;
     align-self: center;
@@ -578,11 +578,7 @@ footer>p {
     z-index: 0;
 }
 
-.product-container:hover > .product-description  {
-    opacity: 1;
-    visibility: visible;
-    height: auto;
-}
+
 
 .product-container:hover::before {
     opacity: 1;
@@ -623,9 +619,14 @@ footer>p {
     transition: all 0.5s ease-out;
     visibility: hidden;
     opacity: 0;
-    height: 0;
     display: block;
     text-align: center;
+}
+
+.product-container:hover > p  {
+    opacity: 1;
+    visibility: visible;
+    height: auto;
 }
 
 .product-container>em {
