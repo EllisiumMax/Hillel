@@ -2,15 +2,10 @@
     "id": "product_1-1",
     "brand": "Mercedes-Benz",
     "model": "E-Class (W213)",
-    "year": 2020,
-    "gearbox": "Automatic",
-    "drive": "RWD",
-    "engine_type": "Petrol",
     "price": 57899,
     "description": "Rear drive class E sedan (body W213). Restyling of the fifth generation of the model. The premiere show of the model took place online on March 3, 2020.",
     "rating": 4.6,
     "added": "23.11.2020 11:35",
-
     "available": true,
     "images": [
         "../images/category_1/product_1-1/1.jpg",

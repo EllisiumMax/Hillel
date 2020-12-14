@@ -2,21 +2,28 @@
 
 
 
-async function loadProductsList() {
-    const CATEGORY_ID = window.location.search.slice(4);
+async function loadRecommended () {
+    const PRODUCTS_AREA = document.getElementById("recommended-products-area");
+    const RESPONSE = await fetch(`./api/recommended.json`);
+    const PRODUCTS_LIST = await RESPONSE.json();
+    const RANDOM_PRODUCTS = new Set();
     const CURRENCY = "₴";
-    const CATEGORY_NAME = document.getElementById("category-name");
-    const PRODUCTS_AREA = document.getElementsByClassName("area products-list")[0];
-    const RESPONSE = await fetch(`./api/categories/${CATEGORY_ID}.json`);
-    const CATEGORY = await RESPONSE.json();
-    CATEGORY_NAME.textContent = CATEGORY.name;
+    const PRODUCTS_TO_SHOW = 4;
+    let currentStep = 0;
 
-    CATEGORY.products.forEach(product => {
+    while (RANDOM_PRODUCTS.size != 4){
+        let random = Math.round(Math.random()*(PRODUCTS_LIST.length-1));
+        RANDOM_PRODUCTS.add(PRODUCTS_LIST[random]);
+    }
+    console.log(RANDOM_PRODUCTS);
+
+    RANDOM_PRODUCTS.forEach(product => {
+        
+        if (currentStep < PRODUCTS_TO_SHOW) {
+            currentStep++;
         const PRODUCT_CONTAINER = document.createElement("div");
         PRODUCT_CONTAINER.id = product.id;
-        PRODUCT_CONTAINER.className = "product-container";
-
-
+        PRODUCT_CONTAINER.className = "recommended-product-container";
 
         const IMG_LINK = document.createElement("a");
         IMG_LINK.href = `item_info.html?id=${product.id}`;
@@ -31,7 +38,6 @@ async function loadProductsList() {
         PRODUCT_BRAND.innerHTML = product.brand + "<br>" + product.model;
 
         const PRODUCT_DESCRIPTION = document.createElement("p");
-        PRODUCT_DESCRIPTION.className = "product-description";
         PRODUCT_DESCRIPTION.textContent = product.description;
 
         const PRODUCT_PRICE = document.createElement("em");
@@ -46,10 +52,10 @@ async function loadProductsList() {
         BRAND_LINK.append(PRODUCT_BRAND);
         
         BTN_ADD_TO_CART.onclick = () => cartUI.addProduct(product.id, product.image, product.brand, product.model, product.price);
+        }
     });
-
-
 }
 
 
-loadProductsList();
+loadRecommended();
+
