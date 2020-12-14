@@ -23,7 +23,7 @@ async function loadRecommended () {
             currentStep++;
         const PRODUCT_CONTAINER = document.createElement("div");
         PRODUCT_CONTAINER.id = product.id;
-        PRODUCT_CONTAINER.className = "recommended-product-container";
+        PRODUCT_CONTAINER.className = "recommended product-container";
 
         const IMG_LINK = document.createElement("a");
         IMG_LINK.href = `item_info.html?id=${product.id}`;

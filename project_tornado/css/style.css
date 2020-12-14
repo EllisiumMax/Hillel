@@ -402,8 +402,9 @@ ul.products-column>li>a {
 
 }
 
-.recommended-product-container {
-    width: 22em;
+.recommended.product-container {
+    width: 25em;
+    height: auto;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
@@ -416,34 +417,43 @@ ul.products-column>li>a {
     color: var(--recommended-product-text);
     box-shadow: 0 0 10px 0px var(--recommended-product-shadow);
 
+
 }
 
-.recommended-product-container>a>img {
+
+.recommended.product-container>a>img {
     width: 14em;
     height: 14em;
     object-fit: contain;
 }
 
-.recommended-product-container>a {
+.recommended.product-container>a {
     margin: 0;
     padding: 0;
 }
 
-.recommended-product-container>a>h3 {
+.recommended.product-container>a>h3 {
     font-weight: 400;
     font-size: 1.1em;
+    margin-bottom: 0.6em;
     text-align: center;
+    color: var(--product-price-background);
 
 }
 
-.recommended-product-container>p {
+.recommended.product-container>p {
     font-size: 0.8em;
-    margin: 0.5em 0 1em;
+    margin: auto 0.3em 1.5em 0.3em;
     align-self: center;
     padding: 0;
+    text-align: center;
+    display: block;
+    visibility: visible;
+    height: auto;
+    opacity: 1;
 }
 
-.recommended-product-container>em {
+.recommended.product-container>em {
     font-style: normal;
     margin-top: auto;
     margin-bottom: 1.5em;
@@ -453,7 +463,7 @@ ul.products-column>li>a {
     border-radius: 1em;
 }
 
-.recommended-product-container>button {
+.recommended.product-container>button {
 
     position: relative;
     font-family: 'Roboto', sans-serif;
@@ -552,7 +562,6 @@ footer>p {
     background-color: var(--product-background);
     color: var(--product-text);
     box-shadow: 0 0 5px 0 var(--recommended-product-shadow);
-    transition: box-shadow 5s ease-in-out;
     user-select: none;
    
 }
@@ -602,6 +611,7 @@ footer>p {
     margin-bottom: 0;
     padding-bottom: 0;
     text-align: center;
+    color: var(--product-price-background);
 
 }
 
@@ -609,7 +619,7 @@ footer>p {
 
 .product-container>p {
     font-size: 0.8em;
-    margin: 0.5em;
+    margin: auto 0.5em;
     transition: all 0.5s ease-out;
     visibility: hidden;
     opacity: 0;
