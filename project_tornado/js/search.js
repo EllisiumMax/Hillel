@@ -57,10 +57,12 @@ const SEARCH_PRODUCT = {
 
     },
     async renderResults() {
+        if (this.searchField.value) {
         await this.searchDB();
         await loadProductsList(this.foundProducts);
         this.proposeWindow.remove();
         this.searchField.value = "";
+        }
     },
 }
 

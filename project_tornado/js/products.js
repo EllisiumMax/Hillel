@@ -8,21 +8,32 @@ async function loadProductsList(objArray = null) {
     const CURRENCY = "₴";
     const CATEGORY_NAME = document.getElementById("category-name");
     const PRODUCTS_AREA = document.getElementById("products-render-area");
-
+    PRODUCTS_AREA.innerHTML = "";
+   
+    
     if(!objArray) {
         const CATEGORY_ID = window.location.search.slice(4);
         const RESPONSE = await fetch(`./api/categories/${CATEGORY_ID}.json`);
         productsDB = await RESPONSE.json();
     } else {
+        if(objArray.length == 0) {
+            const random = Math.random()*10; 
+            const NOTHING_FOUND = document.createElement("img");
+            NOTHING_FOUND.src = `./images/not-found.gif?v=${random}`;
+            NOTHING_FOUND.id = "not-found-panda";
+            NOTHING_FOUND.remove();
+            PRODUCTS_AREA.append(NOTHING_FOUND);
+        }
         const DATA = {
             products: []
-        }
+        };
         DATA.products = objArray;
         productsDB = DATA;
+
     };
 
     CATEGORY_NAME.textContent = productsDB.name || "Вот что мы нашли";
-    PRODUCTS_AREA.innerHTML = "";
+
     productsDB.products.forEach(product => {
         const PRODUCT_CONTAINER = document.createElement("div");
         PRODUCT_CONTAINER.id = product.id;
