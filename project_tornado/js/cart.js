@@ -17,6 +17,7 @@ const cartUI = {
     numberOfProductsInCart: document.getElementById("cart-text"),
     currencySymbol: "₴",
     openCart() {
+        this.totalQuantity();
         this.calcProductsTotalPrice();
         this.wrapper.className = "window-wrapper";
         this.cartWindow.id = "cart-window";
@@ -46,6 +47,12 @@ const cartUI = {
             this.emptyCart.src = "images/empty-cart.png";
             this.cartWindow.append(this.emptyCart);
         }
+
+        const qtty = document.querySelectorAll(".cart-item-qtty");
+        qtty.forEach( product => {
+            product.value = this.cartContents[product.id].quantity;
+        });
+
         this.closeWindowMark.onclick = () => {
                 this.wrapper.remove();
             },
@@ -78,24 +85,20 @@ const cartUI = {
             this.cartWindow.append(this.cartTotalPriceLabel);
             this.cartWindow.append(this.confirmOrderBtn);
             this.cartWindow.append(this.cleanCartBtn);
+
+
         }
 
         if(!this.cartContents[id]) {
             this.cartContents[id] = {
+                id: id,
                 brand: brand,
                 model: model,
                 price: price,
                 quantity: qtty,
                 img: img,
-            };
+            }
 
-            this.cartContents.allItemsPrice += +price;
-            this.totalQuantity();
-            this.numberOfProductsInCart.textContent = this.cartContents.totalQtty;
-            this.cartTotalPriceLabel.textContent = "Общая сумма: " + this.cartContents
-                .allItemsPrice +
-                this.currencySymbol;
-            this.saveCart();
             const productWrapper = document.createElement("div");
             productWrapper.id = "cart-product-wrapper";
             const itemPhoto = document.createElement("img");
@@ -112,6 +115,7 @@ const cartUI = {
             itemModel.className = "cart-item-model";
             qttyContainer.className = "cart-qtty-container";
             itemQtty.className = "cart-item-qtty";
+            itemQtty.id = id;
             btnPlus.className = "cart-item plus";
             btnMinus.className = "cart-item minus";
             itemPrice.className = "cart-item-price";
@@ -121,7 +125,6 @@ const cartUI = {
             itemPhoto.src = img;
             itemBrand.textContent = brand;
             itemModel.textContent = model;
-            itemQtty.value = qtty;
             itemPrice.textContent = price + this.currencySymbol;
             btnDeleteItem.textContent = "УДАЛИТЬ";
             this.productsArea.append(productWrapper);
@@ -134,7 +137,7 @@ const cartUI = {
             qttyContainer.append(btnPlus);
             productWrapper.append(itemPrice);
             productWrapper.append(btnDeleteItem);
-
+            itemQtty.value = this.cartContents[id].quantity;
 
             btnPlus.onclick = () => {
                 itemQtty.value++;
@@ -196,7 +199,21 @@ const cartUI = {
                 }
                 this.saveCart();
             }
-        } else this.openCart();
+
+
+        } else {
+            this.cartContents[id].quantity++;
+
+        }
+
+        this.totalQuantity();
+        this.calcProductsTotalPrice();
+        this.numberOfProductsInCart.textContent = this.cartContents.totalQtty;
+        this.cartTotalPriceLabel.textContent = "Общая сумма: " + this.cartContents
+            .allItemsPrice +
+            this.currencySymbol;
+        this.saveCart();
+
     },
     totalQuantity() {
         this.cartContents.totalQtty = 0;
@@ -204,8 +221,8 @@ const cartUI = {
             if(product.startsWith("product_")) {
                 this.cartContents.totalQtty += +this.cartContents[product].quantity;
             }
-
         }
+
     },
     cleanCart() {
         this.cartContents = {
@@ -248,7 +265,7 @@ const cartUI = {
                 }
             }
             this.cartContents = RESULTS;
-        } 
+        }
     }
 
 }

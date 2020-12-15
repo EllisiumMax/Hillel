@@ -10,11 +10,12 @@
     <link rel="stylesheet" href="css/login-signup.css">
     <link rel="stylesheet" href="css/info-window.css">
     <link rel="stylesheet" href="css/cart.css">
-    <link rel="stylesheet" href="css/slider.css">
+    <link rel="stylesheet" href="css/search.css">
     <script defer src="js/info-window.js"></script>
     <script defer src="js/login-signup.js"></script>
     <script defer src="js/cart.js"></script>
     <script defer src="js/products.js"></script>
+    <script defer src="js/search.js"></script>
     <script defer src="js/main.js"></script>
   </head>
   <body>
@@ -41,16 +42,15 @@
       </div>
   </header>
     <div class="content area products-content">
-      <div class="products-panel">
-        <form class="area">
+      <div class="products-panel" id="products-panel">
+        <form class="area search">
           <h5 class="section-name">Поиск</h5>
-          <input type="text" placeholder="Type to search" />
-          <button>Найти</button>
+          <input type="text" id="search-field" placeholder="Введите название товара" autocomplete="off"/>
+          <button id="btn-search">Найти</button>
         </form>
         <div class="filters area">
           <h5 class="section-name">Фильтры</h5>
           <form>
-            <div class="area">
               <label for="">Сортировать по: </label>
               <select name="sort by" id="sort">
                 <option value="">Рейтингу</option>
@@ -60,16 +60,15 @@
                 <option value="">Производителю от Z до A</option>
                 <option value="">Новизне</option>
               </select>
-            </div>
-            <div class="area">
-              <label for="">brand</label>
+            <div class="checkbox area">
+              <label for="">Производитель</label>
               <div><input type="checkbox" name="" id="" />brand 1</div>
               <div><input type="checkbox" name="" id="" />brand 2</div>
               <div><input type="checkbox" name="" id="" />brand 3</div>
               <div><input type="checkbox" name="" id="" />brand 4</div>
               <div><input type="checkbox" name="" id="" />brand 5</div>
             </div>
-            <div class="area">
+            <div class="price area">
               <div>Цена</div>
               <label for="">от</label>
               <input type="number" />
@@ -82,7 +81,7 @@
       </div>
       <div class="products area">
         <h5 class="section-name" id="category-name"></h5>
-        <div class="area products-list">
+        <div class="area products-list" id="products-render-area">
     </div>
     </div>
     </div>

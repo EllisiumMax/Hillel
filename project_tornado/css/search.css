@@ -1,0 +1,31 @@
+#search-autocomplete-window {
+    position: relative;
+    
+    display: flex;
+    flex-direction: column;
+    min-height: 3em;
+    top: -29.7em;
+    left: 18.6em;
+    border: 1px solid rgb(197, 196, 197);
+    border-radius: 5px;
+    padding: 0.5em;
+    background-color: rgb(255, 255, 255);
+    z-index: 44;
+    letter-spacing: 0.6px;
+}
+
+#search-autocomplete-window > a {
+    font-weight: 300;
+    margin-top: 0.3em;
+    color: #540397;
+    font-size: 0.9em;
+    border-bottom: 1px solid rgb(233, 233, 233);
+}
+
+#search-autocomplete-window > a:last-child {
+    border: none;
+}
+
+#search-autocomplete-window > a:hover {
+    color:  rgb(207, 100, 0);
+}

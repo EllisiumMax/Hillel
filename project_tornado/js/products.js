@@ -2,16 +2,28 @@
 
 
 
-async function loadProductsList() {
-    const CATEGORY_ID = window.location.search.slice(4);
+async function loadProductsList(objArray = null) {
+
+    let productsDB;
     const CURRENCY = "₴";
     const CATEGORY_NAME = document.getElementById("category-name");
-    const PRODUCTS_AREA = document.getElementsByClassName("area products-list")[0];
-    const RESPONSE = await fetch(`./api/categories/${CATEGORY_ID}.json`);
-    const CATEGORY = await RESPONSE.json();
-    CATEGORY_NAME.textContent = CATEGORY.name;
+    const PRODUCTS_AREA = document.getElementById("products-render-area");
 
-    CATEGORY.products.forEach(product => {
+    if(!objArray) {
+        const CATEGORY_ID = window.location.search.slice(4);
+        const RESPONSE = await fetch(`./api/categories/${CATEGORY_ID}.json`);
+        productsDB = await RESPONSE.json();
+    } else {
+        const DATA = {
+            products: []
+        }
+        DATA.products = objArray;
+        productsDB = DATA;
+    };
+
+    CATEGORY_NAME.textContent = productsDB.name || "Вот что мы нашли";
+    PRODUCTS_AREA.innerHTML = "";
+    productsDB.products.forEach(product => {
         const PRODUCT_CONTAINER = document.createElement("div");
         PRODUCT_CONTAINER.id = product.id;
         PRODUCT_CONTAINER.className = "product-container";
@@ -41,14 +53,14 @@ async function loadProductsList() {
         BTN_ADD_TO_CART.textContent = `Добавить в корзину`;
 
         PRODUCTS_AREA.append(PRODUCT_CONTAINER);
-        PRODUCT_CONTAINER.append(IMG_LINK, BRAND_LINK, PRODUCT_DESCRIPTION, PRODUCT_PRICE, BTN_ADD_TO_CART);
+        PRODUCT_CONTAINER.append(IMG_LINK, BRAND_LINK, PRODUCT_DESCRIPTION,
+            PRODUCT_PRICE, BTN_ADD_TO_CART);
         IMG_LINK.append(PRODUCT_IMG);
         BRAND_LINK.append(PRODUCT_BRAND);
-        
-        BTN_ADD_TO_CART.onclick = () => cartUI.addProduct(product.id, product.image, product.brand, product.model, product.price);
+
+        BTN_ADD_TO_CART.onclick = () => cartUI.addProduct(product.id, product.image,
+            product.brand, product.model, product.price);
     });
-
-
 }
 
 

@@ -1,45 +1,53 @@
 [
   {
     "id": "category_1",
-    "name": "Мобильные телефоны"
+    "name": "Мобильные телефоны",
+    "icon": "./images/category_icons/cell-phone.svg"
   },
   {
     "id": "category_2",
-    "name": "Планшеты"
+    "name": "Телевизоры",
+    "icon": "./images/category_icons/tv.svg"
   },
   {
     "id": "category_3",
-    "name": "Ноутбуки"
+    "name": "Ноутбуки",
+    "icon": "./images/category_icons/laptop.svg"
   },
   {
     "id": "category_4",
-    "name": "Настольные компьютеры"
+    "name": "Настольные компьютеры",
+    "icon": "./images/category_icons/cpu.svg"
   },
   {
     "id": "category_5",
-    "name": "Мониторы"
-
+    "name": "Мониторы",
+    "icon": "./images/category_icons/television.svg"
   },
   {
     "id": "category_6",
-    "name": "Клавиатуры"
+    "name": "Клавиатуры",
+    "icon": "./images/category_icons/keyboard.svg"
   },
   {
     "id": "category_7",
-    "name": "Мыши"
+    "name": "Мыши",
+    "icon": "./images/category_icons/mouse.svg"
   },
   {
     "id": "category_8",
-    "name": "Электронные книги"
+    "name": "Электронные книги",
+    "icon": "./images/category_icons/ereader.svg"
   },
   {
     "id": "category_9",
-    "name": "Защитные стекла для мобильных"
+    "name": "Защитные стекла для мобильных",
+    "icon": "./images/category_icons/mobile-protection.svg"
 
   },
   {
     "id": "category_10",
-    "name": "Чехлы для мобильных"
-
+    "name": "Чехлы для мобильных",
+    "icon": "./images/category_icons/phone-case.svg"
   }
 ]
