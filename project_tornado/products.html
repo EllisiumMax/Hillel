@@ -16,6 +16,7 @@
     <script defer src="js/cart.js"></script>
     <script defer src="js/products.js"></script>
     <script defer src="js/search.js"></script>
+    <script defer src="js/filter.js"></script>
     <script defer src="js/main.js"></script>
   </head>
   <body>
@@ -50,32 +51,28 @@
         </form>
         <div class="filters area">
           <h5 class="section-name">Фильтры</h5>
-          <form>
-              <label for="">Сортировать по: </label>
-              <select name="sort by" id="sort">
-                <option value="">Рейтингу</option>
-                <option value="">Цене от дешевой к дорогой</option>
-                <option value="">Цене от дорогой к дешевой</option>
-                <option value="">Производителю от A до Z</option>
-                <option value="">Производителю от Z до A</option>
-                <option value="">Новизне</option>
+          <form name="filters">
+              <h4 for="">Сортировать по: </h4>
+              <select name="sort-by" id="sort">
+                <option value="rating">Рейтингу</option>
+                <option value="price-min-max">Цене от дешевой к дорогой</option>
+                <option value="price-max-min">Цене от дорогой к дешевой</option>
+                <option value="brand-a-z">Производителю от A до Z</option>
+                <option value="brand-z-a">Производителю от Z до A</option>
+                <option value="new">Новизне</option>
               </select>
-            <div class="checkbox area">
-              <label for="">Производитель</label>
-              <div><input type="checkbox" name="" id="" />brand 1</div>
-              <div><input type="checkbox" name="" id="" />brand 2</div>
-              <div><input type="checkbox" name="" id="" />brand 3</div>
-              <div><input type="checkbox" name="" id="" />brand 4</div>
-              <div><input type="checkbox" name="" id="" />brand 5</div>
+            <div class="checkbox area" id="filter-checkbox">
+              <h4>Производитель</h4>
             </div>
             <div class="price area">
               <div>Цена</div>
-              <label for="">от</label>
-              <input type="number" />
-              <label for="">до</label>
-              <input type="number" />
+              <label for="price-min">от</label>
+              <input type="number"  id="price-min" name="price-min">
+              <label for="price-max" >до</label>
+              <input type="number" id="price-max" name="price-max">
+              <double-input-range v-model="message" valuemin="96" valuemax="116" min="90" max="116" step="2" :label="pct"></double-input-range>
             </div>
-            <button>Применить</button>
+            <button id="apply-sort">Применить</button>
       </div>
         </form>
       </div>

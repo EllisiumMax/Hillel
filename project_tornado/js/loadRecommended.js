@@ -15,7 +15,6 @@ async function loadRecommended () {
         let random = Math.round(Math.random()*(PRODUCTS_LIST.length-1));
         RANDOM_PRODUCTS.add(PRODUCTS_LIST[random]);
     }
-    console.log(RANDOM_PRODUCTS);
 
     RANDOM_PRODUCTS.forEach(product => {
         

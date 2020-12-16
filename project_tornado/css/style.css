@@ -701,3 +701,25 @@ form {
     width: 80%;
 }
 /* PRODUCTS END */
+
+
+
+
+/* FILTERS START */
+
+.filter-brand-container {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    margin: 0;
+}
+
+.filter-brand-container > input {
+
+}
+
+.filter-brand-container > p {
+    margin: 0.3em 0 0.3em 0.4em;
+}
+
+/* FILTERS END */
