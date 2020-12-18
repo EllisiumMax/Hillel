@@ -2,6 +2,8 @@
 
 const productsFilter = {
     productsDB: [],
+    constMin: "",
+    constMax: "",
     brands: new Set(),
     sortBy: "",
     selectedBrands: [],
@@ -21,7 +23,7 @@ const productsFilter = {
         this.productsDB.products.forEach(product => this.brands.add(product.brand));
     },
 
-    async loadBrands() {
+    async loadBrandsAndPrices() {
         await this.loadDB();
         this.brands.forEach(brand => {
             const container = document.createElement("div");
@@ -36,13 +38,30 @@ const productsFilter = {
             this.checkBoxArea.append(container);
             container.append(checkBox, checkBoxText);
         });
+        this.productsDB.products.sort((a, b) => (a.price > b.price) ? 1 : -
+        1);
+        this.priceFromElement.value = this.productsDB.products[0].price;
+        this.priceMin = this.productsDB.products[0].price;
+        this.constMin = this.productsDB.products[0].price;
+        this.priceToElement.value = this.productsDB.products[this.productsDB.products.length-1].price;
+        this.priceMax =  this.productsDB.products[this.productsDB.products.length-1].price;
+        this.constMax = this.productsDB.products[this.productsDB.products.length-1].price;
+    },
+    controllMinPriceInput() {
+        if(this.priceFromElement.value < 0 || this.priceFromElement.value > this.constMax) this.priceFromElement.value = this.constMin;
+    },
+    conrollMaxPriceInput() {
+        if(this.priceToElement.value < 0 || this.priceToElement.value > this.constMax) this.priceToElement.value = this.constMax; 
     },
     getFormData() {
         const FORM = new FormData(filters);
         this.sortBy = FORM.get("sort-by");
         this.selectedBrands = FORM.getAll("brand");
-        this.priceMin = FORM.get("price-min");
-        this.priceMax = FORM.get("price-max") ? FORM.get("price-max") : 9999999999;
+        if (FORM.get("price-min") < this.constMin || FORM.get("price-min") > this.constMax) this.priceFromElement.value = this.priceMin;
+        else this.priceMin = FORM.get("price-min");
+        if (FORM.get("price-max") > this.constMax || FORM.get("price-max") < this.constMin) this.priceToElement.value = this.priceMax;
+        else this.priceMax = FORM.get("price-max");
+        
     },
     sortDB() {
         this.getFormData();
@@ -85,33 +104,10 @@ const productsFilter = {
     }
 }
 
-productsFilter.loadBrands();
-
-
+productsFilter.loadBrandsAndPrices();
+productsFilter.priceFromElement.oninput = () => productsFilter.controllMinPriceInput();
+productsFilter.priceToElement.oninput = () => productsFilter.conrollMaxPriceInput();
 productsFilter.applySortBtn.onclick = (e) => {
     e.preventDefault();
     productsFilter.applyFilter();
 }
-
-
-
-
-// function minToMax(a, b) {
-//     if(a < b) return -1;
-//     if(a > b) return 1;
-//     if(a = b) return 0;
-// }
-
-// function maxToMin(a,b) {
-//     if(a < b) return 1;
-//     if(a > b) return -1;
-//     if(a = b) return 0;
-// }
-
-// let arr = [101, 10, 14, 20, 1, 0, 4, 45, -1];
-// let arr2 = [101, 10, 14, 20, 1, 0, 4, 45, -1];
-
-// let minTomax = arr.sort(minToMax);
-// let maxtomin = arr2.sort(maxToMin);
-// console.log(minTomax);
-// console.log(maxtomin);

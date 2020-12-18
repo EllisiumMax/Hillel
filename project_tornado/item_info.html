@@ -13,6 +13,7 @@
     <script defer src="js/info-window.js"></script>
     <script defer src="js/login-signup.js"></script>
     <script defer src="js/cart.js"></script>
+    <script defer src="js/itemInfo.js"></script>
     <script defer src="js/main.js"></script>
   </head>
   <body>
@@ -38,16 +39,16 @@
           </button>
       </div>
   </header>
-    <div class="content area">
-      <h1>Brand model</h1>
+    <div class="content area" id="product-info-page">
+      <h1 class="item-info-header" id="item-info-header">{{brand model}}</h1>
       <div class="area item-info">
         <div class="area">
           <div class="item-slider">
-            <button><</button>
+            <button></button>
             <div class="area">
               <img src="https://freepngimg.com/thumb/samsung_mobile_phone/5-2-samsung-mobile-phone-png-hd-thumb.png" alt="">
             </div>
-            <button>></button>
+            <button></button>
           </div>
           <div class="thumbs">
             <button><img src="https://freepngimg.com/thumb/samsung_mobile_phone/5-2-samsung-mobile-phone-png-hd-thumb.png" alt=""></button>
@@ -58,23 +59,23 @@
           </div>
         </div>
         <div class="area">
-          <div>
-            Brand: brand1
+          <div id="product-brand">
+            Производитель: {{brand}}
           </div>
-          <div>
-            Model: some model
+          <div id="product-model">
+            Модель: {{model}}
           </div>
-          <div>
-            Price: 100$
+          <div id="product-price">
+            Цена: {{price}}
           </div>
-          <div>
-            Available: yes
+          <div id="product-availability">
+            Наличие: {{available}}
           </div>
-          <div>
-            Rating: 3.4
+          <div id="product-rating">
+            Оценка: {{rating}}
           </div>
-          <button>add to cart</button>
-          <input type="number" value="1" name="" id="">
+          <button id="add-to-cart">Добавить в корзину</button>
+          <input type="number" value="1" name="" id="product-quantity">
         </div>
       </div>
       <div class="area">

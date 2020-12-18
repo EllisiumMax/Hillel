@@ -7,6 +7,7 @@
     "rating": 4.6,
     "added": "23.11.2020 11:35",
     "available": true,
+    "stock": 50,
     "images": [
         "../images/category_1/product_1-1/1.jpg",
         "../images/category_1/product_1-1/2.jpg",

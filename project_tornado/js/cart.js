@@ -68,7 +68,7 @@ const cartUI = {
         this.confirmOrderBtn.onclick = () => {
             this.cleanCart();
             this.wrapper.remove();
-            infoWindowUI.show("Спасибо за покупку", 60);
+            infoWindowUI.show("Спасибо за покупку");
         }
         this.cleanCartBtn.onclick = () => {
             this.cleanCart();

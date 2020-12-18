@@ -65,12 +65,16 @@
               <h4>Производитель</h4>
             </div>
             <div class="price area">
-              <div>Цена</div>
-              <label for="price-min">от</label>
-              <input type="number"  id="price-min" name="price-min">
-              <label for="price-max" >до</label>
+              <h4>Цена</h4>
+              <div class="price-container">
+                <label for="price-min" class="price-text">от</label>
+                <label for="price-max" class="price-text">до</label>
+              </div>
+              <div class="price-container">
+              <input type="number" id="price-min" name="price-min">
+              <p class="price-text">&mdash;</p>
               <input type="number" id="price-max" name="price-max">
-              <double-input-range v-model="message" valuemin="96" valuemax="116" min="90" max="116" step="2" :label="pct"></double-input-range>
+            </div>
             </div>
             <button id="apply-sort">Применить</button>
       </div>

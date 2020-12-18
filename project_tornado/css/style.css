@@ -84,7 +84,8 @@ header.area {
     margin: 0;
     height: 6em;
     background-color: var(--header);
-    border-bottom: 1px solid black;
+    box-shadow: 0 0 15px 1px black;
+    border-radius: 0;
 }
 
 header form {
@@ -564,6 +565,9 @@ form {
 
 .products.area {
     width: 80%;
+    border-top: none;
+    border-left: none;
+    border-right: none;
 }
 
 .products-content {
@@ -707,6 +711,20 @@ form {
 
 /* FILTERS START */
 
+#sort {
+    text-align: center;
+    font-size: 0.8em;
+    padding: 0.3em 0;
+    text-align-last:center;
+    outline: none;
+    border: 1px solid rgb(185, 184, 184);
+    border-radius: 4px;
+}
+
+#filter-checkbox{
+    border: none;
+}
+
 .filter-brand-container {
     display: flex;
     align-items: center;
@@ -722,4 +740,66 @@ form {
     margin: 0.3em 0 0.3em 0.4em;
 }
 
+.price.area {
+    border: none;
+}
+
+.price-text {
+    color: gray;
+}
+
+.price-container {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.price-container > input {
+    width: 8em;
+    height: 2.5em;
+    margin: 0 1em;
+    border: 1px solid rgb(185, 184, 184);
+    border-radius: 4px;
+    outline: none;
+    text-align: center;
+}
+
+.price-container > input::-webkit-outer-spin-button,
+.price-container > input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+#apply-sort {
+    background-color: var(--product-add-to-cart-btn-background);
+    color: var(--product-add-to-cart-btn-text);
+    margin: 2em 0;
+    padding: 0.2em 1em;
+}
+
 /* FILTERS END */
+
+
+/* ITEM INFO PAGE START */
+
+#item-info-header {
+    margin: 1em;
+    font-weight: 300;
+}
+
+
+/* ITEM INFO PAGE END */
+
+
+/* 404 */
+
+#not-found{
+    text-align: center;
+    margin: 5em;
+}
+
+#not-found > img {
+    width: 40em;
+    margin-bottom: 6em;
+}

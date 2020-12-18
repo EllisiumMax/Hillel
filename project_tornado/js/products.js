@@ -14,8 +14,9 @@ async function loadProductsList(objArray = null) {
     if(!objArray) {
         const CATEGORY_ID = window.location.search.slice(4);
         const RESPONSE = await fetch(`./api/categories/${CATEGORY_ID}.json`);
-        productsDB = await RESPONSE.json();
-        productsFilter.productsDB = await productsDB;
+        if(RESPONSE.status != 200) window.location.assign("404.html");
+        else productsDB = await RESPONSE.json();
+        
     } else {
         if(objArray.length == 0) {
             const random = Math.random()*10; 
