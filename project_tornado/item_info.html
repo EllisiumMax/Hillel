@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+
+<head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Item info - TORNADO</title>
@@ -10,155 +11,151 @@
     <link rel="stylesheet" href="css/login-signup.css">
     <link rel="stylesheet" href="css/info-window.css">
     <link rel="stylesheet" href="css/cart.css">
+    <link rel="stylesheet" href="css/productSlider.css">
     <script defer src="js/info-window.js"></script>
     <script defer src="js/login-signup.js"></script>
     <script defer src="js/cart.js"></script>
+    <script defer src="js/productSlider.js"></script>
     <script defer src="js/itemInfo.js"></script>
     <script defer src="js/main.js"></script>
-  </head>
-  <body>
+</head>
+
+<body>
     <header class="area">
-      <div class="logo area">
-          <a href="index.html">
+        <div class="logo area">
+            <a href="index.html">
           <img src="images/tornado.svg" alt="tornado" id="tornado">
         <img src="images/logo.svg" alt="logo" class="main-logo">
       </a>
-      </div>
-      <div class="account-buttons">
-          <button id="btn-login" class="log-btn">
-              <img id="btn-login-icon" class="log-btn-img" src="images/person-square.svg">
-              <span id="btn-login-text" class="log-btn-text">Войти</span>
-          </button>
-          <button id="btn-logout" class="log-btn">
-              <img id="btn-login-icon" class="log-btn-img" src="images/power.svg">
-              <span id="btn-login-text" class="log-btn-text">Выйти</span>
-          </button>
-          <button id="cart">
-              <img id="cart-icon"  class="log-btn-img" src="images/cart-fill.svg">
-              <span id="cart-text" class="log-btn-text">0</span>
-          </button>
-      </div>
-  </header>
+        </div>
+        <div class="account-buttons">
+            <button id="btn-login" class="log-btn">
+                <img id="btn-login-icon" class="log-btn-img" src="images/person-square.svg">
+                <span id="btn-login-text" class="log-btn-text">Войти</span>
+            </button>
+            <button id="btn-logout" class="log-btn">
+                <img id="btn-login-icon" class="log-btn-img" src="images/power.svg">
+                <span id="btn-login-text" class="log-btn-text">Выйти</span>
+            </button>
+            <button id="cart">
+                <img id="cart-icon"  class="log-btn-img" src="images/cart-fill.svg">
+                <span id="cart-text" class="log-btn-text">0</span>
+            </button>
+        </div>
+    </header>
     <div class="content area" id="product-info-page">
-      <h1 class="item-info-header" id="item-info-header">{{brand model}}</h1>
-      <div class="area item-info">
-        <div class="area">
-          <div class="item-slider">
-            <button></button>
+        <h1 class="item-info-header" id="item-info-header">{{brand model}}</h1>
+        <div class="area item-info">
             <div class="area">
-              <img src="https://freepngimg.com/thumb/samsung_mobile_phone/5-2-samsung-mobile-phone-png-hd-thumb.png" alt="">
+                <div id="product-slider"></div>
             </div>
-            <button></button>
-          </div>
-          <div class="thumbs">
-            <button><img src="https://freepngimg.com/thumb/samsung_mobile_phone/5-2-samsung-mobile-phone-png-hd-thumb.png" alt=""></button>
-            <button><img src="https://freepngimg.com/thumb/samsung_mobile_phone/5-2-samsung-mobile-phone-png-hd-thumb.png" alt=""></button>
-            <button><img src="https://freepngimg.com/thumb/samsung_mobile_phone/5-2-samsung-mobile-phone-png-hd-thumb.png" alt=""></button>
-            <button><img src="https://freepngimg.com/thumb/samsung_mobile_phone/5-2-samsung-mobile-phone-png-hd-thumb.png" alt=""></button>
-            <button><img src="https://freepngimg.com/thumb/samsung_mobile_phone/5-2-samsung-mobile-phone-png-hd-thumb.png" alt=""></button>
-          </div>
+            <div class="product-main-info area">
+                <div id="product-brand">
+                    Производитель: {{brand}}
+                </div>
+                <div id="product-model">
+                    Модель: {{model}}
+                </div>
+                <div id="product-price">
+                    Цена: {{price}}
+                </div>
+                <div id="product-availability">
+                    Наличие: {{available}}
+                </div>
+                <div>
+                    <label for="product-rating">Рейтинг:</label>
+                    <meter id="product-rating" min="0" max="5" low="3.5" high="5" optimum="4.5" value="0">
+                    </meter>
+                </div>
+                <div class="add-to-cart-block">
+                    <input type="number" value="1" name="" id="product-quantity">
+                    <button id="add-to-cart">Добавить в корзину</button>
+                </div>
+
+            </div>
         </div>
         <div class="area">
-          <div id="product-brand">
-            Производитель: {{brand}}
-          </div>
-          <div id="product-model">
-            Модель: {{model}}
-          </div>
-          <div id="product-price">
-            Цена: {{price}}
-          </div>
-          <div id="product-availability">
-            Наличие: {{available}}
-          </div>
-          <div id="product-rating">
-            Оценка: {{rating}}
-          </div>
-          <button id="add-to-cart">Добавить в корзину</button>
-          <input type="number" value="1" name="" id="product-quantity">
+            <div class="title">Overview (overview accordion)</div>
+            <div class="area body">......</div>
         </div>
-      </div>
-      <div class="area">
-        <div class="title">Overview (overview accordion)</div>
-        <div class="area body">......</div>
-      </div>
-      <div class="area">
-        <div class="title">Specifications (specifications accordion)</div>
-        <div class="area body">......</div>
-      </div>
-      <div class="area">
-        <div class="title">Reviews (reviews accordion)</div>
-        <div class="body">
-          <div class="review area">
-            <div class="title area">
-              <div>User name</div>
-              <div>[date]</div>
-            </div>
-            <div class="body area">
-              Comment Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima quibusdam, veniam ad corporis suscipit nam eius totam impedit, quo quia soluta ea non dicta quod reiciendis rerum, unde aliquid iste?
-            </div>
-            <div class="rating area">rating 3/10</div>
-          </div>
-          <div class="review area">
-            <div class="title area">
-              <div>User name</div>
-              <div>[date]</div>
-            </div>
-            <div class="body area">
-              Comment Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima quibusdam, veniam ad corporis suscipit nam eius totam impedit, quo quia soluta ea non dicta quod reiciendis rerum, unde aliquid iste?
-            </div>
-            <div class="rating area">rating 3/10</div>
-          </div>
-          <div class="review area">
-            <div class="title area">
-              <div>User name</div>
-              <div>[date]</div>
-            </div>
-            <div class="body area">
-              Comment Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima quibusdam, veniam ad corporis suscipit nam eius totam impedit, quo quia soluta ea non dicta quod reiciendis rerum, unde aliquid iste?
-            </div>
-            <div class="rating area">rating 3/10</div>
-          </div>
-          <div class="review area">
-            <div class="title area">
-              <div>User name</div>
-              <div>[date]</div>
-            </div>
-            <div class="body area">
-              Comment Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima quibusdam, veniam ad corporis suscipit nam eius totam impedit, quo quia soluta ea non dicta quod reiciendis rerum, unde aliquid iste?
-            </div>
-            <div class="rating area">rating 3/10</div>
-          </div>
-          <div class="review area">
-            <div class="title area">
-              <div>User name</div>
-              <div>[date]</div>
-            </div>
-            <div class="body area">
-              Comment Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima quibusdam, veniam ad corporis suscipit nam eius totam impedit, quo quia soluta ea non dicta quod reiciendis rerum, unde aliquid iste?
-            </div>
-            <div class="rating area">rating 3/10</div>
-          </div>
+        <div class="area">
+            <div class="title">Specifications (specifications accordion)</div>
+            <div class="area body">......</div>
         </div>
-      </div>
-    </section>
+        <div class="area">
+            <div class="title">Reviews (reviews accordion)</div>
+            <div class="body">
+                <div class="review area">
+                    <div class="title area">
+                        <div>User name</div>
+                        <div>[date]</div>
+                    </div>
+                    <div class="body area">
+                        Comment Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima quibusdam, veniam ad corporis suscipit nam eius totam impedit, quo quia soluta ea non dicta quod reiciendis rerum, unde aliquid iste?
+                    </div>
+                    <div class="rating area">rating 3/10</div>
+                </div>
+                <div class="review area">
+                    <div class="title area">
+                        <div>User name</div>
+                        <div>[date]</div>
+                    </div>
+                    <div class="body area">
+                        Comment Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima quibusdam, veniam ad corporis suscipit nam eius totam impedit, quo quia soluta ea non dicta quod reiciendis rerum, unde aliquid iste?
+                    </div>
+                    <div class="rating area">rating 3/10</div>
+                </div>
+                <div class="review area">
+                    <div class="title area">
+                        <div>User name</div>
+                        <div>[date]</div>
+                    </div>
+                    <div class="body area">
+                        Comment Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima quibusdam, veniam ad corporis suscipit nam eius totam impedit, quo quia soluta ea non dicta quod reiciendis rerum, unde aliquid iste?
+                    </div>
+                    <div class="rating area">rating 3/10</div>
+                </div>
+                <div class="review area">
+                    <div class="title area">
+                        <div>User name</div>
+                        <div>[date]</div>
+                    </div>
+                    <div class="body area">
+                        Comment Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima quibusdam, veniam ad corporis suscipit nam eius totam impedit, quo quia soluta ea non dicta quod reiciendis rerum, unde aliquid iste?
+                    </div>
+                    <div class="rating area">rating 3/10</div>
+                </div>
+                <div class="review area">
+                    <div class="title area">
+                        <div>User name</div>
+                        <div>[date]</div>
+                    </div>
+                    <div class="body area">
+                        Comment Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima quibusdam, veniam ad corporis suscipit nam eius totam impedit, quo quia soluta ea non dicta quod reiciendis rerum, unde aliquid iste?
+                    </div>
+                    <div class="rating area">rating 3/10</div>
+                </div>
+            </div>
+        </div>
+        </section>
     </div>
     <footer>
-      <p>© Интернет-магазин электроники TORNADO™ 2020</p>
-      <img src="images/visa.svg" class="visa" alt="visa certified logo">
-      <img src="images/mastercard.svg" class="mastercard" alt="mastercard certified logo">
-      <div class="social-networks-block">
-          <a href="http://www.instagram.com" class="social-network-ico">
+        <p>© Интернет-магазин электроники TORNADO™ 2020</p>
+        <img src="images/visa.svg" class="visa" alt="visa certified logo">
+        <img src="images/mastercard.svg" class="mastercard" alt="mastercard certified logo">
+        <div class="social-networks-block">
+            <a href="http://www.instagram.com" class="social-network-ico">
               <img src="images/instagram.svg" alt="instagram logo"></a>
-          <a href="http://www.facebook.com" class="social-network-ico">
+            <a href="http://www.facebook.com" class="social-network-ico">
               <img src="images/facebook.svg" alt="facebook  logo"></a>
-          <a href="http://www.youtube.com" class="social-network-ico">
+            <a href="http://www.youtube.com" class="social-network-ico">
               <img src="images/youtube.svg" alt="youtube  logo"></a>
-          <a href="https://t.me/subarumax" class="social-network-ico">
+            <a href="https://t.me/subarumax" class="social-network-ico">
               <img src="images/telegram.svg" alt="telegram  logo"></a>
-          <a href="https://viber.com/" class="social-network-ico">
+            <a href="https://viber.com/" class="social-network-ico">
               <img src="images/viber.svg" alt="viber  logo"></a>
-      </div>
-  </footer>
-  </body>
+        </div>
+    </footer>
+</body>
+
 </html>

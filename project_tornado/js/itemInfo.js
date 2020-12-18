@@ -17,32 +17,42 @@ const productPage = {
         const RESPONSE = await fetch(`./api/products/${this.productId}.json`);
         if(RESPONSE.status != 200) window.location.assign("404.html");
         else this.productInfo = await RESPONSE.json();
-        
+        console.log(this.productId, this.productInfo);
+    },
+    renderHeader() {
+        this.contentHeader.textContent = this.contentHeader.textContent.replace(
+            "{{brand model}}", `${this.productInfo.brand} ${this.productInfo.model}`);
+    },
 
-    },
-    async renderHeader() {
-        this.contentHeader.textContent = this.contentHeader.textContent.replace("{{brand model}}", `${this.productInfo.brand} ${this.productInfo.model}`);
-    },
-    async renderInfo() {
-        
-        this.productBrand.textContent = this.productBrand.textContent.replace("{{brand}}", this.productInfo.brand);
-        this.productModel.textContent = this.productModel.textContent.replace("{{model}}", this.productInfo.model);
-        this.productPrice.textContent = this.productPrice.textContent.replace("{{price}}", `${this.productInfo.price} ${this.currencySymbol}`);
-        if (this.productInfo.available) this.productAvailable.textContent = this.productAvailable.textContent.replace("{{available}}", "Есть в наличии");
-        else this.productAvailable.textContent = this.productAvailable.textContent.replace("{{available}}", "Нет в наличии");
-        this.productRating.textContent = this.productRating.textContent.replace("{{rating}}", this.productInfo.rating);
+    renderInfo() {
+        productSlider.createSlider("product-slider", this.productInfo.images, 600);
+        this.productBrand.textContent = this.productBrand.textContent.replace("{{brand}}", this
+            .productInfo.brand);
+        this.productModel.textContent = this.productModel.textContent.replace("{{model}}", this
+            .productInfo.model);
+        this.productPrice.textContent = this.productPrice.textContent.replace("{{price}}",
+            `${this.productInfo.price} ${this.currencySymbol}`);
+        if(this.productInfo.available) this.productAvailable.textContent = this.productAvailable
+            .textContent.replace("{{available}}", "Есть в наличии");
+        else this.productAvailable.textContent = this.productAvailable.textContent.replace(
+            "{{available}}", "Нет в наличии");
+        this.productRating.value = this.productInfo.rating;
 
         this.productQtty.oninput = () => {
-            if(!this.productQtty.value) this.productQtty.value=1;
+            if(!this.productQtty.value) this.productQtty.value = 1;
             if(this.productQtty.value > this.productInfo.stock) {
                 this.productQtty.value = this.productInfo.stock;
-                infoWindowUI.show(`Ошибка: На складе осталось ${this.productInfo.stock} едениц товара.`, 1800)};
+                infoWindowUI.show(
+                    `Ошибка: На складе осталось ${this.productInfo.stock} едениц товара.`,
+                    1800)
+            };
         }
         this.productQtty.onpaste = (e) => {
             e.preventDefault();
         }
         this.addToCart.onclick = () => {
-            cartUI.addProduct(this.productInfo.id, this.productInfo.image, this.productInfo.brand, this.productInfo.model, this.productInfo.price);
+            cartUI.addProduct(this.productInfo.id, this.productInfo.image, this.productInfo
+                .brand, this.productInfo.model, this.productInfo.price);
         }
     },
     async renderPage() {

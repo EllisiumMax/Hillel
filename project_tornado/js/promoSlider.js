@@ -1,6 +1,6 @@
 "use strict";
 
-const sliderUI = {
+const promotionsSlider = {
     async request(url) {
         let response = await fetch(url);
         let result = await response.json();
@@ -74,6 +74,7 @@ const sliderUI = {
             SLIDER_BULLET.src = RESULT[i].image;
             SLIDER_BULLETS_AREA.append(SLIDER_BULLET);
             SLIDER_BULLET.onclick = () => {
+                if (SLIDER_BULLET.src != CURRENT_SLIDE.src) {
                 PROMOTION_WRAPPER.style.opacity = 0;
                 SLIDER_BTN_PREV.style.opacity = 0;
                 SLIDER_BTN_NEXT.style.opacity = 0;
@@ -109,6 +110,7 @@ const sliderUI = {
                 SLIDER_BULLET.style.border = "3px solid white";
                 counter = i;
             }
+        }
 
         }
         const allBullets = SLIDER_BULLETS_AREA.querySelectorAll(
@@ -214,4 +216,4 @@ const sliderUI = {
 };
 
 
-sliderUI.createSlider("#sales-slider", "./api/promotions.json", 300);
+promotionsSlider.createSlider("#sales-slider", "./api/promotions.json", 300);
