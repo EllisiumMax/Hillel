@@ -26,15 +26,15 @@ const productPage = {
 
     renderInfo() {
         productSlider.createSlider("product-slider", this.productInfo.images, 600);
-        this.productBrand.textContent = this.productBrand.textContent.replace("{{brand}}", this
+        this.productBrand.innerHTML = this.productBrand.innerHTML.replace("{{brand}}", this
             .productInfo.brand);
-        this.productModel.textContent = this.productModel.textContent.replace("{{model}}", this
+        this.productModel.innerHTML = this.productModel.innerHTML.replace("{{model}}", this
             .productInfo.model);
-        this.productPrice.textContent = this.productPrice.textContent.replace("{{price}}",
+        this.productPrice.innerHTML = this.productPrice.innerHTML.replace("{{price}}",
             `${this.productInfo.price} ${this.currencySymbol}`);
-        if(this.productInfo.available) this.productAvailable.textContent = this.productAvailable
-            .textContent.replace("{{available}}", "Есть в наличии");
-        else this.productAvailable.textContent = this.productAvailable.textContent.replace(
+        if(this.productInfo.available) this.productAvailable.innerHTML = this.productAvailable
+            .innerHTML.replace("{{available}}", "Есть в наличии");
+        else this.productAvailable.innerHTML = this.productAvailable.innerHTML.replace(
             "{{available}}", "Нет в наличии");
         this.productRating.value = this.productInfo.rating;
 

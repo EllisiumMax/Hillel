@@ -41,13 +41,10 @@
     cursor: pointer;
     font-size: 7em;
     height: 2em;
-    top: 0;
-    left: 0;
-    right: 50%;
-    bottom: 0;
+    top: -0.1em;
     text-shadow: 0 0 5px rgb(58, 58, 58);
     filter: blur(1px);
-    transition: all 0.4s;
+    transition: all 0.1s;
     z-index: 2;
     box-shadow: none;
 }
@@ -55,7 +52,7 @@
 
 
 .slider-btn.left {
-left: 4.9em;
+left: 0;
 
 }
 
@@ -66,7 +63,7 @@ left: 4.9em;
 .slider-btn:hover {
     filter: blur(0);
     transform: scale(1.5);
-    top: -0.05em;
+    top: -0.1em;
 }
 
 .slider-bullets-area {

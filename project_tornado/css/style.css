@@ -4,8 +4,7 @@
     --section-name: rgb(27, 18, 44);
     --links: rgb(0, 116, 136);
     --text: rgb(22, 22, 22);
-    --border: rgb(238, 237, 238);
-    --area: transparent;
+    --area-border: transparent --area: transparent;
     --categories-background: #540397;
     --categories-text: rgb(255, 255, 255);
     --recommended-product-shadow: #540397;
@@ -71,7 +70,7 @@ header {
 
 
 .area {
-    border: 1px solid var(--border);
+    border: 1px solid var(--area-border);
     padding: 0;
     margin: 0;
     border-radius: 3px;
@@ -783,17 +782,31 @@ form {
 /* ITEM INFO PAGE START */
 
 #item-info-header {
-    margin: 1em;
+    margin: 1em 0 1em 5em;
     font-weight: 300;
+    border: none;
+
 }
 
 .product-main-info.area {
     display: flex;
     flex-direction: column;
+    padding: 2em 1em;
+    border: none;
 }
 
-.product-main-info.area > * {
-margin: 0.5em;
+.product-main-info.area>* {
+    margin-bottom: 2em;
+    font-weight: 300;
+    color: rgb(0, 0, 0);
+    font-size: 1.2em;
+}
+
+.product-main-info.area b {
+    font-weight: 300;
+    color: rgb(5, 119, 119);
+    font-size: 1em;
+    margin-right: 0.5em;
 }
 
 meter::-webkit-meter-bar {
@@ -801,7 +814,6 @@ meter::-webkit-meter-bar {
     height: 1.1em;
     width: 7em;
     background: none;
-    /* Required to get rid of the default background property */
     background-color: whiteSmoke;
     box-shadow: 0 5px 5px -5px #333 inset;
     border-radius: 3px;
@@ -811,8 +823,7 @@ meter::-webkit-meter-bar {
     display: flex;
     flex-direction: row;
     width: 100%;
-    margin-top: auto;
-    margin-bottom: 1em;
+    margin-top: 2em;
     align-items: center;
 }
 
@@ -821,6 +832,15 @@ meter::-webkit-meter-bar {
     background-color: var(--product-add-to-cart-btn-background);
     color: var(--product-add-to-cart-btn-text);
     padding: 0.3em 1em;
+    font-size: 0.8em;
+}
+
+#product-price>em {
+    font-size: 1.2em;
+    background-color: var(--product-price-background);
+    color: white;
+    padding: 0.3em 1em;
+    border-radius: 1em;
 }
 
 #product-quantity {

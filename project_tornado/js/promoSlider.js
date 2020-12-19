@@ -74,6 +74,7 @@ const promotionsSlider = {
             SLIDER_BULLET.src = RESULT[i].image;
             SLIDER_BULLETS_AREA.append(SLIDER_BULLET);
             SLIDER_BULLET.onclick = () => {
+                counter = i;
                 if (SLIDER_BULLET.src != CURRENT_SLIDE.src) {
                 PROMOTION_WRAPPER.style.opacity = 0;
                 SLIDER_BTN_PREV.style.opacity = 0;
