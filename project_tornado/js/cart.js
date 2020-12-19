@@ -50,10 +50,12 @@ const cartUI = {
         const price = document.querySelectorAll(".cart-item-price");
         qtty.forEach( product => {
             product.value = this.cartContents[product.id].quantity;
-            price.textContent = this.cartContents[product.id].quantity * this.cartContents[product.id].price + this.currencySymbol;
+
         });
         
-
+        price.forEach((product) => {
+            product.textContent = this.cartContents[product.dataset.id].quantity * this.cartContents[product.dataset.id].price + this.currencySymbol;
+        });
 
         this.closeWindowMark.onclick = () => {
                 this.wrapper.remove();
@@ -121,6 +123,7 @@ const cartUI = {
             btnPlus.className = "cart-item plus";
             btnMinus.className = "cart-item minus";
             itemPrice.className = "cart-item-price";
+            itemPrice.dataset.id = id; 
             btnDeleteItem.className = "cart-item-delete";
             btnPlus.innerHTML = "&plus;";
             btnMinus.innerHTML = "&minus;";
