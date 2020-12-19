@@ -17,7 +17,6 @@ const productPage = {
         const RESPONSE = await fetch(`./api/products/${this.productId}.json`);
         if(RESPONSE.status != 200) window.location.assign("404.html");
         else this.productInfo = await RESPONSE.json();
-        console.log(this.productId, this.productInfo);
     },
     renderHeader() {
         this.contentHeader.textContent = this.contentHeader.textContent.replace(
@@ -51,8 +50,8 @@ const productPage = {
             e.preventDefault();
         }
         this.addToCart.onclick = () => {
-            cartUI.addProduct(this.productInfo.id, this.productInfo.image, this.productInfo
-                .brand, this.productInfo.model, this.productInfo.price);
+            cartUI.addProduct(this.productInfo.id, this.productInfo.images[0], this.productInfo
+                .brand, this.productInfo.model, this.productInfo.price, this.productQtty.value);
         }
     },
     async renderPage() {

@@ -38,8 +38,6 @@ const cartUI = {
         document.body.append(this.wrapper);
         this.wrapper.append(this.cartWindow);
 
-
-
         if(this.productsArea.children.length == 0) {
             this.cartWindow.append(this.closeWindowMark);
             this.cartWindow.append(this.userNameLabel);
@@ -49,9 +47,13 @@ const cartUI = {
         }
 
         const qtty = document.querySelectorAll(".cart-item-qtty");
+        const price = document.querySelectorAll(".cart-item-price");
         qtty.forEach( product => {
             product.value = this.cartContents[product.id].quantity;
+            price.textContent = this.cartContents[product.id].quantity * this.cartContents[product.id].price + this.currencySymbol;
         });
+        
+
 
         this.closeWindowMark.onclick = () => {
                 this.wrapper.remove();
@@ -95,9 +97,9 @@ const cartUI = {
                 brand: brand,
                 model: model,
                 price: price,
-                quantity: qtty,
+                quantity: +qtty,
                 img: img,
-            }
+            } 
 
             const productWrapper = document.createElement("div");
             productWrapper.id = "cart-product-wrapper";
@@ -125,7 +127,7 @@ const cartUI = {
             itemPhoto.src = img;
             itemBrand.textContent = brand;
             itemModel.textContent = model;
-            itemPrice.textContent = price + this.currencySymbol;
+            
             btnDeleteItem.textContent = "УДАЛИТЬ";
             this.productsArea.append(productWrapper);
             productWrapper.append(itemPhoto);
@@ -138,6 +140,7 @@ const cartUI = {
             productWrapper.append(itemPrice);
             productWrapper.append(btnDeleteItem);
             itemQtty.value = this.cartContents[id].quantity;
+            itemPrice.textContent = itemQtty.value * price + this.currencySymbol;
 
             btnPlus.onclick = () => {
                 itemQtty.value++;
@@ -202,10 +205,9 @@ const cartUI = {
 
 
         } else {
-            this.cartContents[id].quantity++;
+            this.cartContents[id].quantity += +qtty;
 
         }
-
         this.totalQuantity();
         this.calcProductsTotalPrice();
         this.numberOfProductsInCart.textContent = this.cartContents.totalQtty;
