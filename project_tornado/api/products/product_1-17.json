@@ -12,11 +12,11 @@
 
     "available": true,
     "images": [
-        "../images/category_1/product_1-17/1.jpg",
-        "../images/category_1/product_1-17/2.jpg",
-        "../images/category_1/product_1-17/3.jpg",
-        "../images/category_1/product_1-17/4.jpg",
-        "../images/category_1/product_1-17/5.jpg"
+        "./images/category_1/product_1-17/1.jpg",
+        "./images/category_1/product_1-17/2.jpg",
+        "./images/category_1/product_1-17/3.jpg",
+        "./images/category_1/product_1-17/4.jpg",
+        "./images/category_1/product_1-17/5.jpg"
     ],
     "overview": "The cars of the previous generation of the S-class were chosen by more than 500 thousand buyers around the world. And the loyalty of Mercedes customers is high: 80% of those who bought an S-Class in Western Europe choose a car of the same brand as the next car, in the USA this figure is 70%. It is this status of the model, as well as the reputation of the most progressive Mercedes in the brand's lineup, that are the reason for the maximum implementation of technologies related to the level of user experience, safety, dynamics and environmental friendliness of the S-Class W223. Despite the pedestal of the brand's flagship, the S-Class in appearance still inherits several features from other, earlier models. In particular, some notes from the junior E-Class (design of the head optics and front bumper) are read from the front, the triangular rear optics reminds of the CLS model. On the other hand, the overall look still turned out to be isolated, and the dimensions of the S-Class will not allow it to be confused with other models of the brand.",
     "specifications": [{

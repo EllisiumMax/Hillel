@@ -17,6 +17,7 @@
     <script defer src="js/cart.js"></script>
     <script defer src="js/productSlider.js"></script>
     <script defer src="js/itemInfo.js"></script>
+    <script defer src="js/accordion.js"></script>
     <script defer src="js/main.js"></script>
 </head>
 
@@ -71,74 +72,88 @@
                     <input type="number" value="1" name="" id="product-quantity">
                     <button id="add-to-cart">Добавить в корзину</button>
                 </div>
-
             </div>
         </div>
-        <div class="area">
-            <div class="title">Overview (overview accordion)</div>
-            <div class="area body">......</div>
-        </div>
-        <div class="area">
-            <div class="title">Specifications (specifications accordion)</div>
-            <div class="area body">......</div>
-        </div>
-        <div class="area">
-            <div class="title">Reviews (reviews accordion)</div>
-            <div class="body">
-                <div class="review area">
-                    <div class="title area">
-                        <div>User name</div>
-                        <div>[date]</div>
-                    </div>
-                    <div class="body area">
-                        Comment Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima quibusdam, veniam ad corporis suscipit nam eius totam impedit, quo quia soluta ea non dicta quod reiciendis rerum, unde aliquid iste?
-                    </div>
-                    <div class="rating area">rating 3/10</div>
-                </div>
-                <div class="review area">
-                    <div class="title area">
-                        <div>User name</div>
-                        <div>[date]</div>
-                    </div>
-                    <div class="body area">
-                        Comment Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima quibusdam, veniam ad corporis suscipit nam eius totam impedit, quo quia soluta ea non dicta quod reiciendis rerum, unde aliquid iste?
-                    </div>
-                    <div class="rating area">rating 3/10</div>
-                </div>
-                <div class="review area">
-                    <div class="title area">
-                        <div>User name</div>
-                        <div>[date]</div>
-                    </div>
-                    <div class="body area">
-                        Comment Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima quibusdam, veniam ad corporis suscipit nam eius totam impedit, quo quia soluta ea non dicta quod reiciendis rerum, unde aliquid iste?
-                    </div>
-                    <div class="rating area">rating 3/10</div>
-                </div>
-                <div class="review area">
-                    <div class="title area">
-                        <div>User name</div>
-                        <div>[date]</div>
-                    </div>
-                    <div class="body area">
-                        Comment Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima quibusdam, veniam ad corporis suscipit nam eius totam impedit, quo quia soluta ea non dicta quod reiciendis rerum, unde aliquid iste?
-                    </div>
-                    <div class="rating area">rating 3/10</div>
-                </div>
-                <div class="review area">
-                    <div class="title area">
-                        <div>User name</div>
-                        <div>[date]</div>
-                    </div>
-                    <div class="body area">
-                        Comment Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima quibusdam, veniam ad corporis suscipit nam eius totam impedit, quo quia soluta ea non dicta quod reiciendis rerum, unde aliquid iste?
-                    </div>
-                    <div class="rating area">rating 3/10</div>
-                </div>
-            </div>
-        </div>
-        </section>
     </div>
+    </div>
+    <div class="overview-specifications-container">
+        <div class="overview area" id="overview-accordion">
+            <div class="area-title">
+                <h3 class="title">Описание товара</h3>
+                <img src="images/arrows-expand.svg" class="accordion-btn"></img>
+            </div>
+            <div class="accordion-body">
+                <p id="product-description">{{product-description}}</p>
+            </div>
+        </div>
+        <div class="specifications area" id="specifications-accordion">
+            <div class="area-title">
+                <h3 class="title">Характеристики</h3>
+                <img src="images/arrows-expand.svg" class="accordion-btn"></img>
+            </div>
+            <div class="accordion-body">
+                <table id="specs-table"></table>
+            </div>
+        </div>
+    </div>
+
+    <div class="reviews area">
+        <div class="title">Reviews (reviews accordion)</div>
+        <div class="body">
+            <div class="review area">
+                <div class="title area">
+                    <div>User name</div>
+                    <div>[date]</div>
+                </div>
+                <div class="body area">
+                    Comment Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima quibusdam, veniam ad corporis suscipit nam eius totam impedit, quo quia soluta ea non dicta quod reiciendis rerum, unde aliquid iste?
+                </div>
+                <div class="rating area">rating 3/10</div>
+            </div>
+            <div class="review area">
+                <div class="title area">
+                    <div>User name</div>
+                    <div>[date]</div>
+                </div>
+                <div class="body area">
+                    Comment Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima quibusdam, veniam ad corporis suscipit nam eius totam impedit, quo quia soluta ea non dicta quod reiciendis rerum, unde aliquid iste?
+                </div>
+                <div class="rating area">rating 3/10</div>
+            </div>
+            <div class="review area">
+                <div class="title area">
+                    <div>User name</div>
+                    <div>[date]</div>
+                </div>
+                <div class="body area">
+                    Comment Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima quibusdam, veniam ad corporis suscipit nam eius totam impedit, quo quia soluta ea non dicta quod reiciendis rerum, unde aliquid iste?
+                </div>
+                <div class="rating area">rating 3/10</div>
+            </div>
+            <div class="review area">
+                <div class="title area">
+                    <div>User name</div>
+                    <div>[date]</div>
+                </div>
+                <div class="body area">
+                    Comment Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima quibusdam, veniam ad corporis suscipit nam eius totam impedit, quo quia soluta ea non dicta quod reiciendis rerum, unde aliquid iste?
+                </div>
+                <div class="rating area">rating 3/10</div>
+            </div>
+            <div class="review area">
+                <div class="title area">
+                    <div>User name</div>
+                    <div>[date]</div>
+                </div>
+                <div class="body area">
+                    Comment Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima quibusdam, veniam ad corporis suscipit nam eius totam impedit, quo quia soluta ea non dicta quod reiciendis rerum, unde aliquid iste?
+                </div>
+                <div class="rating area">rating 3/10</div>
+            </div>
+        </div>
+    </div>
+    </section>
+
     <footer>
         <p>© Интернет-магазин электроники TORNADO™ 2020</p>
         <img src="images/visa.svg" class="visa" alt="visa certified logo">

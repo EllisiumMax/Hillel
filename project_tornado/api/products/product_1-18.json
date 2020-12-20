@@ -13,11 +13,11 @@
 
     "available": true,
     "images": [
-        "../images/category_1/product_1-18/1.jpg",
-        "../images/category_1/product_1-18/2.jpg",
-        "../images/category_1/product_1-18/3.jpg",
-        "../images/category_1/product_1-18/4.jpg",
-        "../images/category_1/product_1-18/5.jpg"
+        "./images/category_1/product_1-18/1.jpg",
+        "./images/category_1/product_1-18/2.jpg",
+        "./images/category_1/product_1-18/3.jpg",
+        "./images/category_1/product_1-18/4.jpg",
+        "./images/category_1/product_1-18/5.jpg"
     ],
     "overview": "The facelifted version of the XF sedan does not look like a complete overhaul of the previous model, but almost every noticeable exterior detail has received changes. The grille has increased, its design has changed; the front bumper was completely redrawn - now with high imitations of the air intake zones on the sides; Now narrower headlights got hold of the DRL pattern in the form of two letters J in each. At the rear, the changes also affected the optics - now it is darkened; the rear bumper received a different pattern, a diffuser appeared on it. Matrix head optics, 18–20-inch wheels and a panoramic roof are available to order. Each of the interior details was also revised, more high-tech solutions appeared. The steering wheel has become less massive due to the reduced hub; instead of the gearbox washer, a low but massive selector appeared on the central tunnel. As before, instead of the classic dashboard, you can get a digital-panel with modernized graphics. And the previous, recessed display has been replaced by a protruding 11.4-inch.",
     "specifications": [{

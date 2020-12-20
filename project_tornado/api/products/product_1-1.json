@@ -3,11 +3,11 @@
     "brand": "Mercedes-Benz",
     "model": "E-Class (W213)",
     "price": 57899,
-    "description": "Rear drive class E sedan (body W213). Restyling of the fifth generation of the model. The premiere show of the model took place online on March 3, 2020.",
+    "description": "Rear drive class E sedan (body __W213__). http://www.mercedes.com **Restyling** of the fifth __generation__ of the model. http://www.mercedes.com The premiere show of the model took place online on March 3, 2020.",
     "rating": 5,
     "added": "23.11.2020 11:35",
     "available": true,
-    "stock": 50,
+    "stock": 44,
     "images": [
         "./images/category_1/product_1-1/main.jpg",
         "./images/category_1/product_1-1/2.jpg",

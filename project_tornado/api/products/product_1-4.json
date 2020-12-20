@@ -13,11 +13,11 @@
 
     "available": true,
     "images": [
-        "../images/category_1/product_1-4/1.jpg",
-        "../images/category_1/product_1-4/2.jpg",
-        "../images/category_1/product_1-4/3.jpg",
-        "../images/category_1/product_1-4/4.jpg",
-        "../images/category_1/product_1-4/5.jpg"
+        "./images/category_1/product_1-4/1.jpg",
+        "./images/category_1/product_1-4/2.jpg",
+        "./images/category_1/product_1-4/3.jpg",
+        "./images/category_1/product_1-4/4.jpg",
+        "./images/category_1/product_1-4/5.jpg"
     ],
     "overview": " Renault Megane is all-new, and built on the same modular platform that underpins its larger sibling, the Renault Koleos SUV. Compared with its predecessor, the fourth-gen Megane is 57mm longer, 25mm lower, has shorter overhangs, and is 29mm longer between the front and rear axles.",
     "specifications": [{

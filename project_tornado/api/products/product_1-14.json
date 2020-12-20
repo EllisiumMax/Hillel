@@ -13,11 +13,11 @@
 
     "available": true,
     "images": [
-        "../images/category_1/product_1-14/1.jpg",
-        "../images/category_1/product_1-14/2.jpg",
-        "../images/category_1/product_1-14/3.jpg",
-        "../images/category_1/product_1-14/4.jpg",
-        "../images/category_1/product_1-14/5.jpg"
+        "./images/category_1/product_1-14/1.jpg",
+        "./images/category_1/product_1-14/2.jpg",
+        "./images/category_1/product_1-14/3.jpg",
+        "./images/category_1/product_1-14/4.jpg",
+        "./images/category_1/product_1-14/5.jpg"
     ],
     "overview": "If you really look closely, then you still have a chance to learn that we have a restyled version of the W205 model. At the front, the changes are a slightly corrected design of the head optics (LED is already in the base), as well as the front bumper - with a large air intake area in the middle and smaller cells on the sides. The changes in the rear also concern the lanterns - in this version, the drawing resembles a mirrored letter C. In addition, the rear bumper has been tweaked in the air outlets, and the shape of the exhaust pipes has been slightly changed. But there are other versions: for example, the EXCLUSIVE version with a radiator grille with three crossbars and a complete air intake area in the front bumper resembles the S-Class. The AMG-Line version can be recognized by the diamond grille and the front bumper cross bars.",
     "specifications": [{

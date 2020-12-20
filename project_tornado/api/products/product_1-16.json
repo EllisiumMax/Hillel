@@ -13,11 +13,11 @@
 
     "available": true,
     "images": [
-        "../images/category_1/product_1-16/1.jpg",
-        "../images/category_1/product_1-16/2.jpg",
-        "../images/category_1/product_1-16/3.jpg",
-        "../images/category_1/product_1-16/4.jpg",
-        "../images/category_1/product_1-16/5.jpg"
+        "./images/category_1/product_1-16/1.jpg",
+        "./images/category_1/product_1-16/2.jpg",
+        "./images/category_1/product_1-16/3.jpg",
+        "./images/category_1/product_1-16/4.jpg",
+        "./images/category_1/product_1-16/5.jpg"
     ],
     "overview": "The design solutions are in line with the concept of hot and cool, emotion and intelligence, which was first tested in the series on the third generation CLS. The car is distinguished by a forward-tilted radiator grille and headlights that go into the profile, but at the same time its design does not seem aggressive. This is facilitated by the absence of sharp lines on the front bumper - the shapes are dynamic, but smoothed out. The stern of the car looks less heavy compared to the previous generation due to a significant reduction in headlights and their division into two sections. The interior, on the other hand, is a solution familiar to us from other Mercedes-Benz models, brought together: a solid panel of two 12.3-inch screens and four deflectors under them have already been tested on the E- and S-classes. The turbine-shaped baffles are the solution for the E-Class Coupé and Convertible.",
     "specifications": [{

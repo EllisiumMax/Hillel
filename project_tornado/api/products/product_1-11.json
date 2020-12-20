@@ -13,11 +13,11 @@
 
   "available": true,
   "images": [
-      "../images/category_1/product_1-11/1.jpg",
-      "../images/category_1/product_1-11/2.jpg",
-      "../images/category_1/product_1-11/3.jpg",
-      "../images/category_1/product_1-11/4.jpg",
-      "../images/category_1/product_1-11/5.jpg"
+      "./images/category_1/product_1-11/1.jpg",
+      "./images/category_1/product_1-11/2.jpg",
+      "./images/category_1/product_1-11/3.jpg",
+      "./images/category_1/product_1-11/4.jpg",
+      "./images/category_1/product_1-11/5.jpg"
   ],
   "overview": "Restyled Elantra has changed beyond recognition. The redesign of the front end brought the car a new radiator grille with sharp corners, a front bumper, hood, fenders and perhaps the most striking element - triangular optics, which, unlike the optional xenon before, can be fully LED. The rear of the sedan has also been transformed by receiving modified taillights (they can also be diode) and a trunk lid stylized as the older Sonata, the number with which has moved down to the new rear bumper. Only the profile remained similar to the car. At the same time, Elantra was slightly stretched in length from 4570 mm to the current 4620 mm. But the width (1800 mm) and wheelbase (2700 mm) remained the same.",
   "specifications": [{

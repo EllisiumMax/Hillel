@@ -13,11 +13,11 @@
 
     "available": true,
     "images": [
-        "../images/category_1/product_1-9/1.jpg",
-        "../images/category_1/product_1-9/2.jpg",
-        "../images/category_1/product_1-9/3.jpg",
-        "../images/category_1/product_1-9/4.jpg",
-        "../images/category_1/product_1-9/5.jpg"
+        "./images/category_1/product_1-9/1.jpg",
+        "./images/category_1/product_1-9/2.jpg",
+        "./images/category_1/product_1-9/3.jpg",
+        "./images/category_1/product_1-9/4.jpg",
+        "./images/category_1/product_1-9/5.jpg"
     ],
     "overview": "With its sporty, elegant design, Astra's high quality and a wide range of available technologies - some of which are unique, some of which are not typical of this segment - the new compact four-door sedan from Opel (L / W / H: 4658/1814/1476 mm) meets the highest expectations of buyers.",
     "specifications": [{

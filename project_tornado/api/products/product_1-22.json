@@ -13,11 +13,11 @@
 
     "available": true,
     "images": [
-        "../images/category_1/product_1-22/1.jpg",
-        "../images/category_1/product_1-22/2.jpg",
-        "../images/category_1/product_1-22/3.jpg",
-        "../images/category_1/product_1-22/4.jpg",
-        "../images/category_1/product_1-22/5.jpg"
+        "./images/category_1/product_1-22/1.jpg",
+        "./images/category_1/product_1-22/2.jpg",
+        "./images/category_1/product_1-22/3.jpg",
+        "./images/category_1/product_1-22/4.jpg",
+        "./images/category_1/product_1-22/5.jpg"
     ],
     "overview": "It is impossible to imagine Subaru without permanent all-wheel drive, and therefore the WRX got it what is called default. This is the well-known Symmetrical AWD system for brand fans, the principle of operation of which differs depending on the type of transmission. With a manual gearbox, thrust is distributed between the axles in a 50:50 ratio. With a variator, most of the thrust falls on the rear axle - 45:55. In all Subaru cars, the interior design has long been distinguished by practicality, comfort, and high build quality. But the key word here is long time ago. So long ago that I can't even remember whether the constellation of the Pleiades had other interiors. However, conservatives probably like this approach, and it has a right to exist.",
     "specifications": [{

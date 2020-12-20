@@ -13,11 +13,11 @@
 
     "available": true,
     "images": [
-        "../images/category_1/product_1-3/1.jpg",
-        "../images/category_1/product_1-3/2.jpg",
-        "../images/category_1/product_1-3/3.jpg",
-        "../images/category_1/product_1-3/4.jpg",
-        "../images/category_1/product_1-3/5.jpg"
+        "./images/category_1/product_1-3/1.jpg",
+        "./images/category_1/product_1-3/2.jpg",
+        "./images/category_1/product_1-3/3.jpg",
+        "./images/category_1/product_1-3/4.jpg",
+        "./images/category_1/product_1-3/5.jpg"
     ],
     "overview": "The Fiat Tipo is a well-rounded budget hatch. It offers more than enough practicality for most situations, while the strong engine and comfortable chassis make it an acceptable family five-door to live with. However, it’s the Fiat’s thrifty running costs that seal the deal.",
     "specifications": [{

@@ -13,11 +13,11 @@
 
     "available": true,
     "images": [
-        "../images/category_1/product_1-20/1.jpg",
-        "../images/category_1/product_1-20/2.jpg",
-        "../images/category_1/product_1-20/3.jpg",
-        "../images/category_1/product_1-20/4.jpg",
-        "../images/category_1/product_1-20/5.jpg"
+        "./images/category_1/product_1-20/1.jpg",
+        "./images/category_1/product_1-20/2.jpg",
+        "./images/category_1/product_1-20/3.jpg",
+        "./images/category_1/product_1-20/4.jpg",
+        "./images/category_1/product_1-20/5.jpg"
     ],
     "overview": "After the modernization, the 5 Series sedan retained its recognizability, changing in details. The now narrower head optics received L-shaped DRLs, the proprietary elements of the false radiator grille are now made in a single unit, and the front bumper (in the basic version and Luxury Line) has a smile of the air intake with vertical sections on the sides. The car's profile has not undergone changes, but the stern received lamps with a modified pattern, a redrawn bumper, as well as trapezoidal exhaust pipes already in the base. 17-inch rims are standard, as are all-diode optics. Changes in the interior of the sedan are much less than in the exterior. Of the most notable - the modernized design of the graphics of the virtual dashboard, as well as the diagonal of the multimedia touch display increased to 12.3 inches (the basic versions are equipped with a 10.25-inch one). The latter is now running a seventh generation operating system for increased responsiveness; remote software updates are also now available. Earlier, a wireless connection with a phone was only available for Apple CarPlay, after restyling, Android Auto was also connected (moreover, data from the smartphone is also displayed on the head-up display). The changed buttons on the steering wheel are less visible.",
     "specifications": [{

@@ -13,11 +13,11 @@
 
     "available": true,
     "images": [
-        "../images/category_1/product_1-7/1.jpg",
-        "../images/category_1/product_1-7/2.jpg",
-        "../images/category_1/product_1-7/3.jpg",
-        "../images/category_1/product_1-7/4.jpg",
-        "../images/category_1/product_1-7/5.jpg"
+        "./images/category_1/product_1-7/1.jpg",
+        "./images/category_1/product_1-7/2.jpg",
+        "./images/category_1/product_1-7/3.jpg",
+        "./images/category_1/product_1-7/4.jpg",
+        "./images/category_1/product_1-7/5.jpg"
     ],
     "overview": "Although the overall body line of the Renault Logan remained unchanged, the car began to look more modern and presentable.The frontal part of the sedan has completely changed its appearance, having received new LED running lights in the headlights, rounded radiator grilles, new forms of bumpers and edging of foglights.Logan interior has become more refined. It now features chrome accents and new dashboard trims, and the new steering wheel with its exclusive Soft Feel braiding is incredibly soft and comfortable to the touch and is height adjustable.",
     "specifications": [{

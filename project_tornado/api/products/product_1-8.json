@@ -13,11 +13,11 @@
 
     "available": true,
     "images": [
-        "../images/category_1/product_1-8/1.jpg",
-        "../images/category_1/product_1-8/2.jpg",
-        "../images/category_1/product_1-8/3.jpg",
-        "../images/category_1/product_1-8/4.jpg",
-        "../images/category_1/product_1-8/5.jpg"
+        "./images/category_1/product_1-8/1.jpg",
+        "./images/category_1/product_1-8/2.jpg",
+        "./images/category_1/product_1-8/3.jpg",
+        "./images/category_1/product_1-8/4.jpg",
+        "./images/category_1/product_1-8/5.jpg"
     ],
     "overview": "The exterior of the new Corolla Sedan is made in the same style as the other two versions - a hatchback and a station wagon. However, the sedan looks more solid and more prestigious. There is no extra sportiness and some kind of aggression in it as in those two. This is the merit of the unique front end with different bumpers, optics, fenders, hood and relief stern. However, something has been preserved from the previous generation, for example, the length of the wheelbase of 2700 mm, which makes the sedan still one of the most spacious in the class.",
     "specifications": [{

@@ -13,11 +13,11 @@
 
     "available": true,
     "images": [
-        "../images/category_1/product_1-19/1.jpg",
-        "../images/category_1/product_1-19/2.jpg",
-        "../images/category_1/product_1-19/3.jpg",
-        "../images/category_1/product_1-19/4.jpg",
-        "../images/category_1/product_1-19/5.jpg"
+        "./images/category_1/product_1-19/1.jpg",
+        "./images/category_1/product_1-19/2.jpg",
+        "./images/category_1/product_1-19/3.jpg",
+        "./images/category_1/product_1-19/4.jpg",
+        "./images/category_1/product_1-19/5.jpg"
     ],
     "overview": "With the change of generation, the third series with the proprietary index G20, the first of the entire line, received a voice assistant. To revive him, just say “Ok” or “Hey, BMW” (you can call him whatever you like), after which he will immediately offer you his help. Moreover, in addition to simple commands, such as climate control or music control, the assistant is able to give you a full instruction on how this or that function works and also teach you how to use them. And to make your friend even smarter, you don't even have to go to the service for constant updates. The software is updated as on a smartphone online. The exterior of the car was completely redrawn. The desire of designers to get away from those angular lines of its predecessor and to fit the sedan into the general style of the latest models of the brand is immediately evident. From certain angles, the 3 series even resembles the 8-Series and the Z4 roadster. In this case, the model has grown decently. It is 76 mm longer (4709) longer than the F30, 16 mm wider, and now has a wheelbase of 2851 - even more than the previous fifth-series models. And thanks to the transition to the proprietary CLAR platform, the weight of the car has decreased by 55 kg. Of course, this was achieved thanks to the introduction of aluminum components into the body structure. At the same time, the stiffness increased by at least a quarter.",
     "specifications": [{

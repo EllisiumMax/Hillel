@@ -13,11 +13,11 @@
 
     "available": true,
     "images": [
-        "../images/category_1/product_1-5/1.jpg",
-        "../images/category_1/product_1-5/2.jpg",
-        "../images/category_1/product_1-5/3.jpg",
-        "../images/category_1/product_1-5/4.jpg",
-        "../images/category_1/product_1-5/5.jpg"
+        "./images/category_1/product_1-5/1.jpg",
+        "./images/category_1/product_1-5/2.jpg",
+        "./images/category_1/product_1-5/3.jpg",
+        "./images/category_1/product_1-5/4.jpg",
+        "./images/category_1/product_1-5/5.jpg"
     ],
     "overview": "The 2018 Toyota Camry enters its eighth generation and 35th model year with a bang. Long hailed as the “safe but boring” pick of the mid-size sedan segment, much as vanilla is to ice cream, the Toyota Camry has looked to remake itself into something a little more dynamic without losing its family-friendly appeal. As far as we can tell, it worked.",
     "specifications": [{

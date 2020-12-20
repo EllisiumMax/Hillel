@@ -13,11 +13,11 @@
 
     "available": true,
     "images": [
-        "../images/category_1/product_1-10/1.jpg",
-        "../images/category_1/product_1-10/2.jpg",
-        "../images/category_1/product_1-10/3.jpg",
-        "../images/category_1/product_1-10/4.jpg",
-        "../images/category_1/product_1-10/5.jpg"
+        "./images/category_1/product_1-10/1.jpg",
+        "./images/category_1/product_1-10/2.jpg",
+        "./images/category_1/product_1-10/3.jpg",
+        "./images/category_1/product_1-10/4.jpg",
+        "./images/category_1/product_1-10/5.jpg"
     ],
     "overview": "Although the changes are cosmetic, the Peugeot 301 has become more stylish and modern. The car received a different radiator grille, head optics of a different shape with integrated running lights, updated bumpers and rims. Changes in the appearance almost did not affect the overall dimensions of the Peugeot 301. The length has slightly changed - 4445 mm instead of the previous 4442 mm. The rest of the parameters remained unchanged: width - 1748 mm, height - 1466 mm, wheelbase - 2652 mm. The ground clearance is 165 mm, the front and rear overhangs are 819 and 974 mm, respectively.",
     "specifications": [{

@@ -12,11 +12,11 @@
     "added": "06.09.2018 14:13",
     "available": true,
     "images": [
-        "../images/category_1/product_1-6/1.jpg",
-        "../images/category_1/product_1-6/2.jpg",
-        "../images/category_1/product_1-6/3.jpg",
-        "../images/category_1/product_1-6/4.jpg",
-        "../images/category_1/product_1-6/5.jpg"
+        "./images/category_1/product_1-6/1.jpg",
+        "./images/category_1/product_1-6/2.jpg",
+        "./images/category_1/product_1-6/3.jpg",
+        "./images/category_1/product_1-6/4.jpg",
+        "./images/category_1/product_1-6/5.jpg"
     ],
     "overview": "The 2018 Mazda 6 is a midsize family sedan that's available in five trim levels. The base Sport is fairly bare in terms of features, but it comes in at a reasonable price.",
     "specifications": [{

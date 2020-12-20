@@ -13,11 +13,11 @@
 
   "available": true,
   "images": [
-      "../images/category_1/product_1-2/1.jpg",
-      "../images/category_1/product_1-2/2.jpg",
-      "../images/category_1/product_1-2/3.jpg",
-      "../images/category_1/product_1-2/4.jpg",
-      "../images/category_1/product_1-2/5.jpg"
+      "./images/category_1/product_1-2/main.jpg",
+      "./images/category_1/product_1-2/2.jpg",
+      "./images/category_1/product_1-2/3.jpg",
+      "./images/category_1/product_1-2/4.jpg",
+      "./images/category_1/product_1-2/5.jpg"
   ],
   "overview": "For 2020, the Accent gets a revised powertrain that results in a 4-mpg improvement on most trims, thanks to a tweaked inline-4 engine and a new continuously variable automatic transmission (CVT). Other than that, the 2020 Accent is exactly the same as last year’s model.",
   "specifications": [{

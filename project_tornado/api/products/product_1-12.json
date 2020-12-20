@@ -9,16 +9,16 @@
       "price": 15999,
   "description": "Budget class sedan C. The debut of the restyled version of the first generation of the model took place in the fall of 2016 in China.",
       "rating": 3.4,
-      "image": "../images/category_1/product_1-12/main.png",
+      "image": "./images/category_1/product_1-12/main.png",
 "added": "11.04.2017 09:30",
 
   "available": true,
   "images": [
-      "../images/category_1/product_1-12/1.jpg",
-      "../images/category_1/product_1-12/2.jpg",
-      "../images/category_1/product_1-12/3.jpg",
-      "../images/category_1/product_1-12/4.jpg",
-      "../images/category_1/product_1-12/5.jpg"
+      "./images/category_1/product_1-12/1.jpg",
+      "./images/category_1/product_1-12/2.jpg",
+      "./images/category_1/product_1-12/3.jpg",
+      "./images/category_1/product_1-12/4.jpg",
+      "./images/category_1/product_1-12/5.jpg"
   ],
   "overview": "The designers have done some serious work with the appearance of the C-Elysee. The model received a new front end with wide-positioned headlights and a modified radiator grille. To improve aerodynamics and roadholding, the front of the car has been slightly wider. The outlines of the bumpers were also revised, and LED running lights appeared above the fog lamps. The design and filling of the headlights have also changed - LED daytime running lights have been added, which gives the car a modern appearance, as well as makes it more visible on the road, which contributes to increased safety. The taillights have got a stylish pattern that creates the effect of volume (the so-called 3D volumetric lights), which gives the car an elegance.",
   "specifications": [{

@@ -13,11 +13,11 @@
 
     "available": true,
     "images": [
-        "../images/category_1/product_1-21/1.jpg",
-        "../images/category_1/product_1-21/2.jpg",
-        "../images/category_1/product_1-21/3.jpg",
-        "../images/category_1/product_1-21/4.jpg",
-        "../images/category_1/product_1-21/5.jpg"
+        "./images/category_1/product_1-21/1.jpg",
+        "./images/category_1/product_1-21/2.jpg",
+        "./images/category_1/product_1-21/3.jpg",
+        "./images/category_1/product_1-21/4.jpg",
+        "./images/category_1/product_1-21/5.jpg"
     ],
     "overview": "Legacy is built on the SGB (Subaru Global Platform) global platform. As a result, the body of the sedan became stronger, the torsional and bending rigidity increased, the weight decreased, the rolling resistance improved, the steering became sharper. Outwardly, the car retained its recognizability, although it began to look stricter and more dynamic. Except for the length increased by 38 mm (4840), Subaru Legacy managed to maintain the same dimensions: wheelbase - 2750 mm, width - 1840 mm, height - 1500 mm. The interior features a new vertically positioned 11.6-inch Starlink multimedia touchscreen with Apple CarPlay and Android Auto support. Most of the functions and settings are sewn into it. At the same time, the manufacturer still retained a number of physical keys and knobs - for many this is a pleasant plus.",
     "specifications": [{
