@@ -8,12 +8,12 @@ async function loadProductsList(objArray = null) {
     const CURRENCY = "₴";
     const CATEGORY_NAME = document.getElementById("category-name");
     const PRODUCTS_AREA = document.getElementById("products-render-area");
-    PRODUCTS_AREA.innerHTML = "";
    
     
     if(!objArray) {
         const CATEGORY_ID = window.location.search.slice(4);
         const RESPONSE = await fetch(`./api/categories/${CATEGORY_ID}.json`);
+        await loadImmitation("#products-render-area");
         if(RESPONSE.status != 200) window.location.assign("404.html");
         else productsDB = await RESPONSE.json();
         

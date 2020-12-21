@@ -14,7 +14,7 @@ function accordion(div, transitionMS = 400) {
     }
 
     function open(transitionMS) {
-        accordionBody.style.maxHeight = "300px";
+        accordionBody.style.maxHeight = "12000px";
         opened = true;
         setTimeout(() => accordionBtn.src = "images/arrows-collapse.svg", transitionMS);
 
@@ -29,3 +29,4 @@ function accordion(div, transitionMS = 400) {
 
 accordion("overview-accordion");
 accordion("specifications-accordion");
+accordion("comments-accordion");

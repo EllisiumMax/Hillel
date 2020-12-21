@@ -7,11 +7,13 @@
     <title>Item info - TORNADO</title>
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,500;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/loader.css">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/login-signup.css">
     <link rel="stylesheet" href="css/info-window.css">
     <link rel="stylesheet" href="css/cart.css">
     <link rel="stylesheet" href="css/productSlider.css">
+    <script defer src="js/loadingImmitation.js"></script>
     <script defer src="js/info-window.js"></script>
     <script defer src="js/login-signup.js"></script>
     <script defer src="js/cart.js"></script>
@@ -75,7 +77,6 @@
             </div>
         </div>
     </div>
-    </div>
     <div class="overview-specifications-container">
         <div class="overview area" id="overview-accordion">
             <div class="area-title">
@@ -97,80 +98,31 @@
         </div>
     </div>
 
-    <div class="reviews area">
-        <div class="title">Reviews (reviews accordion)</div>
-        <div class="body">
-            <div class="review area">
-                <div class="title area">
-                    <div>User name</div>
-                    <div>[date]</div>
-                </div>
-                <div class="body area">
-                    Comment Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima quibusdam, veniam ad corporis suscipit nam eius totam impedit, quo quia soluta ea non dicta quod reiciendis rerum, unde aliquid iste?
-                </div>
-                <div class="rating area">rating 3/10</div>
-            </div>
-            <div class="review area">
-                <div class="title area">
-                    <div>User name</div>
-                    <div>[date]</div>
-                </div>
-                <div class="body area">
-                    Comment Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima quibusdam, veniam ad corporis suscipit nam eius totam impedit, quo quia soluta ea non dicta quod reiciendis rerum, unde aliquid iste?
-                </div>
-                <div class="rating area">rating 3/10</div>
-            </div>
-            <div class="review area">
-                <div class="title area">
-                    <div>User name</div>
-                    <div>[date]</div>
-                </div>
-                <div class="body area">
-                    Comment Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima quibusdam, veniam ad corporis suscipit nam eius totam impedit, quo quia soluta ea non dicta quod reiciendis rerum, unde aliquid iste?
-                </div>
-                <div class="rating area">rating 3/10</div>
-            </div>
-            <div class="review area">
-                <div class="title area">
-                    <div>User name</div>
-                    <div>[date]</div>
-                </div>
-                <div class="body area">
-                    Comment Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima quibusdam, veniam ad corporis suscipit nam eius totam impedit, quo quia soluta ea non dicta quod reiciendis rerum, unde aliquid iste?
-                </div>
-                <div class="rating area">rating 3/10</div>
-            </div>
-            <div class="review area">
-                <div class="title area">
-                    <div>User name</div>
-                    <div>[date]</div>
-                </div>
-                <div class="body area">
-                    Comment Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima quibusdam, veniam ad corporis suscipit nam eius totam impedit, quo quia soluta ea non dicta quod reiciendis rerum, unde aliquid iste?
-                </div>
-                <div class="rating area">rating 3/10</div>
-            </div>
+    <div class="сomments area" id="comments-accordion">
+        <div class="area-title">
+            <h3 class="title">Комментарии</h3>
+            <img src="images/arrows-expand.svg" class="accordion-btn"></img>
         </div>
-    </div>
-    </section>
+        <div class="accordion-body comments" id="comments-render-area">
+        </div>
 
-    <footer>
-        <p>© Интернет-магазин электроники TORNADO™ 2020</p>
-        <img src="images/visa.svg" class="visa" alt="visa certified logo">
-        <img src="images/mastercard.svg" class="mastercard" alt="mastercard certified logo">
-        <div class="social-networks-block">
-            <a href="http://www.instagram.com" class="social-network-ico">
+        <footer>
+            <p>© Интернет-магазин электроники TORNADO™ 2020</p>
+            <img src="images/visa.svg" class="visa" alt="visa certified logo">
+            <img src="images/mastercard.svg" class="mastercard" alt="mastercard certified logo">
+            <div class="social-networks-block">
+                <a href="http://www.instagram.com" class="social-network-ico">
               <img src="images/instagram.svg" alt="instagram logo"></a>
-            <a href="http://www.facebook.com" class="social-network-ico">
+                <a href="http://www.facebook.com" class="social-network-ico">
               <img src="images/facebook.svg" alt="facebook  logo"></a>
-            <a href="http://www.youtube.com" class="social-network-ico">
+                <a href="http://www.youtube.com" class="social-network-ico">
               <img src="images/youtube.svg" alt="youtube  logo"></a>
-            <a href="https://t.me/subarumax" class="social-network-ico">
+                <a href="https://t.me/subarumax" class="social-network-ico">
               <img src="images/telegram.svg" alt="telegram  logo"></a>
-            <a href="https://viber.com/" class="social-network-ico">
+                <a href="https://viber.com/" class="social-network-ico">
               <img src="images/viber.svg" alt="viber  logo"></a>
-        </div>
-    </footer>
+            </div>
+        </footer>
 </body>
 
 </html>

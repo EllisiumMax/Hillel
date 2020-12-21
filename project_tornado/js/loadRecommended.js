@@ -5,6 +5,7 @@
 async function loadRecommended () {
     const PRODUCTS_AREA = document.getElementById("recommended-products-area");
     const RESPONSE = await fetch(`./api/recommended.json`);
+    await loadImmitation("#recommended-products-area");
     const PRODUCTS_LIST = await RESPONSE.json();
     const RANDOM_PRODUCTS = new Set();
     const CURRENCY = "₴";

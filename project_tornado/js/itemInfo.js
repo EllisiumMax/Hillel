@@ -15,13 +15,17 @@ const productPage = {
     addToCart: document.getElementById("add-to-cart"),
     productDescription: document.getElementById("product-description"),
     specsTable: document.getElementById("specs-table"),
+    findLink: /\b(?<protocol>https?:\/\/)(?<domain>\w{1,63}\.[^\s/.:,]{1,63}(\.[^\s/.:,]{2,63})?(\.[^\s/.:,]{2,63})?)(?<port>\:\d{1,5})?(?<path>\/[\w\/]+(\.(\w{1,8}))?)?\b/mig,
+    findBoldText: /(\*\*)([^*][\p{P}\p{L}\p{N}]+?)(\*\*)/gmiu,
+    findItalicText: /(__)([^*][\p{P}\p{L}\p{N}]+?)(__)/gmiu,
     async loadProduct() {
         const RESPONSE = await fetch(`./api/products/${this.productId}.json`);
         if(RESPONSE.status != 200) window.location.assign("404.html");
         else this.productInfo = await RESPONSE.json();
+        await loadImmitation("#product-info-page", true);
     },
     renderHeader() {
-        this.contentHeader.textContent = this.contentHeader.textContent.replace(
+         this.contentHeader.textContent = this.contentHeader.textContent.replace(
             "{{brand model}}", `${this.productInfo.brand} ${this.productInfo.model}`);
     },
 
@@ -66,15 +70,11 @@ const productPage = {
 
     },
     renderOverview() {
-        const findBoldText = /(\*\*)([^*][\p{P}\p{L}\p{N}]+?)(\*\*)/gmiu;
-        const findItalicText = /(__)([^*][\p{P}\p{L}\p{N}]+?)(__)/gmiu;
-        const findLink =
-            /\b(?<protocol>https?:\/\/)(?<domain>\w{1,63}\.[^\s/.:,]{1,63}(\.[^\s/.:,]{2,63})?(\.[^\s/.:,]{2,63})?)(?<port>\:\d{1,5})?(?<path>\/[\w\/]+(\.(\w{1,8}))?)?\b/mig;
-
-        this.productDescription.innerHTML = this.productInfo.description.replace(findBoldText,
-                "<i>$2</i>")
-            .replace(findLink, '<a href="$&" class="user-link">$&</a>')
-            .replace(findItalicText, "<b>$2</b>");
+        this.productDescription.innerHTML = this.productInfo.description.replace(this
+                .findBoldText,
+                "<b>$2</b>")
+            .replace(this.findLink, '<a href="$&" class="user-link">$&</a>')
+            .replace(this.findItalicText, "<i>$2</i>");
     },
     renderSpecifications() {
         for(let spec of this.productInfo.specifications) {
@@ -91,14 +91,52 @@ const productPage = {
                 const hintText = document.createElement("span");
 
                 hintContainer.className = "hint-container";
-                hintIcon.className = "hint-icon";
+                hintIcon.className = "hint-ico";
                 hintText.className = "hint-text";
-                hintIcon.src = "images/info-button.svg";
+                hintIcon.src = "images/info-ico.svg";
                 hintText.innerHTML = spec.hint;
                 tableRow.append(hintContainer);
                 hintContainer.append(hintIcon, hintText);
             }
         }
+    },
+    renderComments() {
+        const commentsArea = document.getElementById("comments-render-area");
+        const date = new Date();
+        for(let record of this.productInfo.reviews) {
+            const commentContainer = document.createElement("div");
+            const titleContainer = document.createElement("div");
+            const userName = document.createElement("h4");
+            const dateIcon = document.createElement("img");
+            const date = document.createElement("p");
+            const commentBody = document.createElement("p");
+            const rating = document.createElement("p");
+            const passedHours = ((Date.now() - Date.parse(record.date)) / 3600000);
+
+            titleContainer.className = "comments-title-container"
+            dateIcon.src = "images/time-passed.svg"
+            userName.textContent = record.user;
+            commentBody.innerHTML = record.comment
+                .replace(this.findBoldText, "<b>$2</b>")
+                .replace(this.findItalicText, "<i>$2</i>")
+                .replace(this.findLink, "[MOD: ссылка]");
+            rating.textContent = `Оценка: ${record.rating}`;
+            commentsArea.append(commentContainer);
+            commentContainer.append(titleContainer, commentBody, rating);
+            titleContainer.append(userName, dateIcon, date);
+            if(passedHours >= 1 && passedHours < 24) date.textContent =
+                `${Math.round(passedHours)} ч. назад`;
+            if(passedHours < 1) date.textContent = `${Math.round(passedHours * 60)} м. назад`;
+            if(passedHours > 24) {
+                let convertToDays = passedHours / 24;
+                let spreadNumbers = convertToDays.toString().split(".");
+                let days = spreadNumbers[0];
+                let hours = "0." + spreadNumbers[1];
+                date.textContent = `${days} д. ${Math.round(hours *24)} ч. назад`;
+            }
+        }
+
+
     },
     async renderPage() {
         await this.loadProduct();
@@ -106,6 +144,7 @@ const productPage = {
         this.renderInfo();
         this.renderOverview();
         this.renderSpecifications();
+        this.renderComments();
     }
 }
 

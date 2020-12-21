@@ -19,6 +19,7 @@ const productsFilter = {
     async loadDB() {
         const CATEGORY_ID = window.location.search.slice(4);
         const RESPONSE = await fetch(`./api/categories/${CATEGORY_ID}.json`);
+        await loadImmitation("#filter-checkbox")
         this.productsDB = await RESPONSE.json();
         this.productsDB.products.forEach(product => this.brands.add(product.brand));
     },
