@@ -1,7 +1,6 @@
 {
   "id": "category_1",
   "name": "Мобильные телефоны",
-  "description": "100% оригинальные телефоны от ведущих компаний мира.",
 
   "products": [
     {
@@ -12,7 +11,7 @@
       "description": "Экран (6.7', OLED (Super Retina XDR), 2778x1284) / Apple A14 Bionic / тройная основная камер: 12 Мп + 12 Мп + 12 Мп, фронтальная камера: 12 Мп / 256 ГБ встроенной памяти / 3G / LTE / 5G / GPS / Nano-SIM / iOS 14",
       "rating": 4.9,
       "image": "./images/category_1/product_1-1/main.jpg",
-      "added": "2020-12-24T11:35"
+      "added": "2020-09-26T11:15"
     },
     {
       "id": "product_1-2",
@@ -22,7 +21,7 @@
       "description": "Экран (6.1', IPS (Liquid Retina HD), 1792x828)/ Apple A13 Bionic/ основная двойная камера: 12 Мп + 12 Мп, фронтальная камера: 12 Мп/ RAM 4 ГБ/ 128 ГБ встроенной памяти/ 3G/ LTE/ GPS/ ГЛОНАСС/ Nano-SIM/ iOS 13 / 3046 мА*ч",
       "rating": 5.0,
       "image": "./images/category_1/product_1-2/main.jpg",
-      "added": "2020-12-24T11:35"
+      "added": "2020-10-24T15:57"
     },
     {
       "id": "product_1-3",

@@ -1,57 +1,89 @@
 {
-  "id": "product_1-12",
-  "brand": "Citroen",
-      "model": "C-Elysee",
-      "year": 2017,
-      "gearbox": "Manual",
-      "drive": "FWD",
-      "engine_type": "Diesel",
-      "price": 15999,
-  "description": "Budget class sedan C. The debut of the restyled version of the first generation of the model took place in the fall of 2016 in China.",
-      "rating": 3.4,
-      "image": "./images/category_1/product_1-12/main.png",
-"added": "11.04.2017 09:30",
-
-  "available": true,
-  "images": [
-      "./images/category_1/product_1-12/1.jpg",
-      "./images/category_1/product_1-12/2.jpg",
-      "./images/category_1/product_1-12/3.jpg",
-      "./images/category_1/product_1-12/4.jpg",
-      "./images/category_1/product_1-12/5.jpg"
-  ],
-  "overview": "The designers have done some serious work with the appearance of the C-Elysee. The model received a new front end with wide-positioned headlights and a modified radiator grille. To improve aerodynamics and roadholding, the front of the car has been slightly wider. The outlines of the bumpers were also revised, and LED running lights appeared above the fog lamps. The design and filling of the headlights have also changed - LED daytime running lights have been added, which gives the car a modern appearance, as well as makes it more visible on the road, which contributes to increased safety. The taillights have got a stylish pattern that creates the effect of volume (the so-called 3D volumetric lights), which gives the car an elegance.",
-  "specifications": [{
-          "name": "Engine capacity(l):",
-          "value": 1.6,
-          "hint": "Engine capacity refers to the volume swept by all the pistons of an engine, within their bores, from the top to the bottom of their travel."
-      },
-      {
-          "name": "Horse power(hp):",
-          "value": 92,
-          "hint": "Horsepower (hp) is a unit of measurement of power, or the rate at which work is done, usually in reference to the output of engines or motors."
-      },
-      {
-          "name": "Torque(Nm):",
-          "value": 230,
-          "hint": "Torque is a twisting force that speaks to the engine's rotational force and measures how much of that twisting force is available when an engine exerts itself."
-      },
-      {
-          "name": "Maximum speed(km/h):",
-          "value": 180
-      }
-  ],
-  "reviews": [{
-          "user": "Sam",
-          "comment": "**Lorem** ipsum dolor sit amet consectetur adipisicing elit. Minima quibusdam, veniam ad corporis suscipit nam eius totam impedit, quo quia soluta ea non dicta quod reiciendis rerum, unde aliquid iste?",
-          "date": "01.01.2020 13:15",
-          "rating": "7/10"
-      },
-      {
-          "user": "Albert",
-          "comment": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima quibusdam, veniam ad corporis suscipit nam eius totam impedit, quo quia soluta ea non dicta quod reiciendis rerum, unde aliquid iste?",
-          "date": "01.01.2020 20:01",
-          "rating": "1/10"
-      }
-  ]
+    "id": "product_1-12",
+    "brand": "Huawei",
+    "model": "Nova 5T Crush Blue",
+    "price": 10000,
+    "description": "Экран (6.26', IPS, 2340x1080)/ HiSilicon Kirin 980 (2x2.6 ГГц + 2x1.92 ГГц + 4x1.8 ГГц)/ четыре основные камеры: 48 Мп + 16 Мп + 2 Мп + 2 Мп, фронтальная камера: 32 Мп/ RAM 6 ГБ/ 128 ГБ встроенной памяти/ 3G/ LTE/ GPS/ ГЛОНАСС/ поддержка 2х SIM-карт (Nano-SIM)/ Android 9.0 (Pie)/ 3750 мА*ч",
+    "rating": 4.1,
+    "added": "2020-10-17T14:59",
+    "available": true,
+    "images": [
+        "./images/category_1/product_1-12/main.jpg",
+        "./images/category_1/product_1-12/1.jpg",
+        "./images/category_1/product_1-12/2.jpg",
+        "./images/category_1/product_1-12/3.jpg",
+        "./images/category_1/product_1-12/4.jpg"
+    ],
+    "overview": "Ослепительные цвета HUAWEI nova 5T, удивительные текстуры и отражающий дизайн создают захватывающее ощущение безграничного пространства. Изысканная отделка и уникальная текстура подчеркивают контраст света и тени для сюрреалистического и фантастического многослойного 3D-эффекта на плоской поверхности. Боковой датчик отпечатков пальцев улучшает дизайн, мгновенно и удобно открывая HUAWEI nova 5T для удобной работы одной рукой. HUAWEI подталкивает дизайн смартфона к пределам с еще большим соотношением экрана к корпусу на совершенно новом HUAWEI nova 5T. Скрывая переднюю камеру под экраном, экран HUAWEI nova 5T сохраняет свою полную целостность, революционизируя пользовательский опыт. Четыре камеры HUAWEI nova 5T, установленные сзади, захватывают потрясающие фотографии высокой четкости, ультра-широкоугольные, макро-и боке. Камеры также создают видео следующего уровня. Богатые, четкие изображения и видео от огромных пейзажей до захватывающих дух крупных планов. Мощные алгоритмы фото / видео позволяют получать красочные изображения и видео с высоким разрешением в любое время и в любом месте. Широкоугольные фотографии демонстрируют эпические и драматические моменты жизни. Ультра широкоугольный объектив f / 2.2 захватывает грандиозный масштаб природы и дает портретам драматическую вспышку. Расширьте свой кругозор. Есть неизведанные миры красоты Для тех, кто способен их увидеть. Супер макрообъектив позволяет вам снимать крупным планом фотографии с расстояния 4 см, освобождая вас, чтобы исследовать и делиться маленькими чудесами, которые нас окружают. Сделайте свой предмет центром внимания с потрясающими эффектами боке. Камера bokeh, работающая от ISP чипсета Kirin в режиме реального времени, создает профессиональные портреты с потрясающей красотой. Электростанция мобильной фотографии.",
+    "specifications": [{
+            "name": "Экран:",
+            "value": "6.26 IPS (1080 x 2340) / 412 ppi / 16M цветов, сенсорный, емкостный",
+            "hint": "Экран смартфона, на который выводится изображение. Его размер измеряется в дюймах (1 дюйм = 2,54 см)."
+        },
+        {
+            "name": "Процессор:",
+            "value": "HiSilicon Kirin 980 (Octa-core (2x2.6 GHz Cortex-A76 & 2x1.92 GHz Cortex-A76 & 4x1.8 GHz Cortex-A55)) + Mali-G76 MP10",
+            "hint": "Процессор или SoC (System-on-a-Chip) – “сердце” любого смартфона, гарантирует определенный уровень производительности и набор возможностей. "
+        },
+        {
+            "name": "Оперативная память:",
+            "value": "6 ГБ",
+            "hint": "В смартфонах Apple разных поколений предусмотрено четыре варианта объема оперативной памяти: 1, 2, 3 и 4 ГБ. Этот параметр указывает на количество информации, которое способен обработать процессор устройства. При большом объеме ОЗУ, (например, 4 Гб) может работать несколько программ одновременно, а их запуск происходит значительно быстрее."
+        },
+        {
+            "name": "Встроенная память:",
+            "value": "128 ГБ",
+            "hint": "Встроенная или внутренняя память – это то место, где физически хранятся данные пользователя: программы и приложения, музыкальные файлы, видеоролики, электронные книги, фото и прочее."
+        },
+        {
+            "name": "Коммуникации:",
+            "value": "USB 2.0, Type-C / Wi-Fi 802.11 a/b/g/n/ac / Bluetooth 5.0 / GPS (A-GPS, GLONASS, BDS, GALILEO, QZSS) / NFC",
+            "hint": "Технологии, позволяющие обмениваться данными, совершать звонки, искать информацию в интернете, управлять техникой, оплачивать покупки, прокладывать маршруты до пункта назначения."
+        },
+        {
+            "name": "Камера:",
+            "value": "Четверная 48 Мп (f/1.8) + 16 Мп (f/2.2) + 2 Мп (f/2.4) + 2 Мп (f/2.4) / LED вспышка / автофокус / Фронтальная 32 Мп (f/2.0)",
+            "hint": "Разрешение сенсоров основной камеры и количество объективов."
+        },
+        {
+            "name": "Операционная система:",
+            "value": "Android 9.0 (Pie), upgradable to Android 10; EMUI 10",
+            "hint": "Техническое название платформы, на которой работает устройство. Позволяет устанавливать/скачивать программы из магазина приложений, управлять устройством и взаимодействовать с другими пользователями."
+        },
+        {
+            "name": "Цвет корпуса:",
+            "value": "Синий"
+        }
+    ],
+    "reviews": [{
+        "user": "Максим",
+        "comment": "Задача **организации**, в особенности же постоянное __информационно-пропагандистское__ обеспечение нашей деятельности влечет за собой процесс внедрения и модернизации системы обучения кадров, соответствует насущным потребностям. Не следует, однако забывать, что новая модель организационной деятельности представляет собой интересный эксперимент проверки систем массового участия.",
+        "date": "2020-11-15T13:15",
+        "rating": "7/10"
+    },
+    {
+        "user": "Сергей",
+        "comment": "Таким образом реализация намеченных плановых заданий играет важную роль в формировании форм развития http://www.google.com. Разнообразный и богатый опыт консультация с широким активом позволяет оценить значение модели развития.",
+        "date": "2020-11-22T09:26",
+        "rating": "1/10"
+    },
+    {
+        "user": "Юрий",
+        "comment": "Представление счастливой бы упражнениями не этот, приносило как избегает когда предаваться восхваляющих некоей превратное представление. Воспользоваться истину счастливой этот ни стал только, восхваляющих такие, избегал разъясню кто нас обстоятельства, наслаждений как. Упрекнуть бы этот с, страдания когда что справедливости упрекнуть действительно я возлюбил боль вы разъясню возлюбил бы поняли умеет ни тех.",
+        "date": "2020-12-04T23:26",
+        "rating": "3/10"
+    },
+    {
+        "user": "Алина",
+        "comment": "Следует отметить, что внедрение современных методик выявляет срочную потребность благоприятных перспектив. Равным образом, семантический разбор внешних противодействий предполагает независимые способы реализации дальнейших направлений развития. С другой стороны, консультация с широким активом способствует повышению качества модели развития.",
+        "date": "2020-12-22T04:26",
+        "rating": "4/10"
+    },
+    {
+        "user": "Маша",
+        "comment": "Учитывая ключевые сценарии поведения, начало повседневной работы по формированию позиции создаёт необходимость включения в производственный план целого ряда внеочередных мероприятий с учётом комплекса поставленных обществом задач. ",
+        "date": "2020-12-22T14:51",
+        "rating": "1/10"
+    }
+]
 }

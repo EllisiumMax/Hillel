@@ -1,52 +1,89 @@
 {
-  "id": "product_2-3",
-  "brand": "Mercedes-Benz",
-  "model": "E-Class (W213)",
-  "price": 57899,
-  "description": "Rear drive class E sedan (body W213). Restyling of the fifth generation of the model. The premiere show of the model took place online on March 3, 2020.",
-  "rating": 4.6,
-  "added": "23.11.2020 11:35",
-
-  "available": true,
-  "images": [
-      "../images/category_1/product_2-3/1.jpg",
-      "../images/category_1/product_2-3/2.jpg",
-      "../images/category_1/product_2-3/3.jpg",
-      "../images/category_1/product_2-3/4.jpg",
-      "../images/category_1/product_2-3/5.jpg"
-  ],
-  "overview": "The W213 Mercedes-Benz E-Class is the fifth-generation of the Mercedes-Benz E-Class. Sold from 2016 (as a 2017 model), it is the successor to the W212/S212 E-Class models. Unlike the previous generation, this generation coupe/convertible share the same platform as the sedan/wagon. The high-performance Mercedes-AMG E 63 and E 63 S versions of the W213 has been available as well from 2016 (as a 2017 model), and these are the only versions with V8 engines.",
-  "specifications": [{
-          "name": "Engine capacity(l):",
-          "value": 2.0,
-          "hint": "Engine capacity refers to the volume swept by all the pistons of an engine, within their bores, from the top to the bottom of their travel."
-      },
-      {
-          "name": "Horse power(hp):",
-          "value": 184,
-          "hint": "Horsepower (hp) is a unit of measurement of power, or the rate at which work is done, usually in reference to the output of engines or motors."
-      },
-      {
-          "name": "Torque(Nm):",
-          "value": 300,
-          "hint": "Torque is a twisting force that speaks to the engine's rotational force and measures how much of that twisting force is available when an engine exerts itself."
-      },
-      {
-          "name": "Maximum speed(km/h):",
-          "value": 240
-      }
-  ],
-  "reviews": [{
-          "user": "Sam",
-          "comment": "**Lorem** ipsum dolor sit amet consectetur adipisicing elit. Minima quibusdam, veniam ad corporis suscipit nam eius totam impedit, quo quia soluta ea non dicta quod reiciendis rerum, unde aliquid iste?",
-          "date": "01.01.2020 13:15",
-          "rating": "7/10"
-      },
-      {
-          "user": "Albert",
-          "comment": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima quibusdam, veniam ad corporis suscipit nam eius totam impedit, quo quia soluta ea non dicta quod reiciendis rerum, unde aliquid iste?",
-          "date": "01.01.2020 20:01",
-          "rating": "1/10"
-      }
-  ]
+    "id": "product_2-3",
+    "brand": "Panasonic",
+    "model": "TX-65HXR940",
+    "price": 45000,
+    "description": "Диагональ экрана: 65' Разрешение: 3840x2160 Диапазоны цифрового тюнера: DVB-T ¸ DVB-C ¸ DVB-T2 Частота развертки панели: 100 Гц",
+    "rating": 4.5,
+    "added": "2020-07-22T10:55",
+    "available": true,
+    "images": [
+        "./images/category_2/product_2-3/main.jpg",
+        "./images/category_2/product_2-3/1.jpg",
+        "./images/category_2/product_2-3/2.jpg",
+        "./images/category_2/product_2-3/3.jpg",
+        "./images/category_2/product_2-3/4.jpg"
+    ],
+    "overview": "Самая производительная модель 4K LED-телевизора от Panasonic, по максимуму использует преимущества тонкого экрана благодаря процессору HCX Pro Intelligent. Он отвечает  за высокое качество передачи движения, цвета и контраста. Технология Local Dimming Pro Intelligent обеспечивает безупречный контраст и дополняет технологии Dolby Vision™ и HDR10+. Звуковая система Dolby Atmos® и высокая производительность в играх делают этот телевизор центральным элементом любой домашней развлекательной системы.",
+    "specifications": [{
+            "name": "Диагональ экрана:",
+            "value": "65\"",
+            "hint": "Диагональ телевизора играет большую роль при выборе ТВ. От правильности выбора размера экрана зависит комфортность просмотра видео на экране. 1 дюйм равняется 2.54 сантиметра."
+        },
+        {
+            "name": "Разрешение:",
+            "value": "3840x2160 px",
+            "hint": "Чем больше разрешение изображения, то есть большее количество точек используется для его формирования, тем ближе можно просматривать картинку на экране без вреда для качества. И чем меньше разрешение картинки, тем меньше должна быть диагональ телевизора в см, или нужно увеличить расстояние просмотра телевизора."
+        },
+        {
+            "name": "Тип матрицы",
+            "value": "LED",
+            "hint": "Телевизор может иметь экран, построенный по технологии LED, OLED, LCD, QLED. Последнее время на пике популярности ТВ-панели с OLED и QLED-экранами, они характеризуются сочной картинкой, насыщенными цветами и глубоким черным, в отличие от LCD-телевизоров. Зато последние стоят дешевле."
+        },
+        {
+            "name": "Угол обзора",
+            "value": "178 °",
+            "hint": "Угол обзора — это угол под которым можно смотреть телевизор без потери качества изображения. Это очень важный параметр телевизора."
+        },
+        {
+            "name": "Частота обновления",
+            "value": "100 Гц",
+            "hint": "Характеристика, обозначающая количество возможных изменений кадров в секунду. Измеряется в Герцах (Гц). Стандартная частота обновления — 60 Гц. Более плавную и динамичную картинку обеспечат телевизоры с частотой обновления 120 Гц и выше."
+        },
+        {
+            "name": "Коммуникации",
+            "value": "Bluetooth, WiFi, LAN",
+            "hint": "Проводные и беспроводные технологии, с помощью которых к телевизору можно подключить смартфон, ноутбук, планшет или другие устройства, чтобы вывести с них контент на большой экран телевизора (для этого используются HDMI, USB, miniDisplayPort). Также есть порты для выхода в интернет (Enthernet, DLNA) и беспроводные интерфейсы: Wi-Fi, Bluetooth, Miracast и др."
+        },
+        {
+            "name": "Операционная система:",
+            "value": "Firefox OS",
+            "hint": "Техническое название платформы, на которой работает телевизор. Позволяет устанавливать/скачивать программы из магазина приложений, управлять устройством и взаимодействовать с другими пользователями. Телевизоры Samsung работают на ОС Tizen; Kivi, Sony, Bravis, Saturn, Philips — на Android TV; LG — WebOS."
+        },
+        {
+            "name": "Вес:",
+            "value": "28 КГ"
+        }
+    ],
+    "reviews": [{
+            "user": "Максим",
+            "comment": "Задача **организации**, в особенности же постоянное __информационно-пропагандистское__ обеспечение нашей деятельности влечет за собой процесс внедрения и модернизации системы обучения кадров, соответствует насущным потребностям. Не следует, однако забывать, что новая модель организационной деятельности представляет собой интересный эксперимент проверки систем массового участия.",
+            "date": "2020-11-15T13:15",
+            "rating": "7/10"
+        },
+        {
+            "user": "Сергей",
+            "comment": "Таким образом реализация намеченных плановых заданий играет важную роль в формировании форм развития http://www.google.com. Разнообразный и богатый опыт консультация с широким активом позволяет оценить значение модели развития.",
+            "date": "2020-11-22T09:26",
+            "rating": "1/10"
+        },
+        {
+            "user": "Юрий",
+            "comment": "Представление счастливой бы упражнениями не этот, приносило как избегает когда предаваться восхваляющих некоей превратное представление. Воспользоваться истину счастливой этот ни стал только, восхваляющих такие, избегал разъясню кто нас обстоятельства, наслаждений как. Упрекнуть бы этот с, страдания когда что справедливости упрекнуть действительно я возлюбил боль вы разъясню возлюбил бы поняли умеет ни тех.",
+            "date": "2020-12-04T23:26",
+            "rating": "3/10"
+        },
+        {
+            "user": "Алина",
+            "comment": "Следует отметить, что внедрение современных методик выявляет срочную потребность благоприятных перспектив. Равным образом, семантический разбор внешних противодействий предполагает независимые способы реализации дальнейших направлений развития. С другой стороны, консультация с широким активом способствует повышению качества модели развития.",
+            "date": "2020-12-22T04:26",
+            "rating": "4/10"
+        },
+        {
+            "user": "Маша",
+            "comment": "Учитывая ключевые сценарии поведения, начало повседневной работы по формированию позиции создаёт необходимость включения в производственный план целого ряда внеочередных мероприятий с учётом комплекса поставленных обществом задач. ",
+            "date": "2020-12-22T14:51",
+            "rating": "1/10"
+        }
+    ]
 }

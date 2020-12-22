@@ -96,8 +96,6 @@ const productsFilter = {
             this.filteredProducts.sort((a, b) => (Date.parse(b.added) - Date.parse(a.added)));
             break;
         }
-
-        console.log(this.filteredProducts);
     },
     applyFilter() {
         this.sortDB();

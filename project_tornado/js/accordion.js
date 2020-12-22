@@ -1,6 +1,6 @@
 "use strict";
 
-function accordion(div, transitionMS = 400) {
+function accordion(div, transitionMS = 400, maxHeightPX = "700px") {
     const accordion = document.getElementById(div);
     const accordionBody = accordion.getElementsByClassName("accordion-body")[0];
     accordionBody.style.transitionDuration = transitionMS + "ms";
@@ -14,7 +14,7 @@ function accordion(div, transitionMS = 400) {
     }
 
     function open(transitionMS) {
-        accordionBody.style.maxHeight = "12000px";
+        accordionBody.style.maxHeight = maxHeightPX;
         opened = true;
         setTimeout(() => accordionBtn.src = "images/arrows-collapse.svg", transitionMS);
 
@@ -29,4 +29,4 @@ function accordion(div, transitionMS = 400) {
 
 accordion("overview-accordion");
 accordion("specifications-accordion");
-accordion("comments-accordion");
+accordion("comments-accordion", 800, "8000px");

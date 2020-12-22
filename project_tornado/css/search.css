@@ -1,6 +1,5 @@
 #search-autocomplete-window {
     position: relative;
-    
     display: flex;
     flex-direction: column;
     min-height: 3em;

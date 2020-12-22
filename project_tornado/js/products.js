@@ -8,6 +8,7 @@ async function loadProductsList(objArray = null) {
     const CURRENCY = "₴";
     const CATEGORY_NAME = document.getElementById("category-name");
     const PRODUCTS_AREA = document.getElementById("products-render-area");
+    PRODUCTS_AREA.innerHTML = "";
    
     
     if(!objArray) {

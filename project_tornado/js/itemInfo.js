@@ -45,12 +45,6 @@ const productPage = {
 
         this.productQtty.oninput = () => {
             if(!this.productQtty.value) this.productQtty.value = 1;
-            if(this.productQtty.value > this.productInfo.stock) {
-                this.productQtty.value = this.productInfo.stock;
-                infoWindowUI.show(
-                    `Ошибка: На складе осталось ${this.productInfo.stock} ед. товара.`,
-                    1800)
-            };
             if(this.productQtty.value > 100) {
                 this.productQtty.value = 1;
                 infoWindowUI.show(
@@ -70,7 +64,7 @@ const productPage = {
 
     },
     renderOverview() {
-        this.productDescription.innerHTML = this.productInfo.description.replace(this
+        this.productDescription.innerHTML = this.productInfo.overview.replace(this
                 .findBoldText,
                 "<b>$2</b>")
             .replace(this.findLink, '<a href="$&" class="user-link">$&</a>')
