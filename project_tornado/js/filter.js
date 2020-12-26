@@ -19,7 +19,9 @@ const productsFilter = {
     async loadDB() {
         const CATEGORY_ID = window.location.search.slice(4);
         const RESPONSE = await fetch(`./api/categories/${CATEGORY_ID}.json`);
-        await loadImmitation("#filter-checkbox")
+        if(!this.productsDB.products && this.checkBoxArea.children.length <= 1)
+            await loadImmitation("#filter-checkbox");
+        this.loaded = true;
         this.productsDB = await RESPONSE.json();
         this.productsDB.products.forEach(product => this.brands.add(product.brand));
     },
@@ -35,44 +37,62 @@ const productsFilter = {
             checkBox.checked = "true";
             checkBox.value = brand.toLowerCase();
             checkBox.name = "brand";
+            checkBox.className = "filter-checkbox";
             checkBoxText.textContent = brand;
             this.checkBoxArea.append(container);
             container.append(checkBox, checkBoxText);
         });
+        const allCheckBoxes = document.querySelectorAll(".filter-checkbox");
+        let numberOfChecked = allCheckBoxes.length;
+        allCheckBoxes.forEach(checkbox => {
+            checkbox.onclick = () => {
+                if(!checkbox.checked) numberOfChecked--;
+                else numberOfChecked++;
+                if(numberOfChecked <= 0) {
+                    numberOfChecked = 1;
+                    checkbox.checked = true;
+                }
+            }
+        });
         this.productsDB.products.sort((a, b) => (a.price > b.price) ? 1 : -
-        1);
+            1);
         this.priceFromElement.value = this.productsDB.products[0].price;
         this.priceMin = this.productsDB.products[0].price;
         this.constMin = this.productsDB.products[0].price;
-        this.priceToElement.value = this.productsDB.products[this.productsDB.products.length-1].price;
-        this.priceMax =  this.productsDB.products[this.productsDB.products.length-1].price;
-        this.constMax = this.productsDB.products[this.productsDB.products.length-1].price;
+        this.priceToElement.value = this.productsDB.products[this.productsDB.products
+            .length - 1].price;
+        this.priceMax = this.productsDB.products[this.productsDB.products.length - 1].price;
+        this.constMax = this.productsDB.products[this.productsDB.products.length - 1].price;
     },
     controllMinPriceInput() {
-        if(this.priceFromElement.value < 0 || this.priceFromElement.value > this.constMax) this.priceFromElement.value = this.constMin;
+        if(this.priceFromElement.value < 0 || this.priceFromElement.value > this.constMax) this
+            .priceFromElement.value = this.constMin;
     },
     conrollMaxPriceInput() {
-        if(this.priceToElement.value < 0 || this.priceToElement.value > this.constMax) this.priceToElement.value = this.constMax; 
+        if(this.priceToElement.value < 0 || this.priceToElement.value > this.constMax) this
+            .priceToElement.value = this.constMax;
     },
     getFormData() {
         const FORM = new FormData(filters);
         this.sortBy = FORM.get("sort-by");
         this.selectedBrands = FORM.getAll("brand");
-        if (FORM.get("price-min") < this.constMin || FORM.get("price-min") > this.constMax) this.priceFromElement.value = this.priceMin;
+        if(FORM.get("price-min") < this.constMin || FORM.get("price-min") > this.constMax) this
+            .priceFromElement.value = this.priceMin;
         else this.priceMin = FORM.get("price-min");
-        if (FORM.get("price-max") > this.constMax || FORM.get("price-max") < this.constMin) this.priceToElement.value = this.priceMax;
+        if(FORM.get("price-max") > this.constMax || FORM.get("price-max") < this.constMin) this
+            .priceToElement.value = this.priceMax;
         else this.priceMax = FORM.get("price-max");
-        
+
     },
-    sortDB() {
-        this.loadDB();
+    async sortDB() {
+        await this.loadDB();
         this.getFormData();
         this.filteredProducts = this.productsDB.products.filter((product) => {
-                for(let brand of this.selectedBrands) {
-                    if(product.brand.toLowerCase() == brand && product.price >= (this
-                            .priceMin) && product.price <= (this.priceMax)) return true;
-                }
-            });
+            for(let brand of this.selectedBrands) {
+                if(product.brand.toLowerCase() == brand && product.price >= (this
+                        .priceMin) && product.price <= (this.priceMax)) return true;
+            }
+        });
         switch (this.sortBy) {
         case "rating":
             this.filteredProducts.sort((a, b) => (a.rating < b.rating) ? 1 : -1);
@@ -94,21 +114,25 @@ const productsFilter = {
                 1);
             break;
         case "new":
-            this.filteredProducts.sort((a, b) => (Date.parse(b.added) - Date.parse(a.added)));
+            this.filteredProducts.sort((a, b) => (Date.parse(b.added) - Date.parse(a
+                .added)));
             break;
         }
     },
-    applyFilter() {
-        this.sortDB();
-        loadProductsList(this.filteredProducts);
-        
+    async applyFilter() {
+        await this.sortDB();
+        if(this.filteredProducts.length != 0) loadProductsList(this.filteredProducts);
+
     }
 }
 
 productsFilter.loadBrandsAndPrices();
+
 productsFilter.priceFromElement.oninput = () => productsFilter.controllMinPriceInput();
+
 productsFilter.priceToElement.oninput = () => productsFilter.conrollMaxPriceInput();
-productsFilter.applySortBtn.onclick = (e) => {
+
+productsFilter.applySortBtn.onclick = async function (e) {
     e.preventDefault();
-    productsFilter.applyFilter();
+    await productsFilter.applyFilter();
 }

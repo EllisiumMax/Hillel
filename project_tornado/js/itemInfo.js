@@ -22,6 +22,7 @@ const productPage = {
         const RESPONSE = await fetch(`./api/products/${this.productId}.json`);
         if(RESPONSE.status != 200) window.location.assign("404.html");
         else this.productInfo = await RESPONSE.json();
+        document.title = `${this.productInfo.brand}  ${this.productInfo.model} - интернет магазин TORNADO`;
         await loadImmitation("#product-info-page", true);
     },
     renderHeader() {

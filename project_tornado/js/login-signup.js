@@ -24,10 +24,10 @@ const logRegUI = {
     loginRegExp: /^(?=.*[a-z])[a-z0-9]{3,12}$/i,
     passwordRegExp: /(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z])[0-9a-zA-Z!@#$%^&*]{5,20}/i,
     allFieldsValid: false,
-    loggedUserName: localStorage.getItem("CURRENT_LOGGED_USER_PROFILE") || "guest",
+    loggedUserName: localStorage.getItem("CURRENT_LOGGED_USER_PROFILE")|| "Гость",
     
     initiateUser() {
-        if (!localStorage.getItem("CURRENT_LOGGED_USER_PROFILE")) localStorage.setItem("CURRENT_LOGGED_USER_PROFILE", "guest");
+        if (!localStorage.getItem("CURRENT_LOGGED_USER_PROFILE")) localStorage.setItem("CURRENT_LOGGED_USER_PROFILE", "Гость");
     },
     validateAllRegFields() {
         this.validateName();
@@ -283,7 +283,7 @@ const logRegUI = {
     },
     restoreLogin() {
        
-        if(localStorage.getItem("CURRENT_LOGGED_USER_PROFILE") != "guest") {
+        if(localStorage.getItem("CURRENT_LOGGED_USER_PROFILE") != "Гость") {
             const JSON_ANSWEAR = localStorage.getItem("CURRENT_LOGGED_USER_PROFILE");
             const RESULTS = JSON.parse(JSON_ANSWEAR);
             if (RESULTS){
@@ -297,12 +297,12 @@ const logRegUI = {
         }
 },
     logOut() {
-        this.loggedUserName = "guest";
+        this.loggedUserName = "Гость";
         this.userAvatarArea.src = "images/person-square.svg";
         this.loginButtonText.textContent = "Войти";
         LOGOUT_BTN.style.display = "none";
         LOGIN_BTN.onclick = () => logRegUI.createLoginWindow();
-        localStorage.setItem("CURRENT_LOGGED_USER_PROFILE", "guest");
+        localStorage.setItem("CURRENT_LOGGED_USER_PROFILE", "Гость");
         location.reload();
     }
 }

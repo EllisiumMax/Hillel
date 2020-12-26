@@ -17,6 +17,7 @@ async function loadProductsList(objArray = null) {
         await loadImmitation("#products-render-area");
         if(RESPONSE.status != 200) window.location.assign("404.html");
         else productsDB = await RESPONSE.json();
+        document.title = `${productsDB.name} - интернет магазин TORNADO`;
         
     } else {
         if(objArray.length == 0) {
