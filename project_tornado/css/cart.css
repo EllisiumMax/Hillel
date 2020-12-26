@@ -2,7 +2,7 @@
     --cart-window-background: rgb(39, 23, 61);
     --cart-product-area-background: rgb(240, 239, 236);
     --cart-product-area-text: black;
-    --cart-wrapper: rgba(85, 84, 84, 0.932);
+    --cart-wrapper: rgba(5, 5, 5, 0.959);
     --cart-border: grey;
     --cart-text: white;
     --cart-qtty-text: rgb(7, 6, 6);
@@ -30,7 +30,7 @@
     height: auto;
     width: auto;
     padding: 2em;
-    border-radius: 3px;
+    border-radius: 6px;
 }
 
 #mark-close {
@@ -186,14 +186,14 @@
 #cart-total-price {
     align-self: center;
     padding: 0.7em 1em;
-    margin: 0 0 1em 0;
+    margin: 1em 0 1em 0;
     text-align: center;
     font-size: 1.2em;
     font-weight: 300;
     border: 1px solid rgba(240, 119, 7, 0.986);
     border-radius: 3px;
     background-color:#6e5e755b;
-    max-width: 20em;
+    width: 18.3em;
 }
 
 #empty-cart-img {

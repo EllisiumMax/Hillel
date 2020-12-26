@@ -1,15 +1,16 @@
 #search-autocomplete-window {
-    position: relative;
+    position: absolute;
     display: flex;
     flex-direction: column;
-    min-height: 3em;
-    top: -29.7em;
-    left: 18.6em;
-    border: 1px solid rgb(197, 196, 197);
+    margin-left: 18.4em;
+    margin-top: -38.5em;
+    height: 10em;
+    overflow: auto;
+    border: 1px solid rgb(114, 105, 96);
     border-radius: 5px;
     padding: 0.5em;
     background-color: rgb(255, 255, 255);
-    z-index: 44;
+    z-index: 2;
     letter-spacing: 0.6px;
 }
 

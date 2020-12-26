@@ -66,9 +66,11 @@
                     <b>Наличие:</b> {{available}}
                 </div>
                 <div>
-                    <label for="product-rating"><b>Рейтинг:</b></label>
+                    <label for="product-rating" class="rating"><b>Рейтинг:</b></label>
+                    
                     <meter id="product-rating" min="0" max="5" low="3.5" high="5" optimum="4.5" value="0">
                     </meter>
+                    <p class="meter-scale">012345</p>
                 </div>
                 <div class="add-to-cart-block">
                     <input type="number" value="1" name="" id="product-quantity">
@@ -103,9 +105,8 @@
             <h3 class="title">Комментарии</h3>
             <img src="images/arrows-expand.svg" class="accordion-btn"></img>
         </div>
-        <div class="accordion-body comments" id="comments-render-area">
-        </div>
-
+        <div class="accordion-body comments" id="comments-render-area"></div>
+    </div>
         <footer>
             <p>© Интернет-магазин электроники TORNADO™ 2020</p>
             <img src="images/visa.svg" class="visa" alt="visa certified logo">
