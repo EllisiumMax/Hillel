@@ -1,52 +1,86 @@
 {
-  "id": "product_5-1",
-  "brand": "Mercedes-Benz",
-  "model": "E-Class (W213)",
-  "price": 57899,
-  "description": "Rear drive class E sedan (body W213). Restyling of the fifth generation of the model. The premiere show of the model took place online on March 3, 2020.",
-  "rating": 4.6,
-  "added": "23.11.2020 11:35",
 
-  "available": true,
-  "images": [
-      "../images/category_1/product_5-1/1.jpg",
-      "../images/category_1/product_5-1/2.jpg",
-      "../images/category_1/product_5-1/3.jpg",
-      "../images/category_1/product_5-1/4.jpg",
-      "../images/category_1/product_5-1/5.jpg"
-  ],
-  "overview": "The W213 Mercedes-Benz E-Class is the fifth-generation of the Mercedes-Benz E-Class. Sold from 2016 (as a 2017 model), it is the successor to the W212/S212 E-Class models. Unlike the previous generation, this generation coupe/convertible share the same platform as the sedan/wagon. The high-performance Mercedes-AMG E 63 and E 63 S versions of the W213 has been available as well from 2016 (as a 2017 model), and these are the only versions with V8 engines.",
-  "specifications": [{
-          "name": "Engine capacity(l):",
-          "value": 2.0,
-          "hint": "Engine capacity refers to the volume swept by all the pistons of an engine, within their bores, from the top to the bottom of their travel."
-      },
-      {
-          "name": "Horse power(hp):",
-          "value": 184,
-          "hint": "Horsepower (hp) is a unit of measurement of power, or the rate at which work is done, usually in reference to the output of engines or motors."
-      },
-      {
-          "name": "Torque(Nm):",
-          "value": 300,
-          "hint": "Torque is a twisting force that speaks to the engine's rotational force and measures how much of that twisting force is available when an engine exerts itself."
-      },
-      {
-          "name": "Maximum speed(km/h):",
-          "value": 240
-      }
-  ],
-  "reviews": [{
-          "user": "Sam",
-          "comment": "**Lorem** ipsum dolor sit amet consectetur adipisicing elit. Minima quibusdam, veniam ad corporis suscipit nam eius totam impedit, quo quia soluta ea non dicta quod reiciendis rerum, unde aliquid iste?",
-          "date": "01.01.2020 13:15",
-          "rating": "7/10"
-      },
-      {
-          "user": "Albert",
-          "comment": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima quibusdam, veniam ad corporis suscipit nam eius totam impedit, quo quia soluta ea non dicta quod reiciendis rerum, unde aliquid iste?",
-          "date": "01.01.2020 20:01",
-          "rating": "1/10"
-      }
-  ]
+    "id": "product_5-1",
+    "brand": "Acer",
+    "model": "Nitro VG240YSbmiipx",
+    "price": 5555,
+    "description": "Диагональ дисплея: 23.8' Максимальное разрешение дисплея: 1920 x 1080 Тип матрицы: IPS Особенности: Безрамочный (Сinema screen)",
+    "rating": 4.7,
+    "added": "2020-10-23T17:36",
+
+    "available": true,
+    "images": [
+        "./images/category_5/product_5-1/main.jpg",
+        "./images/category_5/product_5-1/1.jpg",
+        "./images/category_5/product_5-1/2.jpg",
+        "./images/category_5/product_5-1/3.jpg",
+        "./images/category_5/product_5-1/4.jpg"
+    ],
+    "overview": "Монитор Acer Nitro VG240YSbmiipx обладает впечатляющими характеристиками, позволяющими достичь идеального изображения. Аппарат обеспечивает мгновенную реакцию изображения на каждое действие, задействовав в работе технологию IPS, особенность которой в сниженном показателе времени отклика 1 мс и показателе частоты 165 Гц. Благодаря технологии AMD FreeSync обновление экрана происходит намного быстрее, что делает работу с графическими приложениями или игры приятнее и занимательнее. Acer Nitro VG240YSbmiipx поддерживает углы обзора 178°/178°, поэтому изображение будет стабильно качественным, какой бы ракурс вы ни выбрали для просмотра. Разрешение 1920x1080 поможет получить четкое и реалистичное изображение, что позволит погрузиться в игровой процесс, полностью отвлечься от реалий жизни. Показатели контрастности и яркости, соответствующие 1000:1 и 250 кд/м², делают картинку очень красивой: при необходимости вы сможете настроить эти показатели.",
+    "specifications": [{
+            "name": "Диагональ:",
+            "value": "23.8",
+            "hint": "Данный параметр является  одним из самых важных для любого экрана — он определяет общий размер его рабочей области. В целом считается, что более крупные мониторы более комфортны."
+        },
+        {
+            "name": "Максимальное разрешение:",
+            "value": "1920 x 1080 px",
+            "hint": "В целом чем выше разрешение — тем выше детализация и тем более продвинутым является экран, однако тем дороже он будет стоить (при прочих равных) и тем большая мощность видеокарты потребуется для нормальной работы с таким разрешением. "
+        },
+        {
+            "name": "Частота обновления:",
+            "value": "165 Гц",
+            "hint": "Чем выше частота кадров — тем более сглаженным будет выглядеть движение на экране, тем менее заметны на нем будут рывки и смазывания."
+        },
+        {
+            "name": "Время реакции матрицы",
+            "value": "1 мс",
+            "hint": "Чем меньше время отклика — тем быстрее матрица реагирует на управляющий сигнал, тем меньше задержка и тем лучше будет качество изображения в динамичных сценах."
+        },
+        {
+            "name": "Тип матрицы:",
+            "value": "IPS",
+            "hint": "Технология, по которой изготовлена матрица монитора (слой, отвечающий непосредственно за отображение изображения). От типа матрицы зависят прежде всего время отклика и качество цветопередачи. "
+        },
+        {
+            "name": "Яркость дисплея:",
+            "value": "250 кд/м²",
+            "hint": "Выбирать монитор с высокой яркостью стоит прежде всего в том случае, если устройство планируется использовать при ярком внешнем освещении — например, если на рабочее место попадает солнечный свет. Тусклое изображение может быть «заглушено» таким освещением, что сделает работу некомфортной. В других же условиях высокая яркость экрана сильно утомляет глаза."
+        },
+        {
+            "name": "Страна производитель:",
+            "value": "Китай"
+        }
+    ],
+    "reviews": [{
+            "user": "Максим",
+            "comment": "Задача **организации**, в особенности же постоянное __информационно-пропагандистское__ обеспечение нашей деятельности влечет за собой процесс внедрения и модернизации системы обучения кадров, соответствует насущным потребностям. Не следует, однако забывать, что новая модель организационной деятельности представляет собой интересный эксперимент проверки систем массового участия.",
+            "date": "2020-11-15T13:15",
+            "rating": "7/10"
+        },
+        {
+            "user": "Сергей",
+            "comment": "Таким образом реализация намеченных плановых заданий играет важную роль в формировании форм развития http://www.google.com. Разнообразный и богатый опыт консультация с широким активом позволяет оценить значение модели развития.",
+            "date": "2020-11-22T09:26",
+            "rating": "1/10"
+        },
+        {
+            "user": "Юрий",
+            "comment": "Представление счастливой бы упражнениями не этот, приносило как избегает когда предаваться восхваляющих некоей превратное представление. Воспользоваться истину счастливой этот ни стал только, восхваляющих такие, избегал разъясню кто нас обстоятельства, наслаждений как. Упрекнуть бы этот с, страдания когда что справедливости упрекнуть действительно я возлюбил боль вы разъясню возлюбил бы поняли умеет ни тех.",
+            "date": "2020-12-04T23:26",
+            "rating": "3/10"
+        },
+        {
+            "user": "Алина",
+            "comment": "Следует отметить, что внедрение современных методик выявляет срочную потребность благоприятных перспектив. Равным образом, семантический разбор внешних противодействий предполагает независимые способы реализации дальнейших направлений развития. С другой стороны, консультация с широким активом способствует повышению качества модели развития.",
+            "date": "2020-12-22T04:26",
+            "rating": "4/10"
+        },
+        {
+            "user": "Маша",
+            "comment": "Учитывая ключевые сценарии поведения, начало повседневной работы по формированию позиции создаёт необходимость включения в производственный план целого ряда внеочередных мероприятий с учётом комплекса поставленных обществом задач. ",
+            "date": "2020-12-22T14:51",
+            "rating": "1/10"
+        }
+    ]
 }

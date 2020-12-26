@@ -388,7 +388,7 @@ ul.products-column>li>a>p {
 
 .recommended.product-container {
     width: 25em;
-    height: 36em;
+    height: 34em;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
@@ -583,7 +583,7 @@ form {
 .product-container {
     position: relative;
     width: 25em;
-    height: 31em;
+    height: 29em;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
@@ -629,13 +629,13 @@ form {
 .product-container>a>img {
     width: 10em;
     height: 10em;
-    margin-top: 5em;
+    margin-top: 3em;
     object-fit: contain;
     transition: all 0.4s ease-out;
 }
 
 .product-container:hover>a>img {
-    margin-top: 0.5em;
+    margin-top: -0.1em;
 }
 
 .product-container>a>h3 {
@@ -653,7 +653,7 @@ form {
 
 .product-container>p {
     font-size: 0.8em;
-    margin: auto 0.5em;
+    margin: auto 0.1em;
     transition: all 0.5s ease-out;
     visibility: hidden;
     opacity: 0;
@@ -676,6 +676,7 @@ form {
     padding: 0.3em 0.5em;
     border-radius: 1em;
     transition: all 0.2s ease-out;
+    font-size: 1.25em;
 }
 
 .product-container:hover>em {
@@ -706,7 +707,7 @@ form {
 
 #sort {
     text-align: center;
-    font-size: 0.8em;
+    font-size: 0.95em;
     padding: 0.3em 0;
     text-align-last: center;
     outline: none;

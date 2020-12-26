@@ -58,7 +58,7 @@ async function loadProductsList(objArray = null) {
 
         const PRODUCT_DESCRIPTION = document.createElement("p");
         PRODUCT_DESCRIPTION.className = "product-description";
-        PRODUCT_DESCRIPTION.textContent = product.description;
+        PRODUCT_DESCRIPTION.innerHTML = product.description;
 
         const PRODUCT_PRICE = document.createElement("em");
         PRODUCT_PRICE.textContent = `Цена: ${product.price} ${CURRENCY}`;

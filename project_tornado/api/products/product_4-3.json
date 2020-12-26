@@ -1,52 +1,92 @@
 {
-  "id": "product_4-3",
-  "brand": "Mercedes-Benz",
-  "model": "E-Class (W213)",
-  "price": 57899,
-  "description": "Rear drive class E sedan (body W213). Restyling of the fifth generation of the model. The premiere show of the model took place online on March 3, 2020.",
-  "rating": 4.6,
-  "added": "23.11.2020 11:35",
-
-  "available": true,
-  "images": [
-      "../images/category_1/product_4-3/1.jpg",
-      "../images/category_1/product_4-3/2.jpg",
-      "../images/category_1/product_4-3/3.jpg",
-      "../images/category_1/product_4-3/4.jpg",
-      "../images/category_1/product_4-3/5.jpg"
-  ],
-  "overview": "The W213 Mercedes-Benz E-Class is the fifth-generation of the Mercedes-Benz E-Class. Sold from 2016 (as a 2017 model), it is the successor to the W212/S212 E-Class models. Unlike the previous generation, this generation coupe/convertible share the same platform as the sedan/wagon. The high-performance Mercedes-AMG E 63 and E 63 S versions of the W213 has been available as well from 2016 (as a 2017 model), and these are the only versions with V8 engines.",
-  "specifications": [{
-          "name": "Engine capacity(l):",
-          "value": 2.0,
-          "hint": "Engine capacity refers to the volume swept by all the pistons of an engine, within their bores, from the top to the bottom of their travel."
-      },
-      {
-          "name": "Horse power(hp):",
-          "value": 184,
-          "hint": "Horsepower (hp) is a unit of measurement of power, or the rate at which work is done, usually in reference to the output of engines or motors."
-      },
-      {
-          "name": "Torque(Nm):",
-          "value": 300,
-          "hint": "Torque is a twisting force that speaks to the engine's rotational force and measures how much of that twisting force is available when an engine exerts itself."
-      },
-      {
-          "name": "Maximum speed(km/h):",
-          "value": 240
-      }
-  ],
-  "reviews": [{
-          "user": "Sam",
-          "comment": "**Lorem** ipsum dolor sit amet consectetur adipisicing elit. Minima quibusdam, veniam ad corporis suscipit nam eius totam impedit, quo quia soluta ea non dicta quod reiciendis rerum, unde aliquid iste?",
-          "date": "01.01.2020 13:15",
-          "rating": "7/10"
-      },
-      {
-          "user": "Albert",
-          "comment": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima quibusdam, veniam ad corporis suscipit nam eius totam impedit, quo quia soluta ea non dicta quod reiciendis rerum, unde aliquid iste?",
-          "date": "01.01.2020 20:01",
-          "rating": "1/10"
-      }
-  ]
+    "id": "product_4-3",
+    "brand": "Artline",
+    "model": "Overlord RTX P99 v20",
+    "price": 255000,
+    "description": "Intel Core i9-9980XE (3.0 - 4.4 ГГц) / RAM 128 ГБ / HDD 2 ТБ + SSD 1 ТБ / 2 x nVidia GeForce RTX 2080 Ti, 11 ГБ / без ОД / LAN / Wi-Fi / Windows 10 Pro",
+    "rating": 5,
+    "added": "2020-09-21T10:35",
+    "available": true,
+    "images": [
+        "./images/category_4/product_4-3/main.jpg",
+        "./images/category_4/product_4-3/1.jpg",
+        "./images/category_4/product_4-3/2.jpg",
+        "./images/category_4/product_4-3/3.jpg",
+        "./images/category_4/product_4-3/4.jpg"
+    ],
+    "overview": "Одни персональные компьютеры отлично отрабатывают вложенные средства в качестве рабочих лошадок, другие – хорошо чувствуют себя в качестве универсальных домашних станций, третьи – позволяют с легкостью крошить в капусту врагов при высоком уровне FPS и графики. А бывают такие, которые заслуженно получают эпитеты в виде громких словосочетаний: компьютеры-«монстры», компьютеры-эксклюзивы, компьютеры top-категории – ARTLINE Overlord RTX. Это ультимативные варианты специально для тех, кто привык всегда получать самое новое и лучше. Представители линейки Overlord включают отборные комплектующие, прошедшие проверку многочасовыми прогонами в специальных тестовых приложениях, профессионально собраны с пристальным вниманием ко всем мелочам, вплоть до стяжки и укладки самого незаметного шлейфа. Вершиной высокопроизводительных компьютеров для самых требовательных пользователей можно считать модель ARTLINE Overlord RTX P99v20. Она по праву может считаться преемственным наследником ПК верхнего эшелона серий Extreme Poseidon и Gaming. Он вобрал в себя все «сливки» и все лучшее уже существующих конфигураций, дополняя последние современными веяниями актуальных инновационных IT-разработок.",
+    "specifications": [{
+            "name": "Процессор",
+            "value": "Восемнадцатиядерный Intel Core i9-9980XE (3.0 - 4.4 ГГц)",
+            "hint": "Центральный процессор (ЦП или CPU — Central Processing Unit) — главный «мозговой центр» ПК. Играет большую роль в быстродействии системы и вычислительных процессах."
+        },
+        {
+            "name": "Оперативная память",
+            "value": "128 ГБ",
+            "hint": "Объем ОЗУ является одним из важнейших показателей, характеризующих общую производительность системы. Чем больше оперативной памяти — тем лучше компьютер будет справляться с «тяжелыми» ресурсоемкими программами."
+        },
+        {
+            "name": "Тип видеокарты",
+            "value": "Дискретная",
+            "hint": "Определяет производительность обработки видеоданных и качество воспроизведения выводимого на экран изображения."
+        },
+        {
+            "name": "Видеокарта",
+            "value": "2 x nVidia GeForce RTX 2080 Ti, 11 ГБ",
+            "hint": "Важный электронный компонент компьютера, отвечающий за плавный вывод любого изображения на экран. Видеокарты отличаются производительностью, энергопотреблением, количеством ядер, наличием или отсутствием собственной памяти. В последнем случае под потребности видеообработки графический процессор забирает часть объема ОЗУ, что снижает производительность аппарата."
+        },
+        {
+            "name": "Накопитель",
+            "value": "HDD 2 ТБ + SSD 1 ТБ",
+            "hint": "В современных ПК для повышения производительности и хранения пользовательских данных используются накопители, которые могут быть двух видов: твердотельные (SSD) и жесткие диски (HDD). Первые беззвучные, устойчивы к повреждениям и имеют высокую скорость записи, что даёт им массу преимуществ перед вторыми. Чем больше объем накопителя, тем больше на нём можно хранить информации."
+        },
+        {
+            "name": "Операционная система:",
+            "value": "Windows 10 Pro",
+            "hint": "Программная оболочка, в которой функционируют штатные и загружаемые приложения. Предустановленная производителем ОС оптимально настроена под конкретную аппаратную конфигурацию изделия, определяет его функционал и удобство использования интерфейса."
+        },
+        {
+            "name": "Размеры",
+            "value": "592 x 274 x 577 мм"
+        },
+        {
+            "name": "Вес",
+            "value": "26 кг"
+        },
+        {
+            "name": "Страна производитель",
+            "value": "Украина"
+        }
+    ],
+    "reviews": [{
+            "user": "Максим",
+            "comment": "Задача **организации**, в особенности же постоянное __информационно-пропагандистское__ обеспечение нашей деятельности влечет за собой процесс внедрения и модернизации системы обучения кадров, соответствует насущным потребностям. Не следует, однако забывать, что новая модель организационной деятельности представляет собой интересный эксперимент проверки систем массового участия.",
+            "date": "2020-11-15T13:15",
+            "rating": "7/10"
+        },
+        {
+            "user": "Сергей",
+            "comment": "Таким образом реализация намеченных плановых заданий играет важную роль в формировании форм развития http://www.google.com. Разнообразный и богатый опыт консультация с широким активом позволяет оценить значение модели развития.",
+            "date": "2020-11-22T09:26",
+            "rating": "1/10"
+        },
+        {
+            "user": "Юрий",
+            "comment": "Представление счастливой бы упражнениями не этот, приносило как избегает когда предаваться восхваляющих некоей превратное представление. Воспользоваться истину счастливой этот ни стал только, восхваляющих такие, избегал разъясню кто нас обстоятельства, наслаждений как. Упрекнуть бы этот с, страдания когда что справедливости упрекнуть действительно я возлюбил боль вы разъясню возлюбил бы поняли умеет ни тех.",
+            "date": "2020-12-04T23:26",
+            "rating": "3/10"
+        },
+        {
+            "user": "Алина",
+            "comment": "Следует отметить, что внедрение современных методик выявляет срочную потребность благоприятных перспектив. Равным образом, семантический разбор внешних противодействий предполагает независимые способы реализации дальнейших направлений развития. С другой стороны, консультация с широким активом способствует повышению качества модели развития.",
+            "date": "2020-12-22T04:26",
+            "rating": "4/10"
+        },
+        {
+            "user": "Маша",
+            "comment": "Учитывая ключевые сценарии поведения, начало повседневной работы по формированию позиции создаёт необходимость включения в производственный план целого ряда внеочередных мероприятий с учётом комплекса поставленных обществом задач. ",
+            "date": "2020-12-22T14:51",
+            "rating": "1/10"
+        }
+    ]
 }

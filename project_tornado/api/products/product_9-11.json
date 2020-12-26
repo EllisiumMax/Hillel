@@ -1,52 +1,76 @@
 {
-  "id": "product_9-11",
-  "brand": "Mercedes-Benz",
-  "model": "E-Class (W213)",
-  "price": 57899,
-  "description": "Rear drive class E sedan (body W213). Restyling of the fifth generation of the model. The premiere show of the model took place online on March 3, 2020.",
-  "rating": 4.6,
-  "added": "23.11.2020 11:35",
 
-  "available": true,
-  "images": [
-      "../images/category_1/product_9-11/1.jpg",
-      "../images/category_1/product_9-11/2.jpg",
-      "../images/category_1/product_9-11/3.jpg",
-      "../images/category_1/product_9-11/4.jpg",
-      "../images/category_1/product_9-11/5.jpg"
-  ],
-  "overview": "The W213 Mercedes-Benz E-Class is the fifth-generation of the Mercedes-Benz E-Class. Sold from 2016 (as a 2017 model), it is the successor to the W212/S212 E-Class models. Unlike the previous generation, this generation coupe/convertible share the same platform as the sedan/wagon. The high-performance Mercedes-AMG E 63 and E 63 S versions of the W213 has been available as well from 2016 (as a 2017 model), and these are the only versions with V8 engines.",
-  "specifications": [{
-          "name": "Engine capacity(l):",
-          "value": 2.0,
-          "hint": "Engine capacity refers to the volume swept by all the pistons of an engine, within their bores, from the top to the bottom of their travel."
-      },
-      {
-          "name": "Horse power(hp):",
-          "value": 184,
-          "hint": "Horsepower (hp) is a unit of measurement of power, or the rate at which work is done, usually in reference to the output of engines or motors."
-      },
-      {
-          "name": "Torque(Nm):",
-          "value": 300,
-          "hint": "Torque is a twisting force that speaks to the engine's rotational force and measures how much of that twisting force is available when an engine exerts itself."
-      },
-      {
-          "name": "Maximum speed(km/h):",
-          "value": 240
-      }
-  ],
-  "reviews": [{
-          "user": "Sam",
-          "comment": "**Lorem** ipsum dolor sit amet consectetur adipisicing elit. Minima quibusdam, veniam ad corporis suscipit nam eius totam impedit, quo quia soluta ea non dicta quod reiciendis rerum, unde aliquid iste?",
-          "date": "01.01.2020 13:15",
-          "rating": "7/10"
-      },
-      {
-          "user": "Albert",
-          "comment": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima quibusdam, veniam ad corporis suscipit nam eius totam impedit, quo quia soluta ea non dicta quod reiciendis rerum, unde aliquid iste?",
-          "date": "01.01.2020 20:01",
-          "rating": "1/10"
-      }
-  ]
+    "id": "product_9-11",
+    "brand": "Sven",
+    "model": "MS-2250",
+    "price": 3300,
+    "description": "Выходная мощность 80 Вт, Частотный диапазон 200 – 20 000 Гц",
+    "rating": 3.9,
+    "added": "2020-07-21T15:19",
+
+    "available": true,
+    "images": [
+        "./images/category_9/product_9-11/main.jpg",
+        "./images/category_9/product_9-11/1.jpg",
+        "./images/category_9/product_9-11/2.jpg",
+        "./images/category_9/product_9-11/3.jpg",
+        "./images/category_9/product_9-11/4.jpg"
+    ],
+    "overview": "Компания Sven представляет очередную модель для любителей качественного звука – мощную акустическую систему 2.1 со встроенным Bluetooth-модулем MS-2250. Суммарная мощность системы 80 Вт позволяет озвучить шумную вечеринку или устроить совместный просмотр фильма или спортивного матча в большой компании. А если подключить систему к ПК или игровой консоли, то полное погружение в игру вам гарантировано! Можно послушать любимую музыку со смартфона или плеера, подключившись к MS-2250 по Bluetooth. На сабвуфере также есть слоты для USB flash и SD card, а встроенный FM-тюнер позволяет поймать любимую радиоволну. Акустика отлично справляется с озвучиванием большого пространства. Однако если у вас небольшая комната, Sven MS-2250 не займет много места, ведь сателлиты можно повесить на стену с помощью специальных креплений.",
+    "specifications": [{
+            "name": "Выходная мощность:",
+            "value": "80 Вт",
+            "hint": "Выходная мощность никак не влияет на качество звука, но характеризует максимальную громкость звучания колонки, чем больше мощность, тем больше будет максимальная громкость."
+        },
+        {
+            "name": "Материал корпуса:",
+            "value": "Дерево и пластик"
+        },
+        {
+            "name": "Частотный диапазон:",
+            "value": "200 – 20 000 Гц",
+            "hint": "Частотный отклик динамика, измеренный в герцах (Гц) или кГц (Гц / 1000), показывает вам, насколько точно он преобразует частоты входного сигнала. "
+        },
+        {
+            "name": "Количество акустических каналов:",
+            "value": "2.1",
+            "hint": "Чем больше, тем объемнее звучание (1.0 – моно, 2.0 – стерео, 2.1 – стерео с сабвуфером, 5.1 - 5 динамиков и сабвуфер)"
+        },
+        {
+            "name": "Производитель товара:",
+            "value": "Китай"
+        }
+
+    ],
+    "reviews": [{
+            "user": "Максим",
+            "comment": "Задача **организации**, в особенности же постоянное __информационно-пропагандистское__ обеспечение нашей деятельности влечет за собой процесс внедрения и модернизации системы обучения кадров, соответствует насущным потребностям. Не следует, однако забывать, что новая модель организационной деятельности представляет собой интересный эксперимент проверки систем массового участия.",
+            "date": "2020-11-15T13:15",
+            "rating": "7/10"
+        },
+        {
+            "user": "Сергей",
+            "comment": "Таким образом реализация намеченных плановых заданий играет важную роль в формировании форм развития http://www.google.com. Разнообразный и богатый опыт консультация с широким активом позволяет оценить значение модели развития.",
+            "date": "2020-11-22T09:26",
+            "rating": "1/10"
+        },
+        {
+            "user": "Юрий",
+            "comment": "Представление счастливой бы упражнениями не этот, приносило как избегает когда предаваться восхваляющих некоей превратное представление. Воспользоваться истину счастливой этот ни стал только, восхваляющих такие, избегал разъясню кто нас обстоятельства, наслаждений как. Упрекнуть бы этот с, страдания когда что справедливости упрекнуть действительно я возлюбил боль вы разъясню возлюбил бы поняли умеет ни тех.",
+            "date": "2020-1-04T23:26",
+            "rating": "3/10"
+        },
+        {
+            "user": "Алина",
+            "comment": "Следует отметить, что внедрение современных методик выявляет срочную потребность благоприятных перспектив. Равным образом, семантический разбор внешних противодействий предполагает независимые способы реализации дальнейших направлений развития. С другой стороны, консультация с широким активом способствует повышению качества модели развития.",
+            "date": "2020-1-22T04:26",
+            "rating": "4/10"
+        },
+        {
+            "user": "Маша",
+            "comment": "Учитывая ключевые сценарии поведения, начало повседневной работы по формированию позиции создаёт необходимость включения в производственный план целого ряда внеочередных мероприятий с учётом комплекса поставленных обществом задач. ",
+            "date": "2020-1-22T14:51",
+            "rating": "1/10"
+        }
+    ]
 }

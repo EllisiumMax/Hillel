@@ -1,52 +1,86 @@
 {
-  "id": "product_5-5",
-  "brand": "Mercedes-Benz",
-  "model": "E-Class (W213)",
-  "price": 57899,
-  "description": "Rear drive class E sedan (body W213). Restyling of the fifth generation of the model. The premiere show of the model took place online on March 3, 2020.",
-  "rating": 4.6,
-  "added": "23.11.2020 11:35",
 
-  "available": true,
-  "images": [
-      "../images/category_1/product_5-5/1.jpg",
-      "../images/category_1/product_5-5/2.jpg",
-      "../images/category_1/product_5-5/3.jpg",
-      "../images/category_1/product_5-5/4.jpg",
-      "../images/category_1/product_5-5/5.jpg"
-  ],
-  "overview": "The W213 Mercedes-Benz E-Class is the fifth-generation of the Mercedes-Benz E-Class. Sold from 2016 (as a 2017 model), it is the successor to the W212/S212 E-Class models. Unlike the previous generation, this generation coupe/convertible share the same platform as the sedan/wagon. The high-performance Mercedes-AMG E 63 and E 63 S versions of the W213 has been available as well from 2016 (as a 2017 model), and these are the only versions with V8 engines.",
-  "specifications": [{
-          "name": "Engine capacity(l):",
-          "value": 2.0,
-          "hint": "Engine capacity refers to the volume swept by all the pistons of an engine, within their bores, from the top to the bottom of their travel."
-      },
-      {
-          "name": "Horse power(hp):",
-          "value": 184,
-          "hint": "Horsepower (hp) is a unit of measurement of power, or the rate at which work is done, usually in reference to the output of engines or motors."
-      },
-      {
-          "name": "Torque(Nm):",
-          "value": 300,
-          "hint": "Torque is a twisting force that speaks to the engine's rotational force and measures how much of that twisting force is available when an engine exerts itself."
-      },
-      {
-          "name": "Maximum speed(km/h):",
-          "value": 240
-      }
-  ],
-  "reviews": [{
-          "user": "Sam",
-          "comment": "**Lorem** ipsum dolor sit amet consectetur adipisicing elit. Minima quibusdam, veniam ad corporis suscipit nam eius totam impedit, quo quia soluta ea non dicta quod reiciendis rerum, unde aliquid iste?",
-          "date": "01.01.2020 13:15",
-          "rating": "7/10"
-      },
-      {
-          "user": "Albert",
-          "comment": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima quibusdam, veniam ad corporis suscipit nam eius totam impedit, quo quia soluta ea non dicta quod reiciendis rerum, unde aliquid iste?",
-          "date": "01.01.2020 20:01",
-          "rating": "1/10"
-      }
-  ]
+    "id": "product_5-5",
+    "brand": "Asus",
+    "model": "VG27AQ",
+    "price": 7300,
+    "description": "Диагональ дисплея: 27' Максимальное разрешение дисплея: 2560 x 1440 Тип матрицы: IPS Особенности: Flicker-Free ¸ Поворотный экран (Pivot)",
+    "rating": 4.0,
+    "added": "2020-12-20T12:33",
+
+    "available": true,
+    "images": [
+        "./images/category_5/product_5-5/main.jpg",
+        "./images/category_5/product_5-5/1.jpg",
+        "./images/category_5/product_5-5/2.jpg",
+        "./images/category_5/product_5-5/3.jpg",
+        "./images/category_5/product_5-5/4.jpg"
+    ],
+    "overview": "TUF Gaming VG27AQ — это 27-дюймовый WQHD (2560x1440) HDR IPS-дисплей со сверхбыстрой частотой 165 Гц, разработанный для профессиональных геймеров и тех, кто ищет захватывающий игровой процесс. Впервые на любом игровом мониторе одновременно могут быть включены Motion Blur Reduction и Adaptive-sync. Эта новая технология называется Asus Extreme Low Motion Blur Sync (ELMB SYNC). ELMB SYNC работает с G-SYNC, совместимым, что позволяет геймерам наслаждаться резкими, высокоскоростными кадрами. 27-дюймовый IPS-дисплей WQHD TUF Gaming VG27AQ оснащен панелью WQHD (2560 x 1440), которая обеспечивает на 77% больше места на рабочем столе, чем стандартные дисплеи Full HD (1920 x 1080). Технология IPS дает превосходные изображения с выдающимися цветами благодаря цветовой гамме sRGB 99% и поразительной контрастности 1000:1. Широкие углы обзора 178 градусов гарантируют минимальное искажение и смещение цвета даже при просмотре с экстремальных положений. Невероятно быстрая частота обновления 165 Гц TUF Gaming VG27AQ 165 Гц частота обновления устраняет лаги и смазывания при движении, что дает вам преимущество в шутерах от первого лица, гонках, стратегиях в реальном времени и спортивных играх. Эта сверхбыстрая частота обновления позволяет вам играть с самыми высокими визуальными настройками и мгновенно реагировать на то, что на экране.",
+    "specifications": [{
+            "name": "Диагональ:",
+            "value": "27'",
+            "hint": "Данный параметр является одним из самых важных для любого экрана — он определяет общий размер его рабочей области. В целом считается, что более крупные мониторы более комфортны."
+        },
+        {
+            "name": "Максимальное разрешение:",
+            "value": "2560 x 1440",
+            "hint": "В целом чем выше разрешение — тем выше детализация и тем более продвинутым является экран, однако тем дороже он будет стоить (при прочих равных) и тем большая мощность видеокарты потребуется для нормальной работы с таким разрешением. "
+        },
+        {
+            "name": "Частота обновления:",
+            "value": "165 Гц",
+            "hint": "Чем выше частота кадров — тем более сглаженным будет выглядеть движение на экране, тем менее заметны на нем будут рывки и смазывания."
+        },
+        {
+            "name": "Время реакции матрицы",
+            "value": "1 мс",
+            "hint": "Чем меньше время отклика — тем быстрее матрица реагирует на управляющий сигнал, тем меньше задержка и тем лучше будет качество изображения в динамичных сценах."
+        },
+        {
+            "name": "Тип матрицы:",
+            "value": "IPS",
+            "hint": "Технология, по которой изготовлена матрица монитора (слой, отвечающий непосредственно за отображение изображения). От типа матрицы зависят прежде всего время отклика и качество цветопередачи. "
+        },
+        {
+            "name": "Яркость дисплея:",
+            "value": "350 кд/м²",
+            "hint": "Выбирать монитор с высокой яркостью стоит прежде всего в том случае, если устройство планируется использовать при ярком внешнем освещении — например, если на рабочее место попадает солнечный свет. Тусклое изображение может быть «заглушено» таким освещением, что сделает работу некомфортной. В других же условиях высокая яркость экрана сильно утомляет глаза."
+        },
+        {
+            "name": "Страна производитель:",
+            "value": "Китай"
+        }
+    ],
+    "reviews": [{
+            "user": "Максим",
+            "comment": "Задача **организации**, в особенности же постоянное __информационно-пропагандистское__ обеспечение нашей деятельности влечет за собой процесс внедрения и модернизации системы обучения кадров, соответствует насущным потребностям. Не следует, однако забывать, что новая модель организационной деятельности представляет собой интересный эксперимент проверки систем массового участия.",
+            "date": "2020-11-15T13:15",
+            "rating": "7/10"
+        },
+        {
+            "user": "Сергей",
+            "comment": "Таким образом реализация намеченных плановых заданий играет важную роль в формировании форм развития http://www.google.com. Разнообразный и богатый опыт консультация с широким активом позволяет оценить значение модели развития.",
+            "date": "2020-11-22T09:26",
+            "rating": "1/10"
+        },
+        {
+            "user": "Юрий",
+            "comment": "Представление счастливой бы упражнениями не этот, приносило как избегает когда предаваться восхваляющих некоей превратное представление. Воспользоваться истину счастливой этот ни стал только, восхваляющих такие, избегал разъясню кто нас обстоятельства, наслаждений как. Упрекнуть бы этот с, страдания когда что справедливости упрекнуть действительно я возлюбил боль вы разъясню возлюбил бы поняли умеет ни тех.",
+            "date": "2020-12-04T23:26",
+            "rating": "3/10"
+        },
+        {
+            "user": "Алина",
+            "comment": "Следует отметить, что внедрение современных методик выявляет срочную потребность благоприятных перспектив. Равным образом, семантический разбор внешних противодействий предполагает независимые способы реализации дальнейших направлений развития. С другой стороны, консультация с широким активом способствует повышению качества модели развития.",
+            "date": "2020-12-22T04:26",
+            "rating": "4/10"
+        },
+        {
+            "user": "Маша",
+            "comment": "Учитывая ключевые сценарии поведения, начало повседневной работы по формированию позиции создаёт необходимость включения в производственный план целого ряда внеочередных мероприятий с учётом комплекса поставленных обществом задач. ",
+            "date": "2020-12-22T14:51",
+            "rating": "1/10"
+        }
+    ]
 }

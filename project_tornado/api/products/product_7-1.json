@@ -1,52 +1,83 @@
 {
-  "id": "product_7-1",
-  "brand": "Mercedes-Benz",
-  "model": "E-Class (W213)",
-  "price": 57899,
-  "description": "Rear drive class E sedan (body W213). Restyling of the fifth generation of the model. The premiere show of the model took place online on March 3, 2020.",
-  "rating": 4.6,
-  "added": "23.11.2020 11:35",
 
-  "available": true,
-  "images": [
-      "../images/category_1/product_7-1/1.jpg",
-      "../images/category_1/product_7-1/2.jpg",
-      "../images/category_1/product_7-1/3.jpg",
-      "../images/category_1/product_7-1/4.jpg",
-      "../images/category_1/product_7-1/5.jpg"
-  ],
-  "overview": "The W213 Mercedes-Benz E-Class is the fifth-generation of the Mercedes-Benz E-Class. Sold from 2016 (as a 2017 model), it is the successor to the W212/S212 E-Class models. Unlike the previous generation, this generation coupe/convertible share the same platform as the sedan/wagon. The high-performance Mercedes-AMG E 63 and E 63 S versions of the W213 has been available as well from 2016 (as a 2017 model), and these are the only versions with V8 engines.",
-  "specifications": [{
-          "name": "Engine capacity(l):",
-          "value": 2.0,
-          "hint": "Engine capacity refers to the volume swept by all the pistons of an engine, within their bores, from the top to the bottom of their travel."
-      },
-      {
-          "name": "Horse power(hp):",
-          "value": 184,
-          "hint": "Horsepower (hp) is a unit of measurement of power, or the rate at which work is done, usually in reference to the output of engines or motors."
-      },
-      {
-          "name": "Torque(Nm):",
-          "value": 300,
-          "hint": "Torque is a twisting force that speaks to the engine's rotational force and measures how much of that twisting force is available when an engine exerts itself."
-      },
-      {
-          "name": "Maximum speed(km/h):",
-          "value": 240
-      }
-  ],
-  "reviews": [{
-          "user": "Sam",
-          "comment": "**Lorem** ipsum dolor sit amet consectetur adipisicing elit. Minima quibusdam, veniam ad corporis suscipit nam eius totam impedit, quo quia soluta ea non dicta quod reiciendis rerum, unde aliquid iste?",
-          "date": "01.01.2020 13:15",
-          "rating": "7/10"
-      },
-      {
-          "user": "Albert",
-          "comment": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima quibusdam, veniam ad corporis suscipit nam eius totam impedit, quo quia soluta ea non dicta quod reiciendis rerum, unde aliquid iste?",
-          "date": "01.01.2020 20:01",
-          "rating": "1/10"
-      }
-  ]
+    "id": "product_7-1",
+    "brand": "A4Tech",
+    "model": "G11-760N Wireless Black",
+    "price": 380,
+    "description": "Подключение: Беспроводное Размер мыши: Средняя Назначение: Обычные Тип датчика: Оптический",
+    "rating": 4.0,
+    "added": "2020-12-14T12:39",
+
+    "available": true,
+    "images": [
+        "./images/category_7/product_7-1/main.jpg",
+        "./images/category_7/product_7-1/1.jpg",
+        "./images/category_7/product_7-1/2.jpg",
+        "./images/category_7/product_7-1/3.jpg",
+        "./images/category_7/product_7-1/4.jpg"
+    ],
+    "overview": "A4Tech G11-760N — великолепное сочетание классического дизайна мыши и необходимых функций. Продвинутое беспроводное соединение обеспечивает стабильную и надежную связь на расстоянии до 10-15 метров. Стабильность беспроводной связи. Расширенное беспроводное соединение 2.4 ГГц с расстояния до 15 м. Пылестойкая конструкция увеличивает срок службы скролла.",
+    "specifications": [{
+            "name": "Тип датчика:",
+            "value": "Оптический",
+            "hint": "Оптические мыши недороги, достаточно надёжны и не слишком требовательны к рабочей поверхности. По принципу работы лазерные мыши сходны с оптическими. Главным отличием является то, что для подсветки изображения в них используется не светодиод, а лазер. Таким образом обеспечивается более узкая направленность луча, как следствие — более точное позиционирование курсора, что особенно важно при работе со сложной детализированной графикой, в играх и т.п. "
+        }, {
+            "name": "Количество кнопок:",
+            "value": "3"
+        },
+        {
+            "name": "Размер мыши:",
+            "value": "Средняя"
+        },
+        {
+            "name": "Максимальное разрешение сенсора:",
+            "value": "1800 dpi",
+            "hint": "Большое число DPI означает более продвинутый сенсор и мышку в целом, в наше время не редкостью являются модели на 3500 – 5000 DPI и даже более. В некотором роде так и есть — высокое разрешение способствует точности. Однако единственное, что непосредственно определяется данным показателем — это скорость перемещения курсора по экрану: чем выше разрешение сенсора — тем больше число пикселей, на которое продвинется курсор при перемещении самой мыши на определенное расстояние."
+        },
+        {
+            "name": "Тип подключения:",
+            "value": "Беспроводное",
+            "hint": "Проводная - подключение при помощи кабеля с тем или иным видом разъема, чаще всего USB, реже PS/2 или фирменным штекером. Радио - беспроводное соединение по радиоканалу, как правило, через беспроводной адаптер, подключаемый к компьютеру через порт USB. Bluetooth - еще один способ беспроводного подключения мышек. Технически Bluetooth основана на радиоволнах, однако данная технология имеет свои особенности, поэтому ее указывают отдельно от «обычного» подключения по радиоканалу."
+        },
+        {
+            "name": "Совместимость с ОС:",
+            "value": "Microsoft Windows",
+            "hint": "Если вашей операционной системы нет в списке, мышка может не работать, либо не все функции будут работать, например подсветка."
+        },
+        {
+            "name": "Страна производитель:",
+            "value": "Китай"
+        }
+    ],
+    "reviews": [{
+            "user": "Максим",
+            "comment": "Задача **организации**, в особенности же постоянное __информационно-пропагандистское__ обеспечение нашей деятельности влечет за собой процесс внедрения и модернизации системы обучения кадров, соответствует насущным потребностям. Не следует, однако забывать, что новая модель организационной деятельности представляет собой интересный эксперимент проверки систем массового участия.",
+            "date": "2020-11-15T13:15",
+            "rating": "7/10"
+        },
+        {
+            "user": "Сергей",
+            "comment": "Таким образом реализация намеченных плановых заданий играет важную роль в формировании форм развития http://www.google.com. Разнообразный и богатый опыт консультация с широким активом позволяет оценить значение модели развития.",
+            "date": "2020-11-22T09:26",
+            "rating": "1/10"
+        },
+        {
+            "user": "Юрий",
+            "comment": "Представление счастливой бы упражнениями не этот, приносило как избегает когда предаваться восхваляющих некоей превратное представление. Воспользоваться истину счастливой этот ни стал только, восхваляющих такие, избегал разъясню кто нас обстоятельства, наслаждений как. Упрекнуть бы этот с, страдания когда что справедливости упрекнуть действительно я возлюбил боль вы разъясню возлюбил бы поняли умеет ни тех.",
+            "date": "2020-1-04T23:26",
+            "rating": "3/10"
+        },
+        {
+            "user": "Алина",
+            "comment": "Следует отметить, что внедрение современных методик выявляет срочную потребность благоприятных перспектив. Равным образом, семантический разбор внешних противодействий предполагает независимые способы реализации дальнейших направлений развития. С другой стороны, консультация с широким активом способствует повышению качества модели развития.",
+            "date": "2020-1-22T04:26",
+            "rating": "4/10"
+        },
+        {
+            "user": "Маша",
+            "comment": "Учитывая ключевые сценарии поведения, начало повседневной работы по формированию позиции создаёт необходимость включения в производственный план целого ряда внеочередных мероприятий с учётом комплекса поставленных обществом задач. ",
+            "date": "2020-1-22T14:51",
+            "rating": "1/10"
+        }
+    ]
 }

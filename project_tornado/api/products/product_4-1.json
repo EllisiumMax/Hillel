@@ -1,52 +1,92 @@
 {
-  "id": "product_4-1",
-  "brand": "Mercedes-Benz",
-  "model": "E-Class (W213)",
-  "price": 57899,
-  "description": "Rear drive class E sedan (body W213). Restyling of the fifth generation of the model. The premiere show of the model took place online on March 3, 2020.",
-  "rating": 4.6,
-  "added": "23.11.2020 11:35",
-
-  "available": true,
-  "images": [
-      "../images/category_1/product_4-1/1.jpg",
-      "../images/category_1/product_4-1/2.jpg",
-      "../images/category_1/product_4-1/3.jpg",
-      "../images/category_1/product_4-1/4.jpg",
-      "../images/category_1/product_4-1/5.jpg"
-  ],
-  "overview": "The W213 Mercedes-Benz E-Class is the fifth-generation of the Mercedes-Benz E-Class. Sold from 2016 (as a 2017 model), it is the successor to the W212/S212 E-Class models. Unlike the previous generation, this generation coupe/convertible share the same platform as the sedan/wagon. The high-performance Mercedes-AMG E 63 and E 63 S versions of the W213 has been available as well from 2016 (as a 2017 model), and these are the only versions with V8 engines.",
-  "specifications": [{
-          "name": "Engine capacity(l):",
-          "value": 2.0,
-          "hint": "Engine capacity refers to the volume swept by all the pistons of an engine, within their bores, from the top to the bottom of their travel."
-      },
-      {
-          "name": "Horse power(hp):",
-          "value": 184,
-          "hint": "Horsepower (hp) is a unit of measurement of power, or the rate at which work is done, usually in reference to the output of engines or motors."
-      },
-      {
-          "name": "Torque(Nm):",
-          "value": 300,
-          "hint": "Torque is a twisting force that speaks to the engine's rotational force and measures how much of that twisting force is available when an engine exerts itself."
-      },
-      {
-          "name": "Maximum speed(km/h):",
-          "value": 240
-      }
-  ],
-  "reviews": [{
-          "user": "Sam",
-          "comment": "**Lorem** ipsum dolor sit amet consectetur adipisicing elit. Minima quibusdam, veniam ad corporis suscipit nam eius totam impedit, quo quia soluta ea non dicta quod reiciendis rerum, unde aliquid iste?",
-          "date": "01.01.2020 13:15",
-          "rating": "7/10"
-      },
-      {
-          "user": "Albert",
-          "comment": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima quibusdam, veniam ad corporis suscipit nam eius totam impedit, quo quia soluta ea non dicta quod reiciendis rerum, unde aliquid iste?",
-          "date": "01.01.2020 20:01",
-          "rating": "1/10"
-      }
-  ]
+    "id": "product_4-1",
+    "brand": "Artline",
+    "model": "Gaming X51 v12",
+    "price": 23800,
+    "description": "Intel Core i5-9400F (2.9 - 4.1 ГГц) / RAM 16 ГБ / HDD 1 ТБ + SSD 480 ГБ / nVidia GeForce GTX 1660 Super, 6 ГБ / без ОД / LAN / без ОС",
+    "rating": 4.8,
+    "added": "2020-11-12T15:31",
+    "available": true,
+    "images": [
+        "./images/category_4/product_4-1/main.jpg",
+        "./images/category_4/product_4-1/1.jpg",
+        "./images/category_4/product_4-1/2.jpg",
+        "./images/category_4/product_4-1/3.jpg",
+        "./images/category_4/product_4-1/4.jpg"
+    ],
+    "overview": "Игровые персональные компьютеры ARTLINE Gaming созданы специально для тех, кто хочет лично создать на их основе настоящий центр домашних развлечений. Редактирование текста и графических изображений, работа с любыми рабочими приложениями, комфортный просмотр видео высокой чёткости, запуск современных игр – это и многое другое станет доступно с ПК ARTLINE Gaming. ARTLINE Gaming X51 v12 оснащен улучшенной версией графического адаптера среднего класса GTX 1660 на чипе Turing TU116 – GeForce GTX 1660 Super — GIGABYTE Nvidia GeForce GV-N166SOC-6GD. Графическая архитектура NVIDIA Turing открывает возможности для следующего поколения приложений, которые будут моделировать физический мир с небывалой скоростью. Встроенный в ядро аппаратный блок кодирования видео до 20 % эффективнее, чем у предшественника, а использование 6 гигабайт памяти GDDR6 с частотой 14000 МГц позволило новинке почти не отставать по производительности от более дорогого GeForce GTX 1660 Ti – это будет настоящим подарком фанатам марки и невероятно мощной стартовой платформой для построения действительно игрового домашнего ПК. Увеличенная производительность плюс широкий встроенный функционал (продвинутый стриминг, работа с фото/видео с пакетом Studio) сделает GeForce GTX 1660 Super «народной» видеокартой текущего и, весьма вероятно, всего последующего года.",
+    "specifications": [{
+            "name": "Процессор",
+            "value": "Шестиядерный Intel Core i5-9400F (2.9 - 4.1 ГГц)",
+            "hint": "Центральный процессор (ЦП или CPU — Central Processing Unit) — главный «мозговой центр» ПК. Играет большую роль в быстродействии системы и вычислительных процессах."
+        },
+        {
+            "name": "Оперативная память",
+            "value": "16 ГБ",
+            "hint": "Объем ОЗУ является одним из важнейших показателей, характеризующих общую производительность системы. Чем больше оперативной памяти — тем лучше компьютер будет справляться с «тяжелыми» ресурсоемкими программами."
+        },
+        {
+            "name": "Тип видеокарты",
+            "value": "Дискретная",
+            "hint": "Определяет производительность обработки видеоданных и качество воспроизведения выводимого на экран изображения."
+        },
+        {
+            "name": "Видеокарта",
+            "value": "GeForce GTX 1660 Super 6 ГБ",
+            "hint": "Важный электронный компонент компьютера, отвечающий за плавный вывод любого изображения на экран. Видеокарты отличаются производительностью, энергопотреблением, количеством ядер, наличием или отсутствием собственной памяти. В последнем случае под потребности видеообработки графический процессор забирает часть объема ОЗУ, что снижает производительность аппарата."
+        },
+        {
+            "name": "Накопитель",
+            "value": "HDD 1 ТБ + SSD 480 ГБ",
+            "hint": "В современных ПК для повышения производительности и хранения пользовательских данных используются накопители, которые могут быть двух видов: твердотельные (SSD) и жесткие диски (HDD). Первые беззвучные, устойчивы к повреждениям и имеют высокую скорость записи, что даёт им массу преимуществ перед вторыми. Чем больше объем накопителя, тем больше на нём можно хранить информации."
+        },
+        {
+            "name": "Операционная система:",
+            "value": "Windows 10",
+            "hint": "Программная оболочка, в которой функционируют штатные и загружаемые приложения. Предустановленная производителем ОС оптимально настроена под конкретную аппаратную конфигурацию изделия, определяет его функционал и удобство использования интерфейса."
+        },
+        {
+            "name": "Размеры",
+            "value": "410 x 192 x 450 мм"
+        },
+        {
+            "name": "Вес",
+            "value": "10 кг"
+        },
+        {
+            "name": "Страна производитель",
+            "value": "Украина"
+        }
+    ],
+    "reviews": [{
+            "user": "Максим",
+            "comment": "Задача **организации**, в особенности же постоянное __информационно-пропагандистское__ обеспечение нашей деятельности влечет за собой процесс внедрения и модернизации системы обучения кадров, соответствует насущным потребностям. Не следует, однако забывать, что новая модель организационной деятельности представляет собой интересный эксперимент проверки систем массового участия.",
+            "date": "2020-11-15T13:15",
+            "rating": "7/10"
+        },
+        {
+            "user": "Сергей",
+            "comment": "Таким образом реализация намеченных плановых заданий играет важную роль в формировании форм развития http://www.google.com. Разнообразный и богатый опыт консультация с широким активом позволяет оценить значение модели развития.",
+            "date": "2020-11-22T09:26",
+            "rating": "1/10"
+        },
+        {
+            "user": "Юрий",
+            "comment": "Представление счастливой бы упражнениями не этот, приносило как избегает когда предаваться восхваляющих некоей превратное представление. Воспользоваться истину счастливой этот ни стал только, восхваляющих такие, избегал разъясню кто нас обстоятельства, наслаждений как. Упрекнуть бы этот с, страдания когда что справедливости упрекнуть действительно я возлюбил боль вы разъясню возлюбил бы поняли умеет ни тех.",
+            "date": "2020-12-04T23:26",
+            "rating": "3/10"
+        },
+        {
+            "user": "Алина",
+            "comment": "Следует отметить, что внедрение современных методик выявляет срочную потребность благоприятных перспектив. Равным образом, семантический разбор внешних противодействий предполагает независимые способы реализации дальнейших направлений развития. С другой стороны, консультация с широким активом способствует повышению качества модели развития.",
+            "date": "2020-12-22T04:26",
+            "rating": "4/10"
+        },
+        {
+            "user": "Маша",
+            "comment": "Учитывая ключевые сценарии поведения, начало повседневной работы по формированию позиции создаёт необходимость включения в производственный план целого ряда внеочередных мероприятий с учётом комплекса поставленных обществом задач. ",
+            "date": "2020-12-22T14:51",
+            "rating": "1/10"
+        }
+    ]
 }

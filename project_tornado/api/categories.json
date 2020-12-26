@@ -41,13 +41,13 @@
   },
   {
     "id": "category_9",
-    "name": "Защитные стекла для мобильных",
-    "icon": "./images/category_icons/mobile-protection.svg"
+    "name": "Акустические системы",
+    "icon": "./images/category_icons/speaker.svg"
 
   },
   {
     "id": "category_10",
-    "name": "Чехлы для мобильных",
-    "icon": "./images/category_icons/phone-case.svg"
+    "name": "Проекторы",
+    "icon": "./images/category_icons/projector.svg"
   }
 ]

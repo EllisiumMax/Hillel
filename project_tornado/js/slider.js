@@ -118,7 +118,6 @@ const sliderUI = {
 
         SLIDER_BTN_PREV.onclick = previous;
         SLIDER_BTN_NEXT.onclick = next;
-
         function next() {
             SLIDER_BTN_NEXT.onclick = null;
             PROMOTION_WRAPPER.style.opacity = 0;
