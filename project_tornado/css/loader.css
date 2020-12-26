@@ -2,6 +2,7 @@
     position: relative;
     left: 0;
     top: 50%;
+    margin: auto;
 }
 
 .preloader.single {
@@ -20,13 +21,13 @@
     position: relative;
     left: 50%;
     top: 50%;
-    width: 150px;
-    height: 150px;
-    margin: -75px 0 0 -75px;
+    width: 7em;
+    height: 7em;
+    margin: -3em 0 0 -3em;
     border-radius: 50%;
     border: 3px solid transparent;
     border-top-color: #9370DB;
-    -webkit-animation: spin 2s linear infinite;
+    -webkit-animation: spin 1s linear infinite;
     animation: spin 2s linear infinite;
 }
 .loader:before {
@@ -45,10 +46,10 @@
 .loader:after {
     content: "";
     position: absolute;
-    top: 15px;
-    left: 15px;
-    right: 15px;
-    bottom: 15px;
+    top: 1em;
+    left: 1em;
+    right: 1em;
+    bottom: 1em;
     border-radius: 50%;
     border: 3px solid transparent;
     border-top-color: #FF00FF;

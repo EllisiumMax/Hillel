@@ -9,7 +9,7 @@ async function loadImmitation(divId, coverAll = false) {
     if (coverAll) preloader.className = "preloader single";
     appendArea.append(preloader);
     preloader.append(loader);
-    let random = Math.round(Math.random() * 100);
+    let random = Math.round(Math.random() * 4000) + 1000;
     let promise = new Promise((resolve) => {
         setTimeout(() => {
             preloader.remove();

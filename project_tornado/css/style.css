@@ -735,6 +735,9 @@ form {
 }
 
 #filter-checkbox {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
     border: none;
     min-height: 15em;
 }
