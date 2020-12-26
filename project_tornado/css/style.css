@@ -862,6 +862,11 @@ meter::-webkit-meter-bar {
     align-items: center;
 }
 
+.area-title>.title {
+    cursor: pointer;
+    user-select: none;
+}
+
 .accordion-btn {
     margin-left: auto;
     margin-right: 4em;
@@ -870,6 +875,7 @@ meter::-webkit-meter-bar {
     padding: 0;
     user-select: none;
 }
+
 .accordion-btn:hover {
     transform: scale(1.1);
 }
@@ -891,15 +897,15 @@ meter::-webkit-meter-bar {
 .accordion-body {
     margin: 1em 3em;
     max-height: 0;
-    border-bottom: 3px solid  #540397;
+    border-bottom: 3px solid #540397;
     transition: all linear;
     overflow: hidden;
 }
 
-.accordion-body > p {
+.accordion-body>p {
     padding: 1em 3em 2em 3em;
     margin: auto;
-    
+
 }
 
 #product-description {
@@ -911,10 +917,11 @@ meter::-webkit-meter-bar {
     font-weight: 300;
 }
 
-#product-description > i {
+#product-description>i {
     font-family: Arial, Helvetica, sans-serif;
 }
-#product-description > a {
+
+#product-description>a {
     color: rgb(142, 22, 255);
 }
 
@@ -932,13 +939,19 @@ meter::-webkit-meter-bar {
 }
 
 #specs-table td {
-    border-bottom: 1px solid rgb(230, 230, 230);
+    border-bottom: 1px solid rgb(218, 218, 218);
     padding: 0.7em 1em;
     font-size: 1em;
 }
 
-#specs-table td:last-child {
+#specs-table td:first-child {
     border: none;
+}
+
+.hint-column {
+    width: 1em;
+    padding: 0 !important;
+
 }
 
 .hint-ico {
@@ -948,22 +961,31 @@ meter::-webkit-meter-bar {
 }
 
 .hint-text {
-display: none;
-width: 22em;
-box-shadow: 0 0 7px rgb(12, 158, 158), inset 0 0 5px 1px rgb(12, 158, 158);
-background-color: rgb(10, 100, 100);
-border-radius: 5px;
-padding: 0.5em 1em;
-font-weight: 300;
+    display: none;
+    width: 22em;
+    box-shadow: 0 0 7px rgb(12, 158, 158), inset 0 0 5px 1px rgb(12, 158, 158);
+    background-color: rgb(10, 100, 100);
+    border-radius: 5px;
+    padding: 0.5em 1em;
+    font-weight: 300;
+}
+
+.hint-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 !important;
 }
 
 .hint-container:hover .hint-text {
     position: absolute;
     cursor: help;
-    display: block;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     font-size: 0.9em;
-    margin-left: -23em;
-    margin-top: -2em;
+    margin-left: -25em;
+    margin-top: -7em;
     color: rgb(255, 255, 255);
 }
 
@@ -977,9 +999,9 @@ font-weight: 300;
     font-weight: 300;
 }
 
-#comments-render-area > div {
+#comments-render-area>div {
     width: 60em;
-    box-shadow: 0 0 4px 0  #540397;
+    box-shadow: 0 0 4px 0 #540397;
     border-radius: 8px;
     margin-top: 1em;
     margin-bottom: 1em;
@@ -987,7 +1009,7 @@ font-weight: 300;
     align-self: center;
 }
 
-#comments-render-area > div:last-child {
+#comments-render-area>div:last-child {
     margin-bottom: 7em;
 }
 
@@ -999,21 +1021,24 @@ font-weight: 300;
 }
 
 
-.comments-title-container > h4 {
+.comments-title-container>h4 {
     font-size: 1.1em;
 }
 
-.comments-title-container > img {
+.comments-title-container>img {
     margin-left: 2em;
     margin-right: 0.4em;
     width: 1.3em;
 }
 
-.comments-title-container > p {
+.comments-title-container>p {
     font-weight: 300;
     font-size: 0.9em;
 }
 
+.comment-body i{
+    font-family: Arial, Helvetica, sans-serif;
+}
 
 
 /* ITEM INFO PAGE END */

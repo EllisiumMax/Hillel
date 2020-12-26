@@ -65,6 +65,7 @@ const productsFilter = {
         
     },
     sortDB() {
+        this.loadDB();
         this.getFormData();
         this.filteredProducts = this.productsDB.products.filter((product) => {
                 for(let brand of this.selectedBrands) {
@@ -100,6 +101,7 @@ const productsFilter = {
     applyFilter() {
         this.sortDB();
         loadProductsList(this.filteredProducts);
+        
     }
 }
 

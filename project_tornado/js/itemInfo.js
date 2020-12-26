@@ -16,8 +16,8 @@ const productPage = {
     productDescription: document.getElementById("product-description"),
     specsTable: document.getElementById("specs-table"),
     findLink: /\b(?<protocol>https?:\/\/)(?<domain>\w{1,63}\.[^\s/.:,]{1,63}(\.[^\s/.:,]{2,63})?(\.[^\s/.:,]{2,63})?)(?<port>\:\d{1,5})?(?<path>\/[\w\/]+(\.(\w{1,8}))?)?\b/mig,
-    findBoldText: /(\*\*)([^*][\p{P}\p{L}\p{N}]+?)(\*\*)/gmiu,
-    findItalicText: /(__)([^*][\p{P}\p{L}\p{N}]+?)(__)/gmiu,
+    findBoldText: /(\*\*)([^*]+)(\*\*)/gmiu,
+    findItalicText: /(__)([^__]+)(__)/gmiu,
     async loadProduct() {
         const RESPONSE = await fetch(`./api/products/${this.productId}.json`);
         if(RESPONSE.status != 200) window.location.assign("404.html");
@@ -75,23 +75,30 @@ const productPage = {
             const tableRow = document.createElement("tr");
             const specName = document.createElement("td");
             const specValue = document.createElement("td");
+            const blankCell = document.createElement("td");
+
+            blankCell.textContent = " ";
             specName.textContent = spec.name;
             specValue.textContent = spec.value;
             this.specsTable.append(tableRow);
             tableRow.append(specName, specValue);
             if(spec.hint) {
+                const hintColumn = document.createElement("td");
                 const hintContainer = document.createElement("td");
                 const hintIcon = document.createElement("img");
                 const hintText = document.createElement("span");
 
+                tableRow.after(hintColumn);
+                hintColumn.className = "hint-column";
                 hintContainer.className = "hint-container";
                 hintIcon.className = "hint-ico";
                 hintText.className = "hint-text";
                 hintIcon.src = "images/info-ico.svg";
                 hintText.innerHTML = spec.hint;
-                tableRow.append(hintContainer);
+                specName.before(hintColumn);
+                hintColumn.append(hintContainer);
                 hintContainer.append(hintIcon, hintText);
-            }
+            } else specName.before(blankCell);
         }
     },
     renderComments() {
@@ -110,6 +117,7 @@ const productPage = {
             titleContainer.className = "comments-title-container"
             dateIcon.src = "images/time-passed.svg"
             userName.textContent = record.user;
+            commentBody.className = "comment-body";
             commentBody.innerHTML = record.comment
                 .replace(this.findBoldText, "<b>$2</b>")
                 .replace(this.findItalicText, "<i>$2</i>")

@@ -2,6 +2,7 @@
 
 function accordion(div, transitionMS = 400, maxHeightPX = "700px") {
     const accordion = document.getElementById(div);
+    const accordionTitle = accordion.querySelector(".title");
     const accordionBody = accordion.getElementsByClassName("accordion-body")[0];
     accordionBody.style.transitionDuration = transitionMS + "ms";
     const accordionBtn = accordion.getElementsByClassName("accordion-btn")[0];
@@ -25,6 +26,7 @@ function accordion(div, transitionMS = 400, maxHeightPX = "700px") {
         else open(transitionMS);
     }
     accordionBtn.onclick = toggle;
+    accordionTitle.onclick = toggle;
 }
 
 accordion("overview-accordion");
