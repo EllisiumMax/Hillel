@@ -1,3 +1,5 @@
+
+
 :root {
     --main-bg: rgba(183, 219, 255, 0.425);
     --header: rgb(247, 247, 247);
@@ -25,7 +27,6 @@
 *:after {
     box-sizing: border-box;
 }
-
 
 body {
     margin: 0;
@@ -296,6 +297,13 @@ button {
     align-items: center;
     justify-content: center;
     list-style: none;
+}
+
+@media (max-width: 780px) {
+    .products-column {
+        width: 45%;
+        padding: 0;
+    }
 }
 
 ul.products-column> {
